@@ -5,21 +5,35 @@ const { Client, Intents } = Discord;
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 const wait = require('util').promisify(setTimeout);
-const Laifu = require('./index');
-const LAIFU_ID = '688202466315206661';
+const Laifu = require('../src/index');
 const embedStrSet = new Set();
 
 /**
  *
  * @param {Discord.MessageEmbed} embed
  */
-const checkEmbed = embed => {
+const identifyEmbed = embed => {
     const arr = [];
-    Object.values(Laifu)
+    Object.values(Laifu.Identifier)
         .filter(val => typeof val === 'function')
         .forEach(func => {
-            const res = func.call(Laifu, embed);
+            const res = func.call(Laifu.Identifier, embed);
             if (res) arr.push(func.name);
+        });
+    console.log(`${arr}`);
+};
+
+/**
+ * 
+ * @param {Discord.MessageEmbed} embed 
+ */
+const checkCharacterProperties = embed => {
+    const arr = [];
+    Object.values(Laifu.Character)
+        .filter(val => typeof val === 'function')
+        .forEach(func => {
+            const res = func.call(Laifu.Character, embed);
+            arr.push(`${func.name}:${res}`);
         });
     console.log(`${arr}`);
 };
@@ -28,8 +42,13 @@ const checkEmbed = embed => {
  *
  * @param {string} id
  * @param {Discord.MessageEmbed} embed
+ * @returns {string}
  */
-const hashEmbed = (id, embed) => id + JSON.stringify(embed.toJSON(), null, 0);
+const hashEmbed = (id, embed) => {
+    const cleanEmbed = embed.toJSON();
+    if (cleanEmbed.image) cleanEmbed.image.height = cleanEmbed.image.width = 0;
+    return id + JSON.stringify(cleanEmbed, null, 0);
+};
 
 /**
  *
@@ -40,7 +59,7 @@ const messageFunction = async message => {
 
     const targetMessage = await message.channel.messages.fetch(message.id);
 
-    if (targetMessage.author.id !== LAIFU_ID) return;
+    if (targetMessage.author.id !== Laifu.Properties.ID) return;
     if (targetMessage.embeds && targetMessage.embeds.length) {
         const embed = targetMessage.embeds[0];
 
@@ -48,9 +67,14 @@ const messageFunction = async message => {
         if (embedStrSet.has(embedStr)) return;
         embedStrSet.add(embedStr);
 
-        checkEmbed(embed);
+        identifyEmbed(embed);
 
-        console.log(embed);
+        if (Laifu.Identifier.isViewEmbed(embed)) {
+            // console.log(embed.toJSON());
+            checkCharacterProperties(embed);
+        }
+
+        // console.log(embed);
     }
 };
 
