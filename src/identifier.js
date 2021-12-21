@@ -219,4 +219,15 @@ module.exports = {
         const validImage = embed.image !== null;
         return validTitle && validImage;
     },
+    /**
+     * Checks if the givne embed is from favorite
+     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @returns {boolean}
+     */
+    isFavoriteEmbed(embed) {
+        if (!embed) return false;
+        const validField = embed.fields?.some(val => val.name === 'Success') &&
+            embed.fields.find(val => val.name === 'Success').value.includes('favorite');
+        return validField === true;
+    },
 };
