@@ -240,4 +240,14 @@ module.exports = {
         const validTitle = embed.title?.includes('TOP 500');
         return validTitle === true;
     },
+    /**
+     * Checks if the given embed is from vote cooldown
+     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @returns {boolean}
+     */
+    isVoteCooldown(embed) {
+        if (!embed) return false;
+        const validTitle = embed.title?.includes('Vote: Cooldown');
+        return validTitle === true;
+    },
 };
