@@ -220,7 +220,7 @@ module.exports = {
         return validTitle && validImage;
     },
     /**
-     * Checks if the givne embed is from favorite
+     * Checks if the given embed is from favorite
      * @param {Discord.MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
@@ -229,5 +229,15 @@ module.exports = {
         const validField = embed.fields?.some(val => val.name === 'Success') &&
             embed.fields.find(val => val.name === 'Success').value.includes('favorite');
         return validField === true;
+    },
+    /**
+     * Checks if the given embed is from top
+     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @returns {boolean}
+     */
+    isTopEmbed(embed) {
+        if (!embed) return false;
+        const validTitle = embed.title?.includes('TOP 500');
+        return validTitle === true;
     },
 };
