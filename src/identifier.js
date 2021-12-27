@@ -57,9 +57,9 @@ module.exports = {
      */
     isInfoEmbed(embed) {
         if (!embed) return false;
-        const validTitle = embed.title === 'Information Card';
+        const validAuthor = embed.author?.name === 'Information Card';
         const validField = embed.fields?.some(val => val.name === 'Collections');
-        return validTitle && validField;
+        return validAuthor && validField;
     },
     /**
      * Checks if the given embed is from badge preview
@@ -248,6 +248,15 @@ module.exports = {
     isVoteCooldown(embed) {
         if (!embed) return false;
         const validTitle = embed.title?.includes('Vote: Cooldown');
+        return validTitle === true;
+    },
+    /**
+     * Checks if the given ebed is from clu
+     * @param {Discord.MessageEmbed} embed a Discord embed
+     */
+    isCluSearch(embed) {
+        if (!embed) return false;
+        const validTitle = embed.title?.includes('- Searching');
         return validTitle === true;
     },
 };

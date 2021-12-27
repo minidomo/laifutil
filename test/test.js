@@ -11,6 +11,7 @@ const embedStrSet = new Set();
 /**
  *
  * @param {Discord.MessageEmbed} embed
+ * @returns {boolean}
  */
 const identifyEmbed = embed => {
     const arr = [];
@@ -21,6 +22,7 @@ const identifyEmbed = embed => {
             if (res) arr.push(func.name);
         });
     console.log(`${arr}`);
+    return arr.length > 0;
 };
 
 /**
@@ -67,12 +69,13 @@ const messageFunction = async message => {
         if (embedStrSet.has(embedStr)) return;
         embedStrSet.add(embedStr);
 
-        identifyEmbed(embed);
+        const res = identifyEmbed(embed);
+        if (!res) console.log(embed);
 
-        if (Laifu.Identifier.isViewEmbed(embed)) {
-            // console.log(embed.toJSON());
-            checkCharacterProperties(embed);
-        }
+        // if (Laifu.Identifier.isViewEmbed(embed)) {
+        //     // console.log(embed.toJSON());
+        //     checkCharacterProperties(embed);
+        // }
 
         // console.log(embed);
     }
