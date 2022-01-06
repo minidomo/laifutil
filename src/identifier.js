@@ -245,18 +245,27 @@ module.exports = {
      * @param {Discord.MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
-    isVoteCooldown(embed) {
+    isVoteCooldownEmbed(embed) {
         if (!embed) return false;
         const validTitle = embed.title?.includes('Vote: Cooldown');
         return validTitle === true;
     },
     /**
-     * Checks if the given ebed is from clu
+     * Checks if the given embed is from clu
      * @param {Discord.MessageEmbed} embed a Discord embed
      */
-    isCluSearch(embed) {
+    isCluSearchEmbed(embed) {
         if (!embed) return false;
         const validTitle = embed.title?.includes('- Searching');
+        return validTitle === true;
+    },
+    /**
+     * Checks if the given embed is from workshop
+     * @param {Discord.MessageEmbed} embed a Discord embed
+     */
+    isCardWorkshopEmbed(embed) {
+        if (!embed) return false;
+        const validTitle = embed.title?.includes('Card Workshop');
         return validTitle === true;
     },
 };

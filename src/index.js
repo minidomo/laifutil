@@ -5,4 +5,5 @@ module.exports = {
     Character: require('./character'),
     Properties: require('./properties'),
     Rarity: require('./rarity'),
+    Util: require('./util'),
 };
