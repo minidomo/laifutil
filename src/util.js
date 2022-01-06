@@ -48,7 +48,7 @@ module.exports = {
      * Checks if the given message has a Laifu embed and meets the criteria given in `options`
      * @param {Discord.Message} message a Discord message
      * @param {LaifuEmbedOptions} [options={}] options for this function
-     * @returns {Promise<?Discord.MessageEmbed>}
+     * @returns {Promise<?Discord.Message>}
      */
     async hasLaifuEmbed(message, options = {}) {
         if (typeof options.delay === 'number') await wait(options.delay);
@@ -64,7 +64,7 @@ module.exports = {
                 if (embedSet.has(embedHash)) return null;
                 embedSet.add(embedHash);
             }
-            return embed;
+            return targetMessage;
         }
 
         return null;

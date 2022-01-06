@@ -40,10 +40,11 @@ const checkCharacterProperties = embed => {
 
 /**
  *
- * @param {Discord.MessageEmbed} embed
+ * @param {Discord.Message} message
  */
-const embedFunction = embed => {
-    if (!embed) return;
+const laifuFunction = message => {
+    if (!message) return;
+    const embed = message.embeds[0];
     const res = identifyEmbed(embed);
     if (!res) console.log(embed);
 
@@ -63,14 +64,14 @@ client.on('messageCreate', async message => {
     if (!client.application?.owner) await client.application?.fetch();
 
     Laifu.Util.hasLaifuEmbed(message, { loaded: false, duplicates: false })
-        .then(embedFunction);
+        .then(laifuFunction);
 });
 
 client.on('messageUpdate', async message => {
     if (!client.application?.owner) await client.application?.fetch();
 
     Laifu.Util.hasLaifuEmbed(message, { delay: 1000, loaded: false, duplicates: false })
-        .then(embedFunction);
+        .then(laifuFunction);
 });
 
 client.login(process.env.BOT_TOKEN);
