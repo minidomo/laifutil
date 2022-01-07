@@ -25,7 +25,8 @@ module.exports = {
     isBurnEmbed(embed) {
         if (!embed) return false;
         const validTitle = CARD_TITLE_REGEX.test(embed.title);
-        const validField = embed.fields?.some(val => val.name === 'Guide');
+        const validField = embed.fields?.some(val => val.name === 'Guide')
+            && embed.fields.find(val => val.name === 'Guide').value.includes('burn');
         return validTitle && validField;
     },
     /**
@@ -70,7 +71,8 @@ module.exports = {
         if (!embed) return false;
         const validTitle = CARD_TITLE_REGEX.test(embed.title);
         const validAuthor = embed.author?.name.endsWith('is Viewing...');
-        const validField = embed.fields?.some(val => val.name === 'Guide');
+        const validField = embed.fields?.some(val => val.name === 'Guide')
+            && embed.fields.find(val => val.name === 'Guide').value.includes('apply');
         return validTitle && validAuthor && validField;
     },
     /**
