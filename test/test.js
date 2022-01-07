@@ -45,19 +45,21 @@ const checkCharacterProperties = embed => {
 const laifuFunction = message => {
     if (!message) return;
     const embed = message.embeds[0];
+
     const res = identifyEmbed(embed);
     if (!res) console.log(embed);
-
-    // if (Laifu.Identifier.isViewEmbed(embed)) {
-    //     // console.log(embed.toJSON());
-    //     checkCharacterProperties(embed);
-    // }
+    const Identifier = Laifu.Identifier;
+    if (Identifier.isInfoEmbed(embed)
+        || Identifier.isViewEmbed(embed)) {
+        // console.log(embed.toJSON());
+        checkCharacterProperties(embed);
+    }
 
     // console.log(embed);
 };
 
 client.once('ready', () => {
-    console.log('Ready!');
+    console.log(`Logged in as ${client.user.tag}`);
 });
 
 client.on('messageCreate', async message => {

@@ -5,9 +5,15 @@ const removeMd = require('remove-markdown');
 const Discord = require('discord.js');
 console.log(new Discord.MessageEmbed().fields.length ? '' : '');
 
-const CARD_TITLE_REGEX = /(?:([^\s]+) )?#([1-9]) (.+)/;
-const GENERAL_INFO_REGEX = /UID: (\d+) \| GID: (\d+)/;
-const MAIN_SERIES_REGEX = /ENG: ([^\n]+)\nJP: ([^\n]+)\nSID: (\d+)/;
+const CARD_TITLE = {
+    OWNER_REGEX: /(?:([^\s]+) )?#([1-9]) (.+)/,
+    INFO_REGEX: /(.+)/,
+};
+const GENERAL_INFO = {
+    OWNER_REGEX: /UID: (\d+) \| GID: (\d+)/,
+    INFO_REGEX: /Global ID: (\d+)/,
+};
+const MAIN_SERIES_REGEX = /ENG: ([^\n]+)\nJP: ([^\n]+)\n(?:SID|Series ID): (\d+)/;
 
 module.exports = {
     /**
@@ -16,9 +22,16 @@ module.exports = {
      * @returns {?string}
      */
     getName(embed) {
-        const res = CARD_TITLE_REGEX.exec(embed.title);
-        if (!res) return null;
-        return res[3] ?? null;
+        let res = CARD_TITLE.OWNER_REGEX.exec(embed.title);
+        let name = null;
+        if (res) {
+            name = res[3] ?? null;
+        } else {
+            res = CARD_TITLE.INFO_REGEX.exec(embed.title);
+            if (!res) return null;
+            name = res[1] ?? null;
+        }
+        return name;
     },
     /**
      * Returns the number of the card
@@ -26,7 +39,7 @@ module.exports = {
      * @returns {?number}
      */
     getCardNumber(embed) {
-        const res = CARD_TITLE_REGEX.exec(embed.title);
+        const res = CARD_TITLE.OWNER_REGEX.exec(embed.title);
         if (!res) return null;
         const numStr = res[2] ?? null;
         if (!numStr) return null;
@@ -38,7 +51,7 @@ module.exports = {
      * @returns {?string}
      */
     getFavoriteEmote(embed) {
-        const res = CARD_TITLE_REGEX.exec(embed.title);
+        const res = CARD_TITLE.OWNER_REGEX.exec(embed.title);
         if (!res) return null;
         return res[1] ?? null;
     },
@@ -51,7 +64,7 @@ module.exports = {
         const field = embed.fields?.find(val => val.name === 'General Info');
         if (!field) return null;
         const cleanValue = removeMd(field.value);
-        const res = GENERAL_INFO_REGEX.exec(cleanValue);
+        const res = GENERAL_INFO.OWNER_REGEX.exec(cleanValue);
         if (!res) return null;
         const numStr = res[1] ?? null;
         if (!numStr) return null;
@@ -66,10 +79,15 @@ module.exports = {
         const field = embed.fields?.find(val => val.name === 'General Info');
         if (!field) return null;
         const cleanValue = removeMd(field.value);
-        const res = GENERAL_INFO_REGEX.exec(cleanValue);
-        if (!res) return null;
-        const numStr = res[2] ?? null;
-        if (!numStr) return null;
+        let res = GENERAL_INFO.OWNER_REGEX.exec(cleanValue);
+        let numStr = null;
+        if (res) {
+            numStr = res[2] ?? null;
+        } else {
+            res = GENERAL_INFO.INFO_REGEX.exec(cleanValue);
+            if (!res) return null;
+            numStr = res[1] ?? null;
+        }
         return parseInt(numStr);
     },
     /**
