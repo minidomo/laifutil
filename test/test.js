@@ -46,13 +46,20 @@ const laifuFunction = message => {
     if (!message) return;
     const embed = message.embeds[0];
 
-    const res = identifyEmbed(embed);
-    if (!res) console.log(embed);
+    // const res = identifyEmbed(embed);
+    // if (!res) console.log(embed);
+
     const Identifier = Laifu.Identifier;
     if (Identifier.isInfoEmbed(embed)
         || Identifier.isViewEmbed(embed)) {
         // console.log(embed.toJSON());
-        checkCharacterProperties(embed);
+        // checkCharacterProperties(embed);
+    }
+
+    if (Identifier.isWishlistEmbed(embed)) {
+        const obj = Laifu.EmbedParser.parseWishlistEmbed(embed);
+        console.log(obj);
+        // console.log(embed);
     }
 
     // console.log(embed);

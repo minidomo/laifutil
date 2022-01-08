@@ -6,4 +6,5 @@ module.exports = {
     Properties: require('./properties'),
     Rarity: require('./rarity'),
     Util: require('./util'),
+    EmbedParser: require('./embed-parser'),
 };
