@@ -255,6 +255,7 @@ module.exports = {
     /**
      * Checks if the given embed is from clu
      * @param {Discord.MessageEmbed} embed a Discord embed
+     * @returns {boolean}
      */
     isCluSearchEmbed(embed) {
         if (!embed) return false;
@@ -264,10 +265,45 @@ module.exports = {
     /**
      * Checks if the given embed is from workshop
      * @param {Discord.MessageEmbed} embed a Discord embed
+     * @returns {boolean}
      */
     isCardWorkshopEmbed(embed) {
         if (!embed) return false;
         const validTitle = embed.title?.includes('Card Workshop');
         return validTitle === true;
+    },
+    /**
+     * Checks if the given embed is from wishlist
+     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @returns {boolean}
+     */
+    isWishlistEmbed(embed) {
+        if (!embed) return false;
+        const validTitle = embed.title?.includes('- Wishlist');
+        return validTitle === true;
+    },
+    /**
+     * Checks if the given embed is from wishlist add
+     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @returns {boolean}
+     */
+    isWishlistAddEmbed(embed) {
+        if (!embed) return false;
+        const field = embed.fields.find(val => val.name === 'Success');
+        if (!field) return false;
+        const validField = field.value.includes('wishlist') && field.value.includes('set');
+        return validField;
+    },
+    /**
+     * Checks if the given embed is from wishlist remove
+     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @returns {boolean}
+     */
+    isWishlistRemoveEmbed(embed) {
+        if (!embed) return false;
+        const field = embed.fields.find(val => val.name === 'Success');
+        if (!field) return false;
+        const validField = field.value.includes('wishlist') && field.value.includes('removed');
+        return validField;
     },
 };
