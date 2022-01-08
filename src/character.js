@@ -2,9 +2,6 @@
 
 const removeMd = require('remove-markdown');
 
-const Discord = require('discord.js');
-console.log(new Discord.MessageEmbed().fields.length ? '' : '');
-
 const CARD_TITLE = {
     OWNER_REGEX: /(?:([^\s]+) )?#([1-9]) (.+)/,
     INFO_REGEX: /(.+)/,
@@ -18,7 +15,7 @@ const MAIN_SERIES_REGEX = /ENG: ([^\n]+)\nJP: ([^\n]+)\n(?:SID|Series ID): (\d+)
 module.exports = {
     /**
      * Returns the name of the character
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {?string}
      */
     getName(embed) {
@@ -35,7 +32,7 @@ module.exports = {
     },
     /**
      * Returns the number of the card
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {?number}
      */
     getCardNumber(embed) {
@@ -47,7 +44,7 @@ module.exports = {
     },
     /**
      * Returns the favorite emote for the card
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {?string}
      */
     getFavoriteEmote(embed) {
@@ -57,7 +54,7 @@ module.exports = {
     },
     /**
      * Returns the UID
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {?number}
      */
     getUid(embed) {
@@ -72,7 +69,7 @@ module.exports = {
     },
     /**
      * Returns the GID
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {?number}
      */
     getGid(embed) {
@@ -92,7 +89,7 @@ module.exports = {
     },
     /**
      * Returns the english series
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {?string}
      */
     getEngSeries(embed) {
@@ -105,7 +102,7 @@ module.exports = {
     },
     /**
      * Returns the japanese series
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {?string}
      */
     getJpSeries(embed) {
@@ -118,7 +115,7 @@ module.exports = {
     },
     /**
      * Returns the SID
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {?string}
      */
     getSid(embed) {
@@ -133,7 +130,7 @@ module.exports = {
     },
     /**
      * Returns the rarity
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {?string}
      */
     getRarity(embed) {
@@ -147,7 +144,7 @@ module.exports = {
     },
     /**
      * Returns the star number
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {?number}
      */
     getStarNumber(embed) {
@@ -161,7 +158,7 @@ module.exports = {
     },
     /**
      * Returns true if the card is glitched, false otherwise
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isGlitched(embed) {
@@ -175,7 +172,7 @@ module.exports = {
     },
     /**
      * Returns the badge id
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {?number}
      */
     getBadgeId(embed) {

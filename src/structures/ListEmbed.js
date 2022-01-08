@@ -3,22 +3,22 @@
 class ListEmbed {
     /**
      * @param {Object} [data={}]
-     * @param {Discord.MessageEmbed=} data.embed
+     * @param {import('discord.js').MessageEmbed=} data.embed
      */
     constructor(data = {}) {
         /**
          * @type {?string}
-         * @public
+
          */
         this.name = null;
         /**
          * @type {?string}
-         * @public
+
          */
         this.identifier = null;
         /**
          * @type {?string[]}
-         * @public
+
          */
         this.data = null;
 

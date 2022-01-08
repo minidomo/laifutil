@@ -1,13 +1,13 @@
 'use strict';
 
-const WishlistEmbed = require('./structures/WishlistEmbed');
+const Structures = require('./structures');
 
 module.exports = {
     /**
-     * @param {Discord.MessageEmbed} embed
-     * @returns {WishlistEmbed}
+     * @param {import('discord.js').MessageEmbed} embed
+     * @returns {Structures.WishlistEmbed}
      */
     parseWishlistEmbed(embed) {
-        return new WishlistEmbed({ embed });
+        return new Structures.WishlistEmbed({ embed });
     },
 };

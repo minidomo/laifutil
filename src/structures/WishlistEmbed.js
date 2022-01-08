@@ -11,17 +11,17 @@ class WishlistCharacter {
     constructor(data = {}) {
         /**
          * @type {?number}
-         * @public
+
          */
         this.gid = null;
         /**
          * @type {?string}
-         * @public
+
          */
         this.name = null;
         /**
          * @type {?number}
-         * @public
+
          */
         this.influence = null;
 
@@ -40,33 +40,31 @@ class WishlistCharacter {
 class WishlistEmbed extends ListEmbed {
     /**
      * @param {Object} [data={}]
-     * @param {Discord.MessageEmbed=} data.embed
+     * @param {import('discord.js').MessageEmbed=} data.embed
      */
     constructor(data = {}) {
         super(data);
         /**
          * @type {?string}
-         * @public
          */
         this.username = this.name;
         /**
          * @type {number}
-         * @public
          */
         this.currentPage = 0;
         /**
          * @type {number}
-         * @public
+
          */
         this.pages = 0;
         /**
          * @type {number}
-         * @public
+
          */
         this.charactersWanted = 0;
         /**
          * @type {?WishlistCharacter[]}
-         * @public
+
          */
         this.characters = null;
 

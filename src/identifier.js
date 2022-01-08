@@ -1,14 +1,11 @@
 'use strict';
 
-const Discord = require('discord.js');
-console.log(new Discord.MessageEmbed().fields.length ? '' : '');
-
 const CARD_TITLE_REGEX = /(?:([^\s]+) )?#([1-9]) (.+)/;
 
 module.exports = {
     /**
      * Checks if the given embed is from gacha and is a character
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isGachaCharacterEmbed(embed) {
@@ -19,7 +16,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from burn
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isBurnEmbed(embed) {
@@ -31,7 +28,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from view
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isViewEmbed(embed) {
@@ -43,7 +40,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from auction
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isAuctionEmbed(embed) {
@@ -53,7 +50,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from info
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isInfoEmbed(embed) {
@@ -64,7 +61,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from badge preview
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isBadgePreviewEmbed(embed) {
@@ -77,7 +74,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from blu
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isBluEmbed(embed) {
@@ -87,7 +84,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from reward box
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isRewardBoxEmbed(embed) {
@@ -97,7 +94,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from gacha and is a badge
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isGachaBadgeEmbed(embed) {
@@ -107,7 +104,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from cd
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isCdEmbed(embed) {
@@ -117,7 +114,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from list
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isListEmbed(embed) {
@@ -127,7 +124,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from drop code
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isDropCodeEmbed(embed) {
@@ -137,7 +134,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from drop completion
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isDropCompletionEmbed(embed) {
@@ -147,7 +144,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from drop cooldown
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isDropCooldownEmbed(embed) {
@@ -157,7 +154,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from loading a gacha
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isGachaLoadEmbed(embed) {
@@ -167,7 +164,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from daily claim
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isDailyClaimEmbed(embed) {
@@ -177,7 +174,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from daily cooldown
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isDailyCooldownEmbed(embed) {
@@ -187,7 +184,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from arena initial
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isArenaInitialEmbed(embed) {
@@ -200,7 +197,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from arena result
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isArenaResultEmbed(embed) {
@@ -212,7 +209,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from arena gif
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isArenaGifEmbed(embed) {
@@ -223,7 +220,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from favorite
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isFavoriteEmbed(embed) {
@@ -234,7 +231,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from top
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isTopEmbed(embed) {
@@ -244,7 +241,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from vote cooldown
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isVoteCooldownEmbed(embed) {
@@ -254,7 +251,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from clu
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isCluSearchEmbed(embed) {
@@ -264,7 +261,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from workshop
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isCardWorkshopEmbed(embed) {
@@ -274,7 +271,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from wishlist
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isWishlistEmbed(embed) {
@@ -284,7 +281,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from wishlist add
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isWishlistAddEmbed(embed) {
@@ -296,7 +293,7 @@ module.exports = {
     },
     /**
      * Checks if the given embed is from wishlist remove
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isWishlistRemoveEmbed(embed) {

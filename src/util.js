@@ -1,8 +1,5 @@
 'use strict';
 
-const Discord = require('discord.js');
-console.log(new Discord.MessageEmbed().fields.length ? '' : '');
-
 const Properties = require('./properties');
 
 const wait = require('util').promisify(setTimeout);
@@ -15,7 +12,7 @@ setInterval(() => {
 /**
  * Hashs an embed
  * @param {string} id the id of the message containing this embed
- * @param {Discord.MessageEmbed} embed a Discord embed
+ * @param {import('discord.js').MessageEmbed} embed a Discord embed
  * @param {boolean} loaded take into consideration whether the entire embed was lodaed
  * @returns {string}
  */
@@ -36,7 +33,7 @@ const hashEmbed = (id, embed, loaded) => {
 module.exports = {
     /**
      * Checks if the given embed's images/gifs, if any, are loaded
-     * @param {Discord.MessageEmbed} embed a Discord embed
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
      * @returns {boolean}
      */
     isLoaded(embed) {
@@ -46,9 +43,9 @@ module.exports = {
     },
     /**
      * Checks if the given message has a Laifu embed and meets the criteria given in `options`
-     * @param {Discord.Message} message a Discord message
+     * @param {import('discord.js').Message} message a Discord message
      * @param {LaifuEmbedOptions} [options={}] options for this function
-     * @returns {Promise<?Discord.Message>}
+     * @returns {Promise<?import('discord.js').Message>}
      */
     async hasLaifuEmbed(message, options = {}) {
         if (typeof options.delay === 'number') await wait(options.delay);
