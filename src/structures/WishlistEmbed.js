@@ -11,14 +11,17 @@ class WishlistCharacter {
     constructor(data = {}) {
         /**
          * @type {?number}
+         * @public
          */
         this.gid = null;
         /**
          * @type {?string}
+         * @public
          */
         this.name = null;
         /**
          * @type {?number}
+         * @public
          */
         this.influence = null;
 
@@ -43,22 +46,27 @@ class WishlistEmbed extends ListEmbed {
         super(data);
         /**
          * @type {?string}
+         * @public
          */
         this.username = this.name;
         /**
          * @type {number}
+         * @public
          */
         this.currentPage = 0;
         /**
          * @type {number}
+         * @public
          */
         this.pages = 0;
         /**
          * @type {number}
+         * @public
          */
         this.charactersWanted = 0;
         /**
          * @type {?WishlistCharacter[]}
+         * @public
          */
         this.characters = null;
 
