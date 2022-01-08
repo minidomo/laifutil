@@ -10,17 +10,14 @@ declare class WishlistEmbed extends ListEmbed {
     currentPage: number;
     /**
      * @type {number}
-
      */
     pages: number;
     /**
      * @type {number}
-
      */
     charactersWanted: number;
     /**
      * @type {?WishlistCharacter[]}
-
      */
     characters: WishlistCharacter[] | null;
 }
@@ -35,17 +32,14 @@ declare class WishlistCharacter {
     });
     /**
      * @type {?number}
-
      */
     gid: number | null;
     /**
      * @type {?string}
-
      */
     name: string | null;
     /**
      * @type {?number}
-
      */
     influence: number | null;
 }

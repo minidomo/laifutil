@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 const { Client, Intents } = Discord;
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
-const Laifu = require('../dist');
+const Laifu = require('../src');
 
 /**
  *

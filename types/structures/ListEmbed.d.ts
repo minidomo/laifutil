@@ -9,17 +9,14 @@ declare class ListEmbed {
     });
     /**
      * @type {?string}
-
      */
     name: string | null;
     /**
      * @type {?string}
-
      */
     identifier: string | null;
     /**
      * @type {?string[]}
-
      */
     data: string[] | null;
 }

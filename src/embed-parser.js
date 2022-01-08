@@ -5,7 +5,7 @@ const Structures = require('./structures');
 module.exports = {
     /**
      * @param {import('discord.js').MessageEmbed} embed
-     * @returns {Structures.WishlistEmbed}
+     * @returns {import('./structures/WishlistEmbed')}
      */
     parseWishlistEmbed(embed) {
         return new Structures.WishlistEmbed({ embed });

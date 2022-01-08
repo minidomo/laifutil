@@ -92,6 +92,6 @@ export const Util: {
     hasLaifuEmbed(message: import("discord.js").Message<boolean>, options?: import("./util").LaifuEmbedOptions): Promise<import("discord.js").Message<boolean>>;
 };
 export const EmbedParser: {
-    parseWishlistEmbed(embed: import("discord.js").MessageEmbed): Structures.WishlistEmbed;
+    parseWishlistEmbed(embed: import("discord.js").MessageEmbed): import("./structures/WishlistEmbed");
 };
 //# sourceMappingURL=index.d.ts.map

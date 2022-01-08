@@ -8,17 +8,14 @@ class ListEmbed {
     constructor(data = {}) {
         /**
          * @type {?string}
-
          */
         this.name = null;
         /**
          * @type {?string}
-
          */
         this.identifier = null;
         /**
          * @type {?string[]}
-
          */
         this.data = null;
 
