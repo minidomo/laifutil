@@ -58,6 +58,10 @@ const laifuFunction = message => {
 
     if (Identifier.isWishlistEmbed(embed)) {
         const obj = Laifu.EmbedParser.parseWishlistEmbed(embed);
+        obj.characters = obj.characters.map(c => {
+            c.name = Laifu.Util.cleanCharacterName(c.name);
+            return c;
+        });
         console.log(obj);
         // console.log(embed);
     }

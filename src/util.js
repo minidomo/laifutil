@@ -23,6 +23,29 @@ const hashEmbed = (id, embed, loaded) => {
 };
 
 /**
+ * Obtains the furthest left and right bounds of the left and right characters in the string
+ * @param {string} str the string to examine
+ * @param {string} leftChar the left character
+ * @param {string} rightChar the right character
+ * @returns {?number[]}
+ */
+const getLastBounds = (str, leftChar, rightChar) => {
+    if (!str.includes(leftChar) || !str.includes(rightChar)) return null;
+    let count = 0;
+    let left = -1, right = -1;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === leftChar) {
+            if (count === 0) left = i;
+            count++;
+        } else if (str[i] === rightChar) {
+            count--;
+            if (count === 0) right = i;
+        }
+    }
+    return left >= right ? null : [left, right];
+};
+
+/**
  * Options for the hasLaifuEmbed funcction
  * @typedef {Object} LaifuEmbedOptions
  * @property {number=} delay the time in milliseconds to wait before performing the function
@@ -65,5 +88,18 @@ module.exports = {
         }
 
         return null;
+    },
+    /**
+     * Removes the last set of parenthesis and custom emotes in the name
+     * @param {string} name the name
+     * @returns {string}
+     */
+    cleanCharacterName(name) {
+        const parenBounds = getLastBounds(name, '(', ')');
+        const emoteBounds = getLastBounds(name, '<', '>');
+        let ret = name;
+        if (parenBounds) ret = ret.substring(0, parenBounds[0]) + ret.substring(parenBounds[1] + 1);
+        if (emoteBounds) ret = ret.substring(0, emoteBounds[0]) + ret.substring(emoteBounds[1] + 1);
+        return ret.trim();
     },
 };
