@@ -41,5 +41,17 @@ declare function hasLaifuEmbed(message: import("discord.js").Message<boolean>, o
  * @returns {Promise<?import('discord.js').Message>}
  */
 declare function hasLaifuEmbed(message: import("discord.js").Message<boolean>, options?: LaifuEmbedOptions): Promise<import("discord.js").Message<boolean>>;
+/**
+ * Removes the last set of parenthesis and custom emotes in the name
+ * @param {string} name the name
+ * @returns {string}
+ */
+declare function cleanCharacterName(name: string): string;
+/**
+ * Removes the last set of parenthesis and custom emotes in the name
+ * @param {string} name the name
+ * @returns {string}
+ */
+declare function cleanCharacterName(name: string): string;
 export {};
 //# sourceMappingURL=util.d.ts.map

@@ -90,6 +90,7 @@ export const Rarity: {
 export const Util: {
     isLoaded(embed: import("discord.js").MessageEmbed): boolean;
     hasLaifuEmbed(message: import("discord.js").Message<boolean>, options?: import("./util").LaifuEmbedOptions): Promise<import("discord.js").Message<boolean>>;
+    cleanCharacterName(name: string): string;
 };
 export const EmbedParser: {
     parseWishlistEmbed(embed: import("discord.js").MessageEmbed): import("./structures/WishlistEmbed");
