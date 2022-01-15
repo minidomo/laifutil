@@ -27,6 +27,7 @@ export const Identifier: {
     isWishlistEmbed(embed: import("discord.js").MessageEmbed): boolean;
     isWishlistAddEmbed(embed: import("discord.js").MessageEmbed): boolean;
     isWishlistRemoveEmbed(embed: import("discord.js").MessageEmbed): boolean;
+    isLookUpErrorEmbed(embed: import("discord.js").MessageEmbed): boolean;
 };
 export const Character: {
     getName(embed: import("discord.js").MessageEmbed): string;

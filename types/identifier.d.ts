@@ -334,4 +334,14 @@ export function isWishlistRemoveEmbed(embed: import("discord.js").MessageEmbed):
  * @returns {boolean}
  */
 export function isWishlistRemoveEmbed(embed: import("discord.js").MessageEmbed): boolean;
+/**
+ * Checks if the given embed is from a look up error
+ * @param {import('discord.js').MessageEmbed} embed a Discord embed
+ */
+export function isLookUpErrorEmbed(embed: import("discord.js").MessageEmbed): boolean;
+/**
+ * Checks if the given embed is from a look up error
+ * @param {import('discord.js').MessageEmbed} embed a Discord embed
+ */
+export function isLookUpErrorEmbed(embed: import("discord.js").MessageEmbed): boolean;
 //# sourceMappingURL=identifier.d.ts.map

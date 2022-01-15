@@ -303,4 +303,15 @@ module.exports = {
         const validField = field.value.includes('wishlist') && field.value.includes('removed');
         return validField;
     },
+    /**
+     * Checks if the given embed is from a look up error
+     * @param {import('discord.js').MessageEmbed} embed a Discord embed
+     */
+    isLookUpErrorEmbed(embed) {
+        if (!embed) return false;
+        const field = embed.fields.find(val => val.name === 'Error');
+        if (!field) return false;
+        const validField = field.value.includes('Lookup');
+        return validField;
+    },
 };

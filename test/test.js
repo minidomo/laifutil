@@ -20,7 +20,7 @@ const identifyEmbed = embed => {
             if (res) arr.push(func.name);
         });
     console.log(`${arr}`);
-    return arr.length > 0;
+    return arr.length === 0;
 };
 
 /**
@@ -46,8 +46,8 @@ const laifuFunction = message => {
     if (!message) return;
     const embed = message.embeds[0];
 
-    // const res = identifyEmbed(embed);
-    // if (!res) console.log(embed);
+    const res = identifyEmbed(embed);
+    if (!res) console.log(embed);
 
     const Identifier = Laifu.Identifier;
     if (Identifier.isInfoEmbed(embed)
