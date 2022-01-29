@@ -1,0 +1,7 @@
+src/
+temp*
+.env
+*.tgz
+.eslintrc.json
+tsconfig.json
+test/
