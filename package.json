@@ -8,6 +8,7 @@
     "lint": "eslint src/**",
     "lint:fix": "eslint src/** --fix",
     "test": "node -r dotenv/config test/test.js",
+    "prepack": "trash *.tgz",
     "build": "trash dist && tsc"
   },
   "repository": {
