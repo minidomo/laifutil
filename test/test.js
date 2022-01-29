@@ -4,7 +4,8 @@ const Discord = require('discord.js');
 const { Client, Intents } = Discord;
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
-const Laifu = require('../src');
+const Laifu = require('../dist');
+const embedSet = new Set();
 
 /**
  *
@@ -20,7 +21,7 @@ const identifyEmbed = embed => {
             if (res) arr.push(func.name);
         });
     console.log(`${arr}`);
-    return arr.length === 0;
+    return arr.length !== 0;
 };
 
 /**
@@ -57,12 +58,12 @@ const laifuFunction = message => {
     }
 
     if (Identifier.isWishlistEmbed(embed)) {
-        const obj = Laifu.EmbedParser.parseWishlistEmbed(embed);
-        obj.characters = obj.characters.map(c => {
-            c.name = Laifu.Util.cleanCharacterName(c.name);
-            return c;
-        });
-        console.log(obj);
+        // const obj = Laifu.EmbedParser.parseWishlistEmbed(embed);
+        // obj.characters = obj.characters.map(c => {
+        //     c.name = Laifu.Util.cleanCharacterName(c.name);
+        //     return c;
+        // });
+        // console.log(obj);
         // console.log(embed);
     }
 
@@ -76,14 +77,14 @@ client.once('ready', () => {
 client.on('messageCreate', async message => {
     if (!client.application?.owner) await client.application?.fetch();
 
-    Laifu.Util.hasLaifuEmbed(message, { loaded: false, duplicates: false })
+    Laifu.Util.hasLaifuEmbed(message, { loaded: false, duplicates: false, embedSet })
         .then(laifuFunction);
 });
 
 client.on('messageUpdate', async message => {
     if (!client.application?.owner) await client.application?.fetch();
 
-    Laifu.Util.hasLaifuEmbed(message, { delay: 1000, loaded: false, duplicates: false })
+    Laifu.Util.hasLaifuEmbed(message, { delay: 1000, loaded: false, duplicates: false, embedSet })
         .then(laifuFunction);
 });
 
