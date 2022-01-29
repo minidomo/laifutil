@@ -1,6 +1,6 @@
 {
   "name": "laifu-util",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,8 +14,8 @@
     "type": "git",
     "url": "git+https://github.com/minidomo/laifu-util.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "JB Ladera",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/minidomo/laifu-util/issues"
   },
