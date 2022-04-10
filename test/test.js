@@ -1,11 +1,13 @@
 'use strict';
 
 const Discord = require('discord.js');
-const { Client, Intents } = Discord;
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+const fs = require('fs');
+const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES] });
+
 
 const Laifu = require('../dist');
 const embedSet = new Set();
+const embeds = [];
 
 /**
  *
@@ -50,6 +52,8 @@ const laifuFunction = message => {
     const res = identifyEmbed(embed);
     if (!res) console.log(embed);
 
+    embeds.push(embed.toJSON());
+
     const Identifier = Laifu.Identifier;
     if (Identifier.isInfoEmbed(embed)
         || Identifier.isViewEmbed(embed)) {
@@ -79,6 +83,11 @@ client.on('messageCreate', async message => {
 
     Laifu.Util.hasLaifuEmbed(message, { loaded: false, duplicates: false, embedSet })
         .then(laifuFunction);
+
+    if (message.content.includes('save')) {
+        fs.writeFileSync('temp/embeds.json', JSON.stringify(embeds, null, 4), { encoding: 'utf-8' });
+        console.log('saved');
+    }
 });
 
 client.on('messageUpdate', async message => {
