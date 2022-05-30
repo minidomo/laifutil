@@ -6,8 +6,8 @@ export interface ListEmbedOptions {
 
 export class ListEmbed {
     name: string | null = null;
-    identifier: string | null = null;
     data: string[] | null = null;
+    identifier: string | null = null;
 
     constructor(data: ListEmbedOptions) {
         if (data.embed.title !== null) {
@@ -15,6 +15,7 @@ export class ListEmbed {
             this.name = titleParts[0];
             this.identifier = titleParts[1];
         }
+
         if (data.embed.description !== null) {
             this.data = data.embed.description.split(/\n+/);
         }

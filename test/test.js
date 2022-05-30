@@ -5,7 +5,7 @@ const fs = require('fs');
 const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES] });
 
 
-const Laifu = require('../dist');
+const Laifu = require('../dist/index');
 const embedSet = new Set();
 const embeds = [];
 
@@ -62,13 +62,13 @@ const laifuFunction = message => {
     }
 
     if (Identifier.isWishlistEmbed(embed)) {
-        // const obj = Laifu.EmbedParser.parseWishlistEmbed(embed);
+        const obj = Laifu.EmbedParser.parseWishlistEmbed(embed);
         // obj.characters = obj.characters.map(c => {
         //     c.name = Laifu.Util.cleanCharacterName(c.name);
         //     return c;
         // });
-        // console.log(obj);
-        // console.log(embed);
+        console.log(obj);
+        console.log(embed);
     }
 
     // console.log(embed);

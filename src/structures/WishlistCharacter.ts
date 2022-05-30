@@ -1,5 +1,7 @@
 import removeMd from 'remove-markdown';
 
+const dataRegex = /(\d+) \| (.+)・(\d+)/;
+
 interface WishlistCharacterOptions {
     text: string;
 }
@@ -10,7 +12,6 @@ export class WishlistCharacter {
     influence: number | null = null;
 
     constructor(data: WishlistCharacterOptions) {
-        const dataRegex = /(\d+) \| (.+)・(\d+)/;
         const dataRes = removeMd(data.text).match(dataRegex);
         if (dataRes) {
             this.gid = parseInt(dataRes[1]);

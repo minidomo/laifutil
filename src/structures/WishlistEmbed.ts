@@ -1,6 +1,7 @@
 import { ListEmbed, ListEmbedOptions } from './ListEmbed';
 import { WishlistCharacter } from './WishlistCharacter';
 
+const footerRegex = /Page (\d+)\/(\d+) • (\d+) Characters Wanted/;
 
 export class WishlistEmbed extends ListEmbed {
     username: string | null = null;
@@ -12,7 +13,6 @@ export class WishlistEmbed extends ListEmbed {
     constructor(data: ListEmbedOptions) {
         super(data);
 
-        const footerRegex = /Page (\d+)\/(\d+) • (\d+) Characters Wanted/;
         if (data.embed.footer) {
             const footerRes = data.embed.footer.text.match(footerRegex);
             if (footerRes) {
@@ -22,6 +22,9 @@ export class WishlistEmbed extends ListEmbed {
             }
         }
 
-        if (this.data) this.characters = this.data.map(text => new WishlistCharacter({ text }));
+        if (this.data) {
+            this.characters = this.data.map(text => new WishlistCharacter({ text }));
+            this.username = this.name;
+        }
     }
 }
