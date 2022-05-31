@@ -14,11 +14,11 @@ export class WishlistEmbed extends ListEmbed {
         super(data);
 
         if (data.embed.footer) {
-            const footerRes = data.embed.footer.text.match(footerRegex);
-            if (footerRes) {
-                this.currentPage = parseInt(footerRes[1]);
-                this.pages = parseInt(footerRes[2]);
-                this.charactersWanted = parseInt(footerRes[3]);
+            const footerParts = data.embed.footer.text.match(footerRegex);
+            if (footerParts) {
+                this.currentPage = parseInt(footerParts[1]);
+                this.pages = parseInt(footerParts[2]);
+                this.charactersWanted = parseInt(footerParts[3]);
             }
         }
 
