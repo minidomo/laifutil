@@ -73,6 +73,13 @@ const laifuFunction = message => {
         console.log(embed);
     }
 
+    if (Identifier.isBurnEmbed(embed)) {
+        const obj = Laifu.EmbedParser.parseBurnEmbed(embed);
+        console.log(obj);
+        console.log(embed);
+    }
+
+
     // console.log(embed);
 };
 

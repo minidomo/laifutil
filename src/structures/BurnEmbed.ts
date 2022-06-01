@@ -2,11 +2,19 @@ import type { MessageEmbed } from 'discord.js';
 import { findRarity, Rarity } from '../rarities';
 
 const titleRegex = /^#(\d) (.+)/;
-const footerRegex = /Uploaded by (.+)\nCredit: (.+)/;
-const generalInfoRegex = /\*\*UID:\*\* (\d+) \| \*\*GID:\*\* (\d+)/;
-const rarityRegex = /\| `([^`]+)`»`([☆★]+)`\nInfluence `#(\d+)`・\*\*(\d+)\*\*/;
+const footerRegex = /(\d+) \/ 15\nUploaded by (.+)\nCredit: (.+)/;
+const generalInfoRegex = new RegExp([
+    /\*\*UID:\*\* (\d+) \| \*\*GID:\*\* (\d+)\n/,
+    /\*\*Claimed By:\*\* (.+)\n/,
+    /\*\*Age:\*\* ([\d-]+) \| `(\d+)`/,
+].map(r => r.source).join(''));
+const rarityRegex = new RegExp([
+    /\| `(?:ɢʟɪᴛᴄʜᴇᴅ )?([^`]+)`»(?:`❦#(\d+)`»)?(?:`[𝐈𝐕]+`»)?`([☆★]+)`\n/,
+    /Influence `#(\d+)`・\*\*(\d+)\*\*/,
+].map(r => r.source).join(''));
+
 const mainSeriesRegex = /\*\*ENG:\*\* (.+)\n\*\*ALT:\*\* (.+)\n\*\*SID:\*\* (\d+) \| `(.+)`/;
-const accountRegex = /\*\*x(\d)\*\*\n.+\*\*x(\d+)\*\*/;
+const guideRegex = /(\d+)% of players/;
 
 function countStars(stars: string): number {
     const count = 0;
@@ -18,21 +26,34 @@ function countStars(stars: string): number {
     return count;
 }
 
-interface GachaCharacterEmbedOptions {
+function hasBadge(embed: MessageEmbed): boolean {
+    return embed.thumbnail !== null;
+}
+
+function isGlitched(embed: MessageEmbed): boolean {
+    return embed.fields[1].value.includes('ɢʟɪᴛᴄʜᴇᴅ');
+}
+
+interface BurnEmbedOptions {
     embed: MessageEmbed;
 }
 
-export class GachaCharacterEmbed {
+export class BurnEmbed {
     cardNumber: number | null = null;
     characterName: string | null = null;
 
     uid: number | null = null;
     gid: number | null = null;
+    claimedBy: string | null = null;
+    age: number | null = null;
+    dateClaimed: string | null = null;
 
     rarity: Rarity | null = null;
     stars: number | null = null;
     influenceRank: number | null = null;
     influence: number | null = null;
+    badgeId: number | null = null;
+    glitched = false;
 
     engSeries: string | null = null;
     altSeries: string | null = null;
@@ -43,11 +64,11 @@ export class GachaCharacterEmbed {
 
     imageUploader: string | null = null;
     imageCredit: string | null = null;
+    burnRewardCounter: number | null = null;
 
-    numStonesUsed: number | null = null;
-    balance: number | null = null;
+    burnPercentage: number | null = null;
 
-    constructor(data: GachaCharacterEmbedOptions) {
+    constructor(data: BurnEmbedOptions) {
         if (data.embed.title) {
             const titleParts = data.embed.title.match(titleRegex);
             if (titleParts) {
@@ -63,8 +84,9 @@ export class GachaCharacterEmbed {
         if (data.embed.footer) {
             const footerParts = data.embed.footer.text.match(footerRegex);
             if (footerParts) {
-                this.imageUploader = footerParts[1];
-                this.imageCredit = footerParts[2];
+                this.burnRewardCounter = parseInt(footerParts[1]);
+                this.imageUploader = footerParts[2];
+                this.imageCredit = footerParts[3];
             }
         }
 
@@ -75,14 +97,21 @@ export class GachaCharacterEmbed {
             if (generalInfoParts) {
                 this.uid = parseInt(generalInfoParts[1]);
                 this.gid = parseInt(generalInfoParts[2]);
+                this.claimedBy = generalInfoParts[3];
+                this.dateClaimed = generalInfoParts[4];
+                this.age = parseInt(generalInfoParts[5]);
             }
 
             const rarityParts = fields[1].value.match(rarityRegex);
             if (rarityParts) {
+                this.glitched = isGlitched(data.embed);
                 this.rarity = findRarity({ text: rarityParts[1] });
-                this.stars = countStars(rarityParts[2]);
-                this.influenceRank = parseInt(rarityParts[3]);
-                this.influence = parseInt(rarityParts[4]);
+                if (hasBadge(data.embed)) {
+                    this.badgeId = parseInt(rarityParts[2]);
+                }
+                this.stars = countStars(rarityParts[3]);
+                this.influenceRank = parseInt(rarityParts[4]);
+                this.influence = parseInt(rarityParts[5]);
             }
 
             const mainSeriesParts = fields[2].value.match(mainSeriesRegex);
@@ -93,10 +122,9 @@ export class GachaCharacterEmbed {
                 this.sequence = mainSeriesParts[4];
             }
 
-            const accountParts = fields[3].value.match(accountRegex);
-            if (accountParts) {
-                this.numStonesUsed = parseInt(accountParts[1]);
-                this.balance = parseInt(accountParts[2]);
+            const guideParts = fields[3].value.match(guideRegex);
+            if (guideParts) {
+                this.burnPercentage = parseInt(guideParts[1]);
             }
         }
     }
