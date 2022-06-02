@@ -131,6 +131,8 @@ describe('EmbedParser', function () {
             assert.strictEqual(parsedEmbed.imageUploader, 'LaifuBot †');
             assert.strictEqual(parsedEmbed.imageCredit, 'Official');
             assert.strictEqual(parsedEmbed.burnRewardCounter, 0);
+
+            assert.strictEqual(parsedEmbed.burnPercentage, 72);
         });
 
         it('should correctly parse a burn embed of a badged card', function () {
@@ -163,6 +165,8 @@ describe('EmbedParser', function () {
             assert.strictEqual(parsedEmbed.imageUploader, 'LaifuBot †');
             assert.strictEqual(parsedEmbed.imageCredit, 'Official Art');
             assert.strictEqual(parsedEmbed.burnRewardCounter, 0);
+
+            assert.strictEqual(parsedEmbed.burnPercentage, 4);
         });
 
         it('should correctly parse a burn embed of a badged, star enhanced card', function () {
@@ -195,6 +199,46 @@ describe('EmbedParser', function () {
             assert.strictEqual(parsedEmbed.imageUploader, 'chocobutternut');
             assert.strictEqual(parsedEmbed.imageCredit, 'Official Art');
             assert.strictEqual(parsedEmbed.burnRewardCounter, 0);
+
+            assert.strictEqual(parsedEmbed.burnPercentage, 4);
+        });
+    });
+
+    describe('#parseViewEmbed', function () {
+        const viewEmbedsArr = embeds.view;
+
+        it('should correctly parse a normal view embed', function () {
+            const embed = new MessageEmbed(viewEmbedsArr[0]);
+            const parsedEmbed = EmbedParser.parseViewEmbed(embed);
+
+            assert.strictEqual(parsedEmbed.cardNumber, 1);
+            assert.strictEqual(parsedEmbed.characterName, 'Nagi Kodachi (小太刀　凪)');
+
+            assert.strictEqual(parsedEmbed.uid, 8591);
+            assert.strictEqual(parsedEmbed.gid, 15013);
+            assert.strictEqual(parsedEmbed.claimedBy, 'JB')
+            assert.strictEqual(parsedEmbed.age, 166)
+            assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-18');
+
+            assert.strictEqual(parsedEmbed.rarity, Rarities.Zeta);
+            assert.strictEqual(parsedEmbed.stars, 0);
+            assert.strictEqual(parsedEmbed.influenceRank, 11709);
+            assert.strictEqual(parsedEmbed.influence, 40);
+            assert.isNull(parsedEmbed.badgeId);
+            assert.isFalse(parsedEmbed.glitched);
+
+            assert.strictEqual(parsedEmbed.engSeries, 'A Good Librarian Like a Good Shepherd');
+            assert.strictEqual(parsedEmbed.altSeries, 'Daitoshokan no Hitsujikai');
+            assert.strictEqual(parsedEmbed.sid, 1548);
+            assert.strictEqual(parsedEmbed.sequence, 'MAIN');
+
+            assert.strictEqual(parsedEmbed.owner, 'JB');
+
+            assert.strictEqual(parsedEmbed.imageUploader, 'LaifuBot †');
+            assert.strictEqual(parsedEmbed.imageCredit, 'Official');
+            assert.strictEqual(parsedEmbed.burnRewardCounter, 0);
+
+            assert.strictEqual(parsedEmbed.burnPercentage, 72);
         });
     });
 });
