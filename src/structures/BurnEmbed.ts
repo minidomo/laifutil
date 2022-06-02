@@ -17,11 +17,12 @@ const mainSeriesRegex = /\*\*ENG:\*\* (.+)\n\*\*ALT:\*\* (.+)\n\*\*SID:\*\* (\d+
 const guideRegex = /(\d+)% of players/;
 
 function countStars(stars: string): number {
-    const count = 0;
+    let count = 0;
     for (let i = 0; i < stars.length; i++) {
         if (stars[i] === '☆') {
             return count;
         }
+        count++;
     }
     return count;
 }
