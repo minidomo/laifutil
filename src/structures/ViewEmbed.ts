@@ -1,10 +1,10 @@
 import type { MessageEmbed } from 'discord.js';
 import { findRarity, Rarity } from '../rarities';
 
-const titleRegex = /^#(\d) (.+)/;
-const footerRegex = /(\d+).+\nUploaded by (.+)\nCredit: (.+)/;
+const titleRegex = /(?:([^\s]+) )?#(\d) (.+)/;
+const footerRegex = /([\d,]+).+\nUploaded by (.+)\nCredit: (.+)/;
 const generalInfoRegex = new RegExp([
-    /\*\*UID:\*\* (\d+) \| \*\*GID:\*\* (\d+)\n/,
+    /\*\*UID:\*\* (\d+) \| \*\*GID:\*\* (\d+) \n/,
     /\*\*Claimed By:\*\* (.+)\n/,
     /\*\*Age:\*\* ([\d-]+) \| `(\d+)`/,
 ].map(r => r.source).join(''));
@@ -15,6 +15,10 @@ const rarityRegex = new RegExp([
 
 const mainSeriesRegex = /\*\*ENG:\*\* (.+)\n\*\*ALT:\*\* (.+)\n\*\*SID:\*\* (\d+) \| `(.+)`/;
 const authorRegex = /(.+) is Viewing\.\.\./;
+
+function removeCommas(str: string) {
+    return str.replaceAll(',', '');
+}
 
 function countStars(stars: string): number {
     let count = 0;
@@ -40,6 +44,7 @@ interface ViewEmbedOptions {
 }
 
 export class ViewEmbed {
+    emoji: string | null = null;
     cardNumber: number | null = null;
     characterName: string | null = null;
 
@@ -71,8 +76,9 @@ export class ViewEmbed {
         if (data.embed.title) {
             const titleParts = data.embed.title.match(titleRegex);
             if (titleParts) {
-                this.cardNumber = parseInt(titleParts[1]);
-                this.characterName = titleParts[2];
+                this.emoji = titleParts[1] ?? null;
+                this.cardNumber = parseInt(titleParts[2]);
+                this.characterName = titleParts[3];
             }
         }
 
@@ -86,7 +92,7 @@ export class ViewEmbed {
         if (data.embed.footer) {
             const footerParts = data.embed.footer.text.match(footerRegex);
             if (footerParts) {
-                this.numExisting = parseInt(footerParts[1]);
+                this.numExisting = parseInt(removeCommas(footerParts[1]));
                 this.imageUploader = footerParts[2];
                 this.imageCredit = footerParts[3];
             }
