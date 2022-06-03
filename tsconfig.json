@@ -6,7 +6,7 @@
     // Type Checking
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    // if true: conflicts with discord-api-types
+    // if below is true: conflicts with discord-api-types
     "exactOptionalPropertyTypes": false,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
@@ -14,7 +14,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "strict": true,
-    "useUnknownInCatchVariables": true,
     // Modules
     "module": "CommonJS",
     "moduleResolution": "node",
@@ -33,12 +32,9 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     // Language and Environment
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "lib": [
       "ESNext"
     ],
-    "target": "ES2021",
-    "useDefineForClassFields": true
+    "target": "es2022"
   }
 }

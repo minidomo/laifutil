@@ -5,7 +5,7 @@ const fs = require('fs');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 
-const { Identifier, Character, Util } = require('../dist/index');
+const { Identifier, Character, Util, EmbedParser } = require('../dist/index');
 const embedSet = new Set();
 const embeds = [];
 

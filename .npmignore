@@ -1,8 +1,10 @@
 src/
+test/
+scripts/
 temp*
 .env
 *.tgz
-.eslintrc.json
 tsconfig.json
-test/
+.eslintignore
+.eslintrc.cjs
 laifu-util*
