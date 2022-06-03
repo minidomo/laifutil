@@ -1,25 +1,25 @@
 'use strict';
 
-const Discord = require('discord.js');
+const { Client, Intents, MessageEmbed } = require('discord.js');
 const fs = require('fs');
-const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES] });
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 
-const Laifu = require('../dist/index');
+const { Identifier, Character, Util } = require('../dist/index');
 const embedSet = new Set();
 const embeds = [];
 
 /**
  *
- * @param {Discord.MessageEmbed} embed
+ * @param {MessageEmbed} embed
  * @returns {boolean}
  */
 const identifyEmbed = embed => {
     const arr = [];
-    Object.values(Laifu.Identifier)
+    Object.values(Identifier)
         .filter(val => typeof val === 'function')
         .forEach(func => {
-            const res = func.call(Laifu.Identifier, embed);
+            const res = func.call(Identifier, embed);
             if (res) arr.push(func.name);
         });
     console.log(`${arr}`);
@@ -28,14 +28,14 @@ const identifyEmbed = embed => {
 
 /**
  * 
- * @param {Discord.MessageEmbed} embed 
+ * @param {MessageEmbed} embed 
  */
 const checkCharacterProperties = embed => {
     const arr = [];
-    Object.values(Laifu.Character)
+    Object.values(Character)
         .filter(val => typeof val === 'function')
         .forEach(func => {
-            const res = func.call(Laifu.Character, embed);
+            const res = func.call(Character, embed);
             arr.push(`${func.name}:${res}`);
         });
     console.log(`${arr}`);
@@ -43,7 +43,7 @@ const checkCharacterProperties = embed => {
 
 /**
  *
- * @param {Discord.Message} message
+ * @param {Message} message
  */
 const laifuFunction = message => {
     if (!message) return;
@@ -54,7 +54,6 @@ const laifuFunction = message => {
 
     embeds.push(embed.toJSON());
 
-    const Identifier = Laifu.Identifier;
     if (Identifier.isInfoEmbed(embed)
         || Identifier.isViewEmbed(embed)) {
         // console.log(embed.toJSON());
@@ -62,19 +61,19 @@ const laifuFunction = message => {
     }
 
     if (Identifier.isWishlistEmbed(embed)) {
-        const obj = Laifu.EmbedParser.parseWishlistEmbed(embed);
+        const obj = EmbedParser.parseWishlistEmbed(embed);
         console.log(obj);
         console.log(embed);
     }
 
     if (Identifier.isGachaCharacterEmbed(embed)) {
-        const obj = Laifu.EmbedParser.parseGachaCharacterEmbed(embed);
+        const obj = EmbedParser.parseGachaCharacterEmbed(embed);
         console.log(obj);
         console.log(embed);
     }
 
     if (Identifier.isBurnEmbed(embed)) {
-        const obj = Laifu.EmbedParser.parseBurnEmbed(embed);
+        const obj = EmbedParser.parseBurnEmbed(embed);
         console.log(obj);
         console.log(embed);
     }
@@ -90,7 +89,7 @@ client.once('ready', () => {
 client.on('messageCreate', async message => {
     if (!client.application?.owner) await client.application?.fetch();
 
-    Laifu.Util.hasLaifuEmbed(message, { loaded: false, duplicates: false, embedSet })
+    Util.hasLaifuEmbed(message, { loaded: false, duplicates: false, embedSet })
         .then(laifuFunction);
 
     if (message.content.includes('save')) {
@@ -102,7 +101,7 @@ client.on('messageCreate', async message => {
 client.on('messageUpdate', async message => {
     if (!client.application?.owner) await client.application?.fetch();
 
-    Laifu.Util.hasLaifuEmbed(message, { delay: 1000, loaded: false, duplicates: false, embedSet })
+    Util.hasLaifuEmbed(message, { delay: 1000, loaded: false, duplicates: false, embedSet })
         .then(laifuFunction);
 });
 

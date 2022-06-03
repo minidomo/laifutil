@@ -177,3 +177,13 @@ export function isLookUpErrorEmbed(embed: MessageEmbed) {
     const validField = field.value.includes('Lookup');
     return validField;
 }
+
+export function isMedalDropActiveEmbed(embed: MessageEmbed) {
+    const validTitle = embed.title?.includes('Medal Drop : Active!');
+    return validTitle === true;
+}
+
+export function isMedalDropClosedEmbed(embed: MessageEmbed) {
+    const validTitle = embed.title?.includes('Medal Drop : Closed!');
+    return validTitle === true;
+}
