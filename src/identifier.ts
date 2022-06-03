@@ -187,3 +187,8 @@ export function isMedalDropClosedEmbed(embed: MessageEmbed) {
     const validTitle = embed.title?.includes('Medal Drop : Closed!');
     return validTitle === true;
 }
+
+export function isBurnRewardEmbed(embed: MessageEmbed) {
+    const validTitle = embed.title?.includes('Burn: Rewards');
+    return validTitle === true;
+}
