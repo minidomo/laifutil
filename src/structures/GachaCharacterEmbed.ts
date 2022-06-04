@@ -1,5 +1,5 @@
 import type { MessageEmbed } from 'discord.js';
-import { findRarity, Rarity } from '../rarities';
+import { findRarity, Rarity } from '../rarity';
 
 const titleRegex = /^#(\d) (.+)/;
 const footerRegex = /Uploaded by (.+)\nCredit: (.+)/;
@@ -17,10 +17,6 @@ function countStars(stars: string): number {
         count++;
     }
     return count;
-}
-
-interface GachaCharacterEmbedOptions {
-    embed: MessageEmbed;
 }
 
 export class GachaCharacterEmbed {
@@ -48,29 +44,29 @@ export class GachaCharacterEmbed {
     numStonesUsed: number | null = null;
     balance: number | null = null;
 
-    constructor(data: GachaCharacterEmbedOptions) {
-        if (data.embed.title) {
-            const titleParts = data.embed.title.match(titleRegex);
+    constructor(embed: MessageEmbed) {
+        if (embed.title) {
+            const titleParts = embed.title.match(titleRegex);
             if (titleParts) {
                 this.cardNumber = parseInt(titleParts[1]);
                 this.characterName = titleParts[2];
             }
         }
 
-        if (data.embed.author) {
-            this.owner = data.embed.author.name;
+        if (embed.author) {
+            this.owner = embed.author.name;
         }
 
-        if (data.embed.footer) {
-            const footerParts = data.embed.footer.text.match(footerRegex);
+        if (embed.footer) {
+            const footerParts = embed.footer.text.match(footerRegex);
             if (footerParts) {
                 this.imageUploader = footerParts[1];
                 this.imageCredit = footerParts[2];
             }
         }
 
-        if (data.embed.fields.length > 0) {
-            const fields = data.embed.fields;
+        if (embed.fields.length > 0) {
+            const fields = embed.fields;
 
             const generalInfoParts = fields[0].value.match(generalInfoRegex);
             if (generalInfoParts) {

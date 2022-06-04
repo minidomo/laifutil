@@ -1,4 +1,5 @@
-import { ListEmbed, ListEmbedOptions } from './ListEmbed';
+import type { MessageEmbed } from 'discord.js';
+import { ListEmbed } from './ListEmbed';
 import { WishlistCharacter } from './WishlistCharacter';
 
 const footerRegex = /Page (\d+)\/(\d+) • (\d+) Characters Wanted/;
@@ -10,11 +11,11 @@ export class WishlistEmbed extends ListEmbed {
     charactersWanted: number | null = null;
     characters: WishlistCharacter[] | null = null;
 
-    constructor(data: ListEmbedOptions) {
-        super(data);
+    constructor(embed: MessageEmbed) {
+        super(embed);
 
-        if (data.embed.footer) {
-            const footerParts = data.embed.footer.text.match(footerRegex);
+        if (embed.footer) {
+            const footerParts = embed.footer.text.match(footerRegex);
             if (footerParts) {
                 this.currentPage = parseInt(footerParts[1]);
                 this.pages = parseInt(footerParts[2]);
@@ -23,7 +24,7 @@ export class WishlistEmbed extends ListEmbed {
         }
 
         if (this.data) {
-            this.characters = this.data.map(text => new WishlistCharacter({ text }));
+            this.characters = this.data.map(text => new WishlistCharacter(text));
             this.username = this.name;
         }
     }

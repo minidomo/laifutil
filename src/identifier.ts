@@ -160,15 +160,13 @@ export function isWishlistEmbed(embed: MessageEmbed) {
 export function isWishlistAddEmbed(embed: MessageEmbed) {
     const field = embed.fields.find(val => val.name === 'Success');
     if (!field) return false;
-    const validField = field.value.includes('wishlist') && field.value.includes('set');
-    return validField;
+    return field.value.includes('wishlist') && field.value.includes('set');
 }
 
 export function isWishlistRemoveEmbed(embed: MessageEmbed) {
     const field = embed.fields.find(val => val.name === 'Success');
     if (!field) return false;
-    const validField = field.value.includes('wishlist') && field.value.includes('removed');
-    return validField;
+    return field.value.includes('wishlist') && field.value.includes('removed');
 }
 
 export function isLookUpErrorEmbed(embed: MessageEmbed) {

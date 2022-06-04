@@ -1,5 +1,5 @@
 import type { MessageEmbed } from 'discord.js';
-import { findRarity, Rarity } from '../rarities';
+import { findRarity, Rarity } from '../rarity';
 
 const titleRegex = /(?:([^\s]+) )?#(\d) (.+)/;
 const footerRegex = /([\d,]+).+\nUploaded by (.+)\nCredit: (.+)/;
@@ -39,10 +39,6 @@ function isGlitched(embed: MessageEmbed): boolean {
     return embed.fields[1].value.includes('ɢʟɪᴛᴄʜᴇᴅ');
 }
 
-interface ViewEmbedOptions {
-    embed: MessageEmbed;
-}
-
 export class ViewEmbed {
     emoji: string | null = null;
     cardNumber: number | null = null;
@@ -72,9 +68,9 @@ export class ViewEmbed {
     imageCredit: string | null = null;
     numExisting: number | null = null;
 
-    constructor(data: ViewEmbedOptions) {
-        if (data.embed.title) {
-            const titleParts = data.embed.title.match(titleRegex);
+    constructor(embed: MessageEmbed) {
+        if (embed.title) {
+            const titleParts = embed.title.match(titleRegex);
             if (titleParts) {
                 this.emoji = titleParts[1] ?? null;
                 this.cardNumber = parseInt(titleParts[2]);
@@ -82,15 +78,15 @@ export class ViewEmbed {
             }
         }
 
-        if (data.embed.author) {
-            const ownerParts = data.embed.author.name.match(authorRegex);
+        if (embed.author) {
+            const ownerParts = embed.author.name.match(authorRegex);
             if (ownerParts) {
                 this.owner = ownerParts[1];
             }
         }
 
-        if (data.embed.footer) {
-            const footerParts = data.embed.footer.text.match(footerRegex);
+        if (embed.footer) {
+            const footerParts = embed.footer.text.match(footerRegex);
             if (footerParts) {
                 this.numExisting = parseInt(removeCommas(footerParts[1]));
                 this.imageUploader = footerParts[2];
@@ -98,8 +94,8 @@ export class ViewEmbed {
             }
         }
 
-        if (data.embed.fields.length > 0) {
-            const fields = data.embed.fields;
+        if (embed.fields.length > 0) {
+            const fields = embed.fields;
 
             const generalInfoParts = fields[0].value.match(generalInfoRegex);
             if (generalInfoParts) {
@@ -112,9 +108,9 @@ export class ViewEmbed {
 
             const rarityParts = fields[1].value.match(rarityRegex);
             if (rarityParts) {
-                this.glitched = isGlitched(data.embed);
+                this.glitched = isGlitched(embed);
                 this.rarity = findRarity({ text: rarityParts[1] });
-                if (hasBadge(data.embed)) {
+                if (hasBadge(embed)) {
                     this.badgeId = parseInt(rarityParts[2]);
                 }
                 this.stars = countStars(rarityParts[3]);
