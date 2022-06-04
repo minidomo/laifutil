@@ -190,3 +190,8 @@ export function isBurnRewardEmbed(embed: MessageEmbed) {
     const validTitle = embed.title?.includes('Burn: Rewards');
     return validTitle === true;
 }
+
+export function isProfileEmbed(embed: MessageEmbed) {
+    const validTitle = embed.title?.includes('Account Perks & Options');
+    return validTitle === true;
+}
