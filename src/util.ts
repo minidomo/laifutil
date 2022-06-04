@@ -35,7 +35,7 @@ export function cleanCharacterName(name: string) {
     return ret.trim();
 }
 
-interface LaifuEmbedOptions {
+export interface LaifuEmbedOptions {
     delay?: number;
     loaded?: boolean;
     duplicates?: boolean;

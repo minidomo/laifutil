@@ -7,11 +7,11 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "save-embeds": "node -r dotenv/config scripts/save-embeds.js",
+    "record-embeds": "ts-node -r dotenv/config scripts/record-embeds.ts",
     "test": "ts-mocha test/**/*.test.ts",
-    "prepack": "trash *.tgz && npm run build",
-    "prebuild": "trash dist",
-    "build": "tsc"
+    "prepack": "rimraf *.tgz && npm run build",
+    "build": "rimraf dist && tsc",
+    "build:docs": "rimraf docs && typedoc"
   },
   "repository": {
     "type": "git",
@@ -37,8 +37,10 @@
     "eslint": "^8.17.0",
     "eslint-plugin-import": "^2.26.0",
     "mocha": "^10.0.0",
-    "trash-cli": "^5.0.0",
+    "rimraf": "^3.0.2",
     "ts-mocha": "^10.0.0",
+    "ts-node": "^10.8.1",
+    "typedoc": "^0.22.17",
     "typescript": "^4.7.3"
   }
 }
