@@ -1,12 +1,12 @@
-import { assert } from "chai";
-import { MessageEmbed } from "discord.js";
+import { assert } from 'chai';
+import { MessageEmbed } from 'discord.js';
 import { BurnEmbed, Rarity } from '../../dist';
 import * as embeds from '../embeds.json';
 
-describe('BurnEmbed', function () {
+describe('BurnEmbed', () => {
     const burnEmbedsArr = embeds.burn;
 
-    it('should correctly parse a burn Discord embed of a normal card from LaifuBot', function () {
+    it('should correctly parse a burn Discord embed of a normal card from LaifuBot', () => {
         const embed = new MessageEmbed(burnEmbedsArr[0]);
         const parsedEmbed = new BurnEmbed(embed);
 
@@ -40,7 +40,7 @@ describe('BurnEmbed', function () {
         assert.strictEqual(parsedEmbed.burnPercentage, 72);
     });
 
-    it('should correctly parse a burn Discord embed of a badged card from LaifuBot', function () {
+    it('should correctly parse a burn Discord embed of a badged card from LaifuBot', () => {
         const embed = new MessageEmbed(burnEmbedsArr[1]);
         const parsedEmbed = new BurnEmbed(embed);
 
@@ -74,7 +74,7 @@ describe('BurnEmbed', function () {
         assert.strictEqual(parsedEmbed.burnPercentage, 4);
     });
 
-    it('should correctly parse a burn Discord embed of a badged, star enhanced card from LaifuBot', function () {
+    it('should correctly parse a burn Discord embed of a badged, star enhanced card from LaifuBot', () => {
         const embed = new MessageEmbed(burnEmbedsArr[2]);
         const parsedEmbed = new BurnEmbed(embed);
 

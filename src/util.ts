@@ -1,6 +1,6 @@
+import { setTimeout } from 'timers/promises';
 import type { Message, MessageEmbed } from 'discord.js';
 import { LaifuProperties } from '.';
-import { promisify } from 'util';
 
 export function isLoaded(embed: MessageEmbed) {
     if (!embed.image) return true;
@@ -48,10 +48,8 @@ function hashEmbed(id: string, embed: MessageEmbed, loaded: boolean) {
     return id + JSON.stringify(cleanEmbed, null, 0);
 }
 
-const wait = promisify(setTimeout);
-
 export async function hasLaifuEmbed(message: Message, options: LaifuEmbedOptions) {
-    if (typeof options.delay === 'number') await wait(options.delay);
+    if (typeof options.delay === 'number') await setTimeout(options.delay);
     if (!message) return null;
 
     const targetMessage = await message.channel.messages.fetch(message.id);

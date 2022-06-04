@@ -1,5 +1,5 @@
-import type { EmbedField } from "discord.js";
-import { BaseSimpleCharacter } from "./BaseSimpleCharacter";
+import type { EmbedField } from 'discord.js';
+import { BaseSimpleCharacter } from './BaseSimpleCharacter';
 
 const CLAIM_REGEX = /\*\*Claimed By:\*\* (.+)\n\*\*Age:\*\* ([\d-]+) \| `(\d+)`/;
 const BADGE_REGEX = /❦#(\d+)/;
@@ -12,10 +12,6 @@ export abstract class BaseFullCharacter extends BaseSimpleCharacter {
 
     badgeId: number | null = null;
     glitched = false;
-
-    constructor() {
-        super();
-    }
 
     protected override parseGeneralInfoField(field: EmbedField) {
         super.parseGeneralInfoField(field);

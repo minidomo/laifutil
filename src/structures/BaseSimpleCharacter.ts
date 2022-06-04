@@ -1,4 +1,4 @@
-import type { EmbedField, MessageEmbed } from "discord.js";
+import type { EmbedField, MessageEmbed } from 'discord.js';
 import { Rarity, REGEX, resolve } from '../rarity';
 
 const TITLE_REGEX = /#(\d) (.+)/;

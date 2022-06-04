@@ -1,12 +1,12 @@
-import { assert } from "chai";
-import { MessageEmbed } from "discord.js";
+import { assert } from 'chai';
+import { MessageEmbed } from 'discord.js';
 import { GachaCharacterEmbed, Rarity } from '../../dist';
 import * as embeds from '../embeds.json';
 
-describe('GachaCharacterEmbed', function () {
+describe('GachaCharacterEmbed', () => {
     const gachaCharacterEmbedsArr = embeds.gachaCharacter;
 
-    it('should correctly parse a gacha character Discord embed from LaifuBot', function () {
+    it('should correctly parse a gacha character Discord embed from LaifuBot', () => {
         const embed = new MessageEmbed(gachaCharacterEmbedsArr[0]);
         const parsedEmbed = new GachaCharacterEmbed(embed);
 

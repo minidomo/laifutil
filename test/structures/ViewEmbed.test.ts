@@ -1,12 +1,12 @@
-import { assert } from "chai";
-import { MessageEmbed } from "discord.js";
+import { assert } from 'chai';
+import { MessageEmbed } from 'discord.js';
 import { ViewEmbed, Rarity } from '../../dist';
 import * as embeds from '../embeds.json';
 
-describe('ViewEmbed', function () {
+describe('ViewEmbed', () => {
     const viewEmbedsArr = embeds.view;
 
-    it('should correctly parse a normal view Discord embed from LaifuBot', function () {
+    it('should correctly parse a normal view Discord embed from LaifuBot', () => {
         const embed = new MessageEmbed(viewEmbedsArr[0]);
         const parsedEmbed = new ViewEmbed(embed);
 
@@ -39,7 +39,7 @@ describe('ViewEmbed', function () {
         assert.strictEqual(parsedEmbed.numExisting, 7);
     });
 
-    it('should correctly parse a badged view Discord embed from LaifuBot', function () {
+    it('should correctly parse a badged view Discord embed from LaifuBot', () => {
         const embed = new MessageEmbed(viewEmbedsArr[1]);
         const parsedEmbed = new ViewEmbed(embed);
 
@@ -72,7 +72,7 @@ describe('ViewEmbed', function () {
         assert.strictEqual(parsedEmbed.numExisting, 1177);
     });
 
-    it('should correctly parse a badged, star enhanced view Discord embed from LaifuBot', function () {
+    it('should correctly parse a badged, star enhanced view Discord embed from LaifuBot', () => {
         const embed = new MessageEmbed(viewEmbedsArr[2]);
         const parsedEmbed = new ViewEmbed(embed);
 
@@ -105,7 +105,7 @@ describe('ViewEmbed', function () {
         assert.strictEqual(parsedEmbed.numExisting, 1187);
     });
 
-    it('should correctly parse a badged, star enhanced, glitched, favorited view Discord embed from LaifuBot', function () {
+    it('should correctly parse a badged, star enhanced, glitched, favorited view Discord embed from LaifuBot', () => {
         const embed = new MessageEmbed(viewEmbedsArr[3]);
         const parsedEmbed = new ViewEmbed(embed);
 

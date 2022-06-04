@@ -1,12 +1,12 @@
-import { assert } from "chai";
-import { MessageEmbed } from "Discord.js";
+import { MessageEmbed } from 'Discord.js';
+import { assert } from 'chai';
 import { WishlistEmbed } from '../../dist';
 import * as embeds from '../embeds.json';
 
-describe('WishlistEmbed', function () {
+describe('WishlistEmbed', () => {
     const wishlistEmbedsArr = embeds.wishlist;
 
-    it('should correctly parse a wishlist Discord embed from LaifuBot', function () {
+    it('should correctly parse a wishlist Discord embed from LaifuBot', () => {
         const embed = new MessageEmbed(wishlistEmbedsArr[0]);
         const parsedEmbed = new WishlistEmbed(embed);
 
