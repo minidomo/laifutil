@@ -3,102 +3,98 @@ export interface Rarity {
     symbol: string;
 }
 
-export const Alpha: Rarity = {
-    text: 'ᴀʟᴘʜᴀ',
-    symbol: 'α',
+export interface RarityConstants {
+    Alpha: Rarity;
+    Beta: Rarity;
+    Gamma: Rarity;
+    Delta: Rarity;
+    Epsilon: Rarity;
+    Zeta: Rarity;
+    Ultra: Rarity;
+    Scarlet: Rarity;
+    Event: Rarity;
+    Special: Rarity;
+}
+
+export const Constants: RarityConstants = {
+    Alpha: {
+        text: 'ᴀʟᴘʜᴀ',
+        symbol: 'α',
+    },
+    Beta: {
+        text: 'ʙᴇᴛᴀ',
+        symbol: 'β',
+    },
+    Gamma: {
+        text: 'ɢᴀᴍᴍᴀ',
+        symbol: 'γ',
+    },
+    Delta: {
+        text: 'ᴅᴇʟᴛᴀ',
+        symbol: 'δ',
+    },
+    Epsilon: {
+        text: 'ᴇᴘsɪʟᴏɴ',
+        symbol: 'ε',
+    },
+    Zeta: {
+        text: 'ᴢᴇᴛᴀ',
+        symbol: 'ζ',
+    },
+    Ultra: {
+        text: 'ᴜʟᴛʀᴀ',
+        symbol: 'ζ𝓡',
+    },
+    Scarlet: {
+        text: 'sᴄᴀʀʟᴇᴛ',
+        symbol: '†',
+    },
+    Event: {
+        text: 'ᴇᴠᴇɴᴛ',
+        symbol: 'ξν',
+    },
+    Special: {
+        text: 'sᴘᴇᴄɪᴀʟ',
+        symbol: 'Λ',
+    },
 };
 
-export const Beta: Rarity = {
-    text: 'ʙᴇᴛᴀ',
-    symbol: 'β',
-};
+function createRegex(): RegExp {
+    const baseExp = Object.values(Constants)
+        .map((rarity: Rarity) => `${rarity.text}|${rarity.symbol}`)
+        .join('|');
+    return new RegExp(`(${baseExp})`);
+}
 
-export const Gamma: Rarity = {
-    text: 'ɢᴀᴍᴍᴀ',
-    symbol: 'γ',
-};
-
-export const Delta: Rarity = {
-    text: 'ᴅᴇʟᴛᴀ',
-    symbol: 'δ',
-};
-
-export const Epsilon: Rarity = {
-    text: 'ᴇᴘsɪʟᴏɴ',
-    symbol: 'ε',
-};
-
-export const Zeta: Rarity = {
-    text: 'ᴢᴇᴛᴀ',
-    symbol: 'ζ',
-};
-
-export const Ultra: Rarity = {
-    text: 'ᴜʟᴛʀᴀ',
-    symbol: 'ζ𝓡',
-};
-
-export const Scarlet: Rarity = {
-    text: 'sᴄᴀʀʟᴇᴛ',
-    symbol: '†',
-};
-
-export const Event: Rarity = {
-    text: 'ᴇᴠᴇɴᴛ',
-    symbol: 'ξν',
-};
-
-export const Special: Rarity = {
-    text: 'sᴘᴇᴄɪᴀʟ',
-    symbol: 'Λ',
-};
-
+export const REGEX = createRegex();
 
 const textMap: Map<string, Rarity> = new Map();
 textMap
-    .set('ᴀʟᴘʜᴀ', Alpha)
-    .set('ʙᴇᴛᴀ', Beta)
-    .set('ɢᴀᴍᴍᴀ', Gamma)
-    .set('ᴅᴇʟᴛᴀ', Delta)
-    .set('ᴇᴘsɪʟᴏɴ', Epsilon)
-    .set('ᴢᴇᴛᴀ', Zeta)
-    .set('ᴜʟᴛʀᴀ', Ultra)
-    .set('sᴄᴀʀʟᴇᴛ', Scarlet)
-    .set('ᴇᴠᴇɴᴛ', Event)
-    .set('sᴘᴇᴄɪᴀʟ', Special);
+    .set('ᴀʟᴘʜᴀ', Constants.Alpha)
+    .set('ʙᴇᴛᴀ', Constants.Beta)
+    .set('ɢᴀᴍᴍᴀ', Constants.Gamma)
+    .set('ᴅᴇʟᴛᴀ', Constants.Delta)
+    .set('ᴇᴘsɪʟᴏɴ', Constants.Epsilon)
+    .set('ᴢᴇᴛᴀ', Constants.Zeta)
+    .set('ᴜʟᴛʀᴀ', Constants.Ultra)
+    .set('sᴄᴀʀʟᴇᴛ', Constants.Scarlet)
+    .set('ᴇᴠᴇɴᴛ', Constants.Event)
+    .set('sᴘᴇᴄɪᴀʟ', Constants.Special);
 
 const symbolMap: Map<string, Rarity> = new Map();
 symbolMap
-    .set('α', Alpha)
-    .set('β', Beta)
-    .set('γ', Gamma)
-    .set('δ', Delta)
-    .set('ε', Epsilon)
-    .set('ζ', Zeta)
-    .set('ζ𝓡', Ultra)
-    .set('†', Scarlet)
-    .set('ξν', Event)
-    .set('Λ', Special);
+    .set('α', Constants.Alpha)
+    .set('β', Constants.Beta)
+    .set('γ', Constants.Gamma)
+    .set('δ', Constants.Delta)
+    .set('ε', Constants.Epsilon)
+    .set('ζ', Constants.Zeta)
+    .set('ζ𝓡', Constants.Ultra)
+    .set('†', Constants.Scarlet)
+    .set('ξν', Constants.Event)
+    .set('Λ', Constants.Special);
 
-interface RarityQuery {
-    text?: string;
-    symbol?: string;
-}
-
-export function findRarity(query: RarityQuery): Rarity | null {
-    if (query.text) {
-        const rarity = textMap.get(query.text);
-        if (rarity) {
-            return rarity;
-        }
-    }
-
-    if (query.symbol) {
-        const rarity = textMap.get(query.symbol);
-        if (rarity) {
-            return rarity;
-        }
-    }
-
-    return null;
+export function resolve(query: string): Rarity | null {
+    const rarity = textMap.get(query) || symbolMap.get(query);
+    return rarity ?? null;
 }

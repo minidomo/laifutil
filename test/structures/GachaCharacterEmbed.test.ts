@@ -16,7 +16,7 @@ describe('GachaCharacterEmbed', function () {
         assert.strictEqual(parsedEmbed.uid, 5070);
         assert.strictEqual(parsedEmbed.gid, 11169);
 
-        assert.strictEqual(parsedEmbed.rarity, Rarity.Gamma);
+        assert.strictEqual(parsedEmbed.rarity, Rarity.Constants.Gamma);
         assert.strictEqual(parsedEmbed.stars, 0);
         assert.strictEqual(parsedEmbed.influenceRank, 14558);
         assert.strictEqual(parsedEmbed.influence, 15);

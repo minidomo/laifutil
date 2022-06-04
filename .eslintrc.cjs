@@ -14,5 +14,6 @@ module.exports = {
     },
     rules: {
         'no-misleading-character-class': 'off',
+        'semi': 'error',
     },
 };

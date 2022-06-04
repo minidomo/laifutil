@@ -6,13 +6,13 @@ export class ListEmbed {
     identifier: string | null = null;
 
     constructor(embed: MessageEmbed) {
-        if (embed.title !== null) {
+        if (embed.title) {
             const titleParts = embed.title.split(' - ');
             this.name = titleParts[0];
             this.identifier = titleParts[1];
         }
 
-        if (embed.description !== null) {
+        if (embed.description) {
             this.data = embed.description.split(/\n+/);
         }
     }

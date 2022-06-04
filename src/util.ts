@@ -55,7 +55,7 @@ export async function hasLaifuEmbed(message: Message, options: LaifuEmbedOptions
     if (!message) return null;
 
     const targetMessage = await message.channel.messages.fetch(message.id);
-    if (targetMessage.author.id !== LaifuProperties.userID) return null;
+    if (targetMessage.author.id !== LaifuProperties.userId) return null;
     if (targetMessage.embeds && targetMessage.embeds.length) {
         const embed = targetMessage.embeds[0];
         if (options.loaded === true && !isLoaded(embed)) return null;

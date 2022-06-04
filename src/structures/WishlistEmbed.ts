@@ -2,7 +2,7 @@ import type { MessageEmbed } from 'discord.js';
 import { ListEmbed } from './ListEmbed';
 import { WishlistCharacter } from './WishlistCharacter';
 
-const footerRegex = /Page (\d+)\/(\d+) • (\d+) Characters Wanted/;
+const FOOTER_REGEX = /Page (\d+)\/(\d+) • (\d+) Characters Wanted/;
 
 export class WishlistEmbed extends ListEmbed {
     username: string | null = null;
@@ -15,11 +15,11 @@ export class WishlistEmbed extends ListEmbed {
         super(embed);
 
         if (embed.footer) {
-            const footerParts = embed.footer.text.match(footerRegex);
-            if (footerParts) {
-                this.currentPage = parseInt(footerParts[1]);
-                this.pages = parseInt(footerParts[2]);
-                this.charactersWanted = parseInt(footerParts[3]);
+            const footerMatch = embed.footer.text.match(FOOTER_REGEX);
+            if (footerMatch) {
+                this.currentPage = parseInt(footerMatch[1]);
+                this.pages = parseInt(footerMatch[2]);
+                this.charactersWanted = parseInt(footerMatch[3]);
             }
         }
 

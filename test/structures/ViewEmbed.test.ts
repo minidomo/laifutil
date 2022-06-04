@@ -16,11 +16,11 @@ describe('ViewEmbed', function () {
 
         assert.strictEqual(parsedEmbed.uid, 8591);
         assert.strictEqual(parsedEmbed.gid, 15013);
-        assert.strictEqual(parsedEmbed.claimedBy, 'JB')
-        assert.strictEqual(parsedEmbed.age, 166)
+        assert.strictEqual(parsedEmbed.claimedBy, 'JB');
+        assert.strictEqual(parsedEmbed.age, 166);
         assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-18');
 
-        assert.strictEqual(parsedEmbed.rarity, Rarity.Zeta);
+        assert.strictEqual(parsedEmbed.rarity, Rarity.Constants.Zeta);
         assert.strictEqual(parsedEmbed.stars, 0);
         assert.strictEqual(parsedEmbed.influenceRank, 11709);
         assert.strictEqual(parsedEmbed.influence, 40);
@@ -47,13 +47,13 @@ describe('ViewEmbed', function () {
         assert.strictEqual(parsedEmbed.cardNumber, 1);
         assert.strictEqual(parsedEmbed.characterName, 'Ririka Momobami (桃喰 リリカ)');
 
-        assert.strictEqual(parsedEmbed.uid, 8364)
-        assert.strictEqual(parsedEmbed.gid, 1996)
-        assert.strictEqual(parsedEmbed.claimedBy, 'JB')
-        assert.strictEqual(parsedEmbed.age, 177)
+        assert.strictEqual(parsedEmbed.uid, 8364);
+        assert.strictEqual(parsedEmbed.gid, 1996);
+        assert.strictEqual(parsedEmbed.claimedBy, 'JB');
+        assert.strictEqual(parsedEmbed.age, 177);
         assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-07');
 
-        assert.strictEqual(parsedEmbed.rarity, Rarity.Alpha);
+        assert.strictEqual(parsedEmbed.rarity, Rarity.Constants.Alpha);
         assert.strictEqual(parsedEmbed.stars, 0);
         assert.strictEqual(parsedEmbed.influenceRank, 210);
         assert.strictEqual(parsedEmbed.influence, 928);
@@ -80,13 +80,13 @@ describe('ViewEmbed', function () {
         assert.strictEqual(parsedEmbed.cardNumber, 2);
         assert.strictEqual(parsedEmbed.characterName, 'Alice Zuberg (アリス・ツーベルク)');
 
-        assert.strictEqual(parsedEmbed.uid, 298)
-        assert.strictEqual(parsedEmbed.gid, 2230)
-        assert.strictEqual(parsedEmbed.claimedBy, 'O2Linn')
-        assert.strictEqual(parsedEmbed.age, 323)
+        assert.strictEqual(parsedEmbed.uid, 298);
+        assert.strictEqual(parsedEmbed.gid, 2230);
+        assert.strictEqual(parsedEmbed.claimedBy, 'O2Linn');
+        assert.strictEqual(parsedEmbed.age, 323);
         assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-14');
 
-        assert.strictEqual(parsedEmbed.rarity, Rarity.Alpha);
+        assert.strictEqual(parsedEmbed.rarity, Rarity.Constants.Alpha);
         assert.strictEqual(parsedEmbed.stars, 1);
         assert.strictEqual(parsedEmbed.influenceRank, 143);
         assert.strictEqual(parsedEmbed.influence, 1044);
@@ -113,13 +113,13 @@ describe('ViewEmbed', function () {
         assert.strictEqual(parsedEmbed.cardNumber, 4);
         assert.strictEqual(parsedEmbed.characterName, 'Satoru Gojou (五条 悟)');
 
-        assert.strictEqual(parsedEmbed.uid, 264)
-        assert.strictEqual(parsedEmbed.gid, 4652)
-        assert.strictEqual(parsedEmbed.claimedBy, 'JB')
-        assert.strictEqual(parsedEmbed.age, 321)
+        assert.strictEqual(parsedEmbed.uid, 264);
+        assert.strictEqual(parsedEmbed.gid, 4652);
+        assert.strictEqual(parsedEmbed.claimedBy, 'JB');
+        assert.strictEqual(parsedEmbed.age, 321);
         assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-16');
 
-        assert.strictEqual(parsedEmbed.rarity, Rarity.Ultra);
+        assert.strictEqual(parsedEmbed.rarity, Rarity.Constants.Ultra);
         assert.strictEqual(parsedEmbed.stars, 4);
         assert.strictEqual(parsedEmbed.influenceRank, 4);
         assert.strictEqual(parsedEmbed.influence, 1897);
