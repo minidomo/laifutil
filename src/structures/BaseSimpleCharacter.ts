@@ -19,7 +19,7 @@ starCount
 export abstract class BaseSimpleCharacter {
     protected abstract OWNER_REGEX: RegExp;
 
-    cardNumber: number | null = null;
+    imageNumber: number | null = null;
     characterName: string | null = null;
 
     uid: number | null = null;
@@ -69,7 +69,7 @@ export abstract class BaseSimpleCharacter {
     protected parseTitle(title: string) {
         const titleMatch = title.match(TITLE_REGEX);
         if (titleMatch) {
-            this.cardNumber = parseInt(titleMatch[1]);
+            this.imageNumber = parseInt(titleMatch[1]);
             this.characterName = titleMatch[2];
         }
     }

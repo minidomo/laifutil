@@ -10,7 +10,7 @@ describe('GachaCharacterEmbed', () => {
         const embed = new MessageEmbed(gachaCharacterEmbedsArr[0]);
         const parsedEmbed = new GachaCharacterEmbed(embed);
 
-        assert.strictEqual(parsedEmbed.cardNumber, 1);
+        assert.strictEqual(parsedEmbed.imageNumber, 1);
         assert.strictEqual(parsedEmbed.characterName, 'Karen Onodera (小野寺樺恋)');
 
         assert.strictEqual(parsedEmbed.uid, 5070);

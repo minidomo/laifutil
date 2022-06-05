@@ -10,7 +10,7 @@ describe('BurnEmbed', () => {
         const embed = new MessageEmbed(burnEmbedsArr[0]);
         const parsedEmbed = new BurnEmbed(embed);
 
-        assert.strictEqual(parsedEmbed.cardNumber, 1);
+        assert.strictEqual(parsedEmbed.imageNumber, 1);
         assert.strictEqual(parsedEmbed.characterName, 'Nagi Kodachi (小太刀　凪)');
 
         assert.strictEqual(parsedEmbed.uid, 8591);
@@ -44,7 +44,7 @@ describe('BurnEmbed', () => {
         const embed = new MessageEmbed(burnEmbedsArr[1]);
         const parsedEmbed = new BurnEmbed(embed);
 
-        assert.strictEqual(parsedEmbed.cardNumber, 1);
+        assert.strictEqual(parsedEmbed.imageNumber, 1);
         assert.strictEqual(parsedEmbed.characterName, 'Ririka Momobami (桃喰 リリカ)');
 
         assert.strictEqual(parsedEmbed.uid, 8364);
@@ -78,7 +78,7 @@ describe('BurnEmbed', () => {
         const embed = new MessageEmbed(burnEmbedsArr[2]);
         const parsedEmbed = new BurnEmbed(embed);
 
-        assert.strictEqual(parsedEmbed.cardNumber, 2);
+        assert.strictEqual(parsedEmbed.imageNumber, 2);
         assert.strictEqual(parsedEmbed.characterName, 'Alice Zuberg (アリス・ツーベルク)');
 
         assert.strictEqual(parsedEmbed.uid, 298);

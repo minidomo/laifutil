@@ -11,7 +11,7 @@ describe('ViewEmbed', () => {
         const parsedEmbed = new ViewEmbed(embed);
 
         assert.isNull(parsedEmbed.emoji);
-        assert.strictEqual(parsedEmbed.cardNumber, 1);
+        assert.strictEqual(parsedEmbed.imageNumber, 1);
         assert.strictEqual(parsedEmbed.characterName, 'Nagi Kodachi (小太刀　凪)');
 
         assert.strictEqual(parsedEmbed.uid, 8591);
@@ -44,7 +44,7 @@ describe('ViewEmbed', () => {
         const parsedEmbed = new ViewEmbed(embed);
 
         assert.isNull(parsedEmbed.emoji);
-        assert.strictEqual(parsedEmbed.cardNumber, 1);
+        assert.strictEqual(parsedEmbed.imageNumber, 1);
         assert.strictEqual(parsedEmbed.characterName, 'Ririka Momobami (桃喰 リリカ)');
 
         assert.strictEqual(parsedEmbed.uid, 8364);
@@ -77,7 +77,7 @@ describe('ViewEmbed', () => {
         const parsedEmbed = new ViewEmbed(embed);
 
         assert.isNull(parsedEmbed.emoji);
-        assert.strictEqual(parsedEmbed.cardNumber, 2);
+        assert.strictEqual(parsedEmbed.imageNumber, 2);
         assert.strictEqual(parsedEmbed.characterName, 'Alice Zuberg (アリス・ツーベルク)');
 
         assert.strictEqual(parsedEmbed.uid, 298);
@@ -110,7 +110,7 @@ describe('ViewEmbed', () => {
         const parsedEmbed = new ViewEmbed(embed);
 
         assert.strictEqual(parsedEmbed.emoji, '🏮');
-        assert.strictEqual(parsedEmbed.cardNumber, 4);
+        assert.strictEqual(parsedEmbed.imageNumber, 4);
         assert.strictEqual(parsedEmbed.characterName, 'Satoru Gojou (五条 悟)');
 
         assert.strictEqual(parsedEmbed.uid, 264);

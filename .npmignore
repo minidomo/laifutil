@@ -2,6 +2,7 @@ src/
 test/
 scripts/
 .scannerwork/
+docs/
 temp*
 .env
 *.tgz
@@ -9,3 +10,4 @@ tsconfig.json
 .eslintignore
 .eslintrc.cjs
 laifu-util*
+typedoc.json

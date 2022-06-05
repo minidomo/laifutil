@@ -68,8 +68,8 @@ function createRegex(): RegExp {
 
 export const REGEX = createRegex();
 
-const textMap: Map<string, Rarity> = new Map();
-textMap
+const mappings: Map<string, Rarity> = new Map();
+mappings
     .set('ᴀʟᴘʜᴀ', Constants.Alpha)
     .set('ʙᴇᴛᴀ', Constants.Beta)
     .set('ɢᴀᴍᴍᴀ', Constants.Gamma)
@@ -79,10 +79,7 @@ textMap
     .set('ᴜʟᴛʀᴀ', Constants.Ultra)
     .set('sᴄᴀʀʟᴇᴛ', Constants.Scarlet)
     .set('ᴇᴠᴇɴᴛ', Constants.Event)
-    .set('sᴘᴇᴄɪᴀʟ', Constants.Special);
-
-const symbolMap: Map<string, Rarity> = new Map();
-symbolMap
+    .set('sᴘᴇᴄɪᴀʟ', Constants.Special)
     .set('α', Constants.Alpha)
     .set('β', Constants.Beta)
     .set('γ', Constants.Gamma)
@@ -95,6 +92,5 @@ symbolMap
     .set('Λ', Constants.Special);
 
 export function resolve(query: string): Rarity | null {
-    const rarity = textMap.get(query) || symbolMap.get(query);
-    return rarity ?? null;
+    return mappings.get(query) ?? null;
 }

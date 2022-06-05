@@ -6,3 +6,4 @@ export * from './BurnEmbed';
 export * from './ViewEmbed';
 export * from './BaseFullCharacter';
 export * from './BaseSimpleCharacter';
+export * from './InfoEmbed';

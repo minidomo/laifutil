@@ -378,5 +378,168 @@
                 "text": "★ Avoid Bans | Don't Alt.\nUploaded by LaifuBot †\nCredit: MyAnimeList"
             }
         }
+    ],
+    "gachaLoad": [
+        {
+            "title": "Feeling Lucky?",
+            "type": "rich",
+            "description": null,
+            "url": null,
+            "timestamp": null,
+            "color": 13227220,
+            "fields": [],
+            "thumbnail": null,
+            "image": {
+                "url": "https://cdn.discordapp.com/attachments/722702340620288042/790324959893389332/oie_PzVfAPDbDMTS.gif",
+                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/790324959893389332/oie_PzVfAPDbDMTS.gif",
+                "height": 0,
+                "width": 0
+            },
+            "author": null,
+            "footer": null
+        }
+    ],
+    "drop": [
+        {
+            "title": null,
+            "type": "rich",
+            "description": "**JB** Dropped a Case File. `RESPOND WITH ITS CODE` to receive its contents.\nYou have `14` seconds.",
+            "url": null,
+            "timestamp": null,
+            "color": 2832008,
+            "fields": [],
+            "thumbnail": null,
+            "image": {
+                "url": "https://cdn.discordapp.com/attachments/867937589716471858/982751584855421000/image.png",
+                "proxyURL": "https://media.discordapp.net/attachments/867937589716471858/982751584855421000/image.png",
+                "height": 0,
+                "width": 0
+            },
+            "author": null,
+            "footer": {
+                "text": "Credit: Official Anime / Artwork\n★ Case Files can be dropped every 15 seconds.\n★ Case Files can be claimed every 6 minutes."
+            }
+        }
+    ],
+    "dropComplete": [
+        {
+            "title": "Case File Opened",
+            "type": "rich",
+            "description": null,
+            "url": null,
+            "timestamp": null,
+            "color": 2832008,
+            "fields": [
+                {
+                    "value": "<:lawstone:725508010893508658>x**1** / **5** *(457)*",
+                    "name": "Stones",
+                    "inline": false
+                }
+            ],
+            "thumbnail": {
+                "url": "https://cdn.discordapp.com/attachments/722702340620288042/810749727616139264/tenor.gif",
+                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/810749727616139264/tenor.gif",
+                "height": 140,
+                "width": 336
+            },
+            "image": null,
+            "author": {
+                "name": "JB",
+                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+            },
+            "footer": null
+        }
+    ],
+    "info": [
+        {
+            "title": "Megumin (めぐみん)",
+            "type": "rich",
+            "description": null,
+            "url": null,
+            "timestamp": null,
+            "color": null,
+            "fields": [
+                {
+                    "value": "*Crazy Crimson Demon Girl*\n**Global ID:** 1\n**Total Images:** 9",
+                    "name": "General Info",
+                    "inline": false
+                },
+                {
+                    "value": "**ENG:** KonoSuba: Gods Blessing on This Wonderful World!\n**ALT:** Kono Subarashii Sekai ni Shukufuku wo!\n**SID:** 47 | `MAIN`\n <a:11:844166305090633730> <a:15:844165571762585620> <a:217:914994793422131301>",
+                    "name": "Main Series",
+                    "inline": false
+                },
+                {
+                    "value": "・**1981**<:inf:755213119055200336> \nRanked: `#3`・`#3`",
+                    "name": "Influence",
+                    "inline": false
+                },
+                {
+                    "value": "<a:r1:837480734050222100> 1132・1188\n<a:r2:837480734452088882> 130・136\n<a:r3:837480734074994749> 101・107\n<a:r4:837480733668278273> 107・110\n<a:r5:837480734985289749> 13・14\n<a:r6:837480733760815124> 8・8\n<a:r7:837487911075053598> 2・2",
+                    "name": "Collections",
+                    "inline": false
+                }
+            ],
+            "thumbnail": null,
+            "image": {
+                "url": "https://cdn.discordapp.com/attachments/722702340620288042/873482227307122698/image.png",
+                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/873482227307122698/image.png",
+                "height": 0,
+                "width": 0
+            },
+            "author": {
+                "name": "Information Card",
+                "icon_url": "https://cdn.discordapp.com/attachments/793598007433232434/898382474999128104/saya6extended-15final_cropped.png"
+            },
+            "footer": {
+                "text": "Have a better Image? Request a Change!\nImage #1 - Uploaded by 9𝔱𝔥Law †\nCredit: KonoSuba: Fantastic Days! / Game"
+            }
+        }
+    ],
+    "auction": [
+        {
+            "title": "Auction Card",
+            "type": "rich",
+            "description": "**Name:** Jill (ジル)\n**Global ID:** 5207\n**Image:** #1",
+            "url": null,
+            "timestamp": null,
+            "color": 16097535,
+            "fields": [
+                {
+                    "value": "**ENG:** Deca-Dence\n**ALT:** Deca-Dence\n**SID:** 408 | `MAIN`",
+                    "name": "Main Series",
+                    "inline": false
+                },
+                {
+                    "value": "<a:r6:837480733760815124> | `ᴢᴇᴛᴀ`»`☆☆☆☆`\nInfluence `#10890`・**58**<:inf:755213119055200336>",
+                    "name": "Rarity",
+                    "inline": false
+                },
+                {
+                    "value": "**Current Bid:** Preguntín\n**Price:** :dollar: $2,855,000 \n**Ends In:** 15 Hours",
+                    "name": "Highest Bid",
+                    "inline": false
+                },
+                {
+                    "value": "Preguntín bid :dollar: **$**2,855,000\n✰898รoรⱥᴍⱥfiⱥ✰ bid :dollar: **$-**2,854,000\nPreguntín bid :dollar: **$**2,853,000\ngastom ♡ bid :dollar: **$**2,852,000\nPreguntín bid :dollar: **$**2,851,000",
+                    "name": "Auction Feed",
+                    "inline": false
+                }
+            ],
+            "thumbnail": null,
+            "image": {
+                "url": "https://cdn.discordapp.com/attachments/766880877099352085/787474936151277619/image.png",
+                "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/787474936151277619/image.png",
+                "height": 0,
+                "width": 0
+            },
+            "author": {
+                "name": "LaifuBot †",
+                "icon_url": "https://cdn.discordapp.com/attachments/722702340620288042/722702409171992576/TnjM57u.png"
+            },
+            "footer": {
+                "text": "Want this character? Bid now using l.bid"
+            }
+        }
     ]
 }
