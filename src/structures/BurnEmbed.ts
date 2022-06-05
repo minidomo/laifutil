@@ -29,7 +29,7 @@ export class BurnEmbed extends BaseFullCharacter {
         }
     }
 
-    private parseGuideField(field: EmbedField) {
+    protected parseGuideField(field: EmbedField) {
         const guideMatch = field.value.match(GUIDE_REGEX);
         if (guideMatch) {
             this.burnPercentage = parseInt(guideMatch[1]);

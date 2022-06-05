@@ -11,7 +11,7 @@
     "test": "ts-mocha test/**/*.test.ts",
     "prepack": "rimraf *.tgz && npm run build",
     "build": "rimraf dist && tsc",
-    "build:docs": "rimraf docs && typedoc",
+    "build:docs": "typedoc",
     "open:docs": ".\\docs\\index.html"
   },
   "repository": {

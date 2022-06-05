@@ -19,7 +19,7 @@ export class GachaCharacterEmbed extends BaseSimpleCharacter {
         this.init(embed);
     }
 
-    private parseAccountField(field: EmbedField) {
+    protected parseAccountField(field: EmbedField) {
         const accountMatch = field.value.match(ACCOUNT_REGEX);
         if (accountMatch) {
             this.numStonesUsed = parseInt(accountMatch[1]);

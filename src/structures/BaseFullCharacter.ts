@@ -6,7 +6,7 @@ const BADGE_REGEX = /❦#(\d+)/;
 const GLITCH_REGEX = /ɢʟɪᴛᴄʜᴇᴅ/;
 
 export abstract class BaseFullCharacter extends BaseSimpleCharacter {
-    claimedBy?: string;
+    claimedBy: string | null = null;
     dateClaimed: string | null = null;
     age: number | null = null;
 

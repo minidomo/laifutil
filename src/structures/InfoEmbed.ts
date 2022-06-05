@@ -66,7 +66,7 @@ export class InfoEmbed {
         }
     }
 
-    private parseGeneralInfoField(field: EmbedField) {
+    protected parseGeneralInfoField(field: EmbedField) {
         const generalInfoMatch = field.value.match(GENERAL_INFO_REGEX);
         if (generalInfoMatch) {
             this.gid = parseInt(generalInfoMatch[1]);
@@ -74,7 +74,7 @@ export class InfoEmbed {
         }
     }
 
-    private parseMainSeriesField(field: EmbedField) {
+    protected parseMainSeriesField(field: EmbedField) {
         const mainSeriesMatch = field.value.match(MAIN_SERIES_REGEX);
         if (mainSeriesMatch) {
             this.engSeries = mainSeriesMatch[1];
@@ -84,7 +84,7 @@ export class InfoEmbed {
         }
     }
 
-    private parseInfluenceField(field: EmbedField) {
+    protected parseInfluenceField(field: EmbedField) {
         const influenceMatch = field.value.match(INFLUENCE_REGEX);
         if (influenceMatch) {
             this.influence = parseInt(influenceMatch[1]);
@@ -95,7 +95,7 @@ export class InfoEmbed {
         }
     }
 
-    private parseCollectionsField(field: EmbedField) {
+    protected parseCollectionsField(field: EmbedField) {
         const it = field.value.matchAll(COLLECTIONS_REGEX);
         const stats: RarityStats[] = [];
 
@@ -115,7 +115,7 @@ export class InfoEmbed {
         this.ultraStats = stats[6];
     }
 
-    private parseFooter(text: string) {
+    protected parseFooter(text: string) {
         const footerMatch = text.match(FOOTER_REGEX);
         if (footerMatch) {
             this.imageNumber = parseInt(footerMatch[1]);
