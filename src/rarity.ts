@@ -3,64 +3,73 @@ export interface Rarity {
     symbol: string;
 }
 
-export interface RarityConstants {
-    Alpha: Rarity;
-    Beta: Rarity;
-    Gamma: Rarity;
-    Delta: Rarity;
-    Epsilon: Rarity;
-    Zeta: Rarity;
-    Ultra: Rarity;
-    Scarlet: Rarity;
-    Event: Rarity;
-    Special: Rarity;
+export interface RarityContainer {
+    ALPHA: Rarity;
+    BETA: Rarity;
+    GAMMA: Rarity;
+    DELTA: Rarity;
+    EPSILON: Rarity;
+    ZETA: Rarity;
+    ULTRA: Rarity;
+    SCARLET: Rarity;
+    EVENT: Rarity;
+    SPECIAL: Rarity;
 }
 
-export const Constants: RarityConstants = {
-    Alpha: {
-        text: 'ᴀʟᴘʜᴀ',
-        symbol: 'α',
-    },
-    Beta: {
-        text: 'ʙᴇᴛᴀ',
-        symbol: 'β',
-    },
-    Gamma: {
-        text: 'ɢᴀᴍᴍᴀ',
-        symbol: 'γ',
-    },
-    Delta: {
-        text: 'ᴅᴇʟᴛᴀ',
-        symbol: 'δ',
-    },
-    Epsilon: {
-        text: 'ᴇᴘsɪʟᴏɴ',
-        symbol: 'ε',
-    },
-    Zeta: {
-        text: 'ᴢᴇᴛᴀ',
-        symbol: 'ζ',
-    },
-    Ultra: {
-        text: 'ᴜʟᴛʀᴀ',
-        symbol: 'ζ𝓡',
-    },
-    Scarlet: {
-        text: 'sᴄᴀʀʟᴇᴛ',
-        symbol: '†',
-    },
-    Event: {
-        text: 'ᴇᴠᴇɴᴛ',
-        symbol: 'ξν',
-    },
-    Special: {
-        text: 'sᴘᴇᴄɪᴀʟ',
-        symbol: 'Λ',
-    },
-};
+function createConstants(): RarityContainer {
+    const constants: RarityContainer = {
+        ALPHA: {
+            text: 'ᴀʟᴘʜᴀ',
+            symbol: 'α',
+        },
+        BETA: {
+            text: 'ʙᴇᴛᴀ',
+            symbol: 'β',
+        },
+        GAMMA: {
+            text: 'ɢᴀᴍᴍᴀ',
+            symbol: 'γ',
+        },
+        DELTA: {
+            text: 'ᴅᴇʟᴛᴀ',
+            symbol: 'δ',
+        },
+        EPSILON: {
+            text: 'ᴇᴘsɪʟᴏɴ',
+            symbol: 'ε',
+        },
+        ZETA: {
+            text: 'ᴢᴇᴛᴀ',
+            symbol: 'ζ',
+        },
+        ULTRA: {
+            text: 'ᴜʟᴛʀᴀ',
+            symbol: 'ζ𝓡',
+        },
+        SCARLET: {
+            text: 'sᴄᴀʀʟᴇᴛ',
+            symbol: '†',
+        },
+        EVENT: {
+            text: 'ᴇᴠᴇɴᴛ',
+            symbol: 'ξν',
+        },
+        SPECIAL: {
+            text: 'sᴘᴇᴄɪᴀʟ',
+            symbol: 'Λ',
+        },
+    };
+
+    Object.freeze(constants);
+    Object.values(constants).forEach((rarity: Rarity) => Object.freeze(rarity));
+
+    return constants;
+}
+
+export const CONSTANTS = createConstants();
 
 function createRegex(): RegExp {
-    const baseExp = Object.values(Constants)
+    const baseExp = Object.values(CONSTANTS)
         .map((rarity: Rarity) => `${rarity.text}|${rarity.symbol}`)
         .join('|');
     return new RegExp(`(${baseExp})`);
@@ -70,26 +79,26 @@ export const REGEX = createRegex();
 
 const mappings: Map<string, Rarity> = new Map();
 mappings
-    .set('ᴀʟᴘʜᴀ', Constants.Alpha)
-    .set('ʙᴇᴛᴀ', Constants.Beta)
-    .set('ɢᴀᴍᴍᴀ', Constants.Gamma)
-    .set('ᴅᴇʟᴛᴀ', Constants.Delta)
-    .set('ᴇᴘsɪʟᴏɴ', Constants.Epsilon)
-    .set('ᴢᴇᴛᴀ', Constants.Zeta)
-    .set('ᴜʟᴛʀᴀ', Constants.Ultra)
-    .set('sᴄᴀʀʟᴇᴛ', Constants.Scarlet)
-    .set('ᴇᴠᴇɴᴛ', Constants.Event)
-    .set('sᴘᴇᴄɪᴀʟ', Constants.Special)
-    .set('α', Constants.Alpha)
-    .set('β', Constants.Beta)
-    .set('γ', Constants.Gamma)
-    .set('δ', Constants.Delta)
-    .set('ε', Constants.Epsilon)
-    .set('ζ', Constants.Zeta)
-    .set('ζ𝓡', Constants.Ultra)
-    .set('†', Constants.Scarlet)
-    .set('ξν', Constants.Event)
-    .set('Λ', Constants.Special);
+    .set('ᴀʟᴘʜᴀ', CONSTANTS.ALPHA)
+    .set('ʙᴇᴛᴀ', CONSTANTS.BETA)
+    .set('ɢᴀᴍᴍᴀ', CONSTANTS.GAMMA)
+    .set('ᴅᴇʟᴛᴀ', CONSTANTS.DELTA)
+    .set('ᴇᴘsɪʟᴏɴ', CONSTANTS.EPSILON)
+    .set('ᴢᴇᴛᴀ', CONSTANTS.ZETA)
+    .set('ᴜʟᴛʀᴀ', CONSTANTS.ULTRA)
+    .set('sᴄᴀʀʟᴇᴛ', CONSTANTS.SCARLET)
+    .set('ᴇᴠᴇɴᴛ', CONSTANTS.EVENT)
+    .set('sᴘᴇᴄɪᴀʟ', CONSTANTS.SPECIAL)
+    .set('α', CONSTANTS.ALPHA)
+    .set('β', CONSTANTS.BETA)
+    .set('γ', CONSTANTS.GAMMA)
+    .set('δ', CONSTANTS.DELTA)
+    .set('ε', CONSTANTS.EPSILON)
+    .set('ζ', CONSTANTS.ZETA)
+    .set('ζ𝓡', CONSTANTS.ULTRA)
+    .set('†', CONSTANTS.SCARLET)
+    .set('ξν', CONSTANTS.EVENT)
+    .set('Λ', CONSTANTS.SPECIAL);
 
 export function resolve(query: string): Rarity | null {
     return mappings.get(query) ?? null;

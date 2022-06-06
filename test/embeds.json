@@ -399,7 +399,7 @@
             "footer": null
         }
     ],
-    "drop": [
+    "dropCode": [
         {
             "title": null,
             "type": "rich",
@@ -540,6 +540,204 @@
             "footer": {
                 "text": "Want this character? Bid now using l.bid"
             }
+        }
+    ],
+    "upgrade": [
+        {
+            "title": "<a:witchp1:806416022499885096> Depths of RNG",
+            "type": "rich",
+            "description": "<a:catp2:806415234809987073> __Choose an option__\n<a:catp1:806414931200966667> :one: ♢ Star Enhancing\n<a:cts2:857108310386147369> :two: ♢ Glitch\n<a:i1:888672463947452456> :three: ♢ Influence Skins\n<a:gm7:960286343190175764> :four: ♢ Medals\n\n__Currencies__\n💠 118480 | <a:gm4:960003433576951858> 2.838 | 💮 1425\n__Failstacks__\n🔮 0",
+            "url": null,
+            "timestamp": null,
+            "color": 7798959,
+            "fields": [],
+            "thumbnail": {
+                "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                "height": 226,
+                "width": 498
+            },
+            "image": null,
+            "author": {
+                "name": "Welcome to:"
+            },
+            "footer": null
+        }
+    ],
+    "medalsCharacterPrompt": [
+        {
+            "title": "<a:hts1:857109008116219914> Depths of RNG",
+            "type": "rich",
+            "description": "<a:gm7:960286343190175764> ♢ Medals\n\n**Medals** will allow you to embed your cards rarity with either a `BRONZE`, `SILVER`, `GOLD`, or a extremely rare `PRISTINE` emblem. \n\n**Medals RNG Guide:**\n> ・**Medal** RNG can fail and reward you with nothing.\n> ・You can roll any **Medal** at once, you do not need to go in order of Bronze to Pristine.\n> ・When rolling a character with a **Medal** already applied, you will always attempt to increase the rarity of the **Medal**. This can fail.\n> ・You can't downgrade a **Medal**, only upgrade.\n> ・Rates for both obtaining and upgrading **Medals** are the same.\n\n`DEMO:`\n<a:r1:837480734050222100><a:gm1:960028177898545222> `BRONZE`・1704 lifetime creations\n<a:r6:837480733760815124><a:gm2:960026979632054282> `SILVER`・906 lifetime creations\n<a:r7:837487911075053598><a:gm3:960032886914969640> `GOLD`・483 lifetime creations\n<a:r9:837877366843637780><a:gm7:960286343190175764> `PRISTINE`・232 lifetime creations\n\n<a:catp1:806414931200966667> You are inside the black cats den..Feeling lucky?\n\n**Insert** the **UniqueID** of the character you wish to attempt to apply a **Medal**.\n\n__Currencies__\n<a:gm4:960003433576951858> 2.838",
+            "url": null,
+            "timestamp": null,
+            "color": 7798959,
+            "fields": [],
+            "thumbnail": {
+                "url": "https://cdn.discordapp.com/attachments/793598007433232434/857108935903150110/ets1.gif",
+                "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/857108935903150110/ets1.gif",
+                "height": 222,
+                "width": 498
+            },
+            "image": null,
+            "author": {
+                "name": "Welcome to:"
+            },
+            "footer": null
+        }
+    ],
+    "medalsCostPrompt": [
+        {
+            "title": "<a:hts1:857109008116219914> Depths of RNG",
+            "type": "rich",
+            "description": "<a:gm7:960286343190175764> ♢ Medals\n\n__Violet Evergarden (ヴァイオレット・エヴァーガーデン)__\n\n**UniqueID:** 2188\n<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`\nInfluence・**1558**<:inf:755213119055200336>\n**SELv.** +0\n\n`COST:`\n:one: <a:gm4:960003433576951858> 1.000\n\n__Currencies__\n<a:gm4:960003433576951858> 2.838",
+            "url": null,
+            "timestamp": null,
+            "color": 7798959,
+            "fields": [],
+            "thumbnail": {
+                "url": "https://cdn.discordapp.com/attachments/793598007433232434/857108935903150110/ets1.gif",
+                "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/857108935903150110/ets1.gif",
+                "height": 222,
+                "width": 498
+            },
+            "image": null,
+            "author": {
+                "name": "Welcome to:"
+            },
+            "footer": null
+        }
+    ],
+    "influenceSkinsCharacterPrompt": [
+        {
+            "title": "<a:witchp1:806416022499885096> Depths of RNG",
+            "type": "rich",
+            "description": "<a:i1:888672463947452456> ♢ Influence Skins\n\nWelcome to the **Influence Skin Store**. **Skins** sold here are on a rotation. <a:nc:870218991967301632>\n\n♢ **Skins** are a one time application onto the card of your choice.\n\n`CURRENT ROTATION:`\n\n:one: *Magic Trick.* \n`REG` | Influence・**1000** <a:i6:912290965778235402> \n`GLITCH` | Influence・**1000** <a:ig6:917639690566397992> \n`SALE ENDS:`2022-06-10 | `4` ᴅᴀʏs \n`COST:`0300 💮 \n⠀\n:two: *Marine.* \n`REG` | Influence・**1000** <a:i12:974445370987929650> \n`GLITCH` | Influence・**1000** <a:ig12:974445121275850772> \n`SALE ENDS:`2022-06-10 | `4` ᴅᴀʏs \n`COST:`0300 💮 \n⠀\n**Insert** the **UniqueID** of the character followed by the **SkinID** you wish to purchase.\n\n__Currencies__\n💮 1425",
+            "url": null,
+            "timestamp": null,
+            "color": 7798959,
+            "fields": [],
+            "thumbnail": {
+                "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                "height": 226,
+                "width": 498
+            },
+            "image": null,
+            "author": {
+                "name": "Welcome to:"
+            },
+            "footer": null
+        }
+    ],
+    "influenceSkinsCostPrompt": [
+        {
+            "title": "<a:witchp1:806416022499885096> Depths of RNG",
+            "type": "rich",
+            "description": "<a:i1:888672463947452456> ♢ Influence Skins\n\n__Violet Evergarden (ヴァイオレット・エヴァーガーデン)__\n\n**UniqueID:** 2188\n<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`\nInfluence・**1558** <a:i12:974445370987929650>\n**SELv.** +0\n\n`CHANGES APPLIED:`\n*Marine.*・ <a:i12:974445370987929650>\n\n`COST:`\n:one: 💮 0300\n\n__Currencies__\n💮 1425",
+            "url": null,
+            "timestamp": null,
+            "color": 7798959,
+            "fields": [],
+            "thumbnail": {
+                "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                "height": 226,
+                "width": 498
+            },
+            "image": null,
+            "author": {
+                "name": "Welcome to:"
+            },
+            "footer": null
+        }
+    ],
+    "cardGlitchingCharacterPrompt": [
+        {
+            "title": "<a:hts1:857109008116219914> Depths of RNG",
+            "type": "rich",
+            "description": "<a:cts1:857109322349019176> ♢ Card Glitching(Glitch)\n\nDo you know what happens to a card that received too much 💠?\n\n**Glitched** will alter a cards influence, badge, and border symbols. **SE**+3 cards are eligible to be **Glitched.**\n\n`DEMO:`\n<a:r6:837480733760815124> into <a:rg6:856716186115768320>\n<:inf:755213119055200336> into <a:zi:856659238184157210>\n..finally the border.\n<a:zb1:856651163230928986><a:zb2:856651163780644894><a:zb3:856651163217821726><a:zb4:856651163957198869><a:zb5:856651166796480513><a:zb6:856651167546081320><a:zb7:856651166951931984><a:zb8:856651165797056552><a:zb9:856651164828827649><a:zb10:856651164454748190><a:zb11:856651164442296330><a:zb12:856651164627894282>\n\n<a:cts2:857108310386147369> **Insert** the **UniqueID** of the character you wish to **Glitch!**\n\n__Currencies__\n💠 118480\n__Failstacks__\n🔮 0",
+            "url": null,
+            "timestamp": null,
+            "color": 7798959,
+            "fields": [],
+            "thumbnail": {
+                "url": "https://cdn.discordapp.com/attachments/793598007433232434/857108935903150110/ets1.gif",
+                "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/857108935903150110/ets1.gif",
+                "height": 222,
+                "width": 498
+            },
+            "image": null,
+            "author": {
+                "name": "Welcome to:"
+            },
+            "footer": null
+        }
+    ],
+    "cardGlitchingCostPrompt": [
+        {
+            "title": "<a:hts1:857109008116219914> Depths of RNG",
+            "type": "rich",
+            "description": "<a:cts1:857109322349019176> ♢ Card Glitching(Glitch)\n\n__Nino Nakano (中野 二乃)__\n\n**UniqueID:** 1067\n<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`\nInfluence・**1604**<:inf:755213119055200336>\n**SELv.** +3\n\n`COST:`\n:one: 💠 2000\n\n__Currencies__\n💠 118480\n__Failstacks__\n🔮 0",
+            "url": null,
+            "timestamp": null,
+            "color": 7798959,
+            "fields": [],
+            "thumbnail": {
+                "url": "https://cdn.discordapp.com/attachments/793598007433232434/857108935903150110/ets1.gif",
+                "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/857108935903150110/ets1.gif",
+                "height": 222,
+                "width": 498
+            },
+            "image": null,
+            "author": {
+                "name": "Welcome to:"
+            },
+            "footer": null
+        }
+    ],
+    "starEnhancingCharacterPrompt": [
+        {
+            "title": "<a:witchp1:806416022499885096> Depths of RNG",
+            "type": "rich",
+            "description": "<a:catp2:806415234809987073> ♢ Star Enhancing(SE)\n\n**SE** will increase a character's rarity level by +N to a maximum of 3.\n\n`DEMO:` <a:r6:837480733760815124> is standard. <a:r6:837480733760815124> | `𝐈`»`★☆☆☆` is **SE**+1.\n\n<a:catp1:806414931200966667> You are inside the black cats den..Feeling lucky?\n\n**Insert** the **UniqueID** of the character you wish to **SE!**\n\n__Currencies__\n💠 118480\n__Failstacks__\n🔮 0",
+            "url": null,
+            "timestamp": null,
+            "color": 7798959,
+            "fields": [],
+            "thumbnail": {
+                "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                "height": 226,
+                "width": 498
+            },
+            "image": null,
+            "author": {
+                "name": "Welcome to:"
+            },
+            "footer": null
+        }
+    ],
+    "starEnhancingCostPrompt": [
+        {
+            "title": "<a:witchp1:806416022499885096> Depths of RNG",
+            "type": "rich",
+            "description": "<a:catp2:806415234809987073> ♢ Star Enhancing\n\n__Miku Nakano (中野 三玖)__\n\n**UniqueID:** 1269\n<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`\nInfluence・**1808**<:inf:755213119055200336>\n**SELv.** +0\n\n`COST:`\n:one: `SINGLE:`💠 25\n:two: `MULTI:`💠 250\n\nYour fail stacks value is **0**. `Bonus:` **+0.00%** \n*You will consume all failstacks on success.*\n\n__Currencies__\n💠 118480\n__Failstacks__\n🔮 0",
+            "url": null,
+            "timestamp": null,
+            "color": 7798959,
+            "fields": [],
+            "thumbnail": {
+                "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                "height": 226,
+                "width": 498
+            },
+            "image": null,
+            "author": {
+                "name": "Welcome to:"
+            },
+            "footer": null
         }
     ]
 }

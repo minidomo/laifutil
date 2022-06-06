@@ -39,7 +39,7 @@ export interface LaifuEmbedOptions {
     delay?: number;
     loaded?: boolean;
     duplicates?: boolean;
-    embedSet: Set<string>;
+    embedSet?: Set<string>;
 }
 
 function hashEmbed(id: string, embed: MessageEmbed, loaded: boolean) {
@@ -57,7 +57,7 @@ export async function hasLaifuEmbed(message: Message, options: LaifuEmbedOptions
     if (targetMessage.embeds && targetMessage.embeds.length) {
         const embed = targetMessage.embeds[0];
         if (options.loaded === true && !isLoaded(embed)) return null;
-        if (options.duplicates === false) {
+        if (options.duplicates === false && options.embedSet) {
             const embedHash = hashEmbed(message.id, embed, !!options.loaded);
             if (options.embedSet.has(embedHash)) return null;
             options.embedSet.add(embedHash);
@@ -66,4 +66,8 @@ export async function hasLaifuEmbed(message: Message, options: LaifuEmbedOptions
     }
 
     return null;
+}
+
+export function isLaifuBot(id: string) {
+    return id === '688202466315206661';
 }

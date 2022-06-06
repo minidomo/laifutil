@@ -195,3 +195,62 @@ export function isProfileEmbed(embed: MessageEmbed) {
     const validTitle = embed.title?.includes('Account Perks & Options');
     return validTitle === true;
 }
+
+export function isUpgradeEmbed(embed: MessageEmbed) {
+    const validDescription = embed.description?.includes('Choose an option');
+    return validDescription === true;
+}
+
+export function isStarEnhancingCharacterPromptEmbed(embed: MessageEmbed) {
+    const validDescription = embed.description?.includes('Star Enhancing(SE)');
+    return validDescription === true;
+}
+
+export function isStarEnhancingCostPromptEmbed(embed: MessageEmbed) {
+    if (embed.description) {
+        return embed.description.includes('Star Enhancing') && embed.description.includes('COST');
+    }
+    return false;
+}
+
+export function isCardGlitchingCharacterPromptEmbed(embed: MessageEmbed) {
+    if (embed.description) {
+        return embed.description.includes('Card Glitching(Glitch)') && !embed.description.includes('COST');
+    }
+    return false;
+}
+
+export function isCardGlitchingCostPromptEmbed(embed: MessageEmbed) {
+    if (embed.description) {
+        return embed.description.includes('Card Glitching(Glitch)') && embed.description.includes('COST');
+    }
+    return false;
+}
+
+export function isInfluenceSkinsCharacterPromptEmbed(embed: MessageEmbed) {
+    if (embed.description) {
+        return embed.description.includes('Influence Skins') && embed.description.includes('CURRENT ROTATION');
+    }
+    return false;
+}
+
+export function isInfluenceSkinsCostPromptEmbed(embed: MessageEmbed) {
+    if (embed.description) {
+        return embed.description.includes('Influence Skins') && embed.description.includes('CHANGES APPLIED');
+    }
+    return false;
+}
+
+export function isMedalsCharacterPromptEmbed(embed: MessageEmbed) {
+    if (embed.description) {
+        return embed.description.includes('Medals') && embed.description.includes('Insert');
+    }
+    return false;
+}
+
+export function isMedalsCostPromptEmbed(embed: MessageEmbed) {
+    if (embed.description) {
+        return embed.description.includes('Medals') && embed.description.includes('COST');
+    }
+    return false;
+}
