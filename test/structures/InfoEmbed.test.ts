@@ -8,7 +8,7 @@ function makeRarityStats(existing: number, totalExisted: number): RarityStats {
 }
 
 describe('InfoEmbed', () => {
-    const infoEmbedsArr = embeds.info;
+    const infoEmbedsArr = embeds.identifier.info;
 
     describe('#constructor', () => {
         it('should correctly parse an info Discord embed from LaifuBot', () => {

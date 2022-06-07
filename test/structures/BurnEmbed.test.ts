@@ -4,7 +4,7 @@ import { BurnEmbed, Rarity } from '../../dist';
 import * as embeds from '../embeds.json';
 
 describe('BurnEmbed', () => {
-    const burnEmbedsArr = embeds.burn;
+    const burnEmbedsArr = embeds.identifier.burn;
 
     describe('#constructor', () => {
         it('should correctly parse a burn Discord embed of a normal card from LaifuBot', () => {

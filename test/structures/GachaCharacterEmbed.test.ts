@@ -4,7 +4,7 @@ import { GachaCharacterEmbed, Rarity } from '../../dist';
 import * as embeds from '../embeds.json';
 
 describe('GachaCharacterEmbed', () => {
-    const gachaCharacterEmbedsArr = embeds.gachaCharacter;
+    const gachaCharacterEmbedsArr = embeds.identifier.gachaCharacter;
 
     describe('#constructor', () => {
         it('should correctly parse a gacha character Discord embed from LaifuBot', () => {

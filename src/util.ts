@@ -1,73 +1,67 @@
-import { setTimeout } from 'timers/promises';
-import type { Message, MessageEmbed } from 'discord.js';
-import { LaifuProperties } from '.';
+import { Message, MessageEmbed, PartialMessage, User } from 'discord.js';
+import type { Bounds } from './structures';
 
-export function isLoaded(embed: MessageEmbed) {
-    if (!embed.image) return true;
-    if (embed.image.width && embed.image.height) {
-        return embed.image.width > 0 && embed.image.height > 0;
+export const USER_ID = '688202466315206661';
+
+function getLastBounds(str: string, leftChar: string, rightChar: string): Bounds | null {
+    if (!str.includes(leftChar) || !str.includes(rightChar)) {
+        return null;
     }
-    return false;
-}
 
-function getLastBounds(str: string, leftChar: string, rightChar: string): [number, number] | null {
-    if (!str.includes(leftChar) || !str.includes(rightChar)) return null;
     let count = 0;
     let left = -1, right = -1;
+
     for (let i = 0; i < str.length; i++) {
         if (str[i] === leftChar) {
-            if (count === 0) left = i;
+            if (count === 0) {
+                left = i;
+            }
             count++;
         } else if (str[i] === rightChar) {
             count--;
-            if (count === 0) right = i;
+            if (count === 0) {
+                right = i;
+            }
         }
     }
-    return left >= right ? null : [left, right];
+
+    return left >= right ? null : { lower: left, upper: right };
 }
 
-export function cleanCharacterName(name: string) {
+export function cleanCharacterName(name: string): string {
     const parenBounds = getLastBounds(name, '(', ')');
     const emoteBounds = getLastBounds(name, '<', '>');
+
     let ret = name;
-    if (parenBounds) ret = ret.substring(0, parenBounds[0]) + ret.substring(parenBounds[1] + 1);
-    if (emoteBounds) ret = ret.substring(0, emoteBounds[0]) + ret.substring(emoteBounds[1] + 1);
+    if (parenBounds) {
+        ret = ret.substring(0, parenBounds.lower) + ret.substring(parenBounds.upper + 1);
+    }
+
+    if (emoteBounds) {
+        ret = ret.substring(0, emoteBounds.lower) + ret.substring(emoteBounds.upper + 1);
+    }
+
     return ret.trim();
 }
 
-export interface LaifuEmbedOptions {
-    delay?: number;
-    loaded?: boolean;
-    duplicates?: boolean;
-    embedSet?: Set<string>;
-}
+export function isLaifuBot(data: string | Message | PartialMessage | User): boolean {
+    let id: string;
 
-function hashEmbed(id: string, embed: MessageEmbed, loaded: boolean) {
-    const cleanEmbed = embed.toJSON();
-    if (cleanEmbed.image && !loaded) cleanEmbed.image.height = cleanEmbed.image.width = 0;
-    return id + JSON.stringify(cleanEmbed, null, 0);
-}
-
-export async function hasLaifuEmbed(message: Message, options: LaifuEmbedOptions) {
-    if (typeof options.delay === 'number') await setTimeout(options.delay);
-    if (!message) return null;
-
-    const targetMessage = await message.channel.messages.fetch(message.id);
-    if (targetMessage.author.id !== LaifuProperties.userId) return null;
-    if (targetMessage.embeds && targetMessage.embeds.length) {
-        const embed = targetMessage.embeds[0];
-        if (options.loaded === true && !isLoaded(embed)) return null;
-        if (options.duplicates === false && options.embedSet) {
-            const embedHash = hashEmbed(message.id, embed, !!options.loaded);
-            if (options.embedSet.has(embedHash)) return null;
-            options.embedSet.add(embedHash);
-        }
-        return targetMessage;
+    if (typeof data === 'string') {
+        id = data;
+    } else if (data instanceof User) {
+        id = data.id;
+    } else {
+        id = data.author?.id ?? '';
     }
 
-    return null;
+    return id === USER_ID;
 }
 
-export function isLaifuBot(id: string) {
-    return id === '688202466315206661';
+export function hasSameImage(embed1: MessageEmbed, embed2: MessageEmbed): boolean {
+    if (embed1.image && embed2.image) {
+        return embed1.image.url === embed2.image.url;
+    }
+
+    return false;
 }

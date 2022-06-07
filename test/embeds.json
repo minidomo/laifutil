@@ -1,341 +1,1481 @@
 {
-    "wishlist": [
-        {
-            "title": "JB - Wishlist",
-            "type": "rich",
-            "description": "13540 | Anju Emma (アンジュ・エマ)・**280**<:inf:755213119055200336>\n13541 | Kurena Kukumila (クレナ・ククミラ)・**217**<:inf:755213119055200336>\n13795 | Eiko Kawasegawa (河瀬川 英子)・**204**<:inf:755213119055200336>\n13796 | Nanako Kogure (小暮 奈々子)・**162**<:inf:755213119055200336>\n13798 | Aki Shino (志野 亜貴)・**258**<:inf:755213119055200336>\n15047 | Miko Yotsuya (四谷 みこ)・**316**<:inf:755213119055200336>\n15048 | Hana Yurikawa (百合川ハナ)・**212**<:inf:755213119055200336>\n15049 | Yuria Niguredou (二暮堂ユリア)・**204**<:inf:755213119055200336>\n15883 | Takane Takamine (鷹峰 高嶺)・**56**<:inf:755213119055200336>\n15926 | Ushio Kofune (小舟 潮)・**14**<:inf:755213119055200336>",
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [],
-            "thumbnail": null,
-            "image": null,
-            "author": null,
-            "footer": {
-                "text": "Page 1/1 • 10 Characters Wanted"
-            }
-        }
-    ],
-    "burn": [
-        {
-            "title": "#1 Nagi Kodachi (小太刀　凪)",
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 16097535,
-            "fields": [
-                {
-                    "value": "**UID:** 8591 | **GID:** 15013\n**Claimed By:** JB\n**Age:** 2021-12-18 | `166` ᴅᴀʏs",
-                    "name": "General Info",
-                    "inline": false
-                },
-                {
-                    "value": "<a:r6:837480733760815124> | `ᴢᴇᴛᴀ`»`☆☆☆☆`\nInfluence `#11709`・**40**<:inf:755213119055200336>",
-                    "name": "Rarity",
-                    "inline": false
-                },
-                {
-                    "value": "**ENG:** A Good Librarian Like a Good Shepherd\n**ALT:** Daitoshokan no Hitsujikai\n**SID:** 1548 | `MAIN`",
-                    "name": "Main Series",
-                    "inline": false
-                },
-                {
-                    "value": "・REPLY `F` to favorite. (Add an emoji to be specific)\n・REPLY `S` to skip.\n・REPLY `B` to burn.\n🔥 *72% of players chose to burn this character.*",
-                    "name": "Guide",
-                    "inline": false
+    "identifier": {
+        "wishlist": [
+            {
+                "title": "JB - Wishlist",
+                "type": "rich",
+                "description": "13540 | Anju Emma (アンジュ・エマ)・**280**<:inf:755213119055200336>\n13541 | Kurena Kukumila (クレナ・ククミラ)・**217**<:inf:755213119055200336>\n13795 | Eiko Kawasegawa (河瀬川 英子)・**204**<:inf:755213119055200336>\n13796 | Nanako Kogure (小暮 奈々子)・**162**<:inf:755213119055200336>\n13798 | Aki Shino (志野 亜貴)・**258**<:inf:755213119055200336>\n15047 | Miko Yotsuya (四谷 みこ)・**316**<:inf:755213119055200336>\n15048 | Hana Yurikawa (百合川ハナ)・**212**<:inf:755213119055200336>\n15049 | Yuria Niguredou (二暮堂ユリア)・**204**<:inf:755213119055200336>\n15883 | Takane Takamine (鷹峰 高嶺)・**56**<:inf:755213119055200336>\n15926 | Ushio Kofune (小舟 潮)・**14**<:inf:755213119055200336>",
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [],
+                "thumbnail": null,
+                "image": null,
+                "author": null,
+                "footer": {
+                    "text": "Page 1/1 • 10 Characters Wanted"
                 }
-            ],
-            "thumbnail": null,
-            "image": {
-                "url": "https://cdn.discordapp.com/attachments/766880877099352085/893638423011786772/image.png",
-                "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/893638423011786772/image.png",
-                "height": 0,
-                "width": 0
-            },
-            "author": {
-                "name": "JB",
-                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
-            },
-            "footer": {
-                "text": "Burn Reward Counter: 0 / 15\nUploaded by LaifuBot †\nCredit: Official"
             }
-        },
-        {
-            "title": "#1 Ririka Momobami (桃喰 リリカ)",
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 13227220,
-            "fields": [
-                {
-                    "value": "**UID:** 8364 | **GID:** 1996\n**Claimed By:** JB\n**Age:** 2021-12-07 | `177` ᴅᴀʏs",
-                    "name": "General Info",
-                    "inline": false
+        ],
+        "burn": [
+            {
+                "title": "#1 Nagi Kodachi (小太刀　凪)",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 16097535,
+                "fields": [
+                    {
+                        "value": "**UID:** 8591 | **GID:** 15013\n**Claimed By:** JB\n**Age:** 2021-12-18 | `166` ᴅᴀʏs",
+                        "name": "General Info",
+                        "inline": false
+                    },
+                    {
+                        "value": "<a:r6:837480733760815124> | `ᴢᴇᴛᴀ`»`☆☆☆☆`\nInfluence `#11709`・**40**<:inf:755213119055200336>",
+                        "name": "Rarity",
+                        "inline": false
+                    },
+                    {
+                        "value": "**ENG:** A Good Librarian Like a Good Shepherd\n**ALT:** Daitoshokan no Hitsujikai\n**SID:** 1548 | `MAIN`",
+                        "name": "Main Series",
+                        "inline": false
+                    },
+                    {
+                        "value": "・REPLY `F` to favorite. (Add an emoji to be specific)\n・REPLY `S` to skip.\n・REPLY `B` to burn.\n🔥 *72% of players chose to burn this character.*",
+                        "name": "Guide",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/766880877099352085/893638423011786772/image.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/893638423011786772/image.png",
+                    "height": 0,
+                    "width": 0
                 },
-                {
-                    "value": "<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`»`❦#82`»`☆☆☆☆`\nInfluence `#210`・**928**<:inf:755213119055200336>\n🎲 *Gambling Cat.*\n<a:b1:838570555761491969><a:b4:838734760591228978><a:b3:838578341807390750>",
-                    "name": "Rarity",
-                    "inline": false
+                "author": {
+                    "name": "JB",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
                 },
-                {
-                    "value": "**ENG:** Kakegurui: Compulsive Gambler\n**ALT:** Kakegurui\n**SID:** 151 | `MAIN`",
-                    "name": "Main Series",
-                    "inline": false
-                },
-                {
-                    "value": "・REPLY `F` to favorite. (Add an emoji to be specific)\n・REPLY `S` to skip.\n・REPLY `B` to burn.\n🔥 *4% of players chose to burn this character.*",
-                    "name": "Guide",
-                    "inline": false
+                "footer": {
+                    "text": "Burn Reward Counter: 0 / 15\nUploaded by LaifuBot †\nCredit: Official"
                 }
-            ],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/819798600837627904/849244837030133770/82.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/849244837030133770/82.gif",
-                "height": 288,
-                "width": 288
             },
-            "image": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/783636397126189106/image-7_2.png",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/783636397126189106/image-7_2.png",
-                "height": 0,
-                "width": 0
-            },
-            "author": {
-                "name": "JB",
-                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
-            },
-            "footer": {
-                "text": "Burn Reward Counter: 0 / 15\nUploaded by LaifuBot †\nCredit: Official Art"
-            }
-        },
-        {
-            "title": "#2 Alice Zuberg (アリス・ツーベルク)",
-            "type": "rich",
-            "description": "<:s1:807703515857682483><:s2:807703526729056318><:s3:807703536963026944><:s4:807703548036644875><:s5:807703558517817344><:s6:807703568734879755><:s7:807703581406527558><:s8:807703591820197939><:s9:807703611831222282><:s10:807703624515452928><:s11:807703636925874237><:s12:807703649572618271>⠀",
-            "url": null,
-            "timestamp": null,
-            "color": 13227220,
-            "fields": [
-                {
-                    "value": "**UID:** 298 | **GID:** 2230\n**Claimed By:** O2Linn\n**Age:** 2021-07-14 | `323` ᴅᴀʏs",
-                    "name": "General Info",
-                    "inline": false
+            {
+                "title": "#1 Ririka Momobami (桃喰 リリカ)",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 13227220,
+                "fields": [
+                    {
+                        "value": "**UID:** 8364 | **GID:** 1996\n**Claimed By:** JB\n**Age:** 2021-12-07 | `177` ᴅᴀʏs",
+                        "name": "General Info",
+                        "inline": false
+                    },
+                    {
+                        "value": "<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`»`❦#82`»`☆☆☆☆`\nInfluence `#210`・**928**<:inf:755213119055200336>\n🎲 *Gambling Cat.*\n<a:b1:838570555761491969><a:b4:838734760591228978><a:b3:838578341807390750>",
+                        "name": "Rarity",
+                        "inline": false
+                    },
+                    {
+                        "value": "**ENG:** Kakegurui: Compulsive Gambler\n**ALT:** Kakegurui\n**SID:** 151 | `MAIN`",
+                        "name": "Main Series",
+                        "inline": false
+                    },
+                    {
+                        "value": "・REPLY `F` to favorite. (Add an emoji to be specific)\n・REPLY `S` to skip.\n・REPLY `B` to burn.\n🔥 *4% of players chose to burn this character.*",
+                        "name": "Guide",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/819798600837627904/849244837030133770/82.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/849244837030133770/82.gif",
+                    "height": 288,
+                    "width": 288
                 },
-                {
-                    "value": "<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`»`❦#126`»`𝐈`»`★☆☆☆`\nInfluence `#143`・**1044**<:inf:755213119055200336>\n*Enhance Armament!*\n<a:b1:838570555761491969>",
-                    "name": "Rarity",
-                    "inline": false
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/783636397126189106/image-7_2.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/783636397126189106/image-7_2.png",
+                    "height": 0,
+                    "width": 0
                 },
-                {
-                    "value": "**ENG:** Sword Art Online\n**ALT:** Sword Art Online\n**SID:** 73 | `MAIN`",
-                    "name": "Main Series",
-                    "inline": false
+                "author": {
+                    "name": "JB",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
                 },
-                {
-                    "value": "・REPLY `F` to favorite. (Add an emoji to be specific)\n・REPLY `S` to skip.\n・REPLY `B` to burn.\n🔥 *4% of players chose to burn this character.*",
-                    "name": "Guide",
-                    "inline": false
+                "footer": {
+                    "text": "Burn Reward Counter: 0 / 15\nUploaded by LaifuBot †\nCredit: Official Art"
                 }
-            ],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/819798600837627904/854889686526459914/126.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/854889686526459914/126.gif",
-                "height": 336,
-                "width": 335
             },
-            "image": {
-                "url": "https://cdn.discordapp.com/attachments/766880877099352085/766976266401611823/image.png",
-                "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/766976266401611823/image.png",
-                "height": 0,
-                "width": 0
-            },
-            "author": {
-                "name": "JB",
-                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
-            },
-            "footer": {
-                "text": "Burn Reward Counter: 0 / 15\nUploaded by chocobutternut\nCredit: Official Art"
-            }
-        }
-    ],
-    "view": [
-        {
-            "title": "#1 Nagi Kodachi (小太刀　凪)",
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 16097535,
-            "fields": [
-                {
-                    "value": "**UID:** 8591 | **GID:** 15013 \n**Claimed By:** JB\n**Age:** 2021-12-18 | `166` ᴅᴀʏs",
-                    "name": "General Info",
-                    "inline": false
+            {
+                "title": "#2 Alice Zuberg (アリス・ツーベルク)",
+                "type": "rich",
+                "description": "<:s1:807703515857682483><:s2:807703526729056318><:s3:807703536963026944><:s4:807703548036644875><:s5:807703558517817344><:s6:807703568734879755><:s7:807703581406527558><:s8:807703591820197939><:s9:807703611831222282><:s10:807703624515452928><:s11:807703636925874237><:s12:807703649572618271>⠀",
+                "url": null,
+                "timestamp": null,
+                "color": 13227220,
+                "fields": [
+                    {
+                        "value": "**UID:** 298 | **GID:** 2230\n**Claimed By:** O2Linn\n**Age:** 2021-07-14 | `323` ᴅᴀʏs",
+                        "name": "General Info",
+                        "inline": false
+                    },
+                    {
+                        "value": "<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`»`❦#126`»`𝐈`»`★☆☆☆`\nInfluence `#143`・**1044**<:inf:755213119055200336>\n*Enhance Armament!*\n<a:b1:838570555761491969>",
+                        "name": "Rarity",
+                        "inline": false
+                    },
+                    {
+                        "value": "**ENG:** Sword Art Online\n**ALT:** Sword Art Online\n**SID:** 73 | `MAIN`",
+                        "name": "Main Series",
+                        "inline": false
+                    },
+                    {
+                        "value": "・REPLY `F` to favorite. (Add an emoji to be specific)\n・REPLY `S` to skip.\n・REPLY `B` to burn.\n🔥 *4% of players chose to burn this character.*",
+                        "name": "Guide",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/819798600837627904/854889686526459914/126.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/854889686526459914/126.gif",
+                    "height": 336,
+                    "width": 335
                 },
-                {
-                    "value": "<a:r6:837480733760815124> | `ᴢᴇᴛᴀ`»`☆☆☆☆`\nInfluence `#11709`・**40**<:inf:755213119055200336>",
-                    "name": "Rarity",
-                    "inline": false
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/766880877099352085/766976266401611823/image.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/766976266401611823/image.png",
+                    "height": 0,
+                    "width": 0
                 },
-                {
-                    "value": "**ENG:** A Good Librarian Like a Good Shepherd\n**ALT:** Daitoshokan no Hitsujikai\n**SID:** 1548 | `MAIN`",
-                    "name": "Main Series",
-                    "inline": false
+                "author": {
+                    "name": "JB",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": {
+                    "text": "Burn Reward Counter: 0 / 15\nUploaded by chocobutternut\nCredit: Official Art"
                 }
-            ],
-            "thumbnail": null,
-            "image": {
-                "url": "https://cdn.discordapp.com/attachments/766880877099352085/893638423011786772/image.png",
-                "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/893638423011786772/image.png",
-                "height": 0,
-                "width": 0
-            },
-            "author": {
-                "name": "JB is Viewing...",
-                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
-            },
-            "footer": {
-                "text": "7 versions of this card currently exist.\nUploaded by LaifuBot †\nCredit: Official"
             }
-        },
-        {
-            "title": "#1 Ririka Momobami (桃喰 リリカ)",
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 13227220,
-            "fields": [
-                {
-                    "value": "**UID:** 8364 | **GID:** 1996 \n**Claimed By:** JB\n**Age:** 2021-12-07 | `177` ᴅᴀʏs",
-                    "name": "General Info",
-                    "inline": false
+        ],
+        "view": [
+            {
+                "title": "#1 Nagi Kodachi (小太刀　凪)",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 16097535,
+                "fields": [
+                    {
+                        "value": "**UID:** 8591 | **GID:** 15013 \n**Claimed By:** JB\n**Age:** 2021-12-18 | `166` ᴅᴀʏs",
+                        "name": "General Info",
+                        "inline": false
+                    },
+                    {
+                        "value": "<a:r6:837480733760815124> | `ᴢᴇᴛᴀ`»`☆☆☆☆`\nInfluence `#11709`・**40**<:inf:755213119055200336>",
+                        "name": "Rarity",
+                        "inline": false
+                    },
+                    {
+                        "value": "**ENG:** A Good Librarian Like a Good Shepherd\n**ALT:** Daitoshokan no Hitsujikai\n**SID:** 1548 | `MAIN`",
+                        "name": "Main Series",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/766880877099352085/893638423011786772/image.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/893638423011786772/image.png",
+                    "height": 0,
+                    "width": 0
                 },
-                {
-                    "value": "<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`»`❦#82`»`☆☆☆☆`\nInfluence `#210`・**928**<:inf:755213119055200336>\n🎲 *Gambling Cat.*\n<a:b1:838570555761491969><a:b4:838734760591228978><a:b3:838578341807390750>",
-                    "name": "Rarity",
-                    "inline": false
+                "author": {
+                    "name": "JB is Viewing...",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
                 },
-                {
-                    "value": "**ENG:** Kakegurui: Compulsive Gambler\n**ALT:** Kakegurui\n**SID:** 151 | `MAIN`",
-                    "name": "Main Series",
-                    "inline": false
+                "footer": {
+                    "text": "7 versions of this card currently exist.\nUploaded by LaifuBot †\nCredit: Official"
                 }
-            ],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/819798600837627904/849244837030133770/82.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/849244837030133770/82.gif",
-                "height": 288,
-                "width": 288
             },
-            "image": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/783636397126189106/image-7_2.png",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/783636397126189106/image-7_2.png",
-                "height": 0,
-                "width": 0
-            },
-            "author": {
-                "name": "JB is Viewing...",
-                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
-            },
-            "footer": {
-                "text": "1,177 versions of this card currently exist.\nUploaded by LaifuBot †\nCredit: Official Art"
-            }
-        },
-        {
-            "title": "#2 Alice Zuberg (アリス・ツーベルク)",
-            "type": "rich",
-            "description": "<:s1:807703515857682483><:s2:807703526729056318><:s3:807703536963026944><:s4:807703548036644875><:s5:807703558517817344><:s6:807703568734879755><:s7:807703581406527558><:s8:807703591820197939><:s9:807703611831222282><:s10:807703624515452928><:s11:807703636925874237><:s12:807703649572618271>⠀",
-            "url": null,
-            "timestamp": null,
-            "color": 13227220,
-            "fields": [
-                {
-                    "value": "**UID:** 298 | **GID:** 2230 \n**Claimed By:** O2Linn\n**Age:** 2021-07-14 | `323` ᴅᴀʏs",
-                    "name": "General Info",
-                    "inline": false
+            {
+                "title": "#1 Ririka Momobami (桃喰 リリカ)",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 13227220,
+                "fields": [
+                    {
+                        "value": "**UID:** 8364 | **GID:** 1996 \n**Claimed By:** JB\n**Age:** 2021-12-07 | `177` ᴅᴀʏs",
+                        "name": "General Info",
+                        "inline": false
+                    },
+                    {
+                        "value": "<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`»`❦#82`»`☆☆☆☆`\nInfluence `#210`・**928**<:inf:755213119055200336>\n🎲 *Gambling Cat.*\n<a:b1:838570555761491969><a:b4:838734760591228978><a:b3:838578341807390750>",
+                        "name": "Rarity",
+                        "inline": false
+                    },
+                    {
+                        "value": "**ENG:** Kakegurui: Compulsive Gambler\n**ALT:** Kakegurui\n**SID:** 151 | `MAIN`",
+                        "name": "Main Series",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/819798600837627904/849244837030133770/82.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/849244837030133770/82.gif",
+                    "height": 288,
+                    "width": 288
                 },
-                {
-                    "value": "<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`»`❦#126`»`𝐈`»`★☆☆☆`\nInfluence `#143`・**1044**<:inf:755213119055200336>\n*Enhance Armament!*\n<a:b1:838570555761491969>",
-                    "name": "Rarity",
-                    "inline": false
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/783636397126189106/image-7_2.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/783636397126189106/image-7_2.png",
+                    "height": 0,
+                    "width": 0
                 },
-                {
-                    "value": "**ENG:** Sword Art Online\n**ALT:** Sword Art Online\n**SID:** 73 | `MAIN`",
-                    "name": "Main Series",
-                    "inline": false
+                "author": {
+                    "name": "JB is Viewing...",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": {
+                    "text": "1,177 versions of this card currently exist.\nUploaded by LaifuBot †\nCredit: Official Art"
                 }
-            ],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/819798600837627904/854889686526459914/126.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/854889686526459914/126.gif",
-                "height": 336,
-                "width": 335
             },
-            "image": {
-                "url": "https://cdn.discordapp.com/attachments/766880877099352085/766976266401611823/image.png",
-                "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/766976266401611823/image.png",
-                "height": 0,
-                "width": 0
-            },
-            "author": {
-                "name": "JB is Viewing...",
-                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
-            },
-            "footer": {
-                "text": "1,187 versions of this card currently exist.\nUploaded by chocobutternut\nCredit: Official Art"
-            }
-        },
-        {
-            "title": "🏮 #4 Satoru Gojou (五条 悟)",
-            "type": "rich",
-            "description": "<a:ub1:856710254410596372><a:ub2:856710255794454559><a:ub3:856710256255434802><a:ub4:856710256168403014><a:ub5:856710258252709938><a:ub6:856710258168692766><a:ub7:856710257265606666><a:ub8:856710257589878784><a:ub9:856710256062103583><a:ub10:856710257681235969><a:ub11:856710257249878026><a:ub12:856710257141088267>⠀",
-            "url": null,
-            "timestamp": null,
-            "color": 16603493,
-            "fields": [
-                {
-                    "value": "*The Strongest Jujutsu Sorcerer*\n**UID:** 264 | **GID:** 4652 \n**Claimed By:** JB\n**Age:** 2021-07-16 | `321` ᴅᴀʏs",
-                    "name": "General Info",
-                    "inline": false
+            {
+                "title": "#2 Alice Zuberg (アリス・ツーベルク)",
+                "type": "rich",
+                "description": "<:s1:807703515857682483><:s2:807703526729056318><:s3:807703536963026944><:s4:807703548036644875><:s5:807703558517817344><:s6:807703568734879755><:s7:807703581406527558><:s8:807703591820197939><:s9:807703611831222282><:s10:807703624515452928><:s11:807703636925874237><:s12:807703649572618271>⠀",
+                "url": null,
+                "timestamp": null,
+                "color": 13227220,
+                "fields": [
+                    {
+                        "value": "**UID:** 298 | **GID:** 2230 \n**Claimed By:** O2Linn\n**Age:** 2021-07-14 | `323` ᴅᴀʏs",
+                        "name": "General Info",
+                        "inline": false
+                    },
+                    {
+                        "value": "<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`»`❦#126`»`𝐈`»`★☆☆☆`\nInfluence `#143`・**1044**<:inf:755213119055200336>\n*Enhance Armament!*\n<a:b1:838570555761491969>",
+                        "name": "Rarity",
+                        "inline": false
+                    },
+                    {
+                        "value": "**ENG:** Sword Art Online\n**ALT:** Sword Art Online\n**SID:** 73 | `MAIN`",
+                        "name": "Main Series",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/819798600837627904/854889686526459914/126.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/854889686526459914/126.gif",
+                    "height": 336,
+                    "width": 335
                 },
-                {
-                    "value": "<a:rg7:856716187559526410> | `ɢʟɪᴛᴄʜᴇᴅ ᴜʟᴛʀᴀ`»`❦#85`»`𝐈𝐕`»`★★★★`\nInfluence `#4`・**1897**<a:ui:856752760599085076>\n<a:85e:849960908146737182> *God amongst mere sorcerers.*\n<a:bg1:856751652122656799><a:bg2:856751651695886347><a:bg3:856751653150523403>",
-                    "name": "Rarity",
-                    "inline": false
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/766880877099352085/766976266401611823/image.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/766976266401611823/image.png",
+                    "height": 0,
+                    "width": 0
                 },
-                {
-                    "value": "**ENG:** Jujutsu Kaisen\n**ALT:** Jujutsu Kaisen\n**SID:** 351 | `MAIN`",
-                    "name": "Main Series",
-                    "inline": false
+                "author": {
+                    "name": "JB is Viewing...",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": {
+                    "text": "1,187 versions of this card currently exist.\nUploaded by chocobutternut\nCredit: Official Art"
                 }
-            ],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/819798600837627904/849960417145257984/85.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/849960417145257984/85.gif",
-                "height": 386,
-                "width": 390
             },
-            "image": {
-                "url": "https://cdn.discordapp.com/attachments/747423582346412052/874538930681311242/Animation2-2.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/747423582346412052/874538930681311242/Animation2-2.gif",
-                "height": 0,
-                "width": 0
-            },
-            "author": {
-                "name": "JB is Viewing...",
-                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
-            },
-            "footer": {
-                "text": "2 versions of this card currently exist.\nUploaded by JB\nCredit: Anime"
+            {
+                "title": "🏮 #4 Satoru Gojou (五条 悟)",
+                "type": "rich",
+                "description": "<a:ub1:856710254410596372><a:ub2:856710255794454559><a:ub3:856710256255434802><a:ub4:856710256168403014><a:ub5:856710258252709938><a:ub6:856710258168692766><a:ub7:856710257265606666><a:ub8:856710257589878784><a:ub9:856710256062103583><a:ub10:856710257681235969><a:ub11:856710257249878026><a:ub12:856710257141088267>⠀",
+                "url": null,
+                "timestamp": null,
+                "color": 16603493,
+                "fields": [
+                    {
+                        "value": "*The Strongest Jujutsu Sorcerer*\n**UID:** 264 | **GID:** 4652 \n**Claimed By:** JB\n**Age:** 2021-07-16 | `321` ᴅᴀʏs",
+                        "name": "General Info",
+                        "inline": false
+                    },
+                    {
+                        "value": "<a:rg7:856716187559526410> | `ɢʟɪᴛᴄʜᴇᴅ ᴜʟᴛʀᴀ`»`❦#85`»`𝐈𝐕`»`★★★★`\nInfluence `#4`・**1897**<a:ui:856752760599085076>\n<a:85e:849960908146737182> *God amongst mere sorcerers.*\n<a:bg1:856751652122656799><a:bg2:856751651695886347><a:bg3:856751653150523403>",
+                        "name": "Rarity",
+                        "inline": false
+                    },
+                    {
+                        "value": "**ENG:** Jujutsu Kaisen\n**ALT:** Jujutsu Kaisen\n**SID:** 351 | `MAIN`",
+                        "name": "Main Series",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/819798600837627904/849960417145257984/85.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/849960417145257984/85.gif",
+                    "height": 386,
+                    "width": 390
+                },
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/747423582346412052/874538930681311242/Animation2-2.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/747423582346412052/874538930681311242/Animation2-2.gif",
+                    "height": 0,
+                    "width": 0
+                },
+                "author": {
+                    "name": "JB is Viewing...",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": {
+                    "text": "2 versions of this card currently exist.\nUploaded by JB\nCredit: Anime"
+                }
             }
-        }
-    ],
-    "gachaCharacter": [
-        {
-            "title": "#1 Karen Onodera (小野寺樺恋)",
+        ],
+        "gachaCharacter": [
+            {
+                "title": "#1 Karen Onodera (小野寺樺恋)",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 8436991,
+                "fields": [
+                    {
+                        "value": "**UID:** 5070 | **GID:** 11169",
+                        "name": "General Info",
+                        "inline": false
+                    },
+                    {
+                        "value": "<a:r3:837480734074994749> | `ɢᴀᴍᴍᴀ`»`☆☆☆☆`\nInfluence `#14558`・**15**<:inf:755213119055200336>",
+                        "name": "Rarity",
+                        "inline": false
+                    },
+                    {
+                        "value": "**ENG:** Please Twins/Teacher\n**ALT:** Onegai Twins/Teacher\n**SID:** 1158 | `MAIN`",
+                        "name": "Main Series",
+                        "inline": false
+                    },
+                    {
+                        "value": "**Used** <:lawstone:725508010893508658>**x5**\n**Balance** <:lawstone:725508010893508658>**x245**\n<a:b1f:842175810633728060> | <:z1:842200435380191282> `Pity` | <:u1:842200435058409483> `Rate+` | <:tick1:788635993241944094> `K-POP`",
+                        "name": "Account",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/766880877099352085/824830508139020338/image.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/824830508139020338/image.png",
+                    "height": 0,
+                    "width": 0
+                },
+                "author": {
+                    "name": "JB",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": {
+                    "text": "★ Avoid Bans | Don't Alt.\nUploaded by LaifuBot †\nCredit: MyAnimeList"
+                }
+            }
+        ],
+        "gachaLoad": [
+            {
+                "title": "Feeling Lucky?",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 13227220,
+                "fields": [],
+                "thumbnail": null,
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/790324959893389332/oie_PzVfAPDbDMTS.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/790324959893389332/oie_PzVfAPDbDMTS.gif",
+                    "height": 0,
+                    "width": 0
+                },
+                "author": null,
+                "footer": null
+            }
+        ],
+        "dropCode": [
+            {
+                "title": null,
+                "type": "rich",
+                "description": "**JB** Dropped a Case File. `RESPOND WITH ITS CODE` to receive its contents.\nYou have `14` seconds.",
+                "url": null,
+                "timestamp": null,
+                "color": 2832008,
+                "fields": [],
+                "thumbnail": null,
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/867937589716471858/982751584855421000/image.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/867937589716471858/982751584855421000/image.png",
+                    "height": 0,
+                    "width": 0
+                },
+                "author": null,
+                "footer": {
+                    "text": "Credit: Official Anime / Artwork\n★ Case Files can be dropped every 15 seconds.\n★ Case Files can be claimed every 6 minutes."
+                }
+            }
+        ],
+        "dropComplete": [
+            {
+                "title": "Case File Opened",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 2832008,
+                "fields": [
+                    {
+                        "value": "<:lawstone:725508010893508658>x**1** / **5** *(457)*",
+                        "name": "Stones",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/810749727616139264/tenor.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/810749727616139264/tenor.gif",
+                    "height": 140,
+                    "width": 336
+                },
+                "image": null,
+                "author": {
+                    "name": "JB",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": null
+            }
+        ],
+        "info": [
+            {
+                "title": "Megumin (めぐみん)",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": null,
+                "fields": [
+                    {
+                        "value": "*Crazy Crimson Demon Girl*\n**Global ID:** 1\n**Total Images:** 9",
+                        "name": "General Info",
+                        "inline": false
+                    },
+                    {
+                        "value": "**ENG:** KonoSuba: Gods Blessing on This Wonderful World!\n**ALT:** Kono Subarashii Sekai ni Shukufuku wo!\n**SID:** 47 | `MAIN`\n <a:11:844166305090633730> <a:15:844165571762585620> <a:217:914994793422131301>",
+                        "name": "Main Series",
+                        "inline": false
+                    },
+                    {
+                        "value": "・**1981**<:inf:755213119055200336> \nRanked: `#3`・`#3`",
+                        "name": "Influence",
+                        "inline": false
+                    },
+                    {
+                        "value": "<a:r1:837480734050222100> 1132・1188\n<a:r2:837480734452088882> 130・136\n<a:r3:837480734074994749> 101・107\n<a:r4:837480733668278273> 107・110\n<a:r5:837480734985289749> 13・14\n<a:r6:837480733760815124> 8・8\n<a:r7:837487911075053598> 2・2",
+                        "name": "Collections",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/873482227307122698/image.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/873482227307122698/image.png",
+                    "height": 0,
+                    "width": 0
+                },
+                "author": {
+                    "name": "Information Card",
+                    "icon_url": "https://cdn.discordapp.com/attachments/793598007433232434/898382474999128104/saya6extended-15final_cropped.png"
+                },
+                "footer": {
+                    "text": "Have a better Image? Request a Change!\nImage #1 - Uploaded by 9𝔱𝔥Law †\nCredit: KonoSuba: Fantastic Days! / Game"
+                }
+            }
+        ],
+        "auction": [
+            {
+                "title": "Auction Card",
+                "type": "rich",
+                "description": "**Name:** Jill (ジル)\n**Global ID:** 5207\n**Image:** #1",
+                "url": null,
+                "timestamp": null,
+                "color": 16097535,
+                "fields": [
+                    {
+                        "value": "**ENG:** Deca-Dence\n**ALT:** Deca-Dence\n**SID:** 408 | `MAIN`",
+                        "name": "Main Series",
+                        "inline": false
+                    },
+                    {
+                        "value": "<a:r6:837480733760815124> | `ᴢᴇᴛᴀ`»`☆☆☆☆`\nInfluence `#10890`・**58**<:inf:755213119055200336>",
+                        "name": "Rarity",
+                        "inline": false
+                    },
+                    {
+                        "value": "**Current Bid:** Preguntín\n**Price:** :dollar: $2,855,000 \n**Ends In:** 15 Hours",
+                        "name": "Highest Bid",
+                        "inline": false
+                    },
+                    {
+                        "value": "Preguntín bid :dollar: **$**2,855,000\n✰898รoรⱥᴍⱥfiⱥ✰ bid :dollar: **$-**2,854,000\nPreguntín bid :dollar: **$**2,853,000\ngastom ♡ bid :dollar: **$**2,852,000\nPreguntín bid :dollar: **$**2,851,000",
+                        "name": "Auction Feed",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/766880877099352085/787474936151277619/image.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/787474936151277619/image.png",
+                    "height": 0,
+                    "width": 0
+                },
+                "author": {
+                    "name": "LaifuBot †",
+                    "icon_url": "https://cdn.discordapp.com/attachments/722702340620288042/722702409171992576/TnjM57u.png"
+                },
+                "footer": {
+                    "text": "Want this character? Bid now using l.bid"
+                }
+            }
+        ],
+        "upgrade": [
+            {
+                "title": "<a:witchp1:806416022499885096> Depths of RNG",
+                "type": "rich",
+                "description": "<a:catp2:806415234809987073> __Choose an option__\n<a:catp1:806414931200966667> :one: ♢ Star Enhancing\n<a:cts2:857108310386147369> :two: ♢ Glitch\n<a:i1:888672463947452456> :three: ♢ Influence Skins\n<a:gm7:960286343190175764> :four: ♢ Medals\n\n__Currencies__\n💠 118480 | <a:gm4:960003433576951858> 2.838 | 💮 1425\n__Failstacks__\n🔮 0",
+                "url": null,
+                "timestamp": null,
+                "color": 7798959,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "height": 226,
+                    "width": 498
+                },
+                "image": null,
+                "author": {
+                    "name": "Welcome to:"
+                },
+                "footer": null
+            }
+        ],
+        "medalsCharacterPrompt": [
+            {
+                "title": "<a:hts1:857109008116219914> Depths of RNG",
+                "type": "rich",
+                "description": "<a:gm7:960286343190175764> ♢ Medals\n\n**Medals** will allow you to embed your cards rarity with either a `BRONZE`, `SILVER`, `GOLD`, or a extremely rare `PRISTINE` emblem. \n\n**Medals RNG Guide:**\n> ・**Medal** RNG can fail and reward you with nothing.\n> ・You can roll any **Medal** at once, you do not need to go in order of Bronze to Pristine.\n> ・When rolling a character with a **Medal** already applied, you will always attempt to increase the rarity of the **Medal**. This can fail.\n> ・You can't downgrade a **Medal**, only upgrade.\n> ・Rates for both obtaining and upgrading **Medals** are the same.\n\n`DEMO:`\n<a:r1:837480734050222100><a:gm1:960028177898545222> `BRONZE`・1704 lifetime creations\n<a:r6:837480733760815124><a:gm2:960026979632054282> `SILVER`・906 lifetime creations\n<a:r7:837487911075053598><a:gm3:960032886914969640> `GOLD`・483 lifetime creations\n<a:r9:837877366843637780><a:gm7:960286343190175764> `PRISTINE`・232 lifetime creations\n\n<a:catp1:806414931200966667> You are inside the black cats den..Feeling lucky?\n\n**Insert** the **UniqueID** of the character you wish to attempt to apply a **Medal**.\n\n__Currencies__\n<a:gm4:960003433576951858> 2.838",
+                "url": null,
+                "timestamp": null,
+                "color": 7798959,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/793598007433232434/857108935903150110/ets1.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/857108935903150110/ets1.gif",
+                    "height": 222,
+                    "width": 498
+                },
+                "image": null,
+                "author": {
+                    "name": "Welcome to:"
+                },
+                "footer": null
+            }
+        ],
+        "medalsCostPrompt": [
+            {
+                "title": "<a:hts1:857109008116219914> Depths of RNG",
+                "type": "rich",
+                "description": "<a:gm7:960286343190175764> ♢ Medals\n\n__Violet Evergarden (ヴァイオレット・エヴァーガーデン)__\n\n**UniqueID:** 2188\n<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`\nInfluence・**1558**<:inf:755213119055200336>\n**SELv.** +0\n\n`COST:`\n:one: <a:gm4:960003433576951858> 1.000\n\n__Currencies__\n<a:gm4:960003433576951858> 2.838",
+                "url": null,
+                "timestamp": null,
+                "color": 7798959,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/793598007433232434/857108935903150110/ets1.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/857108935903150110/ets1.gif",
+                    "height": 222,
+                    "width": 498
+                },
+                "image": null,
+                "author": {
+                    "name": "Welcome to:"
+                },
+                "footer": null
+            }
+        ],
+        "influenceSkinsCharacterPrompt": [
+            {
+                "title": "<a:witchp1:806416022499885096> Depths of RNG",
+                "type": "rich",
+                "description": "<a:i1:888672463947452456> ♢ Influence Skins\n\nWelcome to the **Influence Skin Store**. **Skins** sold here are on a rotation. <a:nc:870218991967301632>\n\n♢ **Skins** are a one time application onto the card of your choice.\n\n`CURRENT ROTATION:`\n\n:one: *Magic Trick.* \n`REG` | Influence・**1000** <a:i6:912290965778235402> \n`GLITCH` | Influence・**1000** <a:ig6:917639690566397992> \n`SALE ENDS:`2022-06-10 | `4` ᴅᴀʏs \n`COST:`0300 💮 \n⠀\n:two: *Marine.* \n`REG` | Influence・**1000** <a:i12:974445370987929650> \n`GLITCH` | Influence・**1000** <a:ig12:974445121275850772> \n`SALE ENDS:`2022-06-10 | `4` ᴅᴀʏs \n`COST:`0300 💮 \n⠀\n**Insert** the **UniqueID** of the character followed by the **SkinID** you wish to purchase.\n\n__Currencies__\n💮 1425",
+                "url": null,
+                "timestamp": null,
+                "color": 7798959,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "height": 226,
+                    "width": 498
+                },
+                "image": null,
+                "author": {
+                    "name": "Welcome to:"
+                },
+                "footer": null
+            }
+        ],
+        "influenceSkinsCostPrompt": [
+            {
+                "title": "<a:witchp1:806416022499885096> Depths of RNG",
+                "type": "rich",
+                "description": "<a:i1:888672463947452456> ♢ Influence Skins\n\n__Violet Evergarden (ヴァイオレット・エヴァーガーデン)__\n\n**UniqueID:** 2188\n<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`\nInfluence・**1558** <a:i12:974445370987929650>\n**SELv.** +0\n\n`CHANGES APPLIED:`\n*Marine.*・ <a:i12:974445370987929650>\n\n`COST:`\n:one: 💮 0300\n\n__Currencies__\n💮 1425",
+                "url": null,
+                "timestamp": null,
+                "color": 7798959,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "height": 226,
+                    "width": 498
+                },
+                "image": null,
+                "author": {
+                    "name": "Welcome to:"
+                },
+                "footer": null
+            }
+        ],
+        "cardGlitchingCharacterPrompt": [
+            {
+                "title": "<a:hts1:857109008116219914> Depths of RNG",
+                "type": "rich",
+                "description": "<a:cts1:857109322349019176> ♢ Card Glitching(Glitch)\n\nDo you know what happens to a card that received too much 💠?\n\n**Glitched** will alter a cards influence, badge, and border symbols. **SE**+3 cards are eligible to be **Glitched.**\n\n`DEMO:`\n<a:r6:837480733760815124> into <a:rg6:856716186115768320>\n<:inf:755213119055200336> into <a:zi:856659238184157210>\n..finally the border.\n<a:zb1:856651163230928986><a:zb2:856651163780644894><a:zb3:856651163217821726><a:zb4:856651163957198869><a:zb5:856651166796480513><a:zb6:856651167546081320><a:zb7:856651166951931984><a:zb8:856651165797056552><a:zb9:856651164828827649><a:zb10:856651164454748190><a:zb11:856651164442296330><a:zb12:856651164627894282>\n\n<a:cts2:857108310386147369> **Insert** the **UniqueID** of the character you wish to **Glitch!**\n\n__Currencies__\n💠 118480\n__Failstacks__\n🔮 0",
+                "url": null,
+                "timestamp": null,
+                "color": 7798959,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/793598007433232434/857108935903150110/ets1.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/857108935903150110/ets1.gif",
+                    "height": 222,
+                    "width": 498
+                },
+                "image": null,
+                "author": {
+                    "name": "Welcome to:"
+                },
+                "footer": null
+            }
+        ],
+        "cardGlitchingCostPrompt": [
+            {
+                "title": "<a:hts1:857109008116219914> Depths of RNG",
+                "type": "rich",
+                "description": "<a:cts1:857109322349019176> ♢ Card Glitching(Glitch)\n\n__Nino Nakano (中野 二乃)__\n\n**UniqueID:** 1067\n<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`\nInfluence・**1604**<:inf:755213119055200336>\n**SELv.** +3\n\n`COST:`\n:one: 💠 2000\n\n__Currencies__\n💠 118480\n__Failstacks__\n🔮 0",
+                "url": null,
+                "timestamp": null,
+                "color": 7798959,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/793598007433232434/857108935903150110/ets1.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/857108935903150110/ets1.gif",
+                    "height": 222,
+                    "width": 498
+                },
+                "image": null,
+                "author": {
+                    "name": "Welcome to:"
+                },
+                "footer": null
+            }
+        ],
+        "starEnhancingCharacterPrompt": [
+            {
+                "title": "<a:witchp1:806416022499885096> Depths of RNG",
+                "type": "rich",
+                "description": "<a:catp2:806415234809987073> ♢ Star Enhancing(SE)\n\n**SE** will increase a character's rarity level by +N to a maximum of 3.\n\n`DEMO:` <a:r6:837480733760815124> is standard. <a:r6:837480733760815124> | `𝐈`»`★☆☆☆` is **SE**+1.\n\n<a:catp1:806414931200966667> You are inside the black cats den..Feeling lucky?\n\n**Insert** the **UniqueID** of the character you wish to **SE!**\n\n__Currencies__\n💠 118480\n__Failstacks__\n🔮 0",
+                "url": null,
+                "timestamp": null,
+                "color": 7798959,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "height": 226,
+                    "width": 498
+                },
+                "image": null,
+                "author": {
+                    "name": "Welcome to:"
+                },
+                "footer": null
+            }
+        ],
+        "starEnhancingCostPrompt": [
+            {
+                "title": "<a:witchp1:806416022499885096> Depths of RNG",
+                "type": "rich",
+                "description": "<a:catp2:806415234809987073> ♢ Star Enhancing\n\n__Miku Nakano (中野 三玖)__\n\n**UniqueID:** 1269\n<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`\nInfluence・**1808**<:inf:755213119055200336>\n**SELv.** +0\n\n`COST:`\n:one: `SINGLE:`💠 25\n:two: `MULTI:`💠 250\n\nYour fail stacks value is **0**. `Bonus:` **+0.00%** \n*You will consume all failstacks on success.*\n\n__Currencies__\n💠 118480\n__Failstacks__\n🔮 0",
+                "url": null,
+                "timestamp": null,
+                "color": 7798959,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "height": 226,
+                    "width": 498
+                },
+                "image": null,
+                "author": {
+                    "name": "Welcome to:"
+                },
+                "footer": null
+            }
+        ],
+        "rewardBox": [
+            {
+                "title": "JB - Reward Box",
+                "type": "rich",
+                "description": "x1 **Badge92・<a:92:850636525875626027> **- (Tier 1 Gacha Reward) | Expires: 1 Days\nx1 **Badge243・<a:243:950875885374939247> **- (Tier 1 Gacha Reward) | Expires: 13 Days\nx1 **Badge227・<a:227:916875639540314183> **- (Tier 1 Gacha Reward) | Expires: 13 Days\nx1 **Badge235・<a:235:931354895502688267> **- (Tier 1 Gacha Reward) | Expires: 44 Days",
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [
+                    {
+                        "value": "Rewards have an expiry date of 45 days.\nUse `CLAIM` command to claim rewards.",
+                        "name": "• Guide",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": null,
+                "author": null,
+                "footer": {
+                    "text": "Page 1/1 • 4 unique rewards available."
+                }
+            }
+        ],
+        "badgePreview": [
+            {
+                "title": "#3 Guy Might (マイト・ガイ)",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 9722874,
+                "fields": [
+                    {
+                        "value": "**UID:** 964 | **GID:** 871\n**Claimed By:** JB\n**Age:** 2021-07-26 | `315` ᴅᴀʏs",
+                        "name": "General Info",
+                        "inline": false
+                    },
+                    {
+                        "value": "<a:r5:837480734985289749> | `ᴇᴘsɪʟᴏɴ`»`❦#92`»`☆☆☆☆`\nInfluence `#887`・**634**<:inf:755213119055200336>\n*Magical microphone.*\n<a:b1:838570555761491969>",
+                        "name": "Rarity",
+                        "inline": false
+                    },
+                    {
+                        "value": "**ENG:** Naruto\n**ALT:** Naruto\n**SID:** 57 | `MAIN`",
+                        "name": "Main Series",
+                        "inline": false
+                    },
+                    {
+                        "value": "・REPLY **Apply** to apply.",
+                        "name": "Guide",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/819798600837627904/850636351405948958/92.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/850636351405948958/92.gif",
+                    "height": 333,
+                    "width": 331
+                },
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/802713382749863996/image.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/802713382749863996/image.png",
+                    "height": 350,
+                    "width": 225
+                },
+                "author": {
+                    "name": "JB is Viewing...",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": {
+                    "text": "Uploaded by dinga\nCredit: Anime official"
+                }
+            }
+        ],
+        "blu": [
+            {
+                "title": "JB - Badge Index",
+                "type": "rich",
+                "description": "**#194 *Yeah!***\n`SERIES:` Is It Wrong to Try to Pick Up Girls in a Dungeon?\n`GUIDE:` Gacha\n`TYPE:` Repeatable\n`CLAIM COUNT:` 237\n`RARITY:` <a:b1:838570555761491969>\n\n**Badge Completion**\nYou don't own this badge on any characters.",
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/819798600837627904/881463694972817408/194.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/881463694972817408/194.gif",
+                    "height": 350,
+                    "width": 350
+                },
+                "image": null,
+                "author": null,
+                "footer": {
+                    "text": "Page 1/1 • 0 badges collected."
+                }
+            }
+        ],
+        "cd": [
+            {
+                "title": "🦈 • JB",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [
+                    {
+                        "value": "🧰 0d 0h 1m 26s\n\n:bed: 0d 13h 23m 39s\n\n🔔 0d 0h 6m 31s",
+                        "name": "Cooldowns",
+                        "inline": false
+                    },
+                    {
+                        "value": "<a:gm4:960003433576951858> 0.000 / 0.75",
+                        "name": "Daily Limits",
+                        "inline": false
+                    },
+                    {
+                        "value": ":dollar: **$**185,771,000 | <:lawstone:725508010893508658> 548 | <a:nightmare:734979349937127544> 0\n🎫 0 | 💠 118480 | <a:gm4:960003433576951858> 2.838 | 💮 1425",
+                        "name": "Wallet",
+                        "inline": true
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096",
+                    "proxyURL": "https://images-ext-2.discordapp.net/external/kRr4x2mFqYH-hBLoBgV0Q710F4_JoT2EDpijEgT80Bg/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png",
+                    "height": 360,
+                    "width": 360
+                },
+                "image": null,
+                "author": {
+                    "name": "Lv.58 | 4500+"
+                },
+                "footer": null
+            }
+        ],
+        "list": [
+            {
+                "title": "JB - Collection",
+                "type": "rich",
+                "description": "8627 | 🇲 [α] #1 Estella `#8237`・**111**<:inf:755213119055200336>\n8626 | 🇲 [α] #2 Kaname Arisugawa `#3343`・**323**<:inf:755213119055200336>\n8625 |  [α] #7 Krista Lenz `#205`・**934**<:inf:755213119055200336>\n8624 | 💸 [α] #6 Tsukasa Yuzaki `#154`・**948**<:inf:755213119055200336>\n8623 | 🪙 [α] #9 Megumi Tadokoro `#288`・**859**<:inf:755213119055200336>\n8622 | 🪙 [β] #6 Sakura Matou `#430`・**766**<:inf:755213119055200336>\n8621 | 🪙 [δ] #3 Misha Necron `#266`・**883**<:inf:755213119055200336>\n8620 | 🪙 [α] #9 Tsukasa Yuzaki `#154`・**948**<:inf:755213119055200336>\n8619 |  [β] #7 Nana Hiiragi `#2636`・**388**<:inf:755213119055200336>\n8618 | 💸 [α] #9 Mei Aihara `#1659`・**510**<:inf:755213119055200336>\n8617 | 💸 [γ] #4 Schwi Dola `#329`・**819**<:inf:755213119055200336>\n8616 | 💸 [α] #6 Chise Hatori `#736`・**676**<:inf:755213119055200336>\n8615 | 💸 [β] #3 Levi Kazama `#685`・**677**<:inf:755213119055200336>\n8614 | 💸 [α] #3 Chisa Kotegawa `#914`・**655**<:inf:755213119055200336>\n8613 | 💸 [α] #5 Hitch Dreyse `#815`・**681**<:inf:755213119055200336>\n8612 | 💸 [α] #7 Shizue Izawa `#441`・**775**<:inf:755213119055200336>\n8611 | 💸 [α] #6 Shizue Izawa `#441`・**775**<:inf:755213119055200336>\n8610 | 💸 [α] #4 Rider `#289`・**868**<:inf:755213119055200336>\n8609 | 💸 [α] #7 Megumi Tadokoro `#288`・**859**<:inf:755213119055200336>\n8608 | 💸 [β] #2 Shuna `#247`・**903**<:inf:755213119055200336>",
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [],
+                "thumbnail": null,
+                "image": null,
+                "author": null,
+                "footer": {
+                    "text": "Page 1/374 • 7477 Characters Collected"
+                }
+            }
+        ],
+        "dropCooldown": [
+            {
+                "title": "Drop: Cooldown",
+                "type": "rich",
+                "description": "You still have a drop cooldown.",
+                "url": null,
+                "timestamp": null,
+                "color": 2832008,
+                "fields": [
+                    {
+                        "value": "0d 0h 1m 8s",
+                        "name": "Remaining",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/725317430418604032/tenor_15.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/725317430418604032/tenor_15.gif",
+                    "height": 498,
+                    "width": 498
+                },
+                "image": null,
+                "author": null,
+                "footer": null
+            }
+        ],
+        "dailyCooldown": [
+            {
+                "title": "Daily: Cooldown",
+                "type": "rich",
+                "description": "The day isn't over yet!",
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [
+                    {
+                        "value": "0d 13h 23m 9s",
+                        "name": "Remaining",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/725590953381068810/tenor_20.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/725590953381068810/tenor_20.gif",
+                    "height": 498,
+                    "width": 498
+                },
+                "image": null,
+                "author": null,
+                "footer": null
+            }
+        ],
+        "favorite": [
+            {
+                "title": null,
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [
+                    {
+                        "value": "You have set **Ezreal ** as a 💖 favorite.",
+                        "name": "Success",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": null,
+                "author": {
+                    "name": "JB",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": null
+            }
+        ],
+        "favoriteRemoved": [
+            {
+                "title": null,
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [
+                    {
+                        "value": "You have removed **Ezreal ** from favorites.\nPremium can mass remove favorities using `FAV -clear`.",
+                        "name": "Success",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": null,
+                "author": {
+                    "name": "JB",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": null
+            }
+        ],
+        "top": [
+            {
+                "title": "🏆 TOP 500",
+                "type": "rich",
+                "description": "**#1 Zero Two** - Darling in the FranXX・**2734**<:inf:755213119055200336>\n**#2 Mai Sakurajima** - Rascal Does Not Dream of Bunny Girl Senpai・**2107**<:inf:755213119055200336>\n**#3 Megumin** - KonoSuba: Gods Blessing on This Wonderful World!・**1984**<:inf:755213119055200336>\n**#4 Satoru Gojou** - Jujutsu Kaisen・**1903**<:inf:755213119055200336>\n**#5 Nezuko Kamado** - Demon Slayer: Kimetsu no Yaiba・**1936**<:inf:755213119055200336>\n**#6 Rem** - ReZERO: Starting Life in Another World・**1813**<:inf:755213119055200336>\n**#7 Miku Nakano** - The Quintessential Quintuplets・**1808**<:inf:755213119055200336>\n**#8 Power** - Chainsaw Man・**1418**<:inf:755213119055200336>\n**#9 Rias Gremory** - High School DxD・**1653**<:inf:755213119055200336>\n**#10 Mikasa Ackerman** - Attack on Titan・**1722**<:inf:755213119055200336>\n**#11 Asuna Yuuki** - Sword Art Online・**1644**<:inf:755213119055200336>\n**#12 Levi** - Attack on Titan・**1646**<:inf:755213119055200336>\n**#13 Nino Nakano** - The Quintessential Quintuplets・**1604**<:inf:755213119055200336>\n**#14 Violet Evergarden** - Violet Evergarden・**1558**<:inf:755213119055200336>\n**#15 Kaguya Shinomiya** - Kaguya-sama: Love is War・**1534**<:inf:755213119055200336>\n**#16 Chika Fujiwara** - Kaguya-sama: Love is War・**1610**<:inf:755213119055200336>\n**#17 Yumeko Jabami** - Kakegurui: Compulsive Gambler・**1491**<:inf:755213119055200336>\n**#18 Shinobu Kochou** - Demon Slayer: Kimetsu no Yaiba・**1536**<:inf:755213119055200336>\n**#19 Chizuru Ichinose** - Rent a Girlfriend・**1481**<:inf:755213119055200336>\n**#20 Killua Zoldyck** - Hunter x Hunter・**1466**<:inf:755213119055200336>",
+                "url": null,
+                "timestamp": null,
+                "color": 16772866,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/755336681070002257/tenor.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/755336681070002257/tenor.gif",
+                    "height": 280,
+                    "width": 498
+                },
+                "image": null,
+                "author": null,
+                "footer": {
+                    "text": "Page 1/25"
+                }
+            }
+        ],
+        "voteCooldown": [
+            {
+                "title": "Vote: Cooldown",
+                "type": "rich",
+                "description": "Vote cooldown isn't up yet!\n<https://top.gg/bot/688202466315206661/vote>",
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [
+                    {
+                        "value": "0d 0h 4m 13s",
+                        "name": "Remaining",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/734982454754017400/tenor_59.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/734982454754017400/tenor_59.gif",
+                    "height": 357,
+                    "width": 498
+                },
+                "image": null,
+                "author": null,
+                "footer": null
+            }
+        ],
+        "cluSearch": [
+            {
+                "title": "JB - Searching",
+                "type": "rich",
+                "description": "4651 | [#9] Megumi Fushiguro - Jujutsu Kaisen ・**1255**<:inf:755213119055200336>\n4652 | [#9] Satoru Gojou - Jujutsu Kaisen ・**1903**<:inf:755213119055200336>\n4653 | [#9] Yuuji Itadori - Jujutsu Kaisen ・**1268**<:inf:755213119055200336>\n4654 | [#9] Nobara Kugisaki - Jujutsu Kaisen ・**1215**<:inf:755213119055200336>\n4655 | [#9] Suguru Getou - Jujutsu Kaisen ・**814**<:inf:755213119055200336>\n4656 | [#9] Toge Inumaki - Jujutsu Kaisen ・**1103**<:inf:755213119055200336>\n4657 | [#9] Mahito - Jujutsu Kaisen ・**846**<:inf:755213119055200336>\n4658 | [#9] Kento Nanami - Jujutsu Kaisen ・**967**<:inf:755213119055200336>\n4659 | [#9] Panda - Jujutsu Kaisen ・**824**<:inf:755213119055200336>\n4660 | [#9] Sukuna Ryoumen - Jujutsu Kaisen ・**1199**<:inf:755213119055200336>\n4661 | [#9] Aoi Toudou - Jujutsu Kaisen ・**768**<:inf:755213119055200336>\n4662 | [#9] Maki Zenin - Jujutsu Kaisen ・**1022**<:inf:755213119055200336>\n8352 | [#9] Junpei Yoshino - Jujutsu Kaisen ・**605**<:inf:755213119055200336>\n8746 | [#9] Kasumi Miwa - Jujutsu Kaisen ・**666**<:inf:755213119055200336>\n11309 | [#9] Choso - Jujutsu Kaisen ・**593**<:inf:755213119055200336>\n11310 | [#5] Mei Mei - Jujutsu Kaisen ・**562**<:inf:755213119055200336>\n11311 | [#6] Momo Nishimiya - Jujutsu Kaisen ・**536**<:inf:755213119055200336>\n11312 | [#9] Toji Fushiguro - Jujutsu Kaisen ・**635**<:inf:755213119055200336>\n11313 | [#2] Utahime Iori - Jujutsu Kaisen ・**541**<:inf:755213119055200336>\n11314 | [#9] Yuta Okkotsu - Jujutsu Kaisen ・**732**<:inf:755213119055200336>",
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [],
+                "thumbnail": null,
+                "image": null,
+                "author": null,
+                "footer": {
+                    "text": "Page 1/2 • 29 Results Found"
+                }
+            }
+        ],
+        "wishlistAdd": [
+            {
+                "title": null,
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [
+                    {
+                        "value": "You have set **Maki Zenin (禪院 真希)** on your wishlist.",
+                        "name": "Success",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": null,
+                "author": {
+                    "name": "JB",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": null
+            }
+        ],
+        "wishlistRemove": [
+            {
+                "title": null,
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [
+                    {
+                        "value": "You have removed **Maki Zenin (禪院 真希)** from your wishlist.",
+                        "name": "Success",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": null,
+                "author": {
+                    "name": "JB",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": null
+            }
+        ],
+        "lookUpError": [
+            {
+                "title": null,
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [
+                    {
+                        "value": "After the Lookup command insert a syntax. **-name** or **-series** followed by a keyboard to search for.",
+                        "name": "Error",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": null,
+                "author": {
+                    "name": "JB",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": null
+            }
+        ],
+        "profile": [
+            {
+                "title": "Account Perks & Options",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": null,
+                "fields": [
+                    {
+                        "value": "Premium <:tick2:788641766407536660>\nPremium Upgrade <:tick2:788641766407536660>",
+                        "name": "Premium Benefits",
+                        "inline": true
+                    },
+                    {
+                        "value": "CRIT RATE: Drop <:tick1:788635993241944094>\nPITY: Zeta <:tick1:788635993241944094>\nBURN: Arena Tickets <:tick1:788635993241944094>\nPITY: Improved Zeta <:tick1:788635993241944094>",
+                        "name": "Arena Benefits",
+                        "inline": true
+                    },
+                    {
+                        "value": "Protection <:tick1:788635993241944094>\n#Rank #10000 AND OVER\nRarity DELTA AND LOWER\nExclusions <:tick2:788641766407536660>",
+                        "name": "Burn Filters (Premium)",
+                        "inline": true
+                    },
+                    {
+                        "value": "K-Pop <:tick1:788635993241944094>",
+                        "name": "Gacha Toggles",
+                        "inline": true
+                    }
+                ],
+                "thumbnail": null,
+                "image": null,
+                "author": null,
+                "footer": null
+            }
+        ],
+        "cardWorkshop": [
+            {
+                "title": "<a:witchp1:806416022499885096> Card Workshop",
+                "type": "rich",
+                "description": "<a:129e:857048890842021889> __Choose an option__\n<a:71:848394571624480798> :one: ♢ Badge Transfers\n<a:ig6:917639690566397992> :two: ♢ Skin Transfers\n\n__Currencies__\n💵 **$**185,771,000 | 💮 1425",
+                "url": null,
+                "timestamp": null,
+                "color": 7798959,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "height": 226,
+                    "width": 498
+                },
+                "image": null,
+                "author": {
+                    "name": "Welcome to:"
+                },
+                "footer": null
+            }
+        ],
+        "badgeTransferCharacterPrompt": [
+            {
+                "title": "<a:witchp1:806416022499885096> Card Workshop",
+                "type": "rich",
+                "description": "<a:129e:857048890842021889> ♢ Badge Transfers\n\nYou can either swap badges between two cards, or transfer a badge to another card.\n\n**Insert** two **UniqueID** of the characters you wish to Badge Transfer.\n\n`DEMO:` 192 36\n\n__Currencies__\n💵 **$**185,771,000",
+                "url": null,
+                "timestamp": null,
+                "color": 7798959,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "height": 226,
+                    "width": 498
+                },
+                "image": null,
+                "author": {
+                    "name": "Welcome to:"
+                },
+                "footer": null
+            }
+        ],
+        "skinTransferCharacterPrompt": [
+            {
+                "title": "<a:witchp1:806416022499885096> Card Workshop",
+                "type": "rich",
+                "description": "<a:ig6:917639690566397992> ♢ Skin Transfers\n\nYou can either swap skins between two cards, or transfer a skin to another card.\n\n**Insert** two **UniqueID** of the characters you wish to Skin Transfer.\n\n`DEMO:` 192 36\n\n__Currencies__\n💮 1425",
+                "url": null,
+                "timestamp": null,
+                "color": 7798959,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                    "height": 226,
+                    "width": 498
+                },
+                "image": null,
+                "author": {
+                    "name": "Welcome to:"
+                },
+                "footer": null
+            }
+        ],
+        "gachaBadge": [
+            {
+                "title": "#235 *Is this a Pigeon?*",
+                "type": "rich",
+                "description": "Congratulations. You unboxed a rare badge!\nThe badge has been sent to your reward box.",
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [
+                    {
+                        "name": "Rarity",
+                        "value": "Tier **1**\n<a:b1:838570555761491969>",
+                        "inline": false
+                    },
+                    {
+                        "name": "Account",
+                        "value": "**Used** <:lawstone:725508010893508658>**x4**\n**Balance** <:lawstone:725508010893508658>**x537**",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/819798600837627904/931354619651694663/235.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/931354619651694663/235.gif",
+                    "height": 286,
+                    "width": 285
+                },
+                "image": null,
+                "author": {
+                    "name": "JB",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": {
+                    "text": "★ Avoid Bans | Don't Alt."
+                }
+            }
+        ],
+        "dailyClaim": [
+            {
+                "title": "Daily: Claimed",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [
+                    {
+                        "value": "<a:125e:854643770493501450> `NO BOOST FOUND`",
+                        "name": "Nitro Boosting",
+                        "inline": false
+                    },
+                    {
+                        "value": "<:lawstone:725508010893508658>x**5**\n🎫x**3**",
+                        "name": "Waifus Awake",
+                        "inline": false
+                    },
+                    {
+                        "value": "[Consider Supporting!](https://donatebot.io/checkout/688203298255142933)\n`DONATE` Command contains more information. :heart:",
+                        "name": "Enjoying Laifu?",
+                        "inline": false
+                    },
+                    {
+                        "value": "**BACK IN TIME TO 2020's FIRST EVENT!**\n> JUNE IS LAIFU'S ANNIVERSARY! COME CELEBRATE WITH US!\n> Lots of rewards to be handed out! <a:rg8:856716188250538024>\n> Limited time **SPECIAL** <a:rg10:856716187442085908> cards are available to obtain!\n*Full details in Maincord.*",
+                        "name": ":loudspeaker:・Notice Board",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/725587098450526228/waifuyes.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/725587098450526228/waifuyes.gif",
+                    "height": 498,
+                    "width": 475
+                },
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/793598007433232434/981418605637951488/birthday-event2.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/981418605637951488/birthday-event2.png",
+                    "height": 0,
+                    "width": 0
+                },
+                "author": null,
+                "footer": {
+                    "text": "See you again in 23 hours."
+                }
+            }
+        ],
+        "arenaInitial": [
+            {
+                "title": "ARENA: Arjay Vs. RickyZ",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 16711680,
+                "fields": [
+                    {
+                        "value": "🔸 **Arjay**\n**Lv.**35\n🦈 • **LP** [3995]\n\n:heart: 10041\n:crossed_swords: 3067\n:shield: 1380\n\n**DMG.** 1687 ~ 2398\n**CRIT.** 43%",
+                        "name": "Attacker",
+                        "inline": true
+                    },
+                    {
+                        "value": "🔸 **RickyZ**\n**Lv.**24\n🐯 • **LP** [3495]\n\n:heart: 4938\n:crossed_swords: 1522\n:shield: 697\n\n**DMG.** 101 ~ 144\n**CRIT.** 10%",
+                        "name": "Defender",
+                        "inline": true
+                    }
+                ],
+                "thumbnail": null,
+                "image": null,
+                "author": {
+                    "name": "🦈 BRACKET [7] LP: 4001 ~ 4500"
+                },
+                "footer": null
+            }
+        ],
+        "arenaResult": [
+            {
+                "title": "ARENA: Arjay Vs. RickyZ",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 16711680,
+                "fields": [
+                    {
+                        "value": "🔸 **Arjay** 🥳\n**Lv.**35\n🦈 • **LP** [4000] 🔺 5\n\n:heart: 10041\n:crossed_swords: 3067\n:shield: 1380\n\n**DMG.** 1687 ~ 2398\n**CRIT.** 43%\n\n:heart: 9658\n**T-DMG.** 6257\n\n💠 + 150",
+                        "name": "Attacker",
+                        "inline": true
+                    },
+                    {
+                        "value": "🔸 **RickyZ** ☠\n**Lv.**24\n🐯 • **LP** [3495] 🔻 0\n\n:heart: 4938\n:crossed_swords: 1522\n:shield: 697\n\n**DMG.** 101 ~ 144\n**CRIT.** 10%\n\n:heart: -1319\n**T-DMG.** 383",
+                        "name": "Defender",
+                        "inline": true
+                    }
+                ],
+                "thumbnail": null,
+                "image": null,
+                "author": {
+                    "name": "🦈 BRACKET [7] LP: 4001 ~ 4500"
+                },
+                "footer": {
+                    "text": "You have 3 entries remaining."
+                }
+            }
+        ],
+        "arenaGif": [
+            {
+                "title": "ARENA: Arjay Vs. RickyZ",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 16711680,
+                "fields": [],
+                "thumbnail": null,
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/804993899495948288/GIF8.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/804993899495948288/GIF8.gif",
+                    "height": 0,
+                    "width": 0
+                },
+                "author": {
+                    "name": "🦈 BRACKET [7] LP: 4001 ~ 4500"
+                },
+                "footer": null
+            }
+        ],
+        "medalDropActive": [
+            {
+                "title": "⚠️・Medal Drop : Active!",
+                "type": "rich",
+                "description": "```Drop Quality : Poor\nContents : 0.010 ~ 0.025\nStatus : Active```",
+                "url": null,
+                "timestamp": null,
+                "color": 16763904,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/793598007433232434/960678276790120478/gm3.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/960678276790120478/gm3.gif",
+                    "height": 96,
+                    "width": 60
+                },
+                "image": null,
+                "author": {
+                    "name": "!zzdovad triggered a spawn.",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138414014303567872/09c616573d34899fa26a92dc7ac428ec.png?size=4096"
+                },
+                "footer": {
+                    "text": "React to receive contents."
+                }
+            }
+        ],
+        "medalDropClosed": [
+            {
+                "title": "⚠️・Medal Drop : Closed!",
+                "type": "rich",
+                "description": "Winner : <@138414014303567872>\n```Drop Quality : Poor\nContents : 0.010 ~ 0.025\nReward : 0.004・✨20%\nParticipants : 1\nStatus : Closed```",
+                "url": null,
+                "timestamp": null,
+                "color": 16763904,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/793598007433232434/960678276790120478/gm3.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/960678276790120478/gm3.gif",
+                    "height": 96,
+                    "width": 60
+                },
+                "image": null,
+                "author": {
+                    "name": "!zzdovad triggered a spawn.",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138414014303567872/09c616573d34899fa26a92dc7ac428ec.png?size=4096"
+                },
+                "footer": {
+                    "text": "This drop has closed."
+                }
+            }
+        ],
+        "burnReward": [
+            {
+                "title": "Burn: Rewards",
+                "type": "rich",
+                "description": "You have reached the Burn Rewards Counter!\n\n__You have gained the following__\n<:lawstone:725508010893508658>x**5** \n<a:nightmare:734979349937127544>x**500**\n🎫x**1**",
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/emojis/871566329482715196.gif?size=44&quality=lossless",
+                    "proxyURL": "https://images-ext-2.discordapp.net/external/zcY_LLMr4EwN5GXeuhTBcuwReZIps2HBJB_O7zOvooM/%3Fsize%3D44%26quality%3Dlossless/https/cdn.discordapp.com/emojis/871566329482715196.gif",
+                    "height": 44,
+                    "width": 44
+                },
+                "image": null,
+                "author": {
+                    "name": "!zzdovad",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138414014303567872/09c616573d34899fa26a92dc7ac428ec.png?size=4096"
+                },
+                "footer": {
+                    "text": "Burn Reward Counter: 15 / 15"
+                }
+            }
+        ],
+        "skinTransferCostPrompt": [],
+        "badgeTransferCostPrompt": []
+    },
+    "util": {
+        "embed1": {
+            "title": "#4 Bitna Kim (김빛나)",
             "type": "rich",
             "description": null,
             "url": null,
@@ -343,30 +1483,30 @@
             "color": 8436991,
             "fields": [
                 {
-                    "value": "**UID:** 5070 | **GID:** 11169",
+                    "value": "**UID:** 5078 | **GID:** 14898",
                     "name": "General Info",
                     "inline": false
                 },
                 {
-                    "value": "<a:r3:837480734074994749> | `ɢᴀᴍᴍᴀ`»`☆☆☆☆`\nInfluence `#14558`・**15**<:inf:755213119055200336>",
+                    "value": "<a:r3:837480734074994749> | `ɢᴀᴍᴍᴀ`»`☆☆☆☆`\nInfluence `#3314`・**269**<:inf:755213119055200336>",
                     "name": "Rarity",
                     "inline": false
                 },
                 {
-                    "value": "**ENG:** Please Twins/Teacher\n**ALT:** Onegai Twins/Teacher\n**SID:** 1158 | `MAIN`",
+                    "value": "**ENG:** Is There an Empty Room\n**ALT:** Is There an Empty Room\n**SID:** 1524 | `MAIN`",
                     "name": "Main Series",
                     "inline": false
                 },
                 {
-                    "value": "**Used** <:lawstone:725508010893508658>**x5**\n**Balance** <:lawstone:725508010893508658>**x245**\n<a:b1f:842175810633728060> | <:z1:842200435380191282> `Pity` | <:u1:842200435058409483> `Rate+` | <:tick1:788635993241944094> `K-POP`",
+                    "value": "**Used** <:lawstone:725508010893508658>**x3**\n**Balance** <:lawstone:725508010893508658>**x548**\n<a:b1f:842175810633728060> | <:z1:842200435380191282> `Pity` | <:u1:842200435058409483> `Rate+` | <:tick1:788635993241944094> `K-POP`",
                     "name": "Account",
                     "inline": false
                 }
             ],
             "thumbnail": null,
             "image": {
-                "url": "https://cdn.discordapp.com/attachments/766880877099352085/824830508139020338/image.png",
-                "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/824830508139020338/image.png",
+                "url": "https://cdn.discordapp.com/attachments/731729116533096468/888430354719969280/image.png",
+                "proxyURL": "https://media.discordapp.net/attachments/731729116533096468/888430354719969280/image.png",
                 "height": 0,
                 "width": 0
             },
@@ -375,1100 +1515,52 @@
                 "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
             },
             "footer": {
-                "text": "★ Avoid Bans | Don't Alt.\nUploaded by LaifuBot †\nCredit: MyAnimeList"
+                "text": "★ Avoid Bans | Don't Alt.\nUploaded by Lifeswoon\nCredit: Official Manhwa Art"
             }
-        }
-    ],
-    "gachaLoad": [
-        {
-            "title": "Feeling Lucky?",
+        },
+        "embed2": {
+            "title": "#4 Bitna Kim (김빛나)",
             "type": "rich",
             "description": null,
             "url": null,
             "timestamp": null,
-            "color": 13227220,
-            "fields": [],
-            "thumbnail": null,
-            "image": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/790324959893389332/oie_PzVfAPDbDMTS.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/790324959893389332/oie_PzVfAPDbDMTS.gif",
-                "height": 0,
-                "width": 0
-            },
-            "author": null,
-            "footer": null
-        }
-    ],
-    "dropCode": [
-        {
-            "title": null,
-            "type": "rich",
-            "description": "**JB** Dropped a Case File. `RESPOND WITH ITS CODE` to receive its contents.\nYou have `14` seconds.",
-            "url": null,
-            "timestamp": null,
-            "color": 2832008,
-            "fields": [],
-            "thumbnail": null,
-            "image": {
-                "url": "https://cdn.discordapp.com/attachments/867937589716471858/982751584855421000/image.png",
-                "proxyURL": "https://media.discordapp.net/attachments/867937589716471858/982751584855421000/image.png",
-                "height": 0,
-                "width": 0
-            },
-            "author": null,
-            "footer": {
-                "text": "Credit: Official Anime / Artwork\n★ Case Files can be dropped every 15 seconds.\n★ Case Files can be claimed every 6 minutes."
-            }
-        }
-    ],
-    "dropComplete": [
-        {
-            "title": "Case File Opened",
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 2832008,
+            "color": 8436991,
             "fields": [
                 {
-                    "value": "<:lawstone:725508010893508658>x**1** / **5** *(457)*",
-                    "name": "Stones",
-                    "inline": false
-                }
-            ],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/810749727616139264/tenor.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/810749727616139264/tenor.gif",
-                "height": 140,
-                "width": 336
-            },
-            "image": null,
-            "author": {
-                "name": "JB",
-                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
-            },
-            "footer": null
-        }
-    ],
-    "info": [
-        {
-            "title": "Megumin (めぐみん)",
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": null,
-            "fields": [
-                {
-                    "value": "*Crazy Crimson Demon Girl*\n**Global ID:** 1\n**Total Images:** 9",
+                    "value": "**UID:** 5078 | **GID:** 14898",
                     "name": "General Info",
                     "inline": false
                 },
                 {
-                    "value": "**ENG:** KonoSuba: Gods Blessing on This Wonderful World!\n**ALT:** Kono Subarashii Sekai ni Shukufuku wo!\n**SID:** 47 | `MAIN`\n <a:11:844166305090633730> <a:15:844165571762585620> <a:217:914994793422131301>",
-                    "name": "Main Series",
-                    "inline": false
-                },
-                {
-                    "value": "・**1981**<:inf:755213119055200336> \nRanked: `#3`・`#3`",
-                    "name": "Influence",
-                    "inline": false
-                },
-                {
-                    "value": "<a:r1:837480734050222100> 1132・1188\n<a:r2:837480734452088882> 130・136\n<a:r3:837480734074994749> 101・107\n<a:r4:837480733668278273> 107・110\n<a:r5:837480734985289749> 13・14\n<a:r6:837480733760815124> 8・8\n<a:r7:837487911075053598> 2・2",
-                    "name": "Collections",
-                    "inline": false
-                }
-            ],
-            "thumbnail": null,
-            "image": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/873482227307122698/image.png",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/873482227307122698/image.png",
-                "height": 0,
-                "width": 0
-            },
-            "author": {
-                "name": "Information Card",
-                "icon_url": "https://cdn.discordapp.com/attachments/793598007433232434/898382474999128104/saya6extended-15final_cropped.png"
-            },
-            "footer": {
-                "text": "Have a better Image? Request a Change!\nImage #1 - Uploaded by 9𝔱𝔥Law †\nCredit: KonoSuba: Fantastic Days! / Game"
-            }
-        }
-    ],
-    "auction": [
-        {
-            "title": "Auction Card",
-            "type": "rich",
-            "description": "**Name:** Jill (ジル)\n**Global ID:** 5207\n**Image:** #1",
-            "url": null,
-            "timestamp": null,
-            "color": 16097535,
-            "fields": [
-                {
-                    "value": "**ENG:** Deca-Dence\n**ALT:** Deca-Dence\n**SID:** 408 | `MAIN`",
-                    "name": "Main Series",
-                    "inline": false
-                },
-                {
-                    "value": "<a:r6:837480733760815124> | `ᴢᴇᴛᴀ`»`☆☆☆☆`\nInfluence `#10890`・**58**<:inf:755213119055200336>",
+                    "value": "<a:r3:837480734074994749> | `ɢᴀᴍᴍᴀ`»`☆☆☆☆`\nInfluence `#3314`・**269**<:inf:755213119055200336>",
                     "name": "Rarity",
                     "inline": false
                 },
                 {
-                    "value": "**Current Bid:** Preguntín\n**Price:** :dollar: $2,855,000 \n**Ends In:** 15 Hours",
-                    "name": "Highest Bid",
-                    "inline": false
-                },
-                {
-                    "value": "Preguntín bid :dollar: **$**2,855,000\n✰898รoรⱥᴍⱥfiⱥ✰ bid :dollar: **$-**2,854,000\nPreguntín bid :dollar: **$**2,853,000\ngastom ♡ bid :dollar: **$**2,852,000\nPreguntín bid :dollar: **$**2,851,000",
-                    "name": "Auction Feed",
-                    "inline": false
-                }
-            ],
-            "thumbnail": null,
-            "image": {
-                "url": "https://cdn.discordapp.com/attachments/766880877099352085/787474936151277619/image.png",
-                "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/787474936151277619/image.png",
-                "height": 0,
-                "width": 0
-            },
-            "author": {
-                "name": "LaifuBot †",
-                "icon_url": "https://cdn.discordapp.com/attachments/722702340620288042/722702409171992576/TnjM57u.png"
-            },
-            "footer": {
-                "text": "Want this character? Bid now using l.bid"
-            }
-        }
-    ],
-    "upgrade": [
-        {
-            "title": "<a:witchp1:806416022499885096> Depths of RNG",
-            "type": "rich",
-            "description": "<a:catp2:806415234809987073> __Choose an option__\n<a:catp1:806414931200966667> :one: ♢ Star Enhancing\n<a:cts2:857108310386147369> :two: ♢ Glitch\n<a:i1:888672463947452456> :three: ♢ Influence Skins\n<a:gm7:960286343190175764> :four: ♢ Medals\n\n__Currencies__\n💠 118480 | <a:gm4:960003433576951858> 2.838 | 💮 1425\n__Failstacks__\n🔮 0",
-            "url": null,
-            "timestamp": null,
-            "color": 7798959,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "height": 226,
-                "width": 498
-            },
-            "image": null,
-            "author": {
-                "name": "Welcome to:"
-            },
-            "footer": null
-        }
-    ],
-    "medalsCharacterPrompt": [
-        {
-            "title": "<a:hts1:857109008116219914> Depths of RNG",
-            "type": "rich",
-            "description": "<a:gm7:960286343190175764> ♢ Medals\n\n**Medals** will allow you to embed your cards rarity with either a `BRONZE`, `SILVER`, `GOLD`, or a extremely rare `PRISTINE` emblem. \n\n**Medals RNG Guide:**\n> ・**Medal** RNG can fail and reward you with nothing.\n> ・You can roll any **Medal** at once, you do not need to go in order of Bronze to Pristine.\n> ・When rolling a character with a **Medal** already applied, you will always attempt to increase the rarity of the **Medal**. This can fail.\n> ・You can't downgrade a **Medal**, only upgrade.\n> ・Rates for both obtaining and upgrading **Medals** are the same.\n\n`DEMO:`\n<a:r1:837480734050222100><a:gm1:960028177898545222> `BRONZE`・1704 lifetime creations\n<a:r6:837480733760815124><a:gm2:960026979632054282> `SILVER`・906 lifetime creations\n<a:r7:837487911075053598><a:gm3:960032886914969640> `GOLD`・483 lifetime creations\n<a:r9:837877366843637780><a:gm7:960286343190175764> `PRISTINE`・232 lifetime creations\n\n<a:catp1:806414931200966667> You are inside the black cats den..Feeling lucky?\n\n**Insert** the **UniqueID** of the character you wish to attempt to apply a **Medal**.\n\n__Currencies__\n<a:gm4:960003433576951858> 2.838",
-            "url": null,
-            "timestamp": null,
-            "color": 7798959,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/793598007433232434/857108935903150110/ets1.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/857108935903150110/ets1.gif",
-                "height": 222,
-                "width": 498
-            },
-            "image": null,
-            "author": {
-                "name": "Welcome to:"
-            },
-            "footer": null
-        }
-    ],
-    "medalsCostPrompt": [
-        {
-            "title": "<a:hts1:857109008116219914> Depths of RNG",
-            "type": "rich",
-            "description": "<a:gm7:960286343190175764> ♢ Medals\n\n__Violet Evergarden (ヴァイオレット・エヴァーガーデン)__\n\n**UniqueID:** 2188\n<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`\nInfluence・**1558**<:inf:755213119055200336>\n**SELv.** +0\n\n`COST:`\n:one: <a:gm4:960003433576951858> 1.000\n\n__Currencies__\n<a:gm4:960003433576951858> 2.838",
-            "url": null,
-            "timestamp": null,
-            "color": 7798959,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/793598007433232434/857108935903150110/ets1.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/857108935903150110/ets1.gif",
-                "height": 222,
-                "width": 498
-            },
-            "image": null,
-            "author": {
-                "name": "Welcome to:"
-            },
-            "footer": null
-        }
-    ],
-    "influenceSkinsCharacterPrompt": [
-        {
-            "title": "<a:witchp1:806416022499885096> Depths of RNG",
-            "type": "rich",
-            "description": "<a:i1:888672463947452456> ♢ Influence Skins\n\nWelcome to the **Influence Skin Store**. **Skins** sold here are on a rotation. <a:nc:870218991967301632>\n\n♢ **Skins** are a one time application onto the card of your choice.\n\n`CURRENT ROTATION:`\n\n:one: *Magic Trick.* \n`REG` | Influence・**1000** <a:i6:912290965778235402> \n`GLITCH` | Influence・**1000** <a:ig6:917639690566397992> \n`SALE ENDS:`2022-06-10 | `4` ᴅᴀʏs \n`COST:`0300 💮 \n⠀\n:two: *Marine.* \n`REG` | Influence・**1000** <a:i12:974445370987929650> \n`GLITCH` | Influence・**1000** <a:ig12:974445121275850772> \n`SALE ENDS:`2022-06-10 | `4` ᴅᴀʏs \n`COST:`0300 💮 \n⠀\n**Insert** the **UniqueID** of the character followed by the **SkinID** you wish to purchase.\n\n__Currencies__\n💮 1425",
-            "url": null,
-            "timestamp": null,
-            "color": 7798959,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "height": 226,
-                "width": 498
-            },
-            "image": null,
-            "author": {
-                "name": "Welcome to:"
-            },
-            "footer": null
-        }
-    ],
-    "influenceSkinsCostPrompt": [
-        {
-            "title": "<a:witchp1:806416022499885096> Depths of RNG",
-            "type": "rich",
-            "description": "<a:i1:888672463947452456> ♢ Influence Skins\n\n__Violet Evergarden (ヴァイオレット・エヴァーガーデン)__\n\n**UniqueID:** 2188\n<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`\nInfluence・**1558** <a:i12:974445370987929650>\n**SELv.** +0\n\n`CHANGES APPLIED:`\n*Marine.*・ <a:i12:974445370987929650>\n\n`COST:`\n:one: 💮 0300\n\n__Currencies__\n💮 1425",
-            "url": null,
-            "timestamp": null,
-            "color": 7798959,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "height": 226,
-                "width": 498
-            },
-            "image": null,
-            "author": {
-                "name": "Welcome to:"
-            },
-            "footer": null
-        }
-    ],
-    "cardGlitchingCharacterPrompt": [
-        {
-            "title": "<a:hts1:857109008116219914> Depths of RNG",
-            "type": "rich",
-            "description": "<a:cts1:857109322349019176> ♢ Card Glitching(Glitch)\n\nDo you know what happens to a card that received too much 💠?\n\n**Glitched** will alter a cards influence, badge, and border symbols. **SE**+3 cards are eligible to be **Glitched.**\n\n`DEMO:`\n<a:r6:837480733760815124> into <a:rg6:856716186115768320>\n<:inf:755213119055200336> into <a:zi:856659238184157210>\n..finally the border.\n<a:zb1:856651163230928986><a:zb2:856651163780644894><a:zb3:856651163217821726><a:zb4:856651163957198869><a:zb5:856651166796480513><a:zb6:856651167546081320><a:zb7:856651166951931984><a:zb8:856651165797056552><a:zb9:856651164828827649><a:zb10:856651164454748190><a:zb11:856651164442296330><a:zb12:856651164627894282>\n\n<a:cts2:857108310386147369> **Insert** the **UniqueID** of the character you wish to **Glitch!**\n\n__Currencies__\n💠 118480\n__Failstacks__\n🔮 0",
-            "url": null,
-            "timestamp": null,
-            "color": 7798959,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/793598007433232434/857108935903150110/ets1.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/857108935903150110/ets1.gif",
-                "height": 222,
-                "width": 498
-            },
-            "image": null,
-            "author": {
-                "name": "Welcome to:"
-            },
-            "footer": null
-        }
-    ],
-    "cardGlitchingCostPrompt": [
-        {
-            "title": "<a:hts1:857109008116219914> Depths of RNG",
-            "type": "rich",
-            "description": "<a:cts1:857109322349019176> ♢ Card Glitching(Glitch)\n\n__Nino Nakano (中野 二乃)__\n\n**UniqueID:** 1067\n<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`\nInfluence・**1604**<:inf:755213119055200336>\n**SELv.** +3\n\n`COST:`\n:one: 💠 2000\n\n__Currencies__\n💠 118480\n__Failstacks__\n🔮 0",
-            "url": null,
-            "timestamp": null,
-            "color": 7798959,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/793598007433232434/857108935903150110/ets1.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/857108935903150110/ets1.gif",
-                "height": 222,
-                "width": 498
-            },
-            "image": null,
-            "author": {
-                "name": "Welcome to:"
-            },
-            "footer": null
-        }
-    ],
-    "starEnhancingCharacterPrompt": [
-        {
-            "title": "<a:witchp1:806416022499885096> Depths of RNG",
-            "type": "rich",
-            "description": "<a:catp2:806415234809987073> ♢ Star Enhancing(SE)\n\n**SE** will increase a character's rarity level by +N to a maximum of 3.\n\n`DEMO:` <a:r6:837480733760815124> is standard. <a:r6:837480733760815124> | `𝐈`»`★☆☆☆` is **SE**+1.\n\n<a:catp1:806414931200966667> You are inside the black cats den..Feeling lucky?\n\n**Insert** the **UniqueID** of the character you wish to **SE!**\n\n__Currencies__\n💠 118480\n__Failstacks__\n🔮 0",
-            "url": null,
-            "timestamp": null,
-            "color": 7798959,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "height": 226,
-                "width": 498
-            },
-            "image": null,
-            "author": {
-                "name": "Welcome to:"
-            },
-            "footer": null
-        }
-    ],
-    "starEnhancingCostPrompt": [
-        {
-            "title": "<a:witchp1:806416022499885096> Depths of RNG",
-            "type": "rich",
-            "description": "<a:catp2:806415234809987073> ♢ Star Enhancing\n\n__Miku Nakano (中野 三玖)__\n\n**UniqueID:** 1269\n<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`\nInfluence・**1808**<:inf:755213119055200336>\n**SELv.** +0\n\n`COST:`\n:one: `SINGLE:`💠 25\n:two: `MULTI:`💠 250\n\nYour fail stacks value is **0**. `Bonus:` **+0.00%** \n*You will consume all failstacks on success.*\n\n__Currencies__\n💠 118480\n__Failstacks__\n🔮 0",
-            "url": null,
-            "timestamp": null,
-            "color": 7798959,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "height": 226,
-                "width": 498
-            },
-            "image": null,
-            "author": {
-                "name": "Welcome to:"
-            },
-            "footer": null
-        }
-    ],
-    "rewardBox": [
-        {
-            "title": "JB - Reward Box",
-            "type": "rich",
-            "description": "x1 **Badge92・<a:92:850636525875626027> **- (Tier 1 Gacha Reward) | Expires: 1 Days\nx1 **Badge243・<a:243:950875885374939247> **- (Tier 1 Gacha Reward) | Expires: 13 Days\nx1 **Badge227・<a:227:916875639540314183> **- (Tier 1 Gacha Reward) | Expires: 13 Days\nx1 **Badge235・<a:235:931354895502688267> **- (Tier 1 Gacha Reward) | Expires: 44 Days",
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [
-                {
-                    "value": "Rewards have an expiry date of 45 days.\nUse `CLAIM` command to claim rewards.",
-                    "name": "• Guide",
-                    "inline": false
-                }
-            ],
-            "thumbnail": null,
-            "image": null,
-            "author": null,
-            "footer": {
-                "text": "Page 1/1 • 4 unique rewards available."
-            }
-        }
-    ],
-    "badgePreview": [
-        {
-            "title": "#3 Guy Might (マイト・ガイ)",
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 9722874,
-            "fields": [
-                {
-                    "value": "**UID:** 964 | **GID:** 871\n**Claimed By:** JB\n**Age:** 2021-07-26 | `315` ᴅᴀʏs",
-                    "name": "General Info",
-                    "inline": false
-                },
-                {
-                    "value": "<a:r5:837480734985289749> | `ᴇᴘsɪʟᴏɴ`»`❦#92`»`☆☆☆☆`\nInfluence `#887`・**634**<:inf:755213119055200336>\n*Magical microphone.*\n<a:b1:838570555761491969>",
-                    "name": "Rarity",
-                    "inline": false
-                },
-                {
-                    "value": "**ENG:** Naruto\n**ALT:** Naruto\n**SID:** 57 | `MAIN`",
+                    "value": "**ENG:** Is There an Empty Room\n**ALT:** Is There an Empty Room\n**SID:** 1524 | `MAIN`",
                     "name": "Main Series",
                     "inline": false
                 },
                 {
-                    "value": "・REPLY **Apply** to apply.",
-                    "name": "Guide",
+                    "value": "**Used** <:lawstone:725508010893508658>**x3**\n**Balance** <:lawstone:725508010893508658>**x548**\n<a:b1f:842175810633728060> | <:z1:842200435380191282> `Pity` | <:u1:842200435058409483> `Rate+` | <:tick1:788635993241944094> `K-POP`",
+                    "name": "Account",
                     "inline": false
                 }
             ],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/819798600837627904/850636351405948958/92.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/850636351405948958/92.gif",
-                "height": 333,
-                "width": 331
-            },
+            "thumbnail": null,
             "image": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/802713382749863996/image.png",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/802713382749863996/image.png",
+                "url": "https://cdn.discordapp.com/attachments/731729116533096468/888430354719969280/image.png",
+                "proxyURL": "https://media.discordapp.net/attachments/731729116533096468/888430354719969280/image.png",
                 "height": 350,
                 "width": 225
             },
             "author": {
-                "name": "JB is Viewing...",
-                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
-            },
-            "footer": {
-                "text": "Uploaded by dinga\nCredit: Anime official"
-            }
-        }
-    ],
-    "blu": [
-        {
-            "title": "JB - Badge Index",
-            "type": "rich",
-            "description": "**#194 *Yeah!***\n`SERIES:` Is It Wrong to Try to Pick Up Girls in a Dungeon?\n`GUIDE:` Gacha\n`TYPE:` Repeatable\n`CLAIM COUNT:` 237\n`RARITY:` <a:b1:838570555761491969>\n\n**Badge Completion**\nYou don't own this badge on any characters.",
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/819798600837627904/881463694972817408/194.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/881463694972817408/194.gif",
-                "height": 350,
-                "width": 350
-            },
-            "image": null,
-            "author": null,
-            "footer": {
-                "text": "Page 1/1 • 0 badges collected."
-            }
-        }
-    ],
-    "cd": [
-        {
-            "title": "🦈 • JB",
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [
-                {
-                    "value": "🧰 0d 0h 1m 26s\n\n:bed: 0d 13h 23m 39s\n\n🔔 0d 0h 6m 31s",
-                    "name": "Cooldowns",
-                    "inline": false
-                },
-                {
-                    "value": "<a:gm4:960003433576951858> 0.000 / 0.75",
-                    "name": "Daily Limits",
-                    "inline": false
-                },
-                {
-                    "value": ":dollar: **$**185,771,000 | <:lawstone:725508010893508658> 548 | <a:nightmare:734979349937127544> 0\n🎫 0 | 💠 118480 | <a:gm4:960003433576951858> 2.838 | 💮 1425",
-                    "name": "Wallet",
-                    "inline": true
-                }
-            ],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096",
-                "proxyURL": "https://images-ext-2.discordapp.net/external/kRr4x2mFqYH-hBLoBgV0Q710F4_JoT2EDpijEgT80Bg/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png",
-                "height": 360,
-                "width": 360
-            },
-            "image": null,
-            "author": {
-                "name": "Lv.58 | 4500+"
-            },
-            "footer": null
-        }
-    ],
-    "list": [
-        {
-            "title": "JB - Collection",
-            "type": "rich",
-            "description": "8627 | 🇲 [α] #1 Estella `#8237`・**111**<:inf:755213119055200336>\n8626 | 🇲 [α] #2 Kaname Arisugawa `#3343`・**323**<:inf:755213119055200336>\n8625 |  [α] #7 Krista Lenz `#205`・**934**<:inf:755213119055200336>\n8624 | 💸 [α] #6 Tsukasa Yuzaki `#154`・**948**<:inf:755213119055200336>\n8623 | 🪙 [α] #9 Megumi Tadokoro `#288`・**859**<:inf:755213119055200336>\n8622 | 🪙 [β] #6 Sakura Matou `#430`・**766**<:inf:755213119055200336>\n8621 | 🪙 [δ] #3 Misha Necron `#266`・**883**<:inf:755213119055200336>\n8620 | 🪙 [α] #9 Tsukasa Yuzaki `#154`・**948**<:inf:755213119055200336>\n8619 |  [β] #7 Nana Hiiragi `#2636`・**388**<:inf:755213119055200336>\n8618 | 💸 [α] #9 Mei Aihara `#1659`・**510**<:inf:755213119055200336>\n8617 | 💸 [γ] #4 Schwi Dola `#329`・**819**<:inf:755213119055200336>\n8616 | 💸 [α] #6 Chise Hatori `#736`・**676**<:inf:755213119055200336>\n8615 | 💸 [β] #3 Levi Kazama `#685`・**677**<:inf:755213119055200336>\n8614 | 💸 [α] #3 Chisa Kotegawa `#914`・**655**<:inf:755213119055200336>\n8613 | 💸 [α] #5 Hitch Dreyse `#815`・**681**<:inf:755213119055200336>\n8612 | 💸 [α] #7 Shizue Izawa `#441`・**775**<:inf:755213119055200336>\n8611 | 💸 [α] #6 Shizue Izawa `#441`・**775**<:inf:755213119055200336>\n8610 | 💸 [α] #4 Rider `#289`・**868**<:inf:755213119055200336>\n8609 | 💸 [α] #7 Megumi Tadokoro `#288`・**859**<:inf:755213119055200336>\n8608 | 💸 [β] #2 Shuna `#247`・**903**<:inf:755213119055200336>",
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [],
-            "thumbnail": null,
-            "image": null,
-            "author": null,
-            "footer": {
-                "text": "Page 1/374 • 7477 Characters Collected"
-            }
-        }
-    ],
-    "dropCooldown": [
-        {
-            "title": "Drop: Cooldown",
-            "type": "rich",
-            "description": "You still have a drop cooldown.",
-            "url": null,
-            "timestamp": null,
-            "color": 2832008,
-            "fields": [
-                {
-                    "value": "0d 0h 1m 8s",
-                    "name": "Remaining",
-                    "inline": false
-                }
-            ],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/725317430418604032/tenor_15.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/725317430418604032/tenor_15.gif",
-                "height": 498,
-                "width": 498
-            },
-            "image": null,
-            "author": null,
-            "footer": null
-        }
-    ],
-    "dailyCooldown": [
-        {
-            "title": "Daily: Cooldown",
-            "type": "rich",
-            "description": "The day isn't over yet!",
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [
-                {
-                    "value": "0d 13h 23m 9s",
-                    "name": "Remaining",
-                    "inline": false
-                }
-            ],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/725590953381068810/tenor_20.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/725590953381068810/tenor_20.gif",
-                "height": 498,
-                "width": 498
-            },
-            "image": null,
-            "author": null,
-            "footer": null
-        }
-    ],
-    "favorite": [
-        {
-            "title": null,
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [
-                {
-                    "value": "You have set **Ezreal ** as a 💖 favorite.",
-                    "name": "Success",
-                    "inline": false
-                }
-            ],
-            "thumbnail": null,
-            "image": null,
-            "author": {
-                "name": "JB",
-                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
-            },
-            "footer": null
-        }
-    ],
-    "favoriteRemoved": [
-        {
-            "title": null,
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [
-                {
-                    "value": "You have removed **Ezreal ** from favorites.\nPremium can mass remove favorities using `FAV -clear`.",
-                    "name": "Success",
-                    "inline": false
-                }
-            ],
-            "thumbnail": null,
-            "image": null,
-            "author": {
-                "name": "JB",
-                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
-            },
-            "footer": null
-        }
-    ],
-    "top": [
-        {
-            "title": "🏆 TOP 500",
-            "type": "rich",
-            "description": "**#1 Zero Two** - Darling in the FranXX・**2734**<:inf:755213119055200336>\n**#2 Mai Sakurajima** - Rascal Does Not Dream of Bunny Girl Senpai・**2107**<:inf:755213119055200336>\n**#3 Megumin** - KonoSuba: Gods Blessing on This Wonderful World!・**1984**<:inf:755213119055200336>\n**#4 Satoru Gojou** - Jujutsu Kaisen・**1903**<:inf:755213119055200336>\n**#5 Nezuko Kamado** - Demon Slayer: Kimetsu no Yaiba・**1936**<:inf:755213119055200336>\n**#6 Rem** - ReZERO: Starting Life in Another World・**1813**<:inf:755213119055200336>\n**#7 Miku Nakano** - The Quintessential Quintuplets・**1808**<:inf:755213119055200336>\n**#8 Power** - Chainsaw Man・**1418**<:inf:755213119055200336>\n**#9 Rias Gremory** - High School DxD・**1653**<:inf:755213119055200336>\n**#10 Mikasa Ackerman** - Attack on Titan・**1722**<:inf:755213119055200336>\n**#11 Asuna Yuuki** - Sword Art Online・**1644**<:inf:755213119055200336>\n**#12 Levi** - Attack on Titan・**1646**<:inf:755213119055200336>\n**#13 Nino Nakano** - The Quintessential Quintuplets・**1604**<:inf:755213119055200336>\n**#14 Violet Evergarden** - Violet Evergarden・**1558**<:inf:755213119055200336>\n**#15 Kaguya Shinomiya** - Kaguya-sama: Love is War・**1534**<:inf:755213119055200336>\n**#16 Chika Fujiwara** - Kaguya-sama: Love is War・**1610**<:inf:755213119055200336>\n**#17 Yumeko Jabami** - Kakegurui: Compulsive Gambler・**1491**<:inf:755213119055200336>\n**#18 Shinobu Kochou** - Demon Slayer: Kimetsu no Yaiba・**1536**<:inf:755213119055200336>\n**#19 Chizuru Ichinose** - Rent a Girlfriend・**1481**<:inf:755213119055200336>\n**#20 Killua Zoldyck** - Hunter x Hunter・**1466**<:inf:755213119055200336>",
-            "url": null,
-            "timestamp": null,
-            "color": 16772866,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/755336681070002257/tenor.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/755336681070002257/tenor.gif",
-                "height": 280,
-                "width": 498
-            },
-            "image": null,
-            "author": null,
-            "footer": {
-                "text": "Page 1/25"
-            }
-        }
-    ],
-    "voteCooldown": [
-        {
-            "title": "Vote: Cooldown",
-            "type": "rich",
-            "description": "Vote cooldown isn't up yet!\n<https://top.gg/bot/688202466315206661/vote>",
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [
-                {
-                    "value": "0d 0h 4m 13s",
-                    "name": "Remaining",
-                    "inline": false
-                }
-            ],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/734982454754017400/tenor_59.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/734982454754017400/tenor_59.gif",
-                "height": 357,
-                "width": 498
-            },
-            "image": null,
-            "author": null,
-            "footer": null
-        }
-    ],
-    "cluSearch": [
-        {
-            "title": "JB - Searching",
-            "type": "rich",
-            "description": "4651 | [#9] Megumi Fushiguro - Jujutsu Kaisen ・**1255**<:inf:755213119055200336>\n4652 | [#9] Satoru Gojou - Jujutsu Kaisen ・**1903**<:inf:755213119055200336>\n4653 | [#9] Yuuji Itadori - Jujutsu Kaisen ・**1268**<:inf:755213119055200336>\n4654 | [#9] Nobara Kugisaki - Jujutsu Kaisen ・**1215**<:inf:755213119055200336>\n4655 | [#9] Suguru Getou - Jujutsu Kaisen ・**814**<:inf:755213119055200336>\n4656 | [#9] Toge Inumaki - Jujutsu Kaisen ・**1103**<:inf:755213119055200336>\n4657 | [#9] Mahito - Jujutsu Kaisen ・**846**<:inf:755213119055200336>\n4658 | [#9] Kento Nanami - Jujutsu Kaisen ・**967**<:inf:755213119055200336>\n4659 | [#9] Panda - Jujutsu Kaisen ・**824**<:inf:755213119055200336>\n4660 | [#9] Sukuna Ryoumen - Jujutsu Kaisen ・**1199**<:inf:755213119055200336>\n4661 | [#9] Aoi Toudou - Jujutsu Kaisen ・**768**<:inf:755213119055200336>\n4662 | [#9] Maki Zenin - Jujutsu Kaisen ・**1022**<:inf:755213119055200336>\n8352 | [#9] Junpei Yoshino - Jujutsu Kaisen ・**605**<:inf:755213119055200336>\n8746 | [#9] Kasumi Miwa - Jujutsu Kaisen ・**666**<:inf:755213119055200336>\n11309 | [#9] Choso - Jujutsu Kaisen ・**593**<:inf:755213119055200336>\n11310 | [#5] Mei Mei - Jujutsu Kaisen ・**562**<:inf:755213119055200336>\n11311 | [#6] Momo Nishimiya - Jujutsu Kaisen ・**536**<:inf:755213119055200336>\n11312 | [#9] Toji Fushiguro - Jujutsu Kaisen ・**635**<:inf:755213119055200336>\n11313 | [#2] Utahime Iori - Jujutsu Kaisen ・**541**<:inf:755213119055200336>\n11314 | [#9] Yuta Okkotsu - Jujutsu Kaisen ・**732**<:inf:755213119055200336>",
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [],
-            "thumbnail": null,
-            "image": null,
-            "author": null,
-            "footer": {
-                "text": "Page 1/2 • 29 Results Found"
-            }
-        }
-    ],
-    "wishlistAdd": [
-        {
-            "title": null,
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [
-                {
-                    "value": "You have set **Maki Zenin (禪院 真希)** on your wishlist.",
-                    "name": "Success",
-                    "inline": false
-                }
-            ],
-            "thumbnail": null,
-            "image": null,
-            "author": {
-                "name": "JB",
-                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
-            },
-            "footer": null
-        }
-    ],
-    "wishlistRemove": [
-        {
-            "title": null,
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [
-                {
-                    "value": "You have removed **Maki Zenin (禪院 真希)** from your wishlist.",
-                    "name": "Success",
-                    "inline": false
-                }
-            ],
-            "thumbnail": null,
-            "image": null,
-            "author": {
-                "name": "JB",
-                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
-            },
-            "footer": null
-        }
-    ],
-    "lookUpError": [
-        {
-            "title": null,
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [
-                {
-                    "value": "After the Lookup command insert a syntax. **-name** or **-series** followed by a keyboard to search for.",
-                    "name": "Error",
-                    "inline": false
-                }
-            ],
-            "thumbnail": null,
-            "image": null,
-            "author": {
-                "name": "JB",
-                "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
-            },
-            "footer": null
-        }
-    ],
-    "profile": [
-        {
-            "title": "Account Perks & Options",
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": null,
-            "fields": [
-                {
-                    "value": "Premium <:tick2:788641766407536660>\nPremium Upgrade <:tick2:788641766407536660>",
-                    "name": "Premium Benefits",
-                    "inline": true
-                },
-                {
-                    "value": "CRIT RATE: Drop <:tick1:788635993241944094>\nPITY: Zeta <:tick1:788635993241944094>\nBURN: Arena Tickets <:tick1:788635993241944094>\nPITY: Improved Zeta <:tick1:788635993241944094>",
-                    "name": "Arena Benefits",
-                    "inline": true
-                },
-                {
-                    "value": "Protection <:tick1:788635993241944094>\n#Rank #10000 AND OVER\nRarity DELTA AND LOWER\nExclusions <:tick2:788641766407536660>",
-                    "name": "Burn Filters (Premium)",
-                    "inline": true
-                },
-                {
-                    "value": "K-Pop <:tick1:788635993241944094>",
-                    "name": "Gacha Toggles",
-                    "inline": true
-                }
-            ],
-            "thumbnail": null,
-            "image": null,
-            "author": null,
-            "footer": null
-        }
-    ],
-    "cardWorkshop": [
-        {
-            "title": "<a:witchp1:806416022499885096> Card Workshop",
-            "type": "rich",
-            "description": "<a:129e:857048890842021889> __Choose an option__\n<a:71:848394571624480798> :one: ♢ Badge Transfers\n<a:ig6:917639690566397992> :two: ♢ Skin Transfers\n\n__Currencies__\n💵 **$**185,771,000 | 💮 1425",
-            "url": null,
-            "timestamp": null,
-            "color": 7798959,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "height": 226,
-                "width": 498
-            },
-            "image": null,
-            "author": {
-                "name": "Welcome to:"
-            },
-            "footer": null
-        }
-    ],
-    "badgeTransferCharacterPrompt": [
-        {
-            "title": "<a:witchp1:806416022499885096> Card Workshop",
-            "type": "rich",
-            "description": "<a:129e:857048890842021889> ♢ Badge Transfers\n\nYou can either swap badges between two cards, or transfer a badge to another card.\n\n**Insert** two **UniqueID** of the characters you wish to Badge Transfer.\n\n`DEMO:` 192 36\n\n__Currencies__\n💵 **$**185,771,000",
-            "url": null,
-            "timestamp": null,
-            "color": 7798959,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "height": 226,
-                "width": 498
-            },
-            "image": null,
-            "author": {
-                "name": "Welcome to:"
-            },
-            "footer": null
-        }
-    ],
-    "badgeTransferCostPrompt": [],
-    "skinTransferCharacterPrompt": [
-        {
-            "title": "<a:witchp1:806416022499885096> Card Workshop",
-            "type": "rich",
-            "description": "<a:ig6:917639690566397992> ♢ Skin Transfers\n\nYou can either swap skins between two cards, or transfer a skin to another card.\n\n**Insert** two **UniqueID** of the characters you wish to Skin Transfer.\n\n`DEMO:` 192 36\n\n__Currencies__\n💮 1425",
-            "url": null,
-            "timestamp": null,
-            "color": 7798959,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
-                "height": 226,
-                "width": 498
-            },
-            "image": null,
-            "author": {
-                "name": "Welcome to:"
-            },
-            "footer": null
-        }
-    ],
-    "skinTransferCostPrompt": [],
-    "gachaBadge": [
-        {
-            "title": "#235 *Is this a Pigeon?*",
-            "type": "rich",
-            "description": "Congratulations. You unboxed a rare badge!\nThe badge has been sent to your reward box.",
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [
-                {
-                    "name": "Rarity",
-                    "value": "Tier **1**\n<a:b1:838570555761491969>",
-                    "inline": false
-                },
-                {
-                    "name": "Account",
-                    "value": "**Used** <:lawstone:725508010893508658>**x4**\n**Balance** <:lawstone:725508010893508658>**x537**",
-                    "inline": false
-                }
-            ],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/819798600837627904/931354619651694663/235.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/931354619651694663/235.gif",
-                "height": 286,
-                "width": 285
-            },
-            "image": null,
-            "author": {
                 "name": "JB",
                 "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
             },
             "footer": {
-                "text": "★ Avoid Bans | Don't Alt."
+                "text": "★ Avoid Bans | Don't Alt.\nUploaded by Lifeswoon\nCredit: Official Manhwa Art"
             }
         }
-    ],
-    "dailyClaim": [
-        {
-            "title": "Daily: Claimed",
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [
-                {
-                    "value": "<a:125e:854643770493501450> `NO BOOST FOUND`",
-                    "name": "Nitro Boosting",
-                    "inline": false
-                },
-                {
-                    "value": "<:lawstone:725508010893508658>x**5**\n🎫x**3**",
-                    "name": "Waifus Awake",
-                    "inline": false
-                },
-                {
-                    "value": "[Consider Supporting!](https://donatebot.io/checkout/688203298255142933)\n`DONATE` Command contains more information. :heart:",
-                    "name": "Enjoying Laifu?",
-                    "inline": false
-                },
-                {
-                    "value": "**BACK IN TIME TO 2020's FIRST EVENT!**\n> JUNE IS LAIFU'S ANNIVERSARY! COME CELEBRATE WITH US!\n> Lots of rewards to be handed out! <a:rg8:856716188250538024>\n> Limited time **SPECIAL** <a:rg10:856716187442085908> cards are available to obtain!\n*Full details in Maincord.*",
-                    "name": ":loudspeaker:・Notice Board",
-                    "inline": false
-                }
-            ],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/725587098450526228/waifuyes.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/725587098450526228/waifuyes.gif",
-                "height": 498,
-                "width": 475
-            },
-            "image": {
-                "url": "https://cdn.discordapp.com/attachments/793598007433232434/981418605637951488/birthday-event2.png",
-                "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/981418605637951488/birthday-event2.png",
-                "height": 0,
-                "width": 0
-            },
-            "author": null,
-            "footer": {
-                "text": "See you again in 23 hours."
-            }
-        }
-    ],
-    "arenaInitial": [
-        {
-            "title": "ARENA: Arjay Vs. RickyZ",
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 16711680,
-            "fields": [
-                {
-                    "value": "🔸 **Arjay**\n**Lv.**35\n🦈 • **LP** [3995]\n\n:heart: 10041\n:crossed_swords: 3067\n:shield: 1380\n\n**DMG.** 1687 ~ 2398\n**CRIT.** 43%",
-                    "name": "Attacker",
-                    "inline": true
-                },
-                {
-                    "value": "🔸 **RickyZ**\n**Lv.**24\n🐯 • **LP** [3495]\n\n:heart: 4938\n:crossed_swords: 1522\n:shield: 697\n\n**DMG.** 101 ~ 144\n**CRIT.** 10%",
-                    "name": "Defender",
-                    "inline": true
-                }
-            ],
-            "thumbnail": null,
-            "image": null,
-            "author": {
-                "name": "🦈 BRACKET [7] LP: 4001 ~ 4500"
-            },
-            "footer": null
-        }
-    ],
-    "arenaResult": [
-        {
-            "title": "ARENA: Arjay Vs. RickyZ",
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 16711680,
-            "fields": [
-                {
-                    "value": "🔸 **Arjay** 🥳\n**Lv.**35\n🦈 • **LP** [4000] 🔺 5\n\n:heart: 10041\n:crossed_swords: 3067\n:shield: 1380\n\n**DMG.** 1687 ~ 2398\n**CRIT.** 43%\n\n:heart: 9658\n**T-DMG.** 6257\n\n💠 + 150",
-                    "name": "Attacker",
-                    "inline": true
-                },
-                {
-                    "value": "🔸 **RickyZ** ☠\n**Lv.**24\n🐯 • **LP** [3495] 🔻 0\n\n:heart: 4938\n:crossed_swords: 1522\n:shield: 697\n\n**DMG.** 101 ~ 144\n**CRIT.** 10%\n\n:heart: -1319\n**T-DMG.** 383",
-                    "name": "Defender",
-                    "inline": true
-                }
-            ],
-            "thumbnail": null,
-            "image": null,
-            "author": {
-                "name": "🦈 BRACKET [7] LP: 4001 ~ 4500"
-            },
-            "footer": {
-                "text": "You have 3 entries remaining."
-            }
-        }
-    ],
-    "arenaGif": [
-        {
-            "title": "ARENA: Arjay Vs. RickyZ",
-            "type": "rich",
-            "description": null,
-            "url": null,
-            "timestamp": null,
-            "color": 16711680,
-            "fields": [],
-            "thumbnail": null,
-            "image": {
-                "url": "https://cdn.discordapp.com/attachments/722702340620288042/804993899495948288/GIF8.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/804993899495948288/GIF8.gif",
-                "height": 0,
-                "width": 0
-            },
-            "author": {
-                "name": "🦈 BRACKET [7] LP: 4001 ~ 4500"
-            },
-            "footer": null
-        }
-    ],
-    "medalDropActive": [
-        {
-            "title": "⚠️・Medal Drop : Active!",
-            "type": "rich",
-            "description": "```Drop Quality : Poor\nContents : 0.010 ~ 0.025\nStatus : Active```",
-            "url": null,
-            "timestamp": null,
-            "color": 16763904,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/793598007433232434/960678276790120478/gm3.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/960678276790120478/gm3.gif",
-                "height": 96,
-                "width": 60
-            },
-            "image": null,
-            "author": {
-                "name": "!zzdovad triggered a spawn.",
-                "icon_url": "https://cdn.discordapp.com/avatars/138414014303567872/09c616573d34899fa26a92dc7ac428ec.png?size=4096"
-            },
-            "footer": {
-                "text": "React to receive contents."
-            }
-        }
-    ],
-    "medalDropClosed": [
-        {
-            "title": "⚠️・Medal Drop : Closed!",
-            "type": "rich",
-            "description": "Winner : <@138414014303567872>\n```Drop Quality : Poor\nContents : 0.010 ~ 0.025\nReward : 0.004・✨20%\nParticipants : 1\nStatus : Closed```",
-            "url": null,
-            "timestamp": null,
-            "color": 16763904,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/attachments/793598007433232434/960678276790120478/gm3.gif",
-                "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/960678276790120478/gm3.gif",
-                "height": 96,
-                "width": 60
-            },
-            "image": null,
-            "author": {
-                "name": "!zzdovad triggered a spawn.",
-                "icon_url": "https://cdn.discordapp.com/avatars/138414014303567872/09c616573d34899fa26a92dc7ac428ec.png?size=4096"
-            },
-            "footer": {
-                "text": "This drop has closed."
-            }
-        }
-    ],
-    "burnReward": [
-        {
-            "title": "Burn: Rewards",
-            "type": "rich",
-            "description": "You have reached the Burn Rewards Counter!\n\n__You have gained the following__\n<:lawstone:725508010893508658>x**5** \n<a:nightmare:734979349937127544>x**500**\n🎫x**1**",
-            "url": null,
-            "timestamp": null,
-            "color": 62975,
-            "fields": [],
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/emojis/871566329482715196.gif?size=44&quality=lossless",
-                "proxyURL": "https://images-ext-2.discordapp.net/external/zcY_LLMr4EwN5GXeuhTBcuwReZIps2HBJB_O7zOvooM/%3Fsize%3D44%26quality%3Dlossless/https/cdn.discordapp.com/emojis/871566329482715196.gif",
-                "height": 44,
-                "width": 44
-            },
-            "image": null,
-            "author": {
-                "name": "!zzdovad",
-                "icon_url": "https://cdn.discordapp.com/avatars/138414014303567872/09c616573d34899fa26a92dc7ac428ec.png?size=4096"
-            },
-            "footer": {
-                "text": "Burn Reward Counter: 15 / 15"
-            }
-        }
-    ]
+    }
 }

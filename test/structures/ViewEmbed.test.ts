@@ -4,7 +4,7 @@ import { ViewEmbed, Rarity } from '../../dist';
 import * as embeds from '../embeds.json';
 
 describe('ViewEmbed', () => {
-    const viewEmbedsArr = embeds.view;
+    const viewEmbedsArr = embeds.identifier.view;
 
     describe('#constructor', () => {
         it('should correctly parse a normal view Discord embed from LaifuBot', () => {

@@ -6,7 +6,7 @@ const INFLUENCE_REGEX = /\*\*(\d+)\*\*.+\n.+`#(\d+)`・`#(\d+)`/;
 const COLLECTIONS_REGEX = /(\d+)・(\d+)/g;
 const FOOTER_REGEX = /Image #(\d) - Uploaded by (.+)\nCredit: (.+)/;
 
-export interface Range {
+export interface Bounds {
     lower: number;
     upper: number;
 }
@@ -28,7 +28,7 @@ export class InfoEmbed {
     sequence: string | null = null;
 
     influence: number | null = null;
-    influenceRankRange: Range | null = null;
+    influenceRankRange: Bounds | null = null;
 
     alphaStats: RarityStats | null = null;
     betaStats: RarityStats | null = null;

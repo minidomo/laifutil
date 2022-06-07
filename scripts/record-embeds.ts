@@ -3,7 +3,7 @@ import * as process from 'process';
 import type { APIEmbed } from 'discord-api-types/v10';
 import { Client, Intents, MessageEmbed } from 'discord.js';
 import { Identifier } from '../dist';
-import { isLaifuBot } from '../dist/util';
+import { isLaifuBot, hasSameImage } from '../dist/util';
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
@@ -26,19 +26,17 @@ function identifyEmbed(embed: MessageEmbed): string[] {
     return identities;
 }
 
-function laifuFunction(embeds: MessageEmbed[]) {
-    embeds.forEach(embed => {
-        const identity = identifyEmbed(embed);
-        console.log(`${identity}`);
+function laifuFunction(embed: MessageEmbed) {
+    const identity = identifyEmbed(embed);
+    console.log(`${identity}`);
 
-        if (identity.length !== 1) {
-            console.log(embed);
-        }
+    if (identity.length !== 1) {
+        console.log(embed);
+    }
 
-        recordedEmbeds.push({
-            identity,
-            embed: embed.toJSON(),
-        });
+    recordedEmbeds.push({
+        identity,
+        embed: embed.toJSON(),
     });
 }
 
@@ -47,12 +45,13 @@ client.once('ready', () => {
 });
 
 client.on('messageCreate', message => {
-    if (isLaifuBot(message.author.id)) {
-        laifuFunction(message.embeds);
+    if (isLaifuBot(message.author.id) && message.embeds[0]) {
+        laifuFunction(message.embeds[0]);
     }
 
     if (message.content.includes('save')) {
         writeFileSync('temp/embeds.json', JSON.stringify(recordedEmbeds, null, 4), { encoding: 'utf-8' });
+        message.reply('saved embeds');
         console.log('saved embeds');
     }
 
@@ -60,17 +59,23 @@ client.on('messageCreate', message => {
         const id = message.content.substring(3).trim();
         message.channel.messages.fetch(id)
             .then(msg => {
+                message.reply('retrieved message');
+
                 if (isLaifuBot(msg.author.id)) {
-                    laifuFunction(msg.embeds);
+                    laifuFunction(msg.embeds[0]);
                 }
             })
             .catch(console.error);
     }
 });
 
-client.on('messageUpdate', (_oldMessage, newMessage) => {
-    if (newMessage.author && isLaifuBot(newMessage.author.id)) {
-        laifuFunction(newMessage.embeds);
+client.on('messageUpdate', (oldMessage, newMessage) => {
+    if (isLaifuBot(newMessage)) {
+        const oldEmbed = oldMessage.embeds[0];
+        const newEmbed = newMessage.embeds[0];
+        if (newEmbed && !hasSameImage(oldEmbed, newEmbed)) {
+            laifuFunction(newEmbed);
+        }
     }
 });
 

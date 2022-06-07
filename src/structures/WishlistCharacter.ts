@@ -1,6 +1,4 @@
-import removeMd from 'remove-markdown';
-
-const ROW_REGEX = /(\d+) \| (.+)・(\d+)/;
+const ROW_REGEX = /(\d+) \| (.+)・\*\*(\d+)/;
 
 export class WishlistCharacter {
     gid: number | null = null;
@@ -8,7 +6,7 @@ export class WishlistCharacter {
     influence: number | null = null;
 
     constructor(data: string) {
-        const rowMatch = removeMd(data).match(ROW_REGEX);
+        const rowMatch = data.match(ROW_REGEX);
         if (rowMatch) {
             this.gid = parseInt(rowMatch[1]);
             this.name = rowMatch[2];

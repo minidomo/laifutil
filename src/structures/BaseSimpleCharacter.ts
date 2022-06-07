@@ -1,5 +1,5 @@
 import type { EmbedField, MessageEmbed } from 'discord.js';
-import { Rarity } from '..';
+import * as Rarity from '../rarity';
 
 const TITLE_REGEX = /#(\d) (.+)/;
 const MAIN_SERIES_REGEX = /\*\*ENG:\*\* (.+)\n\*\*ALT:\*\* (.+)\n\*\*SID:\*\* (\d+) \| `(.+)`/;
