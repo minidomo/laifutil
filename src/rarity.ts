@@ -66,10 +66,10 @@ function createConstants(): RarityContainer {
     return constants;
 }
 
-export const CONSTANTS = createConstants();
+export const constants = createConstants();
 
 function createRegex(): RegExp {
-    const baseExp = Object.values(CONSTANTS)
+    const baseExp = Object.values(constants)
         .map((rarity: Rarity) => `${rarity.text}|${rarity.symbol}`)
         .join('|');
     return new RegExp(`(${baseExp})`);
@@ -79,26 +79,26 @@ export const REGEX = createRegex();
 
 const mappings: Map<string, Rarity> = new Map();
 mappings
-    .set('ᴀʟᴘʜᴀ', CONSTANTS.ALPHA)
-    .set('ʙᴇᴛᴀ', CONSTANTS.BETA)
-    .set('ɢᴀᴍᴍᴀ', CONSTANTS.GAMMA)
-    .set('ᴅᴇʟᴛᴀ', CONSTANTS.DELTA)
-    .set('ᴇᴘsɪʟᴏɴ', CONSTANTS.EPSILON)
-    .set('ᴢᴇᴛᴀ', CONSTANTS.ZETA)
-    .set('ᴜʟᴛʀᴀ', CONSTANTS.ULTRA)
-    .set('sᴄᴀʀʟᴇᴛ', CONSTANTS.SCARLET)
-    .set('ᴇᴠᴇɴᴛ', CONSTANTS.EVENT)
-    .set('sᴘᴇᴄɪᴀʟ', CONSTANTS.SPECIAL)
-    .set('α', CONSTANTS.ALPHA)
-    .set('β', CONSTANTS.BETA)
-    .set('γ', CONSTANTS.GAMMA)
-    .set('δ', CONSTANTS.DELTA)
-    .set('ε', CONSTANTS.EPSILON)
-    .set('ζ', CONSTANTS.ZETA)
-    .set('ζ𝓡', CONSTANTS.ULTRA)
-    .set('†', CONSTANTS.SCARLET)
-    .set('ξν', CONSTANTS.EVENT)
-    .set('Λ', CONSTANTS.SPECIAL);
+    .set('ᴀʟᴘʜᴀ', constants.ALPHA)
+    .set('ʙᴇᴛᴀ', constants.BETA)
+    .set('ɢᴀᴍᴍᴀ', constants.GAMMA)
+    .set('ᴅᴇʟᴛᴀ', constants.DELTA)
+    .set('ᴇᴘsɪʟᴏɴ', constants.EPSILON)
+    .set('ᴢᴇᴛᴀ', constants.ZETA)
+    .set('ᴜʟᴛʀᴀ', constants.ULTRA)
+    .set('sᴄᴀʀʟᴇᴛ', constants.SCARLET)
+    .set('ᴇᴠᴇɴᴛ', constants.EVENT)
+    .set('sᴘᴇᴄɪᴀʟ', constants.SPECIAL)
+    .set('α', constants.ALPHA)
+    .set('β', constants.BETA)
+    .set('γ', constants.GAMMA)
+    .set('δ', constants.DELTA)
+    .set('ε', constants.EPSILON)
+    .set('ζ', constants.ZETA)
+    .set('ζ𝓡', constants.ULTRA)
+    .set('†', constants.SCARLET)
+    .set('ξν', constants.EVENT)
+    .set('Λ', constants.SPECIAL);
 
 export function resolve(query: string): Rarity | null {
     return mappings.get(query) ?? null;

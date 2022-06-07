@@ -1,10 +1,10 @@
 import { assert } from 'chai';
 import { MessageEmbed } from 'discord.js';
-import { GachaCharacterEmbed, Rarity } from '../../dist';
+import { GachaCharacterEmbed, rarity } from '../../dist';
 import * as embeds from '../embeds.json';
 
 describe('GachaCharacterEmbed', () => {
-    const gachaCharacterEmbedsArr = embeds.identifier.gachaCharacter;
+    const gachaCharacterEmbedsArr = embeds.identifier.gacha.character;
 
     describe('#constructor', () => {
         it('should correctly parse a gacha character Discord embed from LaifuBot', () => {
@@ -17,7 +17,7 @@ describe('GachaCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.uid, 5070);
             assert.strictEqual(parsedEmbed.gid, 11169);
 
-            assert.strictEqual(parsedEmbed.rarity, Rarity.CONSTANTS.GAMMA);
+            assert.strictEqual(parsedEmbed.rarity, rarity.constants.GAMMA);
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.influenceRank, 14558);
             assert.strictEqual(parsedEmbed.influence, 15);

@@ -4,7 +4,7 @@ import { WishlistEmbed } from '../../dist';
 import * as embeds from '../embeds.json';
 
 describe('WishlistEmbed', () => {
-    const wishlistEmbedsArr = embeds.identifier.wishlist;
+    const wishlistEmbedsArr = embeds.identifier.wishlist.list;
 
     describe('#constructor', () => {
         it('should correctly parse a wishlist Discord embed from LaifuBot', () => {

@@ -2,8 +2,7 @@ import { writeFileSync } from 'fs';
 import * as process from 'process';
 import type { APIEmbed } from 'discord-api-types/v10';
 import { Client, Intents, MessageEmbed } from 'discord.js';
-import { Identifier } from '../dist';
-import { isLaifuBot, hasSameImage } from '../dist/util';
+import { identifiers, isLaifuBot, hasSameImage } from '../dist';
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
@@ -16,13 +15,26 @@ const recordedEmbeds: RecordEmbed[] = [];
 
 function identifyEmbed(embed: MessageEmbed): string[] {
     const identities: string[] = [];
-    Object.values(Identifier)
-        .forEach(f => {
-            const res = f.call(Identifier, embed);
-            if (res) {
-                identities.push(f.name);
-            }
-        });
+
+    type IsEmbedFunction = (boolean: MessageEmbed) => boolean;
+    type IdentifierObject = { [key: string]: IdentifierObject | IsEmbedFunction };
+
+    function recursiveIdentifyEmbed(obj: IdentifierObject, path: string) {
+        Object.keys(obj)
+            .forEach(key => {
+                if (typeof obj[key] === 'object') {
+                    recursiveIdentifyEmbed(obj[key] as IdentifierObject, `${path}.${key}`);
+                } else {
+                    const f = obj[key] as IsEmbedFunction;
+                    if (f(embed)) {
+                        identities.push(`${path}.#${key}`);
+                    }
+                }
+            });
+    }
+
+    recursiveIdentifyEmbed(identifiers as unknown as IdentifierObject, '');
+
     return identities;
 }
 
@@ -45,6 +57,8 @@ client.once('ready', () => {
 });
 
 client.on('messageCreate', message => {
+    if (message.author.id === client.user?.id) return;
+
     if (isLaifuBot(message.author.id) && message.embeds[0]) {
         laifuFunction(message.embeds[0]);
     }

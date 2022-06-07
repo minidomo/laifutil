@@ -1,10 +1,10 @@
 import { assert } from 'chai';
 import { MessageEmbed } from 'discord.js';
-import { BurnEmbed, Rarity } from '../../dist';
+import { BurnEmbed, rarity } from '../../dist';
 import * as embeds from '../embeds.json';
 
 describe('BurnEmbed', () => {
-    const burnEmbedsArr = embeds.identifier.burn;
+    const burnEmbedsArr = embeds.identifier.burn.character;
 
     describe('#constructor', () => {
         it('should correctly parse a burn Discord embed of a normal card from LaifuBot', () => {
@@ -20,7 +20,7 @@ describe('BurnEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 166);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-18');
 
-            assert.strictEqual(parsedEmbed.rarity, Rarity.CONSTANTS.ZETA);
+            assert.strictEqual(parsedEmbed.rarity, rarity.constants.ZETA);
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.influenceRank, 11709);
             assert.strictEqual(parsedEmbed.influence, 40);
@@ -54,7 +54,7 @@ describe('BurnEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 177);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-07');
 
-            assert.strictEqual(parsedEmbed.rarity, Rarity.CONSTANTS.ALPHA);
+            assert.strictEqual(parsedEmbed.rarity, rarity.constants.ALPHA);
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.influenceRank, 210);
             assert.strictEqual(parsedEmbed.influence, 928);
@@ -88,7 +88,7 @@ describe('BurnEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 323);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-14');
 
-            assert.strictEqual(parsedEmbed.rarity, Rarity.CONSTANTS.ALPHA);
+            assert.strictEqual(parsedEmbed.rarity, rarity.constants.ALPHA);
             assert.strictEqual(parsedEmbed.stars, 1);
             assert.strictEqual(parsedEmbed.influenceRank, 143);
             assert.strictEqual(parsedEmbed.influence, 1044);

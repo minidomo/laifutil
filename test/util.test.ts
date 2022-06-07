@@ -10,14 +10,6 @@ describe('Util', () => {
         });
     });
 
-    // Describe('#cleanCharacterName', () => {
-
-    // });
-
-    // describe('#isLaifuBot', () => {
-
-    // });
-
     describe('#hasSameImage', () => {
         it('should have the same image', () => {
             const embed1 = new MessageEmbed(embeds.util.embed1);

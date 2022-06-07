@@ -1,15 +1,15 @@
 import { assert } from 'chai';
-import { Rarity } from '../dist';
+import { rarity } from '../dist';
 
-describe('Rarity', () => {
+describe('rarity', () => {
     describe('#resolve', () => {
         it('should return the ZETA constant', () => {
-            const ret = Rarity.resolve('ζ');
-            assert.strictEqual(ret, Rarity.CONSTANTS.ZETA);
+            const ret = rarity.resolve('ζ');
+            assert.strictEqual(ret, rarity.constants.ZETA);
         });
 
         it('should return null', () => {
-            const ret = Rarity.resolve('ultra');
+            const ret = rarity.resolve('ultra');
             assert.isNull(ret);
         });
     });

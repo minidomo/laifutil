@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import { MessageEmbed } from 'discord.js';
-import { ViewEmbed, Rarity } from '../../dist';
+import { ViewEmbed, rarity } from '../../dist';
 import * as embeds from '../embeds.json';
 
 describe('ViewEmbed', () => {
@@ -21,7 +21,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 166);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-18');
 
-            assert.strictEqual(parsedEmbed.rarity, Rarity.CONSTANTS.ZETA);
+            assert.strictEqual(parsedEmbed.rarity, rarity.constants.ZETA);
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.influenceRank, 11709);
             assert.strictEqual(parsedEmbed.influence, 40);
@@ -54,7 +54,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 177);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-07');
 
-            assert.strictEqual(parsedEmbed.rarity, Rarity.CONSTANTS.ALPHA);
+            assert.strictEqual(parsedEmbed.rarity, rarity.constants.ALPHA);
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.influenceRank, 210);
             assert.strictEqual(parsedEmbed.influence, 928);
@@ -87,7 +87,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 323);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-14');
 
-            assert.strictEqual(parsedEmbed.rarity, Rarity.CONSTANTS.ALPHA);
+            assert.strictEqual(parsedEmbed.rarity, rarity.constants.ALPHA);
             assert.strictEqual(parsedEmbed.stars, 1);
             assert.strictEqual(parsedEmbed.influenceRank, 143);
             assert.strictEqual(parsedEmbed.influence, 1044);
@@ -121,7 +121,7 @@ describe('ViewEmbed', () => {
                 assert.strictEqual(parsedEmbed.age, 321);
                 assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-16');
 
-                assert.strictEqual(parsedEmbed.rarity, Rarity.CONSTANTS.ULTRA);
+                assert.strictEqual(parsedEmbed.rarity, rarity.constants.ULTRA);
                 assert.strictEqual(parsedEmbed.stars, 4);
                 assert.strictEqual(parsedEmbed.influenceRank, 4);
                 assert.strictEqual(parsedEmbed.influence, 1897);
