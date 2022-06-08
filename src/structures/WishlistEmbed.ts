@@ -1,15 +1,33 @@
 import type { MessageEmbed } from 'discord.js';
-import { ListEmbed } from './ListEmbed';
+import { BaseListEmbed } from './BaseListEmbed';
 import { WishlistCharacter } from './WishlistCharacter';
 
 const FOOTER_REGEX = /Page (\d+)\/(\d+) • (\d+) Characters Wanted/;
 
-export class WishlistEmbed extends ListEmbed {
-    username: string | null = null;
-    currentPage: number | null = null;
-    pages: number | null = null;
-    charactersWanted: number | null = null;
-    characters: WishlistCharacter[] | null = null;
+/**
+ * Represents a wishlist embed from LaifuBot
+ */
+export class WishlistEmbed extends BaseListEmbed {
+    /**
+     * The username of which the wishlist command was used on
+     */
+    username?: string;
+    /**
+     * The current page the embed is on
+     */
+    currentPage?: number;
+    /**
+     * The number of pages available on this embed
+     */
+    pages?: number;
+    /**
+     * The number of characters wanted on this embed
+     */
+    charactersWanted?: number;
+    /**
+     * The list of characters currently displayed on this embed
+     */
+    characters: WishlistCharacter[] = [];
 
     constructor(embed: MessageEmbed) {
         super(embed);

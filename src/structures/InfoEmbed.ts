@@ -1,4 +1,8 @@
 import type { EmbedField, MessageEmbed } from 'discord.js';
+import type {
+    Bounds, CharacterImageInfo,
+    CharacterRarityInfo, CharacterRarityInfoCollection, CharacterSeriesInfo,
+} from './types';
 
 const GENERAL_INFO_REGEX = /\*\*Global ID:\*\* (\d+)\n\*\*Total Images:\*\* (\d+)/;
 const MAIN_SERIES_REGEX = /\*\*ENG:\*\* (.+)\n\*\*ALT:\*\* (.+)\n\*\*SID:\*\* (\d+) \| `(.+)`/;
@@ -6,44 +10,51 @@ const INFLUENCE_REGEX = /\*\*(\d+)\*\*.+\n.+`#(\d+)`・`#(\d+)`/;
 const COLLECTIONS_REGEX = /(\d+)・(\d+)/g;
 const FOOTER_REGEX = /Image #(\d) - Uploaded by (.+)\nCredit: (.+)/;
 
-export interface Bounds {
-    lower: number;
-    upper: number;
-}
-
-export interface RarityStats {
-    existing: number;
-    totalExisted: number;
-}
-
+/**
+ * Represents an info embed from LaifuBot
+ */
 export class InfoEmbed {
-    characterName: string | null = null;
+    /**
+     * Information of the character's image
+     */
+    image: CharacterImageInfo = {};
 
-    gid: number | null = null;
-    images: number | null = null;
+    /**
+     * The name of the character
+     */
+    characterName?: string;
+    /**
+     * The global ID of the character
+     */
+    globalId?: number;
+    /**
+     * The total number of images this character has
+     */
+    totalImages?: number;
 
-    engSeries: string | null = null;
-    altSeries: string | null = null;
-    sid: number | null = null;
-    sequence: string | null = null;
+    /**
+     * Information of the character's series
+     */
+    series: CharacterSeriesInfo = {};
 
-    influence: number | null = null;
-    influenceRankRange: Bounds | null = null;
+    /**
+     * The influence of the character
+     */
+    influence?: number;
+    /**
+     * The influence range of this character
+     */
+    influenceRankRange?: Bounds;
 
-    alphaStats: RarityStats | null = null;
-    betaStats: RarityStats | null = null;
-    gammaStats: RarityStats | null = null;
-    deltaStats: RarityStats | null = null;
-    epsilonStats: RarityStats | null = null;
-    zetaStats: RarityStats | null = null;
-    ultraStats: RarityStats | null = null;
-
-    imageNumber: number | null = null;
-    imageUploader: string | null = null;
-    imageCredit: string | null = null;
+    /**
+     * The rarity information of this character
+     */
+    rarities: CharacterRarityInfoCollection = {};
 
     constructor(embed: MessageEmbed) {
-        this.characterName = embed.title;
+        if (embed.title) {
+            this.characterName = embed.title;
+        }
 
         if (embed.footer?.text) {
             this.parseFooter(embed.footer.text);
@@ -69,18 +80,18 @@ export class InfoEmbed {
     protected parseGeneralInfoField(field: EmbedField) {
         const generalInfoMatch = field.value.match(GENERAL_INFO_REGEX);
         if (generalInfoMatch) {
-            this.gid = parseInt(generalInfoMatch[1]);
-            this.images = parseInt(generalInfoMatch[2]);
+            this.globalId = parseInt(generalInfoMatch[1]);
+            this.totalImages = parseInt(generalInfoMatch[2]);
         }
     }
 
     protected parseMainSeriesField(field: EmbedField) {
         const mainSeriesMatch = field.value.match(MAIN_SERIES_REGEX);
         if (mainSeriesMatch) {
-            this.engSeries = mainSeriesMatch[1];
-            this.altSeries = mainSeriesMatch[2];
-            this.sid = parseInt(mainSeriesMatch[3]);
-            this.sequence = mainSeriesMatch[4];
+            this.series.englishTitle = mainSeriesMatch[1];
+            this.series.alternateTitle = mainSeriesMatch[2];
+            this.series.id = parseInt(mainSeriesMatch[3]);
+            this.series.sequence = mainSeriesMatch[4];
         }
     }
 
@@ -97,30 +108,30 @@ export class InfoEmbed {
 
     protected parseCollectionsField(field: EmbedField) {
         const it = field.value.matchAll(COLLECTIONS_REGEX);
-        const stats: RarityStats[] = [];
+        const stats: CharacterRarityInfo[] = [];
 
         for (let obj = it.next(); !obj.done; obj = it.next()) {
             stats.push({
-                existing: parseInt(obj.value[1]),
-                totalExisted: parseInt(obj.value[2]),
+                existingAmount: parseInt(obj.value[1]),
+                totalClaimed: parseInt(obj.value[2]),
             });
         }
 
-        this.alphaStats = stats[0];
-        this.betaStats = stats[1];
-        this.gammaStats = stats[2];
-        this.deltaStats = stats[3];
-        this.epsilonStats = stats[4];
-        this.zetaStats = stats[5];
-        this.ultraStats = stats[6];
+        this.rarities.alpha = stats[0];
+        this.rarities.beta = stats[1];
+        this.rarities.gamma = stats[2];
+        this.rarities.delta = stats[3];
+        this.rarities.epsilon = stats[4];
+        this.rarities.zeta = stats[5];
+        this.rarities.ultra = stats[6];
     }
 
     protected parseFooter(text: string) {
         const footerMatch = text.match(FOOTER_REGEX);
         if (footerMatch) {
-            this.imageNumber = parseInt(footerMatch[1]);
-            this.imageUploader = footerMatch[2];
-            this.imageCredit = footerMatch[3];
+            this.image.currentNumber = parseInt(footerMatch[1]);
+            this.image.uploader = footerMatch[2];
+            this.image.credit = footerMatch[3];
         }
     }
 }

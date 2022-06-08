@@ -5,12 +5,30 @@ const CLAIM_REGEX = /\*\*Claimed By:\*\* (.+)\n\*\*Age:\*\* ([\d-]+) \| `(\d+)`/
 const BADGE_REGEX = /❦#(\d+)/;
 const GLITCH_REGEX = /ɢʟɪᴛᴄʜᴇᴅ/;
 
+/**
+ * An extension of {@link BaseSimpleCharacter} with additional information
+ */
 export abstract class BaseFullCharacter extends BaseSimpleCharacter {
-    claimedBy: string | null = null;
-    dateClaimed: string | null = null;
-    age: number | null = null;
+    /**
+     * The username of the initial user that claimed this character
+     */
+    claimedBy?: string;
+    /**
+     * The date when this character was claimed
+     */
+    dateClaimed?: string;
+    /**
+     * The number of days since this character was claimed
+     */
+    age?: number;
 
-    badgeId: number | null = null;
+    /**
+     * The badge ID of this character
+     */
+    badgeId?: number;
+    /**
+     * Indicates whether the character is glitched or not
+     */
     glitched = false;
 
     protected override parseGeneralInfoField(field: EmbedField) {

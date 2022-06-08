@@ -1,9 +1,21 @@
 const ROW_REGEX = /(\d+) \| (.+)・\*\*(\d+)/;
 
+/**
+ * Represents a character found in a wishlist embed
+ */
 export class WishlistCharacter {
-    gid: number | null = null;
-    name: string | null = null;
-    influence: number | null = null;
+    /**
+     * The global ID of this character
+     */
+    gid?: number;
+    /**
+     * The name of this character
+     */
+    name?: string;
+    /**
+     * The influence of this character
+     */
+    influence?: number;
 
     constructor(data: string) {
         const rowMatch = data.match(ROW_REGEX);

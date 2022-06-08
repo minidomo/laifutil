@@ -3,11 +3,20 @@ import { BaseSimpleCharacter } from './BaseSimpleCharacter';
 
 const ACCOUNT_REGEX = /\*\*x(\d)\*\*\n.+\*\*x(\d+)\*\*/;
 
+/**
+ * Represents a character embed from the gacha command
+ */
 export class GachaCharacterEmbed extends BaseSimpleCharacter {
     protected OWNER_REGEX = /(.+)/;
 
-    numStonesUsed: number | null = null;
-    balance: number | null = null;
+    /**
+     * The number of stones used for this gacha
+     */
+    numStonesUsed?: number;
+    /**
+     * The owner's current balance in stones
+     */
+    balance?: number;
 
     constructor(embed: MessageEmbed) {
         super();

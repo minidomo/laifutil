@@ -33,6 +33,8 @@ module.exports = {
         'valid-jsdoc': [
             'error',
             {
+                'requireReturnType': false,
+                'requireParamType': false,
                 'requireReturn': false,
                 'requireReturnDescription': false,
                 'prefer': {

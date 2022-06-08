@@ -1,7 +1,14 @@
 {
+    "$schema": "https://typedoc.org/schema.json",
     "entryPoints": [
         "src/index.ts"
     ],
     "out": "docs",
-    "hideGenerator": true
+    "hideGenerator": true,
+    "sort": [
+        "kind",
+        "instance-first",
+        "visibility",
+        "alphabetical"
+    ]
 }

@@ -11,9 +11,6 @@ describe('WishlistEmbed', () => {
             const embed = new MessageEmbed(wishlistEmbedsArr[0]);
             const parsedEmbed = new WishlistEmbed(embed);
 
-            assert.strictEqual(parsedEmbed.name, 'JB');
-            assert.strictEqual(parsedEmbed.identifier, 'Wishlist');
-
             assert.strictEqual(parsedEmbed.username, 'JB');
             assert.strictEqual(parsedEmbed.currentPage, 1);
             assert.strictEqual(parsedEmbed.pages, 1);

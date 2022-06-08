@@ -8,11 +8,20 @@ function removeCommas(str: string) {
     return str.replaceAll(',', '');
 }
 
+/**
+ * Represents a character embed from the view command
+ */
 export class ViewEmbed extends BaseFullCharacter {
     protected OWNER_REGEX = /^(.+) is Viewing\.\.\.$/;
 
-    emoji: string | null = null;
-    numExisting: number | null = null;
+    /**
+     * The emoji this character has from the favorite command
+     */
+    emoji?: string;
+    /**
+     * The number of existing characters with the current rarity
+     */
+    existingAmount?: number;
 
     constructor(embed: MessageEmbed) {
         super();
@@ -25,7 +34,7 @@ export class ViewEmbed extends BaseFullCharacter {
 
         const emojiMatch = title.match(EMOJI_REGEX);
         if (emojiMatch) {
-            this.emoji = emojiMatch[1] ?? null;
+            this.emoji = emojiMatch[1];
         }
     }
 
@@ -34,7 +43,7 @@ export class ViewEmbed extends BaseFullCharacter {
 
         const numExistingMatch = text.match(NUM_EXISTING_REGEX);
         if (numExistingMatch) {
-            this.numExisting = parseInt(removeCommas(numExistingMatch[1]));
+            this.existingAmount = parseInt(removeCommas(numExistingMatch[1]));
         }
     }
 }

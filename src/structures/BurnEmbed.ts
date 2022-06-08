@@ -4,11 +4,20 @@ import { BaseFullCharacter } from './BaseFullCharacter';
 const BURN_REWARD_REGEX = /^Burn Reward Counter: (\d+) \/ 15\n/;
 const GUIDE_REGEX = /(\d+)% of players/;
 
+/**
+ * Represents a character embed from the burn command
+ */
 export class BurnEmbed extends BaseFullCharacter {
     protected OWNER_REGEX = /(.+)/;
 
-    burnRewardCounter: number | null = null;
-    burnPercentage: number | null = null;
+    /**
+     * The current amount of characters burned until the burn reward
+     */
+    burnRewardCounter?: number;
+    /**
+     * The burn percent rate of this character, represented as an integer from 0 to 100
+     */
+    burnPercentage?: number;
 
     constructor(embed: MessageEmbed) {
         super();

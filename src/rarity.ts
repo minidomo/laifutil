@@ -1,8 +1,20 @@
+/**
+ * Contains the text and symbol for a rarity.
+ */
 export interface Rarity {
+    /**
+     * The name of the rarity in latin letter small capitals.
+     */
     text: string;
+    /**
+     * The symbols used to represent the rarity.
+     */
     symbol: string;
 }
 
+/**
+ * Container for all rarities.
+ */
 export interface RarityContainer {
     ALPHA: Rarity;
     BETA: Rarity;
@@ -16,57 +28,51 @@ export interface RarityContainer {
     SPECIAL: Rarity;
 }
 
-function createConstants(): RarityContainer {
-    const constants: RarityContainer = {
-        ALPHA: {
-            text: 'ᴀʟᴘʜᴀ',
-            symbol: 'α',
-        },
-        BETA: {
-            text: 'ʙᴇᴛᴀ',
-            symbol: 'β',
-        },
-        GAMMA: {
-            text: 'ɢᴀᴍᴍᴀ',
-            symbol: 'γ',
-        },
-        DELTA: {
-            text: 'ᴅᴇʟᴛᴀ',
-            symbol: 'δ',
-        },
-        EPSILON: {
-            text: 'ᴇᴘsɪʟᴏɴ',
-            symbol: 'ε',
-        },
-        ZETA: {
-            text: 'ᴢᴇᴛᴀ',
-            symbol: 'ζ',
-        },
-        ULTRA: {
-            text: 'ᴜʟᴛʀᴀ',
-            symbol: 'ζ𝓡',
-        },
-        SCARLET: {
-            text: 'sᴄᴀʀʟᴇᴛ',
-            symbol: '†',
-        },
-        EVENT: {
-            text: 'ᴇᴠᴇɴᴛ',
-            symbol: 'ξν',
-        },
-        SPECIAL: {
-            text: 'sᴘᴇᴄɪᴀʟ',
-            symbol: 'Λ',
-        },
-    };
-
-    Object.freeze(constants);
-    Object.values(constants).forEach((rarity: Rarity) => Object.freeze(rarity));
-
-    return constants;
-}
-
-export const constants = createConstants();
+/**
+ * Constants for all rarities in LaifuBot.
+ */
+export const constants: RarityContainer = {
+    ALPHA: {
+        text: 'ᴀʟᴘʜᴀ',
+        symbol: 'α',
+    },
+    BETA: {
+        text: 'ʙᴇᴛᴀ',
+        symbol: 'β',
+    },
+    GAMMA: {
+        text: 'ɢᴀᴍᴍᴀ',
+        symbol: 'γ',
+    },
+    DELTA: {
+        text: 'ᴅᴇʟᴛᴀ',
+        symbol: 'δ',
+    },
+    EPSILON: {
+        text: 'ᴇᴘsɪʟᴏɴ',
+        symbol: 'ε',
+    },
+    ZETA: {
+        text: 'ᴢᴇᴛᴀ',
+        symbol: 'ζ',
+    },
+    ULTRA: {
+        text: 'ᴜʟᴛʀᴀ',
+        symbol: 'ζ𝓡',
+    },
+    SCARLET: {
+        text: 'sᴄᴀʀʟᴇᴛ',
+        symbol: '†',
+    },
+    EVENT: {
+        text: 'ᴇᴠᴇɴᴛ',
+        symbol: 'ξν',
+    },
+    SPECIAL: {
+        text: 'sᴘᴇᴄɪᴀʟ',
+        symbol: 'Λ',
+    },
+};
 
 function createRegex(): RegExp {
     const baseExp = Object.values(constants)
@@ -75,6 +81,14 @@ function createRegex(): RegExp {
     return new RegExp(`(${baseExp})`);
 }
 
+/**
+ * Regular expression for matching rarity text and symbols.
+ *
+ * ```js
+ * Rarity.REGEX.test('sᴘᴇᴄɪᴀʟ'); // true
+ * Rarity.REGEX.test('Λ'); // true
+ * ```
+ */
 export const REGEX = createRegex();
 
 const mappings: Map<string, Rarity> = new Map();
@@ -100,6 +114,12 @@ mappings
     .set('ξν', constants.EVENT)
     .set('Λ', constants.SPECIAL);
 
+/**
+ * Resolves the query with the corresponding Rarity object.
+ *
+ * @param query The query to resolve
+ * @returns The corresponding Rarity, null otherwise
+ */
 export function resolve(query: string): Rarity | null {
     return mappings.get(query) ?? null;
 }
