@@ -9,5 +9,4 @@ temp*
 tsconfig.json
 .eslintignore
 .eslintrc.cjs
-laifu-util*
 typedoc.json

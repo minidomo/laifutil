@@ -4,5 +4,4 @@ temp*
 .env
 dist/
 *.tgz
-laifu-util*
 docs/

@@ -1,5 +1,5 @@
 {
-  "name": "laifu-util",
+  "name": "laifutil",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/minidomo/laifu-util.git"
+    "url": "git+https://github.com/minidomo/laifutil.git"
   },
   "author": "JB Ladera",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/minidomo/laifu-util/issues"
+    "url": "https://github.com/minidomo/laifutil/issues"
   },
-  "homepage": "https://github.com/minidomo/laifu-util#readme",
+  "homepage": "https://github.com/minidomo/laifutil#readme",
   "devDependencies": {
     "@types/chai": "^4.3.1",
     "@types/mocha": "^9.1.1",

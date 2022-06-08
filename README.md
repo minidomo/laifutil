@@ -1,2 +1,2 @@
-# laifu-util
+# laifutil
 
