@@ -31,7 +31,7 @@ export interface RarityContainer {
 /**
  * Constants for all rarities in LaifuBot.
  */
-export const constants: RarityContainer = {
+export const RarityConstants: RarityContainer = {
     ALPHA: {
         text: 'ᴀʟᴘʜᴀ',
         symbol: 'α',
@@ -75,7 +75,7 @@ export const constants: RarityContainer = {
 };
 
 function createRegex(): RegExp {
-    const baseExp = Object.values(constants)
+    const baseExp = Object.values(RarityConstants)
         .map((rarity: Rarity) => `${rarity.text}|${rarity.symbol}`)
         .join('|');
     return new RegExp(`(${baseExp})`);
@@ -89,30 +89,30 @@ function createRegex(): RegExp {
  * Rarity.REGEX.test('Λ'); // true
  * ```
  */
-export const REGEX = createRegex();
+export const RARITY_REGEX = createRegex();
 
 const mappings: Map<string, Rarity> = new Map();
 mappings
-    .set('ᴀʟᴘʜᴀ', constants.ALPHA)
-    .set('ʙᴇᴛᴀ', constants.BETA)
-    .set('ɢᴀᴍᴍᴀ', constants.GAMMA)
-    .set('ᴅᴇʟᴛᴀ', constants.DELTA)
-    .set('ᴇᴘsɪʟᴏɴ', constants.EPSILON)
-    .set('ᴢᴇᴛᴀ', constants.ZETA)
-    .set('ᴜʟᴛʀᴀ', constants.ULTRA)
-    .set('sᴄᴀʀʟᴇᴛ', constants.SCARLET)
-    .set('ᴇᴠᴇɴᴛ', constants.EVENT)
-    .set('sᴘᴇᴄɪᴀʟ', constants.SPECIAL)
-    .set('α', constants.ALPHA)
-    .set('β', constants.BETA)
-    .set('γ', constants.GAMMA)
-    .set('δ', constants.DELTA)
-    .set('ε', constants.EPSILON)
-    .set('ζ', constants.ZETA)
-    .set('ζ𝓡', constants.ULTRA)
-    .set('†', constants.SCARLET)
-    .set('ξν', constants.EVENT)
-    .set('Λ', constants.SPECIAL);
+    .set('ᴀʟᴘʜᴀ', RarityConstants.ALPHA)
+    .set('ʙᴇᴛᴀ', RarityConstants.BETA)
+    .set('ɢᴀᴍᴍᴀ', RarityConstants.GAMMA)
+    .set('ᴅᴇʟᴛᴀ', RarityConstants.DELTA)
+    .set('ᴇᴘsɪʟᴏɴ', RarityConstants.EPSILON)
+    .set('ᴢᴇᴛᴀ', RarityConstants.ZETA)
+    .set('ᴜʟᴛʀᴀ', RarityConstants.ULTRA)
+    .set('sᴄᴀʀʟᴇᴛ', RarityConstants.SCARLET)
+    .set('ᴇᴠᴇɴᴛ', RarityConstants.EVENT)
+    .set('sᴘᴇᴄɪᴀʟ', RarityConstants.SPECIAL)
+    .set('α', RarityConstants.ALPHA)
+    .set('β', RarityConstants.BETA)
+    .set('γ', RarityConstants.GAMMA)
+    .set('δ', RarityConstants.DELTA)
+    .set('ε', RarityConstants.EPSILON)
+    .set('ζ', RarityConstants.ZETA)
+    .set('ζ𝓡', RarityConstants.ULTRA)
+    .set('†', RarityConstants.SCARLET)
+    .set('ξν', RarityConstants.EVENT)
+    .set('Λ', RarityConstants.SPECIAL);
 
 /**
  * Resolves the query with the corresponding Rarity object.
@@ -120,6 +120,6 @@ mappings
  * @param query The query to resolve
  * @returns The corresponding Rarity, null otherwise
  */
-export function resolve(query: string): Rarity | null {
+export function resolveRarity(query: string): Rarity | null {
     return mappings.get(query) ?? null;
 }

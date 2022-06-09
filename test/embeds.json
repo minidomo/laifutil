@@ -550,6 +550,38 @@
                         "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
                     },
                     "footer": null
+                },
+                {
+                    "title": "Case File Opened",
+                    "type": "rich",
+                    "description": null,
+                    "url": null,
+                    "timestamp": null,
+                    "color": 2832008,
+                    "fields": [
+                        {
+                            "value": "<:lawstone:725508010893508658>x**2** / **5** *(2)*",
+                            "name": "Stones",
+                            "inline": false
+                        },
+                        {
+                            "value": "**EXP:** :dna: + 38\n__BLOODLUST__\n:heart: + 0\n:crossed_swords: + 0\n:shield: + 0",
+                            "name": "<a:nightmare:734979349937127544> Consumption",
+                            "inline": false
+                        }
+                    ],
+                    "thumbnail": {
+                        "url": "https://cdn.discordapp.com/attachments/722702340620288042/810749727616139264/tenor.gif",
+                        "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/810749727616139264/tenor.gif",
+                        "height": 140,
+                        "width": 336
+                    },
+                    "image": null,
+                    "author": {
+                        "name": "CptDomo",
+                        "icon_url": "https://cdn.discordapp.com/avatars/275002545867325440/7e063ea8f1a17271f60092fa8fb3ad5d.png?size=4096"
+                    },
+                    "footer": null
                 }
             ],
             "cooldown": [

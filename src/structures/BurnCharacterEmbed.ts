@@ -7,7 +7,7 @@ const GUIDE_REGEX = /(\d+)% of players/;
 /**
  * Represents a character embed from the burn command
  */
-export class BurnEmbed extends BaseFullCharacter {
+export class BurnCharacterEmbed extends BaseFullCharacter {
     protected OWNER_REGEX = /(.+)/;
 
     /**

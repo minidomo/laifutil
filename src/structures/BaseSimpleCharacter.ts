@@ -1,6 +1,6 @@
 import type { EmbedField, MessageEmbed } from 'discord.js';
 import type { CharacterImageInfo, CharacterSeriesInfo } from './types';
-import * as rarity from '../rarity';
+import { Rarity, RARITY_REGEX, resolveRarity } from '../rarity';
 
 const TITLE_REGEX = /#(\d) (.+)/;
 const MAIN_SERIES_REGEX = /\*\*ENG:\*\* (.+)\n\*\*ALT:\*\* (.+)\n\*\*SID:\*\* (\d+) \| `(.+)`/;
@@ -48,7 +48,7 @@ export abstract class BaseSimpleCharacter {
     /**
      * The rarity of the character
      */
-    rarity?: rarity.Rarity;
+    rarity?: Rarity;
     /**
      * The number of stars the character has
      */
@@ -123,9 +123,9 @@ export abstract class BaseSimpleCharacter {
     }
 
     protected parseRarityField(field: EmbedField) {
-        const rarityMatch = field.value.match(rarity.REGEX);
+        const rarityMatch = field.value.match(RARITY_REGEX);
         if (rarityMatch) {
-            this.rarity = rarity.resolve(rarityMatch[1]) ?? undefined;
+            this.rarity = resolveRarity(rarityMatch[1]) ?? undefined;
         }
 
         const starMatch = field.value.match(STAR_REGEX);

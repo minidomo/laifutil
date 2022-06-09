@@ -1,13 +1,14 @@
 import type { MessageEmbed } from 'discord.js';
 import { BaseListEmbed } from './BaseListEmbed';
-import { WishlistCharacter } from './WishlistCharacter';
+import type { WishlistCharacter } from './types';
 
 const FOOTER_REGEX = /Page (\d+)\/(\d+) • (\d+) Characters Wanted/;
+const ROW_REGEX = /(\d+) \| (.+)・\*\*(\d+)/;
 
 /**
  * Represents a wishlist embed from LaifuBot
  */
-export class WishlistEmbed extends BaseListEmbed {
+export class WishlistListEmbed extends BaseListEmbed {
     /**
      * The username of which the wishlist command was used on
      */
@@ -42,8 +43,19 @@ export class WishlistEmbed extends BaseListEmbed {
         }
 
         if (this.data) {
-            this.characters = this.data.map(text => new WishlistCharacter(text));
             this.username = this.name;
+            this.characters = this.data.map(text => {
+                const obj: WishlistCharacter = {};
+
+                const rowMatch = text.match(ROW_REGEX);
+                if (rowMatch) {
+                    obj.gid = parseInt(rowMatch[1]);
+                    obj.name = rowMatch[2];
+                    obj.influence = parseInt(rowMatch[3]);
+                }
+
+                return obj;
+            });
         }
     }
 }

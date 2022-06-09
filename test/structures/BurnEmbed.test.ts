@@ -1,15 +1,15 @@
 import { assert } from 'chai';
 import { MessageEmbed } from 'discord.js';
-import { BurnEmbed, rarity } from '../../dist';
+import { BurnCharacterEmbed, RarityConstants } from '../../dist';
 import * as embeds from '../embeds.json';
 
-describe('BurnEmbed', () => {
+describe('BurnCharacterEmbed', () => {
     const burnEmbedsArr = embeds.identifier.burn.character;
 
     describe('#constructor', () => {
         it('should correctly parse a burn Discord embed of a normal card from LaifuBot', () => {
             const embed = new MessageEmbed(burnEmbedsArr[0]);
-            const parsedEmbed = new BurnEmbed(embed);
+            const parsedEmbed = new BurnCharacterEmbed(embed);
 
             assert.strictEqual(parsedEmbed.image.currentNumber, 1);
             assert.strictEqual(parsedEmbed.characterName, 'Nagi Kodachi (小太刀　凪)');
@@ -20,7 +20,7 @@ describe('BurnEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 166);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-18');
 
-            assert.strictEqual(parsedEmbed.rarity, rarity.constants.ZETA);
+            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ZETA);
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.influenceRank, 11709);
             assert.strictEqual(parsedEmbed.influence, 40);
@@ -43,7 +43,7 @@ describe('BurnEmbed', () => {
 
         it('should correctly parse a burn Discord embed of a badged card from LaifuBot', () => {
             const embed = new MessageEmbed(burnEmbedsArr[1]);
-            const parsedEmbed = new BurnEmbed(embed);
+            const parsedEmbed = new BurnCharacterEmbed(embed);
 
             assert.strictEqual(parsedEmbed.image.currentNumber, 1);
             assert.strictEqual(parsedEmbed.characterName, 'Ririka Momobami (桃喰 リリカ)');
@@ -54,7 +54,7 @@ describe('BurnEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 177);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-07');
 
-            assert.strictEqual(parsedEmbed.rarity, rarity.constants.ALPHA);
+            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ALPHA);
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.influenceRank, 210);
             assert.strictEqual(parsedEmbed.influence, 928);
@@ -77,7 +77,7 @@ describe('BurnEmbed', () => {
 
         it('should correctly parse a burn Discord embed of a badged, star enhanced card from LaifuBot', () => {
             const embed = new MessageEmbed(burnEmbedsArr[2]);
-            const parsedEmbed = new BurnEmbed(embed);
+            const parsedEmbed = new BurnCharacterEmbed(embed);
 
             assert.strictEqual(parsedEmbed.image.currentNumber, 2);
             assert.strictEqual(parsedEmbed.characterName, 'Alice Zuberg (アリス・ツーベルク)');
@@ -88,7 +88,7 @@ describe('BurnEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 323);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-14');
 
-            assert.strictEqual(parsedEmbed.rarity, rarity.constants.ALPHA);
+            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ALPHA);
             assert.strictEqual(parsedEmbed.stars, 1);
             assert.strictEqual(parsedEmbed.influenceRank, 143);
             assert.strictEqual(parsedEmbed.influence, 1044);

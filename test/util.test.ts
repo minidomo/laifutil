@@ -3,7 +3,7 @@ import { MessageEmbed } from 'discord.js';
 import * as embeds from './embeds.json';
 import { hasSameImage, USER_ID } from '../dist';
 
-describe('Util', () => {
+describe('util.ts', () => {
     describe('.USER_ID', () => {
         it('should be equal to 688202466315206661', () => {
             assert.strictEqual(USER_ID, '688202466315206661');

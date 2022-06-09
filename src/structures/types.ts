@@ -97,3 +97,43 @@ export interface CharacterSeriesInfo {
      */
     sequence?: string;
 }
+
+/**
+ * Represents a character found in a wishlist embed
+ */
+export interface WishlistCharacter {
+    /**
+     * The global ID of this character
+     */
+    gid?: number;
+    /**
+     * The name of this character
+     */
+    name?: string;
+    /**
+     * The influence of this character
+     */
+    influence?: number;
+}
+
+/**
+ * Represents the consumption from a drop command
+ */
+export interface Consumption {
+    /**
+     * The experience gained
+     */
+    experience: number;
+    /**
+     * The amount of health gained
+     */
+    health: number;
+    /**
+     * The amount of attack gained
+     */
+    attack: number;
+    /**
+     * The amount of deference gained
+     */
+    defense: number;
+}

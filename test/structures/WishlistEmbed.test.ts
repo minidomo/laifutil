@@ -1,15 +1,15 @@
 import { MessageEmbed } from 'Discord.js';
 import { assert } from 'chai';
-import { WishlistEmbed } from '../../dist';
+import { WishlistListEmbed } from '../../dist';
 import * as embeds from '../embeds.json';
 
-describe('WishlistEmbed', () => {
+describe('WishlistListEmbed', () => {
     const wishlistEmbedsArr = embeds.identifier.wishlist.list;
 
     describe('#constructor', () => {
         it('should correctly parse a wishlist Discord embed from LaifuBot', () => {
             const embed = new MessageEmbed(wishlistEmbedsArr[0]);
-            const parsedEmbed = new WishlistEmbed(embed);
+            const parsedEmbed = new WishlistListEmbed(embed);
 
             assert.strictEqual(parsedEmbed.username, 'JB');
             assert.strictEqual(parsedEmbed.currentPage, 1);

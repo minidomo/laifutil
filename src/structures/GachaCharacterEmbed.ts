@@ -12,7 +12,7 @@ export class GachaCharacterEmbed extends BaseSimpleCharacter {
     /**
      * The number of stones used for this gacha
      */
-    numStonesUsed?: number;
+    stonesUsed?: number;
     /**
      * The owner's current balance in stones
      */
@@ -31,7 +31,7 @@ export class GachaCharacterEmbed extends BaseSimpleCharacter {
     protected parseAccountField(field: EmbedField) {
         const accountMatch = field.value.match(ACCOUNT_REGEX);
         if (accountMatch) {
-            this.numStonesUsed = parseInt(accountMatch[1]);
+            this.stonesUsed = parseInt(accountMatch[1]);
             this.balance = parseInt(accountMatch[2]);
         }
     }

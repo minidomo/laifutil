@@ -1,7 +1,7 @@
 {
   "name": "laifutil",
   "version": "1.0.0",
-  "description": "",
+  "description": "Identify and parse Discord embeds sent from LaifuBot.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

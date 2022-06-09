@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import { MessageEmbed } from 'discord.js';
-import { GachaCharacterEmbed, rarity } from '../../dist';
+import { GachaCharacterEmbed, RarityConstants } from '../../dist';
 import * as embeds from '../embeds.json';
 
 describe('GachaCharacterEmbed', () => {
@@ -17,7 +17,7 @@ describe('GachaCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.uniqueId, 5070);
             assert.strictEqual(parsedEmbed.globalId, 11169);
 
-            assert.strictEqual(parsedEmbed.rarity, rarity.constants.GAMMA);
+            assert.strictEqual(parsedEmbed.rarity, RarityConstants.GAMMA);
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.influenceRank, 14558);
             assert.strictEqual(parsedEmbed.influence, 15);
@@ -32,7 +32,7 @@ describe('GachaCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.image.uploader, 'LaifuBot †');
             assert.strictEqual(parsedEmbed.image.credit, 'MyAnimeList');
 
-            assert.strictEqual(parsedEmbed.numStonesUsed, 5);
+            assert.strictEqual(parsedEmbed.stonesUsed, 5);
             assert.strictEqual(parsedEmbed.balance, 245);
         });
     });
