@@ -51,6 +51,6 @@ client.login('token');
 ```
 
 ## Links
-- [Documentation](https://minidomo.github.io/laifutil/docs/)
+- [Documentation](https://minidomo.github.io/laifutil/)
 - [GitHub](https://github.com/minidomo/laifutil)
-- [npm]()
+- [npm](https://www.npmjs.com/package/laifutil)
