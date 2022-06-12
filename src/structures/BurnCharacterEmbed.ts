@@ -17,7 +17,7 @@ export class BurnCharacterEmbed extends BaseFullCharacter {
     /**
      * The burn percent rate of this character, represented as an integer from 0 to 100
      */
-    burnPercentage = 0;
+    burnPercentage?: number;
 
     constructor(embed: MessageEmbed) {
         super();

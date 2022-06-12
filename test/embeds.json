@@ -143,6 +143,50 @@
                     "footer": {
                         "text": "Burn Reward Counter: 0 / 15\nUploaded by chocobutternut\nCredit: Official Art"
                     }
+                },
+                {
+                    "title": "#1 Mei Hiuchidani",
+                    "type": "rich",
+                    "description": null,
+                    "url": null,
+                    "timestamp": null,
+                    "color": 13227220,
+                    "fields": [
+                        {
+                            "name": "General Info",
+                            "value": "**UID:** 342 | **GID:** 15899\n**Claimed By:** comp\n**Age:** 2022-05-31 | `0` ᴅᴀʏs",
+                            "inline": false
+                        },
+                        {
+                            "name": "Rarity",
+                            "value": "<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`»`☆☆☆☆`\nInfluence `#13929`・**6**<:inf:755213119055200336>",
+                            "inline": false
+                        },
+                        {
+                            "name": "Main Series",
+                            "value": "**ENG:** Cafe Stella and the Reapers' Butterflies\n**ALT:** Cafe Stella to Shinigami no Chou\n**SID:** 1723 | `MAIN`",
+                            "inline": false
+                        },
+                        {
+                            "name": "Guide",
+                            "value": "・REPLY `F` to favorite. (Add an emoji to be specific)\n・REPLY `S` to skip.\n・REPLY `B` to burn.\n🚧 *No burn data available.*",
+                            "inline": false
+                        }
+                    ],
+                    "thumbnail": null,
+                    "image": {
+                        "url": "https://cdn.discordapp.com/attachments/766880877099352085/971664455161233419/image.png",
+                        "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/971664455161233419/image.png",
+                        "height": 350,
+                        "width": 225
+                    },
+                    "author": {
+                        "name": "!zzdovad",
+                        "icon_url": "https://cdn.discordapp.com/avatars/138414014303567872/09c616573d34899fa26a92dc7ac428ec.png?size=4096"
+                    },
+                    "footer": {
+                        "text": "Burn Reward Counter: 5 / 15\nUploaded by LaifuBot †\nCredit: Official"
+                    }
                 }
             ],
             "reward": [
