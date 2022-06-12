@@ -109,5 +109,39 @@ describe('BurnCharacterEmbed', () => {
 
             assert.strictEqual(parsedEmbed.burnPercentage, 4);
         });
+
+        it('should correctly parse a burn Discord embed of a card that does not have burn data from LaifuBot', () => {
+            const embed = new MessageEmbed(burnEmbedsArr[3]);
+            const parsedEmbed = new BurnCharacterEmbed(embed);
+
+            assert.strictEqual(parsedEmbed.image.currentNumber, 1);
+            assert.strictEqual(parsedEmbed.characterName, 'Mei Hiuchidani');
+
+            assert.strictEqual(parsedEmbed.uniqueId, 342);
+            assert.strictEqual(parsedEmbed.globalId, 15899);
+            assert.strictEqual(parsedEmbed.claimedBy, 'comp');
+            assert.strictEqual(parsedEmbed.age, 0);
+            assert.strictEqual(parsedEmbed.dateClaimed, '2022-05-31');
+
+            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ALPHA);
+            assert.strictEqual(parsedEmbed.stars, 0);
+            assert.strictEqual(parsedEmbed.influenceRank, 13929);
+            assert.strictEqual(parsedEmbed.influence, 6);
+            assert.isUndefined(parsedEmbed.badgeId);
+            assert.isFalse(parsedEmbed.glitched);
+
+            assert.strictEqual(parsedEmbed.series.englishTitle, 'Cafe Stella and the Reapers\' Butterflies');
+            assert.strictEqual(parsedEmbed.series.alternateTitle, 'Cafe Stella to Shinigami no Chou');
+            assert.strictEqual(parsedEmbed.series.id, 1723);
+            assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
+
+            assert.strictEqual(parsedEmbed.owner, '!zzdovad');
+
+            assert.strictEqual(parsedEmbed.image.uploader, 'LaifuBot †');
+            assert.strictEqual(parsedEmbed.image.credit, 'Official');
+            assert.strictEqual(parsedEmbed.burnRewardCounter, 5);
+
+            assert.isUndefined(parsedEmbed.burnPercentage);
+        });
     });
 });
