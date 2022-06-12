@@ -21,7 +21,7 @@ export class ViewEmbed extends BaseFullCharacter {
     /**
      * The number of existing characters with the current rarity
      */
-    existingAmount?: number;
+    existingAmount = 0;
 
     constructor(embed: MessageEmbed) {
         super();

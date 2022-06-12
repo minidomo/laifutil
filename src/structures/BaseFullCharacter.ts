@@ -12,15 +12,15 @@ export abstract class BaseFullCharacter extends BaseSimpleCharacter {
     /**
      * The username of the initial user that claimed this character
      */
-    claimedBy?: string;
+    claimedBy = '';
     /**
      * The date when this character was claimed
      */
-    dateClaimed?: string;
+    dateClaimed = '';
     /**
      * The number of days since this character was claimed
      */
-    age?: number;
+    age = 0;
 
     /**
      * The badge ID of this character

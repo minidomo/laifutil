@@ -7,15 +7,15 @@ export abstract class BaseListEmbed {
     /**
      * The name used in the title of this embed
      */
-    protected name?: string;
+    protected name = '';
     /**
      * The rows of data in the description of this embed
      */
-    protected data?: string[];
+    protected data: string[] = [];
     /**
      * The type of embed
      */
-    protected identifier?: string;
+    protected identifier = '';
 
     constructor(embed: MessageEmbed) {
         if (embed.title) {
