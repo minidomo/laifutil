@@ -11,15 +11,15 @@ export class DropOpenedEmbed {
     /**
      * The username of the user that opened the drop
      */
-    username?: string;
+    username = '';
     /**
      * The number of stones received from the drop
      */
-    stonesReceived?: number;
+    stonesReceived = 0;
     /**
      * The player's current balance in stones
      */
-    balance?: number;
+    balance = 0;
     /**
      * The consumption data
      */

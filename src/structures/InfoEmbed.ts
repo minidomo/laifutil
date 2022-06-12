@@ -17,39 +17,56 @@ export class InfoEmbed {
     /**
      * Information of the character's image
      */
-    image: CharacterImageInfo = {};
+    image: CharacterImageInfo = {
+        currentNumber: 0,
+        uploader: '',
+        credit: '',
+    };
 
     /**
      * The name of the character
      */
-    characterName?: string;
+    characterName = '';
     /**
      * The global ID of the character
      */
-    globalId?: number;
+    globalId = 0;
     /**
      * The total number of images this character has
      */
-    totalImages?: number;
+    totalImages = 0;
 
     /**
      * Information of the character's series
      */
-    series: CharacterSeriesInfo = {};
+    series: CharacterSeriesInfo = {
+        englishTitle: '',
+        alternateTitle: '',
+        id: 0,
+        sequence: '',
+    };
 
     /**
      * The influence of the character
      */
-    influence?: number;
+    influence = 0;
     /**
      * The influence range of this character
      */
-    influenceRankRange?: Bounds;
+    influenceRankRange: Bounds = { lower: 0, upper: 0 };
 
     /**
      * The rarity information of this character
      */
-    rarities: CharacterRarityInfoCollection = {};
+    rarities: CharacterRarityInfoCollection = {
+        alpha: { existingAmount: 0, totalClaimed: 0 },
+        beta: { existingAmount: 0, totalClaimed: 0 },
+        gamma: { existingAmount: 0, totalClaimed: 0 },
+        delta: { existingAmount: 0, totalClaimed: 0 },
+        epsilon: { existingAmount: 0, totalClaimed: 0 },
+        zeta: { existingAmount: 0, totalClaimed: 0 },
+        ultra: { existingAmount: 0, totalClaimed: 0 },
+    };
 
     constructor(embed: MessageEmbed) {
         if (embed.title) {

@@ -16,31 +16,31 @@ export interface CharacterRarityInfoCollection {
     /**
      * The current stats of this character with rarity alpha
      */
-    alpha?: CharacterRarityInfo;
+    alpha: CharacterRarityInfo;
     /**
      * The current stats of this character with rarity beta
      */
-    beta?: CharacterRarityInfo;
+    beta: CharacterRarityInfo;
     /**
      * The current stats of this character with rarity gamma
      */
-    gamma?: CharacterRarityInfo;
+    gamma: CharacterRarityInfo;
     /**
      * The current stats of this character with rarity delta
      */
-    delta?: CharacterRarityInfo;
+    delta: CharacterRarityInfo;
     /**
      * The current stats of this character with rarity epsilon
      */
-    epsilon?: CharacterRarityInfo;
+    epsilon: CharacterRarityInfo;
     /**
      * The current stats of this character with rarity zeta
      */
-    zeta?: CharacterRarityInfo;
+    zeta: CharacterRarityInfo;
     /**
      * The current stats of this character with rarity ultra
      */
-    ultra?: CharacterRarityInfo;
+    ultra: CharacterRarityInfo;
 }
 
 /**
@@ -65,15 +65,15 @@ export interface CharacterImageInfo {
     /**
      * The image number of this character
      */
-    currentNumber?: number;
+    currentNumber: number;
     /**
      * The username of the image uploader for this character image
      */
-    uploader?: string;
+    uploader: string;
     /**
      * The credit source of the image of this character
      */
-    credit?: string;
+    credit: string;
 }
 
 /**
@@ -83,19 +83,19 @@ export interface CharacterSeriesInfo {
     /**
      * The series of the character in English
      */
-    englishTitle?: string;
+    englishTitle: string;
     /**
      * The series of the character in an alternate language
      */
-    alternateTitle?: string;
+    alternateTitle: string;
     /**
      * The series ID of which this character originates from
      */
-    id?: number;
+    id: number;
     /**
      * The sequence this character is a part of
      */
-    sequence?: string;
+    sequence: string;
 }
 
 /**
@@ -105,15 +105,15 @@ export interface WishlistCharacter {
     /**
      * The global ID of this character
      */
-    gid?: number;
+    gid: number;
     /**
      * The name of this character
      */
-    name?: string;
+    name: string;
     /**
      * The influence of this character
      */
-    influence?: number;
+    influence: number;
 }
 
 /**

@@ -12,19 +12,19 @@ export class WishlistListEmbed extends BaseListEmbed {
     /**
      * The username of which the wishlist command was used on
      */
-    username?: string;
+    username = '';
     /**
      * The current page the embed is on
      */
-    currentPage?: number;
+    currentPage = 0;
     /**
      * The number of pages available on this embed
      */
-    pages?: number;
+    pages = 0;
     /**
      * The number of characters wanted on this embed
      */
-    charactersWanted?: number;
+    charactersWanted = 0;
     /**
      * The list of characters currently displayed on this embed
      */
@@ -32,6 +32,8 @@ export class WishlistListEmbed extends BaseListEmbed {
 
     constructor(embed: MessageEmbed) {
         super(embed);
+
+        this.username = this.name;
 
         if (embed.footer) {
             const footerMatch = embed.footer.text.match(FOOTER_REGEX);
@@ -42,20 +44,21 @@ export class WishlistListEmbed extends BaseListEmbed {
             }
         }
 
-        if (this.data) {
-            this.username = this.name;
-            this.characters = this.data.map(text => {
-                const obj: WishlistCharacter = {};
+        this.characters = this.data.map(text => {
+            const obj: WishlistCharacter = {
+                gid: 0,
+                name: '',
+                influence: 0,
+            };
 
-                const rowMatch = text.match(ROW_REGEX);
-                if (rowMatch) {
-                    obj.gid = parseInt(rowMatch[1]);
-                    obj.name = rowMatch[2];
-                    obj.influence = parseInt(rowMatch[3]);
-                }
+            const rowMatch = text.match(ROW_REGEX);
+            if (rowMatch) {
+                obj.gid = parseInt(rowMatch[1]);
+                obj.name = rowMatch[2];
+                obj.influence = parseInt(rowMatch[3]);
+            }
 
-                return obj;
-            });
-        }
+            return obj;
+        });
     }
 }

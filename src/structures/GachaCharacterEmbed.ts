@@ -12,11 +12,11 @@ export class GachaCharacterEmbed extends BaseSimpleCharacter {
     /**
      * The number of stones used for this gacha
      */
-    stonesUsed?: number;
+    stonesUsed = 0;
     /**
      * The owner's current balance in stones
      */
-    balance?: number;
+    balance = 0;
 
     constructor(embed: MessageEmbed) {
         super();

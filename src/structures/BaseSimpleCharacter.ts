@@ -1,6 +1,6 @@
 import type { EmbedField, MessageEmbed } from 'discord.js';
 import type { CharacterImageInfo, CharacterSeriesInfo } from './types';
-import { Rarity, RARITY_REGEX, resolveRarity } from '../rarity';
+import { Rarity, RarityConstants, RARITY_REGEX, resolveRarity } from '../rarity';
 
 const TITLE_REGEX = /#(\d) (.+)/;
 const MAIN_SERIES_REGEX = /\*\*ENG:\*\* (.+)\n\*\*ALT:\*\* (.+)\n\*\*SID:\*\* (\d+) \| `(.+)`/;
@@ -29,49 +29,58 @@ export abstract class BaseSimpleCharacter {
     /**
      * Information of the character's image
      */
-    image: CharacterImageInfo = {};
+    image: CharacterImageInfo = {
+        currentNumber: 0,
+        uploader: '',
+        credit: '',
+    };
 
     /**
      * The name of the character
      */
-    characterName?: string;
+    characterName = '';
 
     /**
      * The unique ID of the character
      */
-    uniqueId?: number;
+    uniqueId = 0;
     /**
      * The global ID of the character
      */
-    globalId?: number;
+    globalId = 0;
 
     /**
      * The rarity of the character
      */
-    rarity?: Rarity;
+    rarity: Rarity = RarityConstants.ALPHA;
     /**
      * The number of stars the character has
      */
-    stars?: number;
+    stars = 0;
 
     /**
      * The influence rank of this character
      */
-    influenceRank?: number;
+    influenceRank = 0;
     /**
      * The influence of this character
      */
-    influence?: number;
+    influence = 0;
 
     /**
      * Information of the character's series
      */
-    series: CharacterSeriesInfo = {};
+    series: CharacterSeriesInfo = {
+        englishTitle: '',
+        alternateTitle: '',
+        id: 0,
+        sequence: '',
+    };
 
     /**
      * The owner of this character
      */
-    owner?: string;
+    owner = '';
 
     protected init(embed: MessageEmbed) {
         if (embed.title) {
@@ -125,12 +134,12 @@ export abstract class BaseSimpleCharacter {
     protected parseRarityField(field: EmbedField) {
         const rarityMatch = field.value.match(RARITY_REGEX);
         if (rarityMatch) {
-            this.rarity = resolveRarity(rarityMatch[1]) ?? undefined;
+            this.rarity = resolveRarity(rarityMatch[1]) ?? RarityConstants.ALPHA;
         }
 
         const starMatch = field.value.match(STAR_REGEX);
         if (starMatch) {
-            this.stars = starCount.get(starMatch[1]);
+            this.stars = starCount.get(starMatch[1]) ?? 0;
         }
 
         const influenceMatch = field.value.match(INFLUENCE_REGEX);
