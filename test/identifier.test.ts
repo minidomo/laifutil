@@ -1,6 +1,7 @@
 import { assert } from 'chai';
-import { MessageEmbed, MessageEmbedOptions } from 'discord.js';
+import { MessageEmbed } from 'discord.js';
 import * as embeds from './embeds.json';
+import { MEO } from './util';
 import * as laifutil from '../dist';
 
 const identifyEmbed = (() => {
@@ -24,8 +25,8 @@ const identifyEmbed = (() => {
     return run;
 })();
 
-function test(exampleEmbeds: MessageEmbedOptions[], f: (arg: MessageEmbed) => boolean) {
-    exampleEmbeds.map(e => new MessageEmbed(e))
+function test(exampleEmbeds: object[], f: (arg: MessageEmbed) => boolean) {
+    exampleEmbeds.map(e => new MessageEmbed(MEO(e)))
         .forEach((embed, i) => {
             const identities = identifyEmbed(embed);
 

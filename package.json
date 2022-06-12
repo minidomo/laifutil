@@ -52,5 +52,8 @@
   },
   "peerDependencies": {
     "discord.js": "13.x"
+  },
+  "dependencies": {
+    "emoji-regex": "^10.1.0"
   }
 }

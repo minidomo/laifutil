@@ -2,9 +2,10 @@ import { assert } from 'chai';
 import { MessageEmbed } from 'discord.js';
 import { ViewEmbed, RarityConstants } from '../../dist';
 import * as embeds from '../embeds.json';
+import { MEOArr } from '../util';
 
 describe('ViewEmbed', () => {
-    const viewEmbedsArr = embeds.identifier.view;
+    const viewEmbedsArr = MEOArr(embeds.identifier.view);
 
     describe('#constructor', () => {
         it('should correctly parse a normal view Discord embed from LaifuBot', () => {

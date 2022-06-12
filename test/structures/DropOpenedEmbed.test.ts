@@ -2,9 +2,10 @@ import { MessageEmbed } from 'Discord.js';
 import { assert } from 'chai';
 import { Consumption, DropOpenedEmbed } from '../../dist';
 import * as embeds from '../embeds.json';
+import { MEOArr } from '../util';
 
 describe('DropOpenedEmbed', () => {
-    const dropEmbedsArr = embeds.identifier.drop.opened;
+    const dropEmbedsArr = MEOArr(embeds.identifier.drop.opened);
 
     describe('#constructor', () => {
         it('should correctly parse a drop opened without consumption Discord embed from LaifuBot', () => {

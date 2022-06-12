@@ -2,9 +2,10 @@ import { assert } from 'chai';
 import { MessageEmbed } from 'discord.js';
 import { GachaCharacterEmbed, RarityConstants } from '../../dist';
 import * as embeds from '../embeds.json';
+import { MEOArr } from '../util';
 
 describe('GachaCharacterEmbed', () => {
-    const gachaCharacterEmbedsArr = embeds.identifier.gacha.character;
+    const gachaCharacterEmbedsArr = MEOArr(embeds.identifier.gacha.character);
 
     describe('#constructor', () => {
         it('should correctly parse a gacha character Discord embed from LaifuBot', () => {

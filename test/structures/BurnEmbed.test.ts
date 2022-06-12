@@ -2,9 +2,10 @@ import { assert } from 'chai';
 import { MessageEmbed } from 'discord.js';
 import { BurnCharacterEmbed, RarityConstants } from '../../dist';
 import * as embeds from '../embeds.json';
+import { MEOArr } from '../util';
 
 describe('BurnCharacterEmbed', () => {
-    const burnEmbedsArr = embeds.identifier.burn.character;
+    const burnEmbedsArr = MEOArr(embeds.identifier.burn.character);
 
     describe('#constructor', () => {
         it('should correctly parse a burn Discord embed of a normal card from LaifuBot', () => {
