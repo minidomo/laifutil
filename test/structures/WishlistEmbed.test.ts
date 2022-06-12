@@ -2,9 +2,10 @@ import { MessageEmbed } from 'Discord.js';
 import { assert } from 'chai';
 import { WishlistListEmbed } from '../../dist';
 import * as embeds from '../embeds.json';
+import { MEOArr } from '../util';
 
 describe('WishlistListEmbed', () => {
-    const wishlistEmbedsArr = embeds.identifier.wishlist.list;
+    const wishlistEmbedsArr = MEOArr(embeds.identifier.wishlist.list);
 
     describe('#constructor', () => {
         it('should correctly parse a wishlist Discord embed from LaifuBot', () => {

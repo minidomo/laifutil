@@ -1,4 +1,5 @@
 import { Message, MessageEmbed, PartialMessage, User } from 'discord.js';
+import emojiRegex from 'emoji-regex';
 import type { Bounds } from './structures';
 
 /**
@@ -6,8 +7,10 @@ import type { Bounds } from './structures';
  */
 export const USER_ID = '688202466315206661';
 
-function getLastBounds(str: string, leftChar: string, rightChar: string): Bounds | null {
-    if (!str.includes(leftChar) || !str.includes(rightChar)) {
+function getLastBounds(str: string, leftChar: string[], rightChar: string[]): Bounds | null {
+    const leftCharExists = leftChar.some(e => str.includes(e));
+    const rightCharExists = rightChar.some(e => str.includes(e));
+    if (!leftCharExists || !rightCharExists) {
         return null;
     }
 
@@ -15,12 +18,15 @@ function getLastBounds(str: string, leftChar: string, rightChar: string): Bounds
     let left = -1, right = -1;
 
     for (let i = 0; i < str.length; i++) {
-        if (str[i] === leftChar) {
+        const isLeftChar = leftChar.some(e => str[i] === e);
+        const isRightChar = rightChar.some(e => str[i] === e);
+
+        if (isLeftChar) {
             if (count === 0) {
                 left = i;
             }
             count++;
-        } else if (str[i] === rightChar) {
+        } else if (isRightChar) {
             count--;
             if (count === 0) {
                 right = i;
@@ -31,6 +37,17 @@ function getLastBounds(str: string, leftChar: string, rightChar: string): Bounds
     return left >= right ? null : { lower: left, upper: right };
 }
 
+function removeEmojis(name: string): string {
+    let ret = name;
+
+    for (let match = emojiRegex().exec(ret); match; match = emojiRegex().exec(ret)) {
+        const emoji = match[0];
+        ret = ret.substring(0, match.index) + ret.substring(match.index + emoji.length);
+    }
+
+    return ret;
+}
+
 /**
  * Transforms the given name to a new string without ending emojis or alternative names.
  *
@@ -38,8 +55,8 @@ function getLastBounds(str: string, leftChar: string, rightChar: string): Bounds
  * @returns The name without emojis or alternative names
  */
 export function cleanCharacterName(name: string): string {
-    const parenBounds = getLastBounds(name, '(', ')');
-    const emoteBounds = getLastBounds(name, '<', '>');
+    const parenBounds = getLastBounds(name, '(（'.split(''), ')）'.split(''));
+    const emoteBounds = getLastBounds(name, '<'.split(''), '>'.split(''));
 
     let ret = name;
     if (parenBounds) {
@@ -49,6 +66,8 @@ export function cleanCharacterName(name: string): string {
     if (emoteBounds) {
         ret = ret.substring(0, emoteBounds.lower) + ret.substring(emoteBounds.upper + 1);
     }
+
+    ret = removeEmojis(ret);
 
     return ret.trim();
 }

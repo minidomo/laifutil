@@ -2,13 +2,14 @@ import { assert } from 'chai';
 import { MessageEmbed } from 'discord.js';
 import { InfoEmbed, CharacterRarityInfo } from '../../dist';
 import * as embeds from '../embeds.json';
+import { MEOArr } from '../util';
 
 function makeRarityStats(existingAmount: number, totalClaimed: number): CharacterRarityInfo {
     return { existingAmount, totalClaimed };
 }
 
 describe('InfoEmbed', () => {
-    const infoEmbedsArr = embeds.identifier.info;
+    const infoEmbedsArr = MEOArr(embeds.identifier.info);
 
     describe('#constructor', () => {
         it('should correctly parse an info Discord embed from LaifuBot', () => {
