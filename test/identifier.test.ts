@@ -327,4 +327,10 @@ describe('identifier.ts', () => {
             test(embeds.identifier.profile, laifutil.isProfileEmbed);
         });
     });
+
+    describe('#isCasinoEmbed', () => {
+        it('should identify an embed as a casino Discord embed from LaifuBot', () => {
+            test(embeds.identifier.casino, laifutil.isCasinoEmbed);
+        });
+    });
 });
