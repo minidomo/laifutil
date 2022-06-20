@@ -333,4 +333,16 @@ describe('identifier.ts', () => {
             test(embeds.identifier.casino, laifutil.isCasinoEmbed);
         });
     });
+
+    describe('#isFluMenuEmbed', () => {
+        it('should identify an embed as a flu menu Discord embed from LaifuBot', () => {
+            test(embeds.identifier.flu.menu, laifutil.isFluMenuEmbed);
+        });
+    });
+
+    describe('#isFluInfoEmbed', () => {
+        it('should identify an embed as a flu info Discord embed from LaifuBot', () => {
+            test(embeds.identifier.flu.info, laifutil.isFluInfoEmbed);
+        });
+    });
 });

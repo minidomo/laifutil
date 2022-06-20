@@ -358,3 +358,17 @@ export function isCasinoEmbed(embed: MessageEmbed): boolean {
     if (!embed) return false;
     return embed.title?.endsWith('The Palace') ?? false;
 }
+
+export function isFluMenuEmbed(embed: MessageEmbed): boolean {
+    if (!embed) return false;
+    const validTitle = embed.title?.endsWith('- Frame Index') ?? false;
+    const validField = embed.fields.some(e => e.name === 'Guide');
+    return validTitle && validField;
+}
+
+export function isFluInfoEmbed(embed: MessageEmbed): boolean {
+    if (!embed) return false;
+    const validTitle = embed.title?.endsWith('- Frame Index') ?? false;
+    const validField = embed.description?.includes('Frame Completion') ?? false;
+    return validTitle && validField;
+}

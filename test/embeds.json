@@ -1691,7 +1691,64 @@
                 },
                 "footer": null
             }
-        ]
+        ],
+        "flu": {
+            "menu": [
+                {
+                    "title": "! JB - Frame Index",
+                    "type": "rich",
+                    "description": "<:f1:988403327039602750> **#1** - *Crimson Lotus.*\n<:f2:987996892313026570> **#2** - *Serenity Pond.*\n<:f3:986491084978946058> **#3** - *Shattered Record.*\n<:f4:986546986385834037> **#4** - *Fame & Fortune.*\n<:f5:986553641152417862> **#5** - *Submerged.*\n<:f6:988059860576903248> **#6** - *No Longer Human.*\n **#102** - *Summer-Time Laifu!*\n **#106** - *Shrine of Memory.*",
+                    "url": null,
+                    "timestamp": null,
+                    "color": 62975,
+                    "fields": [
+                        {
+                            "value": "> View a specific frame and its variants using `FLU ID`\n> Frames do not have rarities\n> Specific color variants are rarer then others",
+                            "name": "Guide",
+                            "inline": false
+                        }
+                    ],
+                    "thumbnail": {
+                        "url": "https://cdn.discordapp.com/attachments/793598007433232434/988362233279053834/3_2.gif",
+                        "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/988362233279053834/3_2.gif",
+                        "height": 235,
+                        "width": 163
+                    },
+                    "image": null,
+                    "author": null,
+                    "footer": {
+                        "text": "Page 1/1 • 8 frames found."
+                    }
+                }
+            ],
+            "info": [
+                {
+                    "title": "! JB - Frame Index",
+                    "type": "rich",
+                    "description": "**#1 *Crimson Lotus.***\n`TYPE:` Casino VIP Room\n`CLAIM COUNT:` 0\n\n**Frame Completion**\nYou don't own this frame on any characters.\n\n**Variant Preview**\nCOMMON: Original",
+                    "url": null,
+                    "timestamp": null,
+                    "color": null,
+                    "fields": [],
+                    "thumbnail": {
+                        "url": "https://cdn.discordapp.com/attachments/984239328383369269/988409404196008026/0.png",
+                        "proxyURL": "https://media.discordapp.net/attachments/984239328383369269/988409404196008026/0.png",
+                        "height": 366,
+                        "width": 241
+                    },
+                    "image": {
+                        "url": "https://cdn.discordapp.com/attachments/984239328383369269/988409404196008026/0.png",
+                        "proxyURL": "https://media.discordapp.net/attachments/984239328383369269/988409404196008026/0.png",
+                        "height": 366,
+                        "width": 241
+                    },
+                    "author": null,
+                    "footer": {
+                        "text": "Page 1/1 • 0 frames collected."
+                    }
+                }
+            ]
+        }
     },
     "util": {
         "embed1": {
