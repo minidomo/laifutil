@@ -1653,7 +1653,45 @@
                     "footer": null
                 }
             ]
-        }
+        },
+        "casino": [
+            {
+                "title": "👑 The Palace",
+                "type": "rich",
+                "description": "<a:p1:807436980467007570><a:p2:807436980710801428><a:p3:807436980719452180><a:p4:807436980623245394><a:p5:807436980974911499><a:p6:807436980845543494><a:p7:807436981159067658><a:p8:807436980475658293><a:p9:807436981172699146><a:p10:807436980949745694><a:p11:807436980975566858><a:p12:807436981058666526>\n__**JB**__\n`⭕ Standard Account | Standard Rate`\n💳 __Wallet__\n:dollar: **$**185,998,500",
+                "url": null,
+                "timestamp": null,
+                "color": 16772866,
+                "fields": [
+                    {
+                        "value": "__We supply only the finest and most expensive items.__\n\n👑 Rates? HA! You know what you're doing! Keep your pennies. Come back when you're ready to roll. \n👑 I am nobody's friend, but should you get lucky, your reward will be sent to your `REWARDBOX`.\n👑 Choose the Machine you would like below.",
+                        "name": "Choose your Machine.",
+                        "inline": false
+                    },
+                    {
+                        "value": "<a:09:844163047479705640> <a:178:876015079714349067>\n:dollar: $400,000 `PER SPIN`",
+                        "name": ":one: :money_with_wings:  *Badge Gacha*",
+                        "inline": true
+                    },
+                    {
+                        "value": "<:f4:986546986385834037>\n:dollar: $400,000 `PER SPIN`",
+                        "name": ":two: :money_with_wings:  *Frame Gacha*",
+                        "inline": true
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/793598007433232434/838950982573359164/C1955_cropped.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/838950982573359164/C1955_cropped.png",
+                    "height": 437,
+                    "width": 437
+                },
+                "image": null,
+                "author": {
+                    "name": "Welcome to:"
+                },
+                "footer": null
+            }
+        ]
     },
     "util": {
         "embed1": {

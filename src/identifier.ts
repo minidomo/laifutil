@@ -353,3 +353,8 @@ export function isProfileEmbed(embed: MessageEmbed): boolean {
     if (!embed) return false;
     return embed.title?.includes('Account Perks & Options') ?? false;
 }
+
+export function isCasinoEmbed(embed: MessageEmbed): boolean {
+    if (!embed) return false;
+    return embed.title?.endsWith('The Palace') ?? false;
+}
