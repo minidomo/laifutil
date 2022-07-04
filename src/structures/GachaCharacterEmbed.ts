@@ -1,38 +1,28 @@
-import type { EmbedField, MessageEmbed } from 'discord.js';
-import { BaseSimpleCharacter } from './BaseSimpleCharacter';
+import type { MessageEmbed } from 'discord.js';
+import { BasePersonalSimpleCharacterEmbed } from './BasePersonalSimpleCharacterEmbed';
 
 const ACCOUNT_REGEX = /\*\*x(\d)\*\*\n.+\*\*x(\d+)\*\*/;
+const OWNER_REGEX = /(.+)/;
 
 /**
  * Represents a character embed from the gacha command
  */
-export class GachaCharacterEmbed extends BaseSimpleCharacter {
-    protected OWNER_REGEX = /(.+)/;
-
+export class GachaCharacterEmbed extends BasePersonalSimpleCharacterEmbed {
     /**
      * The number of stones used for this gacha
      */
-    stonesUsed = 0;
+    stonesUsed: number;
     /**
      * The owner's current balance in stones
      */
-    balance = 0;
+    balance: number;
 
     constructor(embed: MessageEmbed) {
-        super();
+        super(embed, OWNER_REGEX);
 
-        if (embed.fields[3]) {
-            this.parseAccountField(embed.fields[3]);
-        }
-
-        this.init(embed);
-    }
-
-    protected parseAccountField(field: EmbedField) {
-        const accountMatch = field.value.match(ACCOUNT_REGEX);
-        if (accountMatch) {
-            this.stonesUsed = parseInt(accountMatch[1]);
-            this.balance = parseInt(accountMatch[2]);
-        }
+        // Account numbers
+        const accountMatch = embed.fields[3].value.match(ACCOUNT_REGEX) as RegExpMatchArray;
+        this.stonesUsed = parseInt(accountMatch[1]);
+        this.balance = parseInt(accountMatch[2]);
     }
 }

@@ -7,25 +7,21 @@ export abstract class BaseListEmbed {
     /**
      * The name used in the title of this embed
      */
-    protected name = '';
+    protected name: string;
     /**
      * The rows of data in the description of this embed
      */
-    protected data: string[] = [];
+    protected data: string[];
     /**
      * The type of embed
      */
-    protected identifier = '';
+    protected identifier: string;
 
     constructor(embed: MessageEmbed) {
-        if (embed.title) {
-            const titleParts = embed.title.split(' - ');
-            this.name = titleParts[0];
-            this.identifier = titleParts[1];
-        }
+        const titleParts = (embed.title as string).split(' - ');
+        this.name = titleParts[0];
+        this.identifier = titleParts[1];
 
-        if (embed.description) {
-            this.data = embed.description.split(/\n+/);
-        }
+        this.data = (embed.description as string).split(/\n+/);
     }
 }

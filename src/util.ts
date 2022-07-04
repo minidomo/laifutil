@@ -1,6 +1,6 @@
 import { Message, MessageEmbed, PartialMessage, User } from 'discord.js';
 import emojiRegex from 'emoji-regex';
-import type { Bounds } from './structures';
+import type { Bounds } from './types';
 
 /**
  * LaifuBot's user ID.
@@ -55,8 +55,8 @@ function removeEmojis(name: string): string {
  * @returns The name without emojis or alternative names
  */
 export function cleanCharacterName(name: string): string {
-    const parenBounds = getLastBounds(name, '(（'.split(''), ')）'.split(''));
-    const emoteBounds = getLastBounds(name, '<'.split(''), '>'.split(''));
+    const parenBounds = getLastBounds(name, ['(', '（'], [')', '）']);
+    const emoteBounds = getLastBounds(name, ['<'], ['>']);
 
     let ret = name;
     if (parenBounds) {

@@ -16,13 +16,13 @@ describe('InfoEmbed', () => {
             const embed = new MessageEmbed(infoEmbedsArr[0]);
             const parsedEmbed = new InfoEmbed(embed);
 
-            assert.strictEqual(parsedEmbed.characterName, 'Megumin (めぐみん)');
+            assert.strictEqual(parsedEmbed.name, 'Megumin (めぐみん)');
 
-            assert.strictEqual(parsedEmbed.globalId, 1);
+            assert.strictEqual(parsedEmbed.id, 1);
             assert.strictEqual(parsedEmbed.totalImages, 9);
 
-            assert.strictEqual(parsedEmbed.series.englishTitle, 'KonoSuba: Gods Blessing on This Wonderful World!');
-            assert.strictEqual(parsedEmbed.series.alternateTitle, 'Kono Subarashii Sekai ni Shukufuku wo!');
+            assert.strictEqual(parsedEmbed.series.title.english, 'KonoSuba: Gods Blessing on This Wonderful World!');
+            assert.strictEqual(parsedEmbed.series.title.alternate, 'Kono Subarashii Sekai ni Shukufuku wo!');
             assert.strictEqual(parsedEmbed.series.id, 47);
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
