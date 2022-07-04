@@ -25,7 +25,7 @@ export class InfoEmbed implements Character {
     /**
      * The global ID of the character
      */
-    id: number;
+    globalId: number;
     /**
      * The influence of the character
      */
@@ -64,7 +64,7 @@ export class InfoEmbed implements Character {
 
         // General info
         const generalInfoMatch = embed.fields[0].value.match(GENERAL_INFO_REGEX) as RegExpMatchArray;
-        this.id = parseInt(generalInfoMatch[1]);
+        this.globalId = parseInt(generalInfoMatch[1]);
         this.totalImages = parseInt(generalInfoMatch[2]);
 
         // Main series

@@ -38,13 +38,11 @@ export class BasePersonalFullCharacter extends BasePersonalSimpleCharacterEmbed 
     constructor(embed: MessageEmbed, ownerRegex: RegExp) {
         super(embed, ownerRegex);
 
-        // General info
         const claimMatch = embed.fields[0].value.match(CLAIM_REGEX) as RegExpMatchArray;
         this.claimedBy = claimMatch[1];
         this.dateClaimed = claimMatch[2];
         this.age = parseInt(claimMatch[3]);
 
-        // Rarity section
         const rarityField = embed.fields[1];
 
         const badgeMatch = rarityField.value.match(BADGE_REGEX);

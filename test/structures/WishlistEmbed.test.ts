@@ -20,43 +20,43 @@ describe('WishlistListEmbed', () => {
 
             const characters = parsedEmbed.characters;
 
-            assert.strictEqual(characters[0].id, 13540);
+            assert.strictEqual(characters[0].globalId, 13540);
             assert.strictEqual(characters[0].influence, 280);
             assert.strictEqual(characters[0].name, 'Anju Emma (アンジュ・エマ)');
 
-            assert.strictEqual(characters[1].id, 13541);
+            assert.strictEqual(characters[1].globalId, 13541);
             assert.strictEqual(characters[1].influence, 217);
             assert.strictEqual(characters[1].name, 'Kurena Kukumila (クレナ・ククミラ)');
 
-            assert.strictEqual(characters[2].id, 13795);
+            assert.strictEqual(characters[2].globalId, 13795);
             assert.strictEqual(characters[2].influence, 204);
             assert.strictEqual(characters[2].name, 'Eiko Kawasegawa (河瀬川 英子)');
 
-            assert.strictEqual(characters[3].id, 13796);
+            assert.strictEqual(characters[3].globalId, 13796);
             assert.strictEqual(characters[3].influence, 162);
             assert.strictEqual(characters[3].name, 'Nanako Kogure (小暮 奈々子)');
 
-            assert.strictEqual(characters[4].id, 13798);
+            assert.strictEqual(characters[4].globalId, 13798);
             assert.strictEqual(characters[4].influence, 258);
             assert.strictEqual(characters[4].name, 'Aki Shino (志野 亜貴)');
 
-            assert.strictEqual(characters[5].id, 15047);
+            assert.strictEqual(characters[5].globalId, 15047);
             assert.strictEqual(characters[5].influence, 316);
             assert.strictEqual(characters[5].name, 'Miko Yotsuya (四谷 みこ)');
 
-            assert.strictEqual(characters[6].id, 15048);
+            assert.strictEqual(characters[6].globalId, 15048);
             assert.strictEqual(characters[6].influence, 212);
             assert.strictEqual(characters[6].name, 'Hana Yurikawa (百合川ハナ)');
 
-            assert.strictEqual(characters[7].id, 15049);
+            assert.strictEqual(characters[7].globalId, 15049);
             assert.strictEqual(characters[7].influence, 204);
             assert.strictEqual(characters[7].name, 'Yuria Niguredou (二暮堂ユリア)');
 
-            assert.strictEqual(characters[8].id, 15883);
+            assert.strictEqual(characters[8].globalId, 15883);
             assert.strictEqual(characters[8].influence, 56);
             assert.strictEqual(characters[8].name, 'Takane Takamine (鷹峰 高嶺)');
 
-            assert.strictEqual(characters[9].id, 15926);
+            assert.strictEqual(characters[9].globalId, 15926);
             assert.strictEqual(characters[9].influence, 14);
             assert.strictEqual(characters[9].name, 'Ushio Kofune (小舟 潮)');
         });

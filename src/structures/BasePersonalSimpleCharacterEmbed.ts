@@ -29,7 +29,7 @@ export class BasePersonalSimpleCharacterEmbed implements Character {
     /**
      * The global ID of the character
      */
-    id: number;
+    globalId: number;
     /**
      * The influence of the character
      */
@@ -97,7 +97,7 @@ export class BasePersonalSimpleCharacterEmbed implements Character {
         // General info
         const generalInfoMatch = embed.fields[0].value.match(GENERAL_INFO_REGEX) as RegExpMatchArray;
         this.uniqueId = parseInt(generalInfoMatch[1]);
-        this.id = parseInt(generalInfoMatch[2]);
+        this.globalId = parseInt(generalInfoMatch[2]);
 
         // Rarity
         const rarityField = embed.fields[1];

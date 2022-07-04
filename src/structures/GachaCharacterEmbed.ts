@@ -20,7 +20,6 @@ export class GachaCharacterEmbed extends BasePersonalSimpleCharacterEmbed {
     constructor(embed: MessageEmbed) {
         super(embed, OWNER_REGEX);
 
-        // Account numbers
         const accountMatch = embed.fields[3].value.match(ACCOUNT_REGEX) as RegExpMatchArray;
         this.stonesUsed = parseInt(accountMatch[1]);
         this.balance = parseInt(accountMatch[2]);

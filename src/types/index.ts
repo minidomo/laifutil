@@ -108,7 +108,7 @@ export interface WishlistCharacter {
     /**
      * The global ID of the character
      */
-    id: number;
+    globalId: number;
     /**
      * The influence of the character
      */
@@ -148,7 +148,7 @@ export interface Character {
     /**
      * The global ID of the character
      */
-    id: number;
+    globalId: number;
     /**
      * The influence of the character
      */

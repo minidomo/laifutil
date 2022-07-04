@@ -44,7 +44,7 @@ export class WishlistListEmbed extends BaseListEmbed {
             const rowMatch = text.match(ROW_REGEX) as RegExpMatchArray;
 
             return {
-                id: parseInt(rowMatch[1]),
+                globalId: parseInt(rowMatch[1]),
                 name: rowMatch[2],
                 influence: parseInt(rowMatch[3]),
             } as WishlistCharacter;
