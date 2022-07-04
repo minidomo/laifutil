@@ -18,7 +18,7 @@ describe('ListEmbed', () => {
             assert.strictEqual(parsedEmbed.entities, 7477);
             assert.strictEqual(parsedEmbed.characters.length, 20);
         });
-       
+
         it('should correctly parse a complex list Discord embed from LaifuBot', () => {
             const embed = new MessageEmbed(listEmbedsArr[1]);
             const parsedEmbed = new ListEmbed(embed);

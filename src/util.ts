@@ -5,7 +5,7 @@ import type { Bounds } from './types';
 /**
  * LaifuBot's user ID.
  */
-export const USER_ID = '688202466315206661';
+export const LAIFU_USER_ID = '688202466315206661';
 
 function getLastBounds(str: string, leftChar: string[], rightChar: string[]): Bounds | null {
     const leftCharExists = leftChar.some(e => str.includes(e));
@@ -90,7 +90,7 @@ export function isLaifuBot(data: string | Message | PartialMessage | User): bool
         id = data.author?.id ?? '';
     }
 
-    return id === USER_ID;
+    return id === LAIFU_USER_ID;
 }
 
 /**
