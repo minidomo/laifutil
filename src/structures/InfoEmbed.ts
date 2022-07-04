@@ -1,10 +1,10 @@
 import type { EmbedFooterData, MessageEmbed } from 'discord.js';
 import type {
     Bounds,
-    Character,
+    CharacterEmbed,
     ImageInfo,
-    RarityStats,
-    RarityStatsCollection,
+    RarityStatistics,
+    RarityStatisticsCollection,
     Series,
 } from '../types';
 
@@ -17,7 +17,7 @@ const FOOTER_REGEX = /Image #(\d) - Uploaded by (.+)\nCredit: (.+)/;
 /**
  * Represents an info embed from LaifuBot
  */
-export class InfoEmbed implements Character {
+export class InfoEmbed implements CharacterEmbed {
     /**
      * The name of the character
      */
@@ -25,7 +25,7 @@ export class InfoEmbed implements Character {
     /**
      * The global ID of the character
      */
-    id: number;
+    globalId: number;
     /**
      * The influence of the character
      */
@@ -49,7 +49,7 @@ export class InfoEmbed implements Character {
     /**
      * The rarity information of this character
      */
-    rarities: RarityStatsCollection;
+    rarities: RarityStatisticsCollection;
 
     constructor(embed: MessageEmbed) {
         this.name = embed.title as string;
@@ -64,7 +64,7 @@ export class InfoEmbed implements Character {
 
         // General info
         const generalInfoMatch = embed.fields[0].value.match(GENERAL_INFO_REGEX) as RegExpMatchArray;
-        this.id = parseInt(generalInfoMatch[1]);
+        this.globalId = parseInt(generalInfoMatch[1]);
         this.totalImages = parseInt(generalInfoMatch[2]);
 
         // Main series
@@ -81,14 +81,17 @@ export class InfoEmbed implements Character {
         // Influence
         const influenceMatch = embed.fields[2].value.match(INFLUENCE_REGEX) as RegExpMatchArray;
         this.influence = parseInt(influenceMatch[1]);
+
+        const firstRank = parseInt(influenceMatch[2]);
+        const secondRank = parseInt(influenceMatch[3]);
         this.influenceRankRange = {
-            lower: parseInt(influenceMatch[2]),
-            upper: parseInt(influenceMatch[3]),
+            lower: Math.min(firstRank, secondRank),
+            upper: Math.max(firstRank, secondRank),
         };
 
         // Collections
         const it = embed.fields[3].value.matchAll(COLLECTIONS_REGEX);
-        const stats: RarityStats[] = [];
+        const stats: RarityStatistics[] = [];
 
         for (let obj = it.next(); !obj.done; obj = it.next()) {
             stats.push({

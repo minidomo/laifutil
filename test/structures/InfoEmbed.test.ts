@@ -18,7 +18,7 @@ describe('InfoEmbed', () => {
 
             assert.strictEqual(parsedEmbed.name, 'Megumin (めぐみん)');
 
-            assert.strictEqual(parsedEmbed.id, 1);
+            assert.strictEqual(parsedEmbed.globalId, 1);
             assert.strictEqual(parsedEmbed.totalImages, 9);
 
             assert.strictEqual(parsedEmbed.series.title.english, 'KonoSuba: Gods Blessing on This Wonderful World!');

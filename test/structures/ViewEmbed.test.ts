@@ -17,7 +17,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.name, 'Nagi Kodachi (小太刀　凪)');
 
             assert.strictEqual(parsedEmbed.uniqueId, 8591);
-            assert.strictEqual(parsedEmbed.id, 15013);
+            assert.strictEqual(parsedEmbed.globalId, 15013);
             assert.strictEqual(parsedEmbed.claimedBy, 'JB');
             assert.strictEqual(parsedEmbed.age, 166);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-18');
@@ -51,7 +51,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.name, 'Ririka Momobami (桃喰 リリカ)');
 
             assert.strictEqual(parsedEmbed.uniqueId, 8364);
-            assert.strictEqual(parsedEmbed.id, 1996);
+            assert.strictEqual(parsedEmbed.globalId, 1996);
             assert.strictEqual(parsedEmbed.claimedBy, 'JB');
             assert.strictEqual(parsedEmbed.age, 177);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-07');
@@ -85,7 +85,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.name, 'Alice Zuberg (アリス・ツーベルク)');
 
             assert.strictEqual(parsedEmbed.uniqueId, 298);
-            assert.strictEqual(parsedEmbed.id, 2230);
+            assert.strictEqual(parsedEmbed.globalId, 2230);
             assert.strictEqual(parsedEmbed.claimedBy, 'O2Linn');
             assert.strictEqual(parsedEmbed.age, 323);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-14');
@@ -120,7 +120,7 @@ describe('ViewEmbed', () => {
                 assert.strictEqual(parsedEmbed.name, 'Satoru Gojou (五条 悟)');
 
                 assert.strictEqual(parsedEmbed.uniqueId, 264);
-                assert.strictEqual(parsedEmbed.id, 4652);
+                assert.strictEqual(parsedEmbed.globalId, 4652);
                 assert.strictEqual(parsedEmbed.claimedBy, 'JB');
                 assert.strictEqual(parsedEmbed.age, 321);
                 assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-16');

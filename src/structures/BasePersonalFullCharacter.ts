@@ -2,13 +2,13 @@ import type { MessageEmbed } from 'discord.js';
 import { BasePersonalSimpleCharacterEmbed } from './BasePersonalSimpleCharacterEmbed';
 
 const CLAIM_REGEX = /\*\*Claimed By:\*\* (.+)\n\*\*Age:\*\* ([\d-]+) \| `(\d+)`/;
-const BADGE_REGEX = /❦#(\d+)/;
-const GLITCH_REGEX = /ɢʟɪᴛᴄʜᴇᴅ/;
+const BADGE_REGEX = /❦#(\d+)/u;
+const GLITCH_REGEX = /ɢʟɪᴛᴄʜᴇᴅ/u;
 
 /**
  * An extension of {@link BasePersonalSimpleCharacterEmbed} with additional information
  */
-export class BasePersonalFullCharacter extends BasePersonalSimpleCharacterEmbed {
+export abstract class BasePersonalFullCharacter extends BasePersonalSimpleCharacterEmbed {
     /**
      * The username of the initial user that claimed this character
      */
@@ -38,13 +38,11 @@ export class BasePersonalFullCharacter extends BasePersonalSimpleCharacterEmbed 
     constructor(embed: MessageEmbed, ownerRegex: RegExp) {
         super(embed, ownerRegex);
 
-        // General info
         const claimMatch = embed.fields[0].value.match(CLAIM_REGEX) as RegExpMatchArray;
         this.claimedBy = claimMatch[1];
         this.dateClaimed = claimMatch[2];
         this.age = parseInt(claimMatch[3]);
 
-        // Rarity section
         const rarityField = embed.fields[1];
 
         const badgeMatch = rarityField.value.match(BADGE_REGEX);

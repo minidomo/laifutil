@@ -21,11 +21,9 @@ export class BurnCharacterEmbed extends BasePersonalFullCharacter {
     constructor(embed: MessageEmbed) {
         super(embed, OWNER_REGEX);
 
-        // Footer
         const burnRewardMatch = (embed.footer as EmbedFooterData).text.match(BURN_REWARD_REGEX) as RegExpMatchArray;
         this.burnRewardCounter = parseInt(burnRewardMatch[1]);
 
-        // Guide
         const guideMatch = embed.fields[3].value.match(GUIDE_REGEX);
         if (guideMatch) {
             this.burnPercentage = parseInt(guideMatch[1]);

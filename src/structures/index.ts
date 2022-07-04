@@ -7,3 +7,6 @@ export * from './BasePersonalFullCharacter';
 export * from './BasePersonalSimpleCharacterEmbed';
 export * from './InfoEmbed';
 export * from './DropOpenedEmbed';
+export * from './ListCharacter';
+export * from './WishlistCharacter';
+export * from './ListEmbed';

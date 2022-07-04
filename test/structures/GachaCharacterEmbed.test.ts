@@ -16,7 +16,7 @@ describe('GachaCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.name, 'Karen Onodera (小野寺樺恋)');
 
             assert.strictEqual(parsedEmbed.uniqueId, 5070);
-            assert.strictEqual(parsedEmbed.id, 11169);
+            assert.strictEqual(parsedEmbed.globalId, 11169);
 
             assert.strictEqual(parsedEmbed.rarity, RarityConstants.GAMMA);
             assert.strictEqual(parsedEmbed.stars, 0);

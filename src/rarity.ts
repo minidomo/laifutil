@@ -75,7 +75,9 @@ export const RarityConstants: RarityContainer = {
 };
 
 function createRegex(): RegExp {
+    // Sort to look at longer symbols first due to similarity with zeta and ultra symbols
     const baseExp = Object.values(RarityConstants)
+        .sort((a: Rarity, b: Rarity) => b.symbol.length - a.symbol.length)
         .map((rarity: Rarity) => `${rarity.text}|${rarity.symbol}`)
         .join('|');
     return new RegExp(`(${baseExp})`);
