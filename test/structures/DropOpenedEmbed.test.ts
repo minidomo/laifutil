@@ -13,6 +13,7 @@ describe('DropOpenedEmbed', () => {
             const parsedEmbed = new DropOpenedEmbed(embed);
 
             assert.strictEqual(parsedEmbed.username, 'JB');
+            assert.strictEqual(parsedEmbed.userId, '138419598469890048');
             assert.strictEqual(parsedEmbed.stonesReceived, 1);
             assert.strictEqual(parsedEmbed.balance, 457);
             assert.isUndefined(parsedEmbed.consumption);
@@ -23,6 +24,7 @@ describe('DropOpenedEmbed', () => {
             const parsedEmbed = new DropOpenedEmbed(embed);
 
             assert.strictEqual(parsedEmbed.username, 'CptDomo');
+            assert.strictEqual(parsedEmbed.userId, '275002545867325440');
             assert.strictEqual(parsedEmbed.stonesReceived, 2);
             assert.strictEqual(parsedEmbed.balance, 2);
 
