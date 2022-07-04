@@ -2,13 +2,13 @@ import type { MessageEmbed } from 'discord.js';
 import { BasePersonalSimpleCharacterEmbed } from './BasePersonalSimpleCharacterEmbed';
 
 const CLAIM_REGEX = /\*\*Claimed By:\*\* (.+)\n\*\*Age:\*\* ([\d-]+) \| `(\d+)`/;
-const BADGE_REGEX = /❦#(\d+)/;
-const GLITCH_REGEX = /ɢʟɪᴛᴄʜᴇᴅ/;
+const BADGE_REGEX = /❦#(\d+)/u;
+const GLITCH_REGEX = /ɢʟɪᴛᴄʜᴇᴅ/u;
 
 /**
  * An extension of {@link BasePersonalSimpleCharacterEmbed} with additional information
  */
-export class BasePersonalFullCharacter extends BasePersonalSimpleCharacterEmbed {
+export abstract class BasePersonalFullCharacter extends BasePersonalSimpleCharacterEmbed {
     /**
      * The username of the initial user that claimed this character
      */

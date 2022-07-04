@@ -1,7 +1,7 @@
 import type { EmbedFooterData, MessageEmbed } from 'discord.js';
 import { BasePersonalFullCharacter } from './BasePersonalFullCharacter';
 
-const EMOJI_REGEX = /^(?:([^\s]+) )?#/;
+const EMOJI_REGEX = /^(?:([^\s]+) )#/;
 const NUM_EXISTING_REGEX = /^([\d,]+).+\n/;
 const OWNER_REGEX = /^(.+) is Viewing\.\.\.$/;
 
@@ -25,8 +25,10 @@ export class ViewEmbed extends BasePersonalFullCharacter {
     constructor(embed: MessageEmbed) {
         super(embed, OWNER_REGEX);
 
-        const emojiMatch = (embed.title as string).match(EMOJI_REGEX) as RegExpMatchArray;
-        this.emoji = emojiMatch[1];
+        const emojiMatch = (embed.title as string).match(EMOJI_REGEX);
+        if (emojiMatch) {
+            this.emoji = emojiMatch[1];
+        }
 
         const numExistingMatch = (embed.footer as EmbedFooterData).text.match(NUM_EXISTING_REGEX) as RegExpMatchArray;
         this.existingAmount = parseInt(removeCommas(numExistingMatch[1]));

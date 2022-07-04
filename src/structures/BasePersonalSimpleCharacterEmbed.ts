@@ -1,11 +1,11 @@
 import type { EmbedAuthorData, EmbedFooterData, MessageEmbed } from 'discord.js';
-import { Rarity, RarityConstants, RARITY_REGEX, resolveRarity } from '../rarity';
-import type { Character, ImageInfo, Series } from '../types';
+import { Rarity, RARITY_REGEX, resolveRarity } from '../rarity';
+import type { CharacterEmbed, ImageInfo, Series } from '../types';
 
 const TITLE_REGEX = /#(\d) (.+)/;
 const MAIN_SERIES_REGEX = /\*\*ENG:\*\* (.+)\n\*\*ALT:\*\* (.+)\n\*\*SID:\*\* (\d+) \| `(.+)`/;
 const GENERAL_INFO_REGEX = /\*\*UID:\*\* (\d+) \| \*\*GID:\*\* (\d+)/;
-const STAR_REGEX = /([★☆]+)/;
+const STAR_REGEX = /([★☆]+)/u;
 const INFLUENCE_REGEX = /Influence `#(\d+)`・\*\*(\d+)\*\*/;
 const FOOTER_REGEX = /Uploaded by (.+)\nCredit: (.+)/;
 const USER_ID_REGEX = /^https:\/\/cdn\.discordapp\.com\/avatars\/(\d+)/;
@@ -21,7 +21,7 @@ starCount
 /**
  * A basic implementation for character embeds from gacha, view, and burn commands
  */
-export class BasePersonalSimpleCharacterEmbed implements Character {
+export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed {
     /**
      * The name of the character
      */
@@ -103,7 +103,7 @@ export class BasePersonalSimpleCharacterEmbed implements Character {
         const rarityField = embed.fields[1];
 
         const rarityMatch = rarityField.value.match(RARITY_REGEX) as RegExpMatchArray;
-        this.rarity = resolveRarity(rarityMatch[1]) ?? RarityConstants.ALPHA;
+        this.rarity = resolveRarity(rarityMatch[1]) as Rarity;
 
         const starMatch = rarityField.value.match(STAR_REGEX) as RegExpMatchArray;
         this.stars = starCount.get(starMatch[1]) ?? 0;

@@ -98,24 +98,6 @@ export interface Series {
 }
 
 /**
- * Represents a character found in a wishlist embed
- */
-export interface WishlistCharacter {
-    /**
-     * The name of the character
-     */
-    name: string;
-    /**
-     * The global ID of the character
-     */
-    globalId: number;
-    /**
-     * The influence of the character
-     */
-    influence: number;
-}
-
-/**
  * Represents the consumption from a drop command
  */
 export interface Consumption {
@@ -140,7 +122,7 @@ export interface Consumption {
 /**
  * Contains basic information about a character
  */
-export interface Character {
+export interface CharacterEmbed {
     /**
      * The name of the character
      */

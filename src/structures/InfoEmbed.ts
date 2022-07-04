@@ -1,7 +1,7 @@
 import type { EmbedFooterData, MessageEmbed } from 'discord.js';
 import type {
     Bounds,
-    Character,
+    CharacterEmbed,
     ImageInfo,
     RarityStatistics,
     RarityStatisticsCollection,
@@ -17,7 +17,7 @@ const FOOTER_REGEX = /Image #(\d) - Uploaded by (.+)\nCredit: (.+)/;
 /**
  * Represents an info embed from LaifuBot
  */
-export class InfoEmbed implements Character {
+export class InfoEmbed implements CharacterEmbed {
     /**
      * The name of the character
      */
