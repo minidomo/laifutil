@@ -3,8 +3,8 @@ import type {
     Bounds,
     Character,
     ImageInfo,
-    RarityStats,
-    RarityStatsCollection,
+    RarityStatistics,
+    RarityStatisticsCollection,
     Series,
 } from '../types';
 
@@ -49,7 +49,7 @@ export class InfoEmbed implements Character {
     /**
      * The rarity information of this character
      */
-    rarities: RarityStatsCollection;
+    rarities: RarityStatisticsCollection;
 
     constructor(embed: MessageEmbed) {
         this.name = embed.title as string;
@@ -81,14 +81,17 @@ export class InfoEmbed implements Character {
         // Influence
         const influenceMatch = embed.fields[2].value.match(INFLUENCE_REGEX) as RegExpMatchArray;
         this.influence = parseInt(influenceMatch[1]);
+
+        const firstRank = parseInt(influenceMatch[2]);
+        const secondRank = parseInt(influenceMatch[3]);
         this.influenceRankRange = {
-            lower: parseInt(influenceMatch[2]),
-            upper: parseInt(influenceMatch[3]),
+            lower: Math.min(firstRank, secondRank),
+            upper: Math.max(firstRank, secondRank),
         };
 
         // Collections
         const it = embed.fields[3].value.matchAll(COLLECTIONS_REGEX);
-        const stats: RarityStats[] = [];
+        const stats: RarityStatistics[] = [];
 
         for (let obj = it.next(); !obj.done; obj = it.next()) {
             stats.push({

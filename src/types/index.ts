@@ -15,42 +15,42 @@ export interface Bounds {
 /**
  * Contains statistics on several rarities for a character
  */
-export interface RarityStatsCollection {
+export interface RarityStatisticsCollection {
     /**
      * The current stats of this character with rarity alpha
      */
-    alpha: RarityStats;
+    alpha: RarityStatistics;
     /**
      * The current stats of this character with rarity beta
      */
-    beta: RarityStats;
+    beta: RarityStatistics;
     /**
      * The current stats of this character with rarity gamma
      */
-    gamma: RarityStats;
+    gamma: RarityStatistics;
     /**
      * The current stats of this character with rarity delta
      */
-    delta: RarityStats;
+    delta: RarityStatistics;
     /**
      * The current stats of this character with rarity epsilon
      */
-    epsilon: RarityStats;
+    epsilon: RarityStatistics;
     /**
      * The current stats of this character with rarity zeta
      */
-    zeta: RarityStats;
+    zeta: RarityStatistics;
     /**
      * The current stats of this character with rarity ultra
      */
-    ultra: RarityStats;
+    ultra: RarityStatistics;
 }
 
 /**
  * Contains information about a character with the corresponding rarity which includes the current number of existing
  * characters and the total number of claimed characters
  */
-export interface RarityStats {
+export interface RarityStatistics {
     /**
      * The current number of existing characters with the corresponding rarity
      */
