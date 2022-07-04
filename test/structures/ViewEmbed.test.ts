@@ -14,10 +14,10 @@ describe('ViewEmbed', () => {
 
             assert.isUndefined(parsedEmbed.emoji);
             assert.strictEqual(parsedEmbed.image.currentNumber, 1);
-            assert.strictEqual(parsedEmbed.characterName, 'Nagi Kodachi (小太刀　凪)');
+            assert.strictEqual(parsedEmbed.name, 'Nagi Kodachi (小太刀　凪)');
 
             assert.strictEqual(parsedEmbed.uniqueId, 8591);
-            assert.strictEqual(parsedEmbed.globalId, 15013);
+            assert.strictEqual(parsedEmbed.id, 15013);
             assert.strictEqual(parsedEmbed.claimedBy, 'JB');
             assert.strictEqual(parsedEmbed.age, 166);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-18');
@@ -29,8 +29,8 @@ describe('ViewEmbed', () => {
             assert.isUndefined(parsedEmbed.badgeId);
             assert.isFalse(parsedEmbed.glitched);
 
-            assert.strictEqual(parsedEmbed.series.englishTitle, 'A Good Librarian Like a Good Shepherd');
-            assert.strictEqual(parsedEmbed.series.alternateTitle, 'Daitoshokan no Hitsujikai');
+            assert.strictEqual(parsedEmbed.series.title.english, 'A Good Librarian Like a Good Shepherd');
+            assert.strictEqual(parsedEmbed.series.title.alternate, 'Daitoshokan no Hitsujikai');
             assert.strictEqual(parsedEmbed.series.id, 1548);
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
@@ -47,10 +47,10 @@ describe('ViewEmbed', () => {
 
             assert.isUndefined(parsedEmbed.emoji);
             assert.strictEqual(parsedEmbed.image.currentNumber, 1);
-            assert.strictEqual(parsedEmbed.characterName, 'Ririka Momobami (桃喰 リリカ)');
+            assert.strictEqual(parsedEmbed.name, 'Ririka Momobami (桃喰 リリカ)');
 
             assert.strictEqual(parsedEmbed.uniqueId, 8364);
-            assert.strictEqual(parsedEmbed.globalId, 1996);
+            assert.strictEqual(parsedEmbed.id, 1996);
             assert.strictEqual(parsedEmbed.claimedBy, 'JB');
             assert.strictEqual(parsedEmbed.age, 177);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-07');
@@ -62,8 +62,8 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.badgeId, 82);
             assert.isFalse(parsedEmbed.glitched);
 
-            assert.strictEqual(parsedEmbed.series.englishTitle, 'Kakegurui: Compulsive Gambler');
-            assert.strictEqual(parsedEmbed.series.alternateTitle, 'Kakegurui');
+            assert.strictEqual(parsedEmbed.series.title.english, 'Kakegurui: Compulsive Gambler');
+            assert.strictEqual(parsedEmbed.series.title.alternate, 'Kakegurui');
             assert.strictEqual(parsedEmbed.series.id, 151);
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
@@ -80,10 +80,10 @@ describe('ViewEmbed', () => {
 
             assert.isUndefined(parsedEmbed.emoji);
             assert.strictEqual(parsedEmbed.image.currentNumber, 2);
-            assert.strictEqual(parsedEmbed.characterName, 'Alice Zuberg (アリス・ツーベルク)');
+            assert.strictEqual(parsedEmbed.name, 'Alice Zuberg (アリス・ツーベルク)');
 
             assert.strictEqual(parsedEmbed.uniqueId, 298);
-            assert.strictEqual(parsedEmbed.globalId, 2230);
+            assert.strictEqual(parsedEmbed.id, 2230);
             assert.strictEqual(parsedEmbed.claimedBy, 'O2Linn');
             assert.strictEqual(parsedEmbed.age, 323);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-14');
@@ -95,8 +95,8 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.badgeId, 126);
             assert.isFalse(parsedEmbed.glitched);
 
-            assert.strictEqual(parsedEmbed.series.englishTitle, 'Sword Art Online');
-            assert.strictEqual(parsedEmbed.series.alternateTitle, 'Sword Art Online');
+            assert.strictEqual(parsedEmbed.series.title.english, 'Sword Art Online');
+            assert.strictEqual(parsedEmbed.series.title.alternate, 'Sword Art Online');
             assert.strictEqual(parsedEmbed.series.id, 73);
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
@@ -114,10 +114,10 @@ describe('ViewEmbed', () => {
 
                 assert.strictEqual(parsedEmbed.emoji, '🏮');
                 assert.strictEqual(parsedEmbed.image.currentNumber, 4);
-                assert.strictEqual(parsedEmbed.characterName, 'Satoru Gojou (五条 悟)');
+                assert.strictEqual(parsedEmbed.name, 'Satoru Gojou (五条 悟)');
 
                 assert.strictEqual(parsedEmbed.uniqueId, 264);
-                assert.strictEqual(parsedEmbed.globalId, 4652);
+                assert.strictEqual(parsedEmbed.id, 4652);
                 assert.strictEqual(parsedEmbed.claimedBy, 'JB');
                 assert.strictEqual(parsedEmbed.age, 321);
                 assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-16');
@@ -129,8 +129,8 @@ describe('ViewEmbed', () => {
                 assert.strictEqual(parsedEmbed.badgeId, 85);
                 assert.isTrue(parsedEmbed.glitched);
 
-                assert.strictEqual(parsedEmbed.series.englishTitle, 'Jujutsu Kaisen');
-                assert.strictEqual(parsedEmbed.series.alternateTitle, 'Jujutsu Kaisen');
+                assert.strictEqual(parsedEmbed.series.title.english, 'Jujutsu Kaisen');
+                assert.strictEqual(parsedEmbed.series.title.alternate, 'Jujutsu Kaisen');
                 assert.strictEqual(parsedEmbed.series.id, 351);
                 assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 

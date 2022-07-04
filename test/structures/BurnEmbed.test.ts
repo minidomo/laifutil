@@ -13,10 +13,10 @@ describe('BurnCharacterEmbed', () => {
             const parsedEmbed = new BurnCharacterEmbed(embed);
 
             assert.strictEqual(parsedEmbed.image.currentNumber, 1);
-            assert.strictEqual(parsedEmbed.characterName, 'Nagi Kodachi (小太刀　凪)');
+            assert.strictEqual(parsedEmbed.name, 'Nagi Kodachi (小太刀　凪)');
 
             assert.strictEqual(parsedEmbed.uniqueId, 8591);
-            assert.strictEqual(parsedEmbed.globalId, 15013);
+            assert.strictEqual(parsedEmbed.id, 15013);
             assert.strictEqual(parsedEmbed.claimedBy, 'JB');
             assert.strictEqual(parsedEmbed.age, 166);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-18');
@@ -28,8 +28,8 @@ describe('BurnCharacterEmbed', () => {
             assert.isUndefined(parsedEmbed.badgeId);
             assert.isFalse(parsedEmbed.glitched);
 
-            assert.strictEqual(parsedEmbed.series.englishTitle, 'A Good Librarian Like a Good Shepherd');
-            assert.strictEqual(parsedEmbed.series.alternateTitle, 'Daitoshokan no Hitsujikai');
+            assert.strictEqual(parsedEmbed.series.title.english, 'A Good Librarian Like a Good Shepherd');
+            assert.strictEqual(parsedEmbed.series.title.alternate, 'Daitoshokan no Hitsujikai');
             assert.strictEqual(parsedEmbed.series.id, 1548);
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
@@ -47,10 +47,10 @@ describe('BurnCharacterEmbed', () => {
             const parsedEmbed = new BurnCharacterEmbed(embed);
 
             assert.strictEqual(parsedEmbed.image.currentNumber, 1);
-            assert.strictEqual(parsedEmbed.characterName, 'Ririka Momobami (桃喰 リリカ)');
+            assert.strictEqual(parsedEmbed.name, 'Ririka Momobami (桃喰 リリカ)');
 
             assert.strictEqual(parsedEmbed.uniqueId, 8364);
-            assert.strictEqual(parsedEmbed.globalId, 1996);
+            assert.strictEqual(parsedEmbed.id, 1996);
             assert.strictEqual(parsedEmbed.claimedBy, 'JB');
             assert.strictEqual(parsedEmbed.age, 177);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-07');
@@ -62,8 +62,8 @@ describe('BurnCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.badgeId, 82);
             assert.isFalse(parsedEmbed.glitched);
 
-            assert.strictEqual(parsedEmbed.series.englishTitle, 'Kakegurui: Compulsive Gambler');
-            assert.strictEqual(parsedEmbed.series.alternateTitle, 'Kakegurui');
+            assert.strictEqual(parsedEmbed.series.title.english, 'Kakegurui: Compulsive Gambler');
+            assert.strictEqual(parsedEmbed.series.title.alternate, 'Kakegurui');
             assert.strictEqual(parsedEmbed.series.id, 151);
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
@@ -81,10 +81,10 @@ describe('BurnCharacterEmbed', () => {
             const parsedEmbed = new BurnCharacterEmbed(embed);
 
             assert.strictEqual(parsedEmbed.image.currentNumber, 2);
-            assert.strictEqual(parsedEmbed.characterName, 'Alice Zuberg (アリス・ツーベルク)');
+            assert.strictEqual(parsedEmbed.name, 'Alice Zuberg (アリス・ツーベルク)');
 
             assert.strictEqual(parsedEmbed.uniqueId, 298);
-            assert.strictEqual(parsedEmbed.globalId, 2230);
+            assert.strictEqual(parsedEmbed.id, 2230);
             assert.strictEqual(parsedEmbed.claimedBy, 'O2Linn');
             assert.strictEqual(parsedEmbed.age, 323);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-14');
@@ -96,8 +96,8 @@ describe('BurnCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.badgeId, 126);
             assert.isFalse(parsedEmbed.glitched);
 
-            assert.strictEqual(parsedEmbed.series.englishTitle, 'Sword Art Online');
-            assert.strictEqual(parsedEmbed.series.alternateTitle, 'Sword Art Online');
+            assert.strictEqual(parsedEmbed.series.title.english, 'Sword Art Online');
+            assert.strictEqual(parsedEmbed.series.title.alternate, 'Sword Art Online');
             assert.strictEqual(parsedEmbed.series.id, 73);
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
@@ -115,10 +115,10 @@ describe('BurnCharacterEmbed', () => {
             const parsedEmbed = new BurnCharacterEmbed(embed);
 
             assert.strictEqual(parsedEmbed.image.currentNumber, 1);
-            assert.strictEqual(parsedEmbed.characterName, 'Mei Hiuchidani');
+            assert.strictEqual(parsedEmbed.name, 'Mei Hiuchidani');
 
             assert.strictEqual(parsedEmbed.uniqueId, 342);
-            assert.strictEqual(parsedEmbed.globalId, 15899);
+            assert.strictEqual(parsedEmbed.id, 15899);
             assert.strictEqual(parsedEmbed.claimedBy, 'comp');
             assert.strictEqual(parsedEmbed.age, 0);
             assert.strictEqual(parsedEmbed.dateClaimed, '2022-05-31');
@@ -130,8 +130,8 @@ describe('BurnCharacterEmbed', () => {
             assert.isUndefined(parsedEmbed.badgeId);
             assert.isFalse(parsedEmbed.glitched);
 
-            assert.strictEqual(parsedEmbed.series.englishTitle, 'Cafe Stella and the Reapers\' Butterflies');
-            assert.strictEqual(parsedEmbed.series.alternateTitle, 'Cafe Stella to Shinigami no Chou');
+            assert.strictEqual(parsedEmbed.series.title.english, 'Cafe Stella and the Reapers\' Butterflies');
+            assert.strictEqual(parsedEmbed.series.title.alternate, 'Cafe Stella to Shinigami no Chou');
             assert.strictEqual(parsedEmbed.series.id, 1723);
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 

@@ -35,43 +35,43 @@ export const RarityConstants: RarityContainer = {
     ALPHA: {
         text: 'ᴀʟᴘʜᴀ',
         symbol: 'α',
-    },
+    } as const,
     BETA: {
         text: 'ʙᴇᴛᴀ',
         symbol: 'β',
-    },
+    } as const,
     GAMMA: {
         text: 'ɢᴀᴍᴍᴀ',
         symbol: 'γ',
-    },
+    } as const,
     DELTA: {
         text: 'ᴅᴇʟᴛᴀ',
         symbol: 'δ',
-    },
+    } as const,
     EPSILON: {
         text: 'ᴇᴘsɪʟᴏɴ',
         symbol: 'ε',
-    },
+    } as const,
     ZETA: {
         text: 'ᴢᴇᴛᴀ',
         symbol: 'ζ',
-    },
+    } as const,
     ULTRA: {
         text: 'ᴜʟᴛʀᴀ',
         symbol: 'ζ𝓡',
-    },
+    } as const,
     SCARLET: {
         text: 'sᴄᴀʀʟᴇᴛ',
         symbol: '†',
-    },
+    } as const,
     EVENT: {
         text: 'ᴇᴠᴇɴᴛ',
         symbol: 'ξν',
-    },
+    } as const,
     SPECIAL: {
         text: 'sᴘᴇᴄɪᴀʟ',
         symbol: 'Λ',
-    },
+    } as const,
 };
 
 function createRegex(): RegExp {
@@ -85,8 +85,8 @@ function createRegex(): RegExp {
  * Regular expression for matching rarity text and symbols.
  *
  * ```js
- * Rarity.REGEX.test('sᴘᴇᴄɪᴀʟ'); // true
- * Rarity.REGEX.test('Λ'); // true
+ * RARITY_REGEX.test('sᴘᴇᴄɪᴀʟ'); // true
+ * RARITY_REGEX.test('Λ'); // true
  * ```
  */
 export const RARITY_REGEX = createRegex();

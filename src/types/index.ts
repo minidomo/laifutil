@@ -3,51 +3,54 @@
  */
 export interface Bounds {
     /**
-     * The lower bound of this object
+     * The lower bound of this object (inclusive)
      */
     lower: number;
     /**
-     * The upper bound of this object
+     * The upper bound of this object (inclusive)
      */
     upper: number;
 }
 
-export interface CharacterRarityInfoCollection {
+/**
+ * Contains statistics on several rarities for a character
+ */
+export interface RarityStatsCollection {
     /**
      * The current stats of this character with rarity alpha
      */
-    alpha: CharacterRarityInfo;
+    alpha: RarityStats;
     /**
      * The current stats of this character with rarity beta
      */
-    beta: CharacterRarityInfo;
+    beta: RarityStats;
     /**
      * The current stats of this character with rarity gamma
      */
-    gamma: CharacterRarityInfo;
+    gamma: RarityStats;
     /**
      * The current stats of this character with rarity delta
      */
-    delta: CharacterRarityInfo;
+    delta: RarityStats;
     /**
      * The current stats of this character with rarity epsilon
      */
-    epsilon: CharacterRarityInfo;
+    epsilon: RarityStats;
     /**
      * The current stats of this character with rarity zeta
      */
-    zeta: CharacterRarityInfo;
+    zeta: RarityStats;
     /**
      * The current stats of this character with rarity ultra
      */
-    ultra: CharacterRarityInfo;
+    ultra: RarityStats;
 }
 
 /**
  * Contains information about a character with the corresponding rarity which includes the current number of existing
  * characters and the total number of claimed characters
  */
-export interface CharacterRarityInfo {
+export interface RarityStats {
     /**
      * The current number of existing characters with the corresponding rarity
      */
@@ -61,7 +64,7 @@ export interface CharacterRarityInfo {
 /**
  * Contains informations about a character's image
  */
-export interface CharacterImageInfo {
+export interface ImageInfo {
     /**
      * The image number of this character
      */
@@ -77,17 +80,13 @@ export interface CharacterImageInfo {
 }
 
 /**
- * Contains information about a character's series
+ * Contains information about a series
  */
-export interface CharacterSeriesInfo {
+export interface Series {
     /**
-     * The series of the character in English
+     * The title of the series
      */
-    englishTitle: string;
-    /**
-     * The series of the character in an alternate language
-     */
-    alternateTitle: string;
+    title: SeriesTitle;
     /**
      * The series ID of which this character originates from
      */
@@ -103,15 +102,15 @@ export interface CharacterSeriesInfo {
  */
 export interface WishlistCharacter {
     /**
-     * The global ID of this character
-     */
-    gid: number;
-    /**
-     * The name of this character
+     * The name of the character
      */
     name: string;
     /**
-     * The influence of this character
+     * The global ID of the character
+     */
+    id: number;
+    /**
+     * The influence of the character
      */
     influence: number;
 }
@@ -133,7 +132,43 @@ export interface Consumption {
      */
     attack: number;
     /**
-     * The amount of deference gained
+     * The amount of defense gained
      */
     defense: number;
+}
+
+/**
+ * Contains basic information about a character
+ */
+export interface Character {
+    /**
+     * The name of the character
+     */
+    name: string;
+    /**
+     * The global ID of the character
+     */
+    id: number;
+    /**
+     * The influence of the character
+     */
+    influence: number;
+    /**
+     * The series of the character
+     */
+    series: Series;
+}
+
+/**
+ * Contains the titles of a series
+ */
+export interface SeriesTitle {
+    /**
+     * The alternate title
+     */
+    alternate: string;
+    /**
+     * The English title
+     */
+    english: string;
 }
