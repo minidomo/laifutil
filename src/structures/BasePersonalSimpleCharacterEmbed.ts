@@ -8,6 +8,7 @@ const GENERAL_INFO_REGEX = /\*\*UID:\*\* (\d+) \| \*\*GID:\*\* (\d+)/;
 const STAR_REGEX = /([★☆]+)/;
 const INFLUENCE_REGEX = /Influence `#(\d+)`・\*\*(\d+)\*\*/;
 const FOOTER_REGEX = /Uploaded by (.+)\nCredit: (.+)/;
+const USER_ID_REGEX = /^https:\/\/cdn\.discordapp\.com\/avatars\/(\d+)/;
 
 const starCount: Map<string, number> = new Map();
 starCount
@@ -61,6 +62,10 @@ export class BasePersonalSimpleCharacterEmbed implements Character {
      * The owner of this character
      */
     owner: string;
+    /**
+     * The Discord user ID of the user that prompted this embed
+     */
+    userId: string;
 
     /**
      *
@@ -73,8 +78,13 @@ export class BasePersonalSimpleCharacterEmbed implements Character {
         this.name = titleMatch[2];
 
         // Author
-        const nameMatch = (embed.author as EmbedAuthorData).name.match(ownerRegex) as RegExpMatchArray;
+        const author = embed.author as EmbedAuthorData;
+
+        const nameMatch = author.name.match(ownerRegex) as RegExpMatchArray;
         this.owner = nameMatch[1];
+
+        const userIdMatch = (author.iconURL as string).match(USER_ID_REGEX) as RegExpMatchArray;
+        this.userId = userIdMatch[1];
 
         // Footer
         const footerMatch = (embed.footer as EmbedFooterData).text.match(FOOTER_REGEX) as RegExpMatchArray;

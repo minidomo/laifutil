@@ -34,6 +34,7 @@ describe('BurnCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
             assert.strictEqual(parsedEmbed.owner, 'JB');
+            assert.strictEqual(parsedEmbed.userId, '138419598469890048');
 
             assert.strictEqual(parsedEmbed.image.uploader, 'LaifuBot †');
             assert.strictEqual(parsedEmbed.image.credit, 'Official');
@@ -68,6 +69,7 @@ describe('BurnCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
             assert.strictEqual(parsedEmbed.owner, 'JB');
+            assert.strictEqual(parsedEmbed.userId, '138419598469890048');
 
             assert.strictEqual(parsedEmbed.image.uploader, 'LaifuBot †');
             assert.strictEqual(parsedEmbed.image.credit, 'Official Art');
@@ -102,6 +104,7 @@ describe('BurnCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
             assert.strictEqual(parsedEmbed.owner, 'JB');
+            assert.strictEqual(parsedEmbed.userId, '138419598469890048');
 
             assert.strictEqual(parsedEmbed.image.uploader, 'chocobutternut');
             assert.strictEqual(parsedEmbed.image.credit, 'Official Art');
@@ -136,6 +139,7 @@ describe('BurnCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
             assert.strictEqual(parsedEmbed.owner, '!zzdovad');
+            assert.strictEqual(parsedEmbed.userId, '138414014303567872');
 
             assert.strictEqual(parsedEmbed.image.uploader, 'LaifuBot †');
             assert.strictEqual(parsedEmbed.image.credit, 'Official');

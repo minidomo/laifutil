@@ -17,13 +17,14 @@ We can make a simple bot to remind a user to drop after six minutes upon complet
 
 ```js
 const { setTimeout } = require('node:timers/promises');
+const { userMention } = require('@discordjs/builders');
 const { Client, Intents } = require('discord.js');
 const { isLaifuBot, isDropOpenedEmbed, DropOpenedEmbed } = require('laifutil');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 // Six minutes in milliseconds
-const dropInterval = 1000 * 60 * 6;
+const dropInterval = 360_000;
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -32,16 +33,9 @@ client.on('ready', () => {
 client.on('messageCreate', message => {
     if (isLaifuBot(message) && isDropOpenedEmbed(message.embeds[0])) {
         setTimeout(dropInterval)
-            .then(async () => {
-                const dropOpenedEmbed = new DropOpenedEmbed(message.embeds[0]);
-
-                const users = await message.guild.members.fetch({
-                    query: dropOpenedEmbed.username,
-                    limit: 1,
-                });
-
-                const member = users.first();
-                message.channel.send(`Time to drop, ${member}!`);
+            .then(() => {
+                const embed = new DropOpenedEmbed(message.embeds[0]);
+                message.channel.send(`Time to drop, ${userMention(embed.userId)}!`);
             })
             .catch(console.error);
     }
