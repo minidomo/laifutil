@@ -1,5 +1,5 @@
 import type { EmbedFooterData, MessageEmbed } from 'discord.js';
-import { BasePersonalFullCharacter } from './BasePersonalFullCharacterEmbed';
+import { BasePersonalFullCharacterEmbed } from './BasePersonalFullCharacterEmbed';
 
 const EMOJI_REGEX = /^(?:([^\s]+) )#/;
 const NUM_EXISTING_REGEX = /^([\d,]+).+\n/;
@@ -12,7 +12,7 @@ function removeCommas(str: string) {
 /**
  * Represents a character embed from the view command
  */
-export class ViewEmbed extends BasePersonalFullCharacter {
+export class ViewEmbed extends BasePersonalFullCharacterEmbed {
     /**
      * The emoji this character has from the favorite command
      */

@@ -1,5 +1,5 @@
 import type { EmbedFooterData, MessageEmbed } from 'discord.js';
-import { BasePersonalFullCharacter } from './BasePersonalFullCharacterEmbed';
+import { BasePersonalFullCharacterEmbed } from './BasePersonalFullCharacterEmbed';
 
 const BURN_REWARD_REGEX = /^Burn Reward Counter: (\d+) \/ 15\n/;
 const GUIDE_REGEX = /(\d+)% of players/;
@@ -8,7 +8,7 @@ const OWNER_REGEX = /(.+)/;
 /**
  * Represents a character embed from the burn command
  */
-export class BurnCharacterEmbed extends BasePersonalFullCharacter {
+export class BurnCharacterEmbed extends BasePersonalFullCharacterEmbed {
     /**
      * The current amount of characters burned until the burn reward
      */
