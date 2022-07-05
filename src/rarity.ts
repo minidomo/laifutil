@@ -5,11 +5,11 @@ export interface Rarity {
     /**
      * The name of the rarity in latin letter small capitals.
      */
-    text: string;
+    TEXT: string;
     /**
      * The symbols used to represent the rarity.
      */
-    symbol: string;
+    SYMBOL: string;
 }
 
 /**
@@ -33,52 +33,52 @@ export interface RarityContainer {
  */
 export const RarityConstants: RarityContainer = {
     ALPHA: {
-        text: 'ᴀʟᴘʜᴀ',
-        symbol: 'α',
+        TEXT: 'ᴀʟᴘʜᴀ',
+        SYMBOL: 'α',
     } as const,
     BETA: {
-        text: 'ʙᴇᴛᴀ',
-        symbol: 'β',
+        TEXT: 'ʙᴇᴛᴀ',
+        SYMBOL: 'β',
     } as const,
     GAMMA: {
-        text: 'ɢᴀᴍᴍᴀ',
-        symbol: 'γ',
+        TEXT: 'ɢᴀᴍᴍᴀ',
+        SYMBOL: 'γ',
     } as const,
     DELTA: {
-        text: 'ᴅᴇʟᴛᴀ',
-        symbol: 'δ',
+        TEXT: 'ᴅᴇʟᴛᴀ',
+        SYMBOL: 'δ',
     } as const,
     EPSILON: {
-        text: 'ᴇᴘsɪʟᴏɴ',
-        symbol: 'ε',
+        TEXT: 'ᴇᴘsɪʟᴏɴ',
+        SYMBOL: 'ε',
     } as const,
     ZETA: {
-        text: 'ᴢᴇᴛᴀ',
-        symbol: 'ζ',
+        TEXT: 'ᴢᴇᴛᴀ',
+        SYMBOL: 'ζ',
     } as const,
     ULTRA: {
-        text: 'ᴜʟᴛʀᴀ',
-        symbol: 'ζ𝓡',
+        TEXT: 'ᴜʟᴛʀᴀ',
+        SYMBOL: 'ζ𝓡',
     } as const,
     SCARLET: {
-        text: 'sᴄᴀʀʟᴇᴛ',
-        symbol: '†',
+        TEXT: 'sᴄᴀʀʟᴇᴛ',
+        SYMBOL: '†',
     } as const,
     EVENT: {
-        text: 'ᴇᴠᴇɴᴛ',
-        symbol: 'ξν',
+        TEXT: 'ᴇᴠᴇɴᴛ',
+        SYMBOL: 'ξν',
     } as const,
     SPECIAL: {
-        text: 'sᴘᴇᴄɪᴀʟ',
-        symbol: 'Λ',
+        TEXT: 'sᴘᴇᴄɪᴀʟ',
+        SYMBOL: 'Λ',
     } as const,
 };
 
 function createRegex(): RegExp {
     // Sort to look at longer symbols first due to similarity with zeta and ultra symbols
     const baseExp = Object.values(RarityConstants)
-        .sort((a: Rarity, b: Rarity) => b.symbol.length - a.symbol.length)
-        .map((rarity: Rarity) => `${rarity.text}|${rarity.symbol}`)
+        .sort((a: Rarity, b: Rarity) => b.SYMBOL.length - a.SYMBOL.length)
+        .map((rarity: Rarity) => `${rarity.TEXT}|${rarity.SYMBOL}`)
         .join('|');
     return new RegExp(`(${baseExp})`);
 }
