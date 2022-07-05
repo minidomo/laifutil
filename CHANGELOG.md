@@ -1,5 +1,10 @@
 # Changelog
 
+# 2.0.1 - (2022-07-05)
+
+## Refractor
+- Add Embed to class name ([#15](https://github.com/minidomo/laifutil/pull/15)) ([e2a3746](https://github.com/minidomo/laifutil/commit/e2a37466613195ed460653b951846ce6d234b211))
+
 # 2.0.0 - (2022-07-04)
 
 ## Bug Fixes
