@@ -2,12 +2,12 @@ import { assert } from 'chai';
 import { MessageEmbed } from 'discord.js';
 import * as embeds from './embeds.json';
 import { MEO } from './util';
-import { cleanCharacterName, hasSameImage, USER_ID } from '../dist';
+import { cleanCharacterName, hasSameImage, LAIFU_USER_ID } from '../dist';
 
 describe('util.ts', () => {
-    describe('.USER_ID', () => {
+    describe('.LAIFU_USER_ID', () => {
         it('should be equal to 688202466315206661', () => {
-            assert.strictEqual(USER_ID, '688202466315206661');
+            assert.strictEqual(LAIFU_USER_ID, '688202466315206661');
         });
     });
 

@@ -2,6 +2,9 @@ import type { MessageEmbed } from 'discord.js';
 import { BaseListEmbed } from './BaseListEmbed';
 import { ListCharacter } from './ListCharacter';
 
+/**
+ * Represents a list embed from LaifuBot
+ */
 export class ListEmbed extends BaseListEmbed {
     /**
      * The nickname of the user this list belongs to

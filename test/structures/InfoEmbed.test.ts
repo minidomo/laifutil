@@ -1,10 +1,10 @@
 import { assert } from 'chai';
 import { MessageEmbed } from 'discord.js';
-import { InfoEmbed, CharacterRarityInfo } from '../../dist';
+import { InfoEmbed, RarityStatistics } from '../../dist';
 import * as embeds from '../embeds.json';
 import { MEOArr } from '../util';
 
-function makeRarityStats(existingAmount: number, totalClaimed: number): CharacterRarityInfo {
+function makeRarityStats(existingAmount: number, totalClaimed: number): RarityStatistics {
     return { existingAmount, totalClaimed };
 }
 

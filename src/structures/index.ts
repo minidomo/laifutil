@@ -10,3 +10,4 @@ export * from './DropOpenedEmbed';
 export * from './ListCharacter';
 export * from './WishlistCharacter';
 export * from './ListEmbed';
+export * from './AuctionEmbed';

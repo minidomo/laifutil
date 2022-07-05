@@ -154,3 +154,17 @@ export interface SeriesTitle {
      */
     english: string;
 }
+
+/**
+ * Represents a bid in an auction
+ */
+export interface Bid {
+    /**
+     * The username of the user that made this bid
+     */
+    username: string;
+    /**
+     * The amount that was bid
+     */
+    amount: number;
+}
