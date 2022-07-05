@@ -17,6 +17,9 @@ starCount
     .set('★★★☆', 3)
     .set('★★★★', 4);
 
+/**
+ * Represents an auction embed from LaifuBot
+ */
 export class AuctionEmbed implements CharacterEmbed {
     /**
      * The name of the character
