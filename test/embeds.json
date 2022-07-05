@@ -726,7 +726,7 @@
                         "inline": false
                     },
                     {
-                        "value": "Preguntín bid :dollar: **$**2,855,000\n✰898รoรⱥᴍⱥfiⱥ✰ bid :dollar: **$-**2,854,000\nPreguntín bid :dollar: **$**2,853,000\ngastom ♡ bid :dollar: **$**2,852,000\nPreguntín bid :dollar: **$**2,851,000",
+                        "value": "Preguntín bid :dollar: **$**2,855,000\n✰898รoรⱥᴍⱥfiⱥ✰ bid :dollar: **$**2,854,000\nPreguntín bid :dollar: **$**2,853,000\ngastom ♡ bid :dollar: **$**2,852,000\nPreguntín bid :dollar: **$**2,851,000",
                         "name": "Auction Feed",
                         "inline": false
                     }
@@ -737,6 +737,94 @@
                     "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/787474936151277619/image.png",
                     "height": 0,
                     "width": 0
+                },
+                "author": {
+                    "name": "LaifuBot †",
+                    "icon_url": "https://cdn.discordapp.com/attachments/722702340620288042/722702409171992576/TnjM57u.png"
+                },
+                "footer": {
+                    "text": "Want this character? Bid now using l.bid"
+                }
+            },
+            {
+                "title": "Auction Card",
+                "type": "rich",
+                "description": "**Name:** Big the Cat (ビッグ・ザ・キャット)\n**Global ID:** 11580\n**Image:** #1",
+                "url": null,
+                "timestamp": null,
+                "color": 16097535,
+                "fields": [
+                    {
+                        "name": "Main Series",
+                        "value": "**ENG:** Sonic the Hedgehog\n**ALT:** Sonic the Hedgehog\n**SID:** 748 | `MAIN`",
+                        "inline": false
+                    },
+                    {
+                        "name": "Rarity",
+                        "value": "<a:r6:837480733760815124> | `ᴢᴇᴛᴀ`»`☆☆☆☆`\nInfluence `#6803`・**174**<:inf:755213119055200336>",
+                        "inline": false
+                    },
+                    {
+                        "name": "Highest Bid",
+                        "value": "**Current Bid:** ChickpeaKryoz\n**Price:** :dollar: $25,165,000 \n**Ends In:** < 1 Hours",
+                        "inline": false
+                    },
+                    {
+                        "name": "Auction Feed",
+                        "value": "ChickpeaKryoz bid :dollar: **$**25,165,000\nChickpeaKryoz bid :dollar: **$**25,164,000\nYellow Cedar bid :dollar: **$**25,163,000\n100k…here I come bid :dollar: **$**25,138,000\nmads bid :dollar: **$**25,137,000",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/766880877099352085/829602379921752064/image.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/829602379921752064/image.png",
+                    "height": 350,
+                    "width": 225
+                },
+                "author": {
+                    "name": "LaifuBot †",
+                    "icon_url": "https://cdn.discordapp.com/attachments/722702340620288042/722702409171992576/TnjM57u.png"
+                },
+                "footer": {
+                    "text": "Want this character? Bid now using l.bid"
+                }
+            },
+            {
+                "title": "Auction Card",
+                "type": "rich",
+                "description": "**Name:** Big the Cat (ビッグ・ザ・キャット)\n**Global ID:** 11580\n**Image:** #1",
+                "url": null,
+                "timestamp": null,
+                "color": 16097535,
+                "fields": [
+                    {
+                        "name": "Main Series",
+                        "value": "**ENG:** Sonic the Hedgehog\n**ALT:** Sonic the Hedgehog\n**SID:** 748 | `MAIN`",
+                        "inline": false
+                    },
+                    {
+                        "name": "Rarity",
+                        "value": "<a:r6:837480733760815124> | `ᴢᴇᴛᴀ`»`☆☆☆☆`\nInfluence `#6803`・**174**<:inf:755213119055200336>",
+                        "inline": false
+                    },
+                    {
+                        "name": "Highest Bid",
+                        "value": "**Current Bid:** \n**Price:** :dollar: $1,800,000 \n**Ends In:** 15 Hours",
+                        "inline": false
+                    },
+                    {
+                        "name": "Auction Feed",
+                        "value": "Bid history is currently empty.",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/766880877099352085/829602379921752064/image.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/829602379921752064/image.png",
+                    "height": 350,
+                    "width": 225
                 },
                 "author": {
                     "name": "LaifuBot †",
