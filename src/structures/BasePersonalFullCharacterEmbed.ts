@@ -8,7 +8,7 @@ const GLITCH_REGEX = /ɢʟɪᴛᴄʜᴇᴅ/u;
 /**
  * An extension of {@link BasePersonalSimpleCharacterEmbed} with additional information
  */
-export abstract class BasePersonalFullCharacter extends BasePersonalSimpleCharacterEmbed {
+export abstract class BasePersonalFullCharacterEmbed extends BasePersonalSimpleCharacterEmbed {
     /**
      * The username of the initial user that claimed this character
      */
