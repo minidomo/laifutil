@@ -1,5 +1,5 @@
 import type { EmbedFooterData, MessageEmbed } from 'discord.js';
-import { BasePersonalFullCharacter } from './BasePersonalFullCharacter';
+import { BasePersonalFullCharacter } from './BasePersonalFullCharacterEmbed';
 
 const BURN_REWARD_REGEX = /^Burn Reward Counter: (\d+) \/ 15\n/;
 const GUIDE_REGEX = /(\d+)% of players/;

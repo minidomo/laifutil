@@ -1,5 +1,5 @@
 import type { EmbedFooterData, MessageEmbed } from 'discord.js';
-import { BasePersonalFullCharacter } from './BasePersonalFullCharacter';
+import { BasePersonalFullCharacter } from './BasePersonalFullCharacterEmbed';
 
 const EMOJI_REGEX = /^(?:([^\s]+) )#/;
 const NUM_EXISTING_REGEX = /^([\d,]+).+\n/;

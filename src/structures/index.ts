@@ -3,7 +3,7 @@ export * from './WishlistListEmbed';
 export * from './GachaCharacterEmbed';
 export * from './BurnCharacterEmbed';
 export * from './ViewEmbed';
-export * from './BasePersonalFullCharacter';
+export * from './BasePersonalFullCharacterEmbed';
 export * from './BasePersonalSimpleCharacterEmbed';
 export * from './InfoEmbed';
 export * from './DropOpenedEmbed';
