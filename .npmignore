@@ -10,3 +10,4 @@ tsconfig.json
 .eslintignore
 .eslintrc.json
 typedoc.json
+CHANGELOG.md
