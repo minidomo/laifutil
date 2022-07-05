@@ -8,5 +8,5 @@ temp*
 *.tgz
 tsconfig.json
 .eslintignore
-.eslintrc.cjs
+.eslintrc.json
 typedoc.json
