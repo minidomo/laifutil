@@ -372,3 +372,17 @@ export function isFluInfoEmbed(embed: MessageEmbed): boolean {
     const validField = embed.description?.includes('Frame Completion') ?? false;
     return validTitle && validField;
 }
+
+export function isFrameTransferMenuEmbed(embed: MessageEmbed): boolean {
+    if (!embed) return false;
+    const validTitle = embed.title?.includes('Card Workshop') ?? false;
+    const validDescription = embed.description?.includes('Return a frame') ?? false;
+    return validTitle && validDescription;
+}
+
+export function isFrameTransferConfirmationEmbed(embed: MessageEmbed): boolean {
+    if (!embed) return false;
+    const validTitle = embed.title?.includes('Card Workshop') ?? false;
+    const validDescription = embed.description?.includes('returning the frame') ?? false;
+    return validTitle && validDescription;
+}

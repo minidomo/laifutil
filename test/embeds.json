@@ -1737,6 +1737,52 @@
                         "footer": null
                     }
                 ]
+            },
+            "frame": {
+                "menu": [
+                    {
+                        "title": "<a:witchp1:806416022499885096> Card Workshop",
+                        "type": "rich",
+                        "description": "<:f10:992311910504615947> ♢ Frame Transfers\n\nReturn a frame to your `REWARDS` inventory.\n\n**Insert** the **UniqueID** of the character you wish to Frame Transfer.\n\n__Currencies__\n💮 1335",
+                        "url": null,
+                        "timestamp": null,
+                        "color": 7798959,
+                        "fields": [],
+                        "thumbnail": {
+                            "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                            "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                            "height": 226,
+                            "width": 498
+                        },
+                        "image": null,
+                        "author": {
+                            "name": "Welcome to:"
+                        },
+                        "footer": null
+                    }
+                ],
+                "confirmation": [
+                    {
+                        "title": "<a:witchp1:806416022499885096> Card Workshop",
+                        "type": "rich",
+                        "description": "<a:f10:992311910504615947> ♢ Frame Transfers\n\nYou will be returning the frame to your `REWARDS` inventory.\n\n**<a:r1:837480734050222100> | »`☆☆☆☆` #9 Violet Evergarden (ヴァイオレット・エヴァーガーデン) <a:i12:974445370987929650>**\n🔽\n**REWARDS INVENTORY**\n\n`COST:`\n:one: 💮 0025\n\n__Currencies__\n💮 1335",
+                        "url": null,
+                        "timestamp": null,
+                        "color": 7798959,
+                        "fields": [],
+                        "thumbnail": {
+                            "url": "https://cdn.discordapp.com/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                            "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/806412448297910308/tenor_-_2021-02-03T173455.276.gif",
+                            "height": 226,
+                            "width": 498
+                        },
+                        "image": null,
+                        "author": {
+                            "name": "Welcome to:"
+                        },
+                        "footer": null
+                    }
+                ]
             }
         },
         "arena": {
