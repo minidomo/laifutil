@@ -20,7 +20,7 @@ export class ViewEmbed extends BasePersonalFullCharacterEmbed {
     /**
      * The number of existing characters with the current rarity
      */
-    existingAmount: number;
+    existingAmount?: number;
 
     constructor(embed: MessageEmbed) {
         super(embed, OWNER_REGEX);
@@ -30,7 +30,9 @@ export class ViewEmbed extends BasePersonalFullCharacterEmbed {
             this.emoji = emojiMatch[1];
         }
 
-        const numExistingMatch = (embed.footer as EmbedFooterData).text.match(NUM_EXISTING_REGEX) as RegExpMatchArray;
-        this.existingAmount = parseInt(removeCommas(numExistingMatch[1]));
+        const numExistingMatch = (embed.footer as EmbedFooterData).text.match(NUM_EXISTING_REGEX);
+        if (numExistingMatch) {
+            this.existingAmount = parseInt(removeCommas(numExistingMatch[1]));
+        }
     }
 }
