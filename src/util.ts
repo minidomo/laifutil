@@ -15,7 +15,8 @@ function getLastBounds(str: string, leftChar: string[], rightChar: string[]): Bo
     }
 
     let count = 0;
-    let left = -1, right = -1;
+    let left = -1,
+        right = -1;
 
     for (let i = 0; i < str.length; i++) {
         const isLeftChar = leftChar.some(e => str[i] === e);

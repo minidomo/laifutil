@@ -8,11 +8,7 @@ const GLITCHED_REGEX = /a:ui:856752760599085076/;
 const BADGE_ID_REGEX = /\*\*<[^>]+>・<a:(\d+)/;
 
 const starCount: Map<string, number> = new Map();
-starCount
-    .set('𝐈', 1)
-    .set('𝐈𝐈', 2)
-    .set('𝐈𝐈𝐈', 3)
-    .set('𝐈𝐕', 4);
+starCount.set('𝐈', 1).set('𝐈𝐈', 2).set('𝐈𝐈𝐈', 3).set('𝐈𝐕', 4);
 
 /**
  * Represents a character found in a list embed
@@ -73,7 +69,7 @@ export class ListCharacter {
         this.rarity = resolveRarity(rarityMatch[1]) as Rarity;
 
         const starMatch = text.match(STAR_REGEX);
-        this.stars = starMatch ? starCount.get(starMatch[1]) as number : 0;
+        this.stars = starMatch ? (starCount.get(starMatch[1]) as number) : 0;
 
         this.glitched = GLITCHED_REGEX.test(text);
 

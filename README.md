@@ -1,15 +1,18 @@
 <h1 align="center">laifutil</h1>
 
 ## About
+
 laifutil is a library to identify and parse [Discord embeds](https://discord.js.org/#/docs/discord.js/13.8.0/class/MessageEmbed) sent from [LaifuBot](https://laifubot.fandom.com/wiki/Laifubot_Wiki).
 
 ## Installation
+
 ```sh
 npm install laifutil
 ```
 
 ### Peer Dependencies
-- [discord.js](https://discord.js.org/#/) v13.x
+
+-   [discord.js](https://discord.js.org/#/) v13.x
 
 ## Example usage
 
@@ -45,6 +48,7 @@ client.login('token');
 ```
 
 ## Links
-- [Documentation](https://minidomo.github.io/laifutil/)
-- [GitHub](https://github.com/minidomo/laifutil)
-- [npm](https://www.npmjs.com/package/laifutil)
+
+-   [Documentation](https://minidomo.github.io/laifutil/)
+-   [GitHub](https://github.com/minidomo/laifutil)
+-   [npm](https://www.npmjs.com/package/laifutil)
