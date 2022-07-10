@@ -261,28 +261,28 @@ export function isWorkshopMenuEmbed(embed: MessageEmbed): boolean {
 export function isBadgeTransferMenuEmbed(embed: MessageEmbed): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('Card Workshop') ?? false;
-    const validDescription = embed.description?.includes('swap badges') ?? false;
+    const validDescription = embed.description?.includes('Return a badge') ?? false;
     return validTitle && validDescription;
 }
 
 export function isBadgeTransferConfirmationEmbed(embed: MessageEmbed): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('Card Workshop') ?? false;
-    const validDescription = embed.description?.includes('swapping the badges') ?? false;
+    const validDescription = embed.description?.includes('returning the badge') ?? false;
     return validTitle && validDescription;
 }
 
 export function isSkinTransferMenuEmbed(embed: MessageEmbed): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('Card Workshop') ?? false;
-    const validDescription = embed.description?.includes('swap skins') ?? false;
+    const validDescription = embed.description?.includes('Return a influence skin') ?? false;
     return validTitle && validDescription;
 }
 
 export function isSkinTransferConfirmationEmbed(embed: MessageEmbed): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('Card Workshop') ?? false;
-    const validDescription = embed.description?.includes('swapping the skins') ?? false;
+    const validDescription = embed.description?.includes('returning the influence skin') ?? false;
     return validTitle && validDescription;
 }
 

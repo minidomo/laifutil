@@ -1084,24 +1084,29 @@
         },
         "rewardBox": [
             {
-                "title": "JB - Reward Box",
+                "title": "! JB - Reward Box",
                 "type": "rich",
-                "description": "x1 **Badge92・<a:92:850636525875626027> **- (Tier 1 Gacha Reward) | Expires: 1 Days\nx1 **Badge243・<a:243:950875885374939247> **- (Tier 1 Gacha Reward) | Expires: 13 Days\nx1 **Badge227・<a:227:916875639540314183> **- (Tier 1 Gacha Reward) | Expires: 13 Days\nx1 **Badge235・<a:235:931354895502688267> **- (Tier 1 Gacha Reward) | Expires: 44 Days",
+                "description": "x1 **Badge257**・<a:257:987235528669790248> `EVENT:` <a:257e:987556496290246736>*Happy birthday! Laifu! #02*\nx1 **Badge248**・<a:248:958262079234637825> `EVENT:` *Trickster. #02*\nx1 **Badge235**・<a:235:931354895502688267> `TIER 1:` *Is this a Pigeon?*\nx1 **Badge219**・<a:219:915377728952336394> `TIER 3:` <:219e:915377379046727762> *FBI. OPEN UP!*\nx1 **Badge218**・<a:218:915038054383767613> `EVENT:` *Snow. #02*\nx1 **Badge206**・<a:206:886733025969328128> `EVENT:` *Hell. #02*\nx1 **Badge201**・<a:201:885639594903756830> `TIER 1:` *Magical Contract.*\nx1 **Badge198**・<a:198:882445848045309993> `TIER 1:` *Flowers in your hair.*\nx1 **Badge189**・<a:189:879356527885037578> `TIER 3:` <:189e:879361693677920308> *Shining Comet.*\nx1 **Badge178**・<a:178:876015079714349067> `TIER 3:` :coin: *Level 5 Coin-Launcher.*\nx1 **Badge168**・<a:168:872244405178875914> `TIER 1:` *Mythical power.*\nx1 **Badge137**・<a:137:860447794179473428> `TIER 2:` *Choc-flavored Neko.*\nx1 **Badge134**・<a:134:859330181902106644> `TIER 1:` *Prosperous peace.*\nx3 **Badge104**・<a:104:851588390587334706> `TIER 1:` *Harbinger of apocalypse.*\nx1 **Badge96**・<a:96:850701334793158686> `TIER 2:` *By your side.*\nx1 **Badge92**・<a:92:850636525875626027> `TIER 1:` *Magical microphone.*\nx1 **Badge90**・<a:90:850634854197493790> `TIER 1:` *Always looking at you.*\nx1 **Badge88**・<a:88:850551803137622056> `TIER 1:` *Spot the neko.*\nx1 **Badge76**・<a:76:848430425638567976> `TIER 1:` *Cold thoughts.*\nx1 **Badge58**・<a:58:846955907137011722> `TIER 1:` *Boys club.*",
                 "url": null,
                 "timestamp": null,
                 "color": 62975,
                 "fields": [
                     {
-                        "value": "Rewards have an expiry date of 45 days.\nUse `CLAIM` command to claim rewards.",
                         "name": "• Guide",
+                        "value": "Use `/CLAIM` command to claim rewards.\n**Bold Text** is the rewards name used for claiming.",
                         "inline": false
                     }
                 ],
-                "thumbnail": null,
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/793598007433232434/988362233279053834/3_2.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/988362233279053834/3_2.gif",
+                    "height": 235,
+                    "width": 163
+                },
                 "image": null,
                 "author": null,
                 "footer": {
-                    "text": "Page 1/1 • 4 unique rewards available."
+                    "text": "Page 1/2 • 27 unique & 29 total rewards available."
                 }
             }
         ],
@@ -1159,12 +1164,12 @@
         "blu": {
             "info": [
                 {
-                    "title": "JB - Badge Index",
+                    "title": "! JB - Badge Index",
                     "type": "rich",
-                    "description": "**#194 *Yeah!***\n`SERIES:` Is It Wrong to Try to Pick Up Girls in a Dungeon?\n`GUIDE:` Gacha\n`TYPE:` Repeatable\n`CLAIM COUNT:` 237\n`RARITY:` <a:b1:838570555761491969>\n\n**Badge Completion**\nYou don't own this badge on any characters.",
+                    "description": "**#194 *Yeah!***\n`SERIES:` Is It Wrong to Try to Pick Up Girls in a Dungeon?\n`GUIDE:` Gacha\n`TYPE:` Repeatable\n`DROP COUNT:` 263\n`RARITY:` <a:b1:838570555761491969>\n\n**Badge Completion**\nInventory has `0` copies stored.\nYou don't own this badge on any characters.",
                     "url": null,
                     "timestamp": null,
-                    "color": 62975,
+                    "color": null,
                     "fields": [],
                     "thumbnail": {
                         "url": "https://cdn.discordapp.com/attachments/819798600837627904/881463694972817408/194.gif",
@@ -1177,33 +1182,53 @@
                     "footer": {
                         "text": "Page 1/1 • 0 badges collected."
                     }
+                },
+                {
+                    "title": "! JB - Badge Index",
+                    "type": "rich",
+                    "description": "**#257 <a:257e:987556496290246736>*Happy birthday! Laifu! #02***\n`SERIES:` The Daily Life of The Immortal King\n`GUIDE:` Birthday Bash 2022 Event\n`TYPE:` One-Time Reward\n`DROP COUNT:` 649\n`RARITY:` <a:b2:838578342504038441><a:b2:838578342504038441><a:b2:838578342504038441>\n\n**Badge Completion**\nInventory has `1` copies stored.\nYou don't own this badge on any characters.",
+                    "url": null,
+                    "timestamp": null,
+                    "color": null,
+                    "fields": [],
+                    "thumbnail": {
+                        "url": "https://cdn.discordapp.com/attachments/819798600837627904/987235191707807794/257.gif",
+                        "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/987235191707807794/257.gif",
+                        "height": 328,
+                        "width": 327
+                    },
+                    "image": null,
+                    "author": null,
+                    "footer": {
+                        "text": "Page 1/1 • 1 badges collected."
+                    }
                 }
             ],
             "menu": [
                 {
-                    "title": "JB - Badge Index",
+                    "title": "! JB - Badge Index",
                     "type": "rich",
-                    "description": "<a:11:844166305090633730> **#11** - *The God of Money doesn't sound so bad.*\n<a:012:841855117551468624> **#12** - *My Best Friend..*\n<a:13:844167086933540875> **#13** - 😈 *Pain Unleashed.*\n<a:14:844160932510957598> **#14** - *Its my Spa day.*\n<a:15:844165571762585620> **#15** - *Why has RNG forsaken me?*\n<a:16:844164929304002610> **#16** - *Fish Tank.*\n<a:017:842313911901487114> **#17** - *Nature Observer.*\n<a:018:842315105080573984> **#18** - *Made it on Television!*\n<a:19:844164179610435646> **#19** - *Peering into the Night Sky.*\n<a:020:842317163611160577> **#20** - *Following the steps of my Father.*",
+                    "description": "<a:1_:989800700437475341> **#1** - *Titan. #01*\n<a:002:841450063997304854> **#2** - *Hell. #01*\n<a:003:841450732028559430> **#3** - *Snow. #01*\n<a:004:823430709314060309> **#4** - *Trickster. #01*\n<a:005:841451180269764628> **#5** - ⚔ *Against the Odds.*\n<a:06:844148950838673419> **#6** - 📂 *Master of Progress. #01*\n<a:07:844162355666878464> **#7** - 🖌 *Master of Progress. #02*\n<a:08:844161665586036737> **#8** - *A Waifu for Laifu.* <a:hmb:802429453665304576>\n<a:09:844163047479705640> **#9** - 💸 *Balance Unlimited.*\n<a:10:844168031872483348> **#10** - 🔺 *Conquered the Arena.*",
                     "url": null,
                     "timestamp": null,
                     "color": 62975,
                     "fields": [
                         {
-                            "value": "[View all badges on the Laifu website!](https://www.laifubot.xyz/badges)\n__Badge Tiers__\n<a:b1:838570555761491969>\n<a:b1:838570555761491969><a:b4:838734760591228978>\n<a:b1:838570555761491969><a:b4:838734760591228978><a:b3:838578341807390750>\n<a:b2:838578342504038441><a:b2:838578342504038441><a:b2:838578342504038441>",
+                            "value": "> View a specific badge using `BLU ID`\n> Badges have 3 rarities, Tier 1, 2 and 3\n> Tier 2 & 3 badges are extremely more difficult to obtain than Tier 1\n> Badge completion use `BCOMPLETION`",
                             "name": "Guide",
                             "inline": false
                         }
                     ],
                     "thumbnail": {
-                        "url": "https://cdn.discordapp.com/attachments/819798600837627904/835126296303370280/bd.png",
-                        "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/835126296303370280/bd.png",
-                        "height": 113,
-                        "width": 108
+                        "url": "https://cdn.discordapp.com/attachments/793598007433232434/988362233279053834/3_2.gif",
+                        "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/988362233279053834/3_2.gif",
+                        "height": 235,
+                        "width": 163
                     },
                     "image": null,
                     "author": null,
                     "footer": {
-                        "text": "Page 2/26 • 255 badges found."
+                        "text": "Page 1/26 • 258 badges found."
                     }
                 }
             ]
@@ -1603,7 +1628,7 @@
                 {
                     "title": "<a:witchp1:806416022499885096> Card Workshop",
                     "type": "rich",
-                    "description": "<a:129e:857048890842021889> __Choose an option__\n<a:71:848394571624480798> :one: ♢ Badge Transfers\n<a:ig6:917639690566397992> :two: ♢ Skin Transfers\n\n__Currencies__\n💵 **$**185,771,000 | 💮 1425",
+                    "description": "<a:129e:857048890842021889> __Choose an option__\n<a:71:848394571624480798> :one: ♢ Badge Transfers\n<a:ig6:917639690566397992> :two: ♢ Skin Transfers\n<:f10:992311910504615947> :three: ♢ Frame Transfers\n\n__Currencies__\n💵 **$**185,908,500 | 💮 1335",
                     "url": null,
                     "timestamp": null,
                     "color": 7798959,
@@ -1626,7 +1651,7 @@
                     {
                         "title": "<a:witchp1:806416022499885096> Card Workshop",
                         "type": "rich",
-                        "description": "<a:129e:857048890842021889> ♢ Badge Transfers\n\nYou can either swap badges between two cards, or transfer a badge to another card.\n\n**Insert** two **UniqueID** of the characters you wish to Badge Transfer.\n\n`DEMO:` 192 36\n\n__Currencies__\n💵 **$**185,771,000",
+                        "description": "<a:129e:857048890842021889> ♢ Badge Transfers\n\nReturn a badge to your `REWARDS` inventory.\n\n**Insert** the **UniqueID** of the character you wish to Badge Transfer.\n\n__Currencies__\n💵 **$**185,908,500",
                         "url": null,
                         "timestamp": null,
                         "color": 7798959,
@@ -1648,7 +1673,7 @@
                     {
                         "title": "<a:witchp1:806416022499885096> Card Workshop",
                         "type": "rich",
-                        "description": "<a:129e:857048890842021889> ♢ Badge Transfers\n\nYou will be swapping the badges between the following characters. If a character has no badge, it will transfer instead.\n\n**<a:r1:837480734050222100> | »`❦#82` »`☆☆☆☆` #1 Ririka Momobami (桃喰 リリカ)**\n🔽 🔼\n**<a:r1:837480734050222100> | »`❦#10` »`☆☆☆☆` #8 Levi (リヴァイ)**\n\n`COST:`\n:one: 💵 $400,000\n\n__Currencies__\n💵 **$**185,841,000",
+                        "description": "<a:129e:857048890842021889> ♢ Badge Transfers\n\nYou will be returning the badge to your `REWARDS` inventory.\n\n**<a:rg7:856716187559526410> | »`❦#85` »`𝐈𝐕`»`★★★★` #4 Satoru Gojou (五条 悟)**\n🔽\n**REWARDS INVENTORY**\n\n`COST:`\n:one: 💵 $400,000\n\n__Currencies__\n💵 **$**185,908,500",
                         "url": null,
                         "timestamp": null,
                         "color": 7798959,
@@ -1672,7 +1697,7 @@
                     {
                         "title": "<a:witchp1:806416022499885096> Card Workshop",
                         "type": "rich",
-                        "description": "<a:ig6:917639690566397992> ♢ Skin Transfers\n\nYou can either swap skins between two cards, or transfer a skin to another card.\n\n**Insert** two **UniqueID** of the characters you wish to Skin Transfer.\n\n`DEMO:` 192 36\n\n__Currencies__\n💮 1425",
+                        "description": "<a:ig6:917639690566397992> ♢ Skin Transfers\n\nReturn a influence skin to your `REWARDS` inventory.\n\n**Insert** the **UniqueID** of the character you wish to Influence Skin Transfer.\n\n__Currencies__\n💮 1335",
                         "url": null,
                         "timestamp": null,
                         "color": 7798959,
@@ -1694,7 +1719,7 @@
                     {
                         "title": "<a:witchp1:806416022499885096> Card Workshop",
                         "type": "rich",
-                        "description": "<a:ig6:917639690566397992> ♢ Skin Transfers\n\nYou will be swapping the skins between the following characters. If a character has no skin, it will transfer instead.\n\n**<a:r1:837480734050222100> | »`☆☆☆☆` #9 Violet Evergarden (ヴァイオレット・エヴァーガーデン) <a:i12:974445370987929650>**\n🔽 🔼\n**<a:r1:837480734050222100> | »`☆☆☆☆` #6 Power (パワー)**\n\n`COST:`\n:one: 💮 0025\n\n__Currencies__\n💮 1130",
+                        "description": "<a:ig6:917639690566397992> ♢ Skin Transfers\n\nYou will be returning the influence skin to your `REWARDS` inventory.\n\n**<a:r1:837480734050222100> | »`☆☆☆☆` #9 Violet Evergarden (ヴァイオレット・エヴァーガーデン) <a:i12:974445370987929650>**\n🔽\n**REWARDS INVENTORY**\n\n`COST:`\n:one: 💮 0025\n\n__Currencies__\n💮 1335",
                         "url": null,
                         "timestamp": null,
                         "color": 7798959,
