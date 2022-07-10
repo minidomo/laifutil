@@ -110,8 +110,9 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.existingAmount, 1187);
         });
 
-        it('should correctly parse a badged, star enhanced, glitched, favorited view '
-            + 'Discord embed from LaifuBot', () => {
+        it(
+            'should correctly parse a badged, star enhanced, glitched, favorited view ' + 'Discord embed from LaifuBot',
+            () => {
                 const embed = new MessageEmbed(viewEmbedsArr[3]);
                 const parsedEmbed = new ViewEmbed(embed);
 
@@ -143,10 +144,13 @@ describe('ViewEmbed', () => {
                 assert.strictEqual(parsedEmbed.image.uploader, 'JB');
                 assert.strictEqual(parsedEmbed.image.credit, 'Anime');
                 assert.strictEqual(parsedEmbed.existingAmount, 2);
-            });
+            },
+        );
 
-        it('should correctly parse a star enhanced, glitched, favorited, special view '
-            + 'Discord embed from LaifuBot', () => {
+        it(
+            'should correctly parse a star enhanced, glitched, favorited, special view ' +
+                'Discord embed from LaifuBot',
+            () => {
                 const embed = new MessageEmbed(viewEmbedsArr[4]);
                 const parsedEmbed = new ViewEmbed(embed);
 
@@ -168,8 +172,10 @@ describe('ViewEmbed', () => {
                 assert.isTrue(parsedEmbed.glitched);
 
                 assert.strictEqual(parsedEmbed.series.title.english, 'My Teen Romantic Comedy SNAFU');
-                assert.strictEqual(parsedEmbed.series.title.alternate,
-                    'Yahari Ore no Seishun Love Comedy wa Machigatteiru.');
+                assert.strictEqual(
+                    parsedEmbed.series.title.alternate,
+                    'Yahari Ore no Seishun Love Comedy wa Machigatteiru.',
+                );
                 assert.strictEqual(parsedEmbed.series.id, 56);
                 assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
@@ -179,6 +185,7 @@ describe('ViewEmbed', () => {
                 assert.strictEqual(parsedEmbed.image.uploader, 'matsu△');
                 assert.strictEqual(parsedEmbed.image.credit, 'Oregairu Official Art');
                 assert.isUndefined(parsedEmbed.existingAmount);
-            });
+            },
+        );
     });
 });

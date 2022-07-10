@@ -10,13 +10,12 @@ const identifyEmbed = (() => {
     const functions: IsEmbedFunction[] = [];
     const IS_EMBED_REGEX = /^is.+Embed$/;
 
-    Object.keys(laifutil)
-        .forEach(key => {
-            const match = key.match(IS_EMBED_REGEX);
-            if (match) {
-                functions.push(laifutil[key] as IsEmbedFunction);
-            }
-        });
+    Object.keys(laifutil).forEach(key => {
+        const match = key.match(IS_EMBED_REGEX);
+        if (match) {
+            functions.push(laifutil[key] as IsEmbedFunction);
+        }
+    });
 
     function run(embed: MessageEmbed): string[] {
         return functions.filter(f => f(embed)).map(f => f.name);
@@ -26,7 +25,8 @@ const identifyEmbed = (() => {
 })();
 
 function test(exampleEmbeds: object[], f: (arg: MessageEmbed) => boolean) {
-    exampleEmbeds.map(e => new MessageEmbed(MEO(e)))
+    exampleEmbeds
+        .map(e => new MessageEmbed(MEO(e)))
         .forEach((embed, i) => {
             const identities = identifyEmbed(embed);
 
@@ -34,7 +34,6 @@ function test(exampleEmbeds: object[], f: (arg: MessageEmbed) => boolean) {
             assert.isTrue(f(embed), `index: ${i}`);
         });
 }
-
 
 describe('identifier.ts', () => {
     describe('#isArenaInitialEmbed', () => {
@@ -177,8 +176,7 @@ describe('identifier.ts', () => {
 
     describe('#isStarEnhancingConfirmationEmbed', () => {
         it('should identify an embed as a upgrade star enhancing confirmation Discord embed from LaifuBot', () => {
-            test(embeds.identifier.upgrade.starEnhancing.confirmation,
-                laifutil.isStarEnhancingConfirmationEmbed);
+            test(embeds.identifier.upgrade.starEnhancing.confirmation, laifutil.isStarEnhancingConfirmationEmbed);
         });
     });
 
@@ -190,8 +188,7 @@ describe('identifier.ts', () => {
 
     describe('#isCardGlitchingConfirmationEmbed', () => {
         it('should identify an embed as a upgrade card glitching confirmation Discord embed from LaifuBot', () => {
-            test(embeds.identifier.upgrade.cardGlitching.confirmation,
-                laifutil.isCardGlitchingConfirmationEmbed);
+            test(embeds.identifier.upgrade.cardGlitching.confirmation, laifutil.isCardGlitchingConfirmationEmbed);
         });
     });
 
@@ -203,8 +200,7 @@ describe('identifier.ts', () => {
 
     describe('#isInfluenceSkinsConfirmationEmbed', () => {
         it('should identify an embed as a upgrade influence skins confirmation Discord embed from LaifuBot', () => {
-            test(embeds.identifier.upgrade.influenceSkins.confirmation,
-                laifutil.isInfluenceSkinsConfirmationEmbed);
+            test(embeds.identifier.upgrade.influenceSkins.confirmation, laifutil.isInfluenceSkinsConfirmationEmbed);
         });
     });
 

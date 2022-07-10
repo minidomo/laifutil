@@ -133,7 +133,7 @@ describe('BurnCharacterEmbed', () => {
             assert.isUndefined(parsedEmbed.badgeId);
             assert.isFalse(parsedEmbed.glitched);
 
-            assert.strictEqual(parsedEmbed.series.title.english, 'Cafe Stella and the Reapers\' Butterflies');
+            assert.strictEqual(parsedEmbed.series.title.english, "Cafe Stella and the Reapers' Butterflies");
             assert.strictEqual(parsedEmbed.series.title.alternate, 'Cafe Stella to Shinigami no Chou');
             assert.strictEqual(parsedEmbed.series.id, 1723);
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');

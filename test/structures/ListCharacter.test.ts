@@ -20,8 +20,9 @@ describe('ListCharacter', () => {
         });
 
         it('should correctly parse a character with all fields from a list embed', () => {
-            const text = '264 | 🏮 [ζ𝓡 𝐈𝐕] #4 Satoru Gojou `#4`・**1934**<a:ui:856752760599085076>'
-                + '・<a:85:849961150686953482>';
+            const text =
+                '264 | 🏮 [ζ𝓡 𝐈𝐕] #4 Satoru Gojou `#4`・**1934**<a:ui:856752760599085076>' +
+                '・<a:85:849961150686953482>';
             const character = new ListCharacter(text);
 
             assert.strictEqual(character.uniqueId, 264);
@@ -53,8 +54,9 @@ describe('ListCharacter', () => {
         });
 
         it('should correctly parse a special character from a list embed', () => {
-            const text = '1 | 💖 [Λ 𝐈𝐕] #3 Yukino Yukinoshita `#67`・**1151**<a:spi:856659240228093983>'
-                + '・<a:218:915038054383767613>';
+            const text =
+                '1 | 💖 [Λ 𝐈𝐕] #3 Yukino Yukinoshita `#67`・**1151**<a:spi:856659240228093983>' +
+                '・<a:218:915038054383767613>';
             const character = new ListCharacter(text);
 
             assert.strictEqual(character.uniqueId, 1);

@@ -1,12 +1,5 @@
 import type { EmbedFooterData, MessageEmbed } from 'discord.js';
-import type {
-    Bounds,
-    CharacterEmbed,
-    ImageInfo,
-    RarityStatistics,
-    RarityStatisticsCollection,
-    Series,
-} from '../types';
+import type { Bounds, CharacterEmbed, ImageInfo, RarityStatistics, RarityStatisticsCollection, Series } from '../types';
 
 const GENERAL_INFO_REGEX = /\*\*Global ID:\*\* (\d+)\n\*\*Total Images:\*\* (\d+)/;
 const MAIN_SERIES_REGEX = /\*\*ENG:\*\* (.+)\n\*\*ALT:\*\* (.+)\n\*\*SID:\*\* (\d+) \| `(.+)`/;
