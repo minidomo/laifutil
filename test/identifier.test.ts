@@ -345,4 +345,16 @@ describe('identifier.ts', () => {
             test(embeds.identifier.flu.info, laifutil.isFluInfoEmbed);
         });
     });
+
+    describe('#isFrameTransferMenuEmbed', () => {
+        it('should identify an embed as a workshop frame transfer menu Discord embed from LaifuBot', () => {
+            test(embeds.identifier.workshop.frame.menu, laifutil.isFrameTransferMenuEmbed);
+        });
+    });
+
+    describe('#isFrameTransferConfirmationEmbed', () => {
+        it('should identify an embed as a workshop frame transfer confirmation Discord embed from LaifuBot', () => {
+            test(embeds.identifier.workshop.frame.confirmation, laifutil.isFrameTransferConfirmationEmbed);
+        });
+    });
 });
