@@ -386,6 +386,45 @@
                 "footer": {
                     "text": "2 versions of this card currently exist.\nUploaded by JB\nCredit: Anime"
                 }
+            },
+            {
+                "title": "💖 #3 Yukino Yukinoshita (雪ノ下 雪乃)",
+                "type": "rich",
+                "description": "<a:spb1:856658426796965908><a:spb2:856658426515685376><a:spb3:856658426817019914><a:spb4:856658427043512330><a:spb5:856658428620439552><a:spb6:856658429619470346><a:spb7:856658428138487819><a:spb8:856658428289351700><a:spb9:856658428315172895><a:spb10:856658427455733791><a:spb11:856658428976693258><a:spb12:856658428473507871>⠀",
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [
+                    {
+                        "name": "General Info",
+                        "value": "*Yukinon*\n**UID:** 1 | **GID:** 630 \n**Claimed By:** 🚀 Onwards to 2022!\n**Age:** 2021-12-31 | `190` ᴅᴀʏs",
+                        "inline": false
+                    },
+                    {
+                        "name": "Rarity",
+                        "value": "<a:rg10:856716187442085908> | `🔒・ɢʟɪᴛᴄʜᴇᴅ sᴘᴇᴄɪᴀʟ`»`𝐈𝐕`»`★★★★`\nInfluence `#68`・**1154**<a:spi:856659240228093983>",
+                        "inline": false
+                    },
+                    {
+                        "name": "Main Series",
+                        "value": "**ENG:** My Teen Romantic Comedy SNAFU\n**ALT:** Yahari Ore no Seishun Love Comedy wa Machigatteiru.\n**SID:** 56 | `MAIN`",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/722702340620288042/847246202868989952/image.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/847246202868989952/image.png",
+                    "height": 350,
+                    "width": 225
+                },
+                "author": {
+                    "name": "! JB is Viewing...",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": {
+                    "text": "Uploaded by matsu△\nCredit: Oregairu Official Art"
+                }
             }
         ],
         "gacha": {

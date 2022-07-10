@@ -144,5 +144,41 @@ describe('ViewEmbed', () => {
                 assert.strictEqual(parsedEmbed.image.credit, 'Anime');
                 assert.strictEqual(parsedEmbed.existingAmount, 2);
             });
+
+        it('should correctly parse a star enhanced, glitched, favorited, special view '
+            + 'Discord embed from LaifuBot', () => {
+                const embed = new MessageEmbed(viewEmbedsArr[4]);
+                const parsedEmbed = new ViewEmbed(embed);
+
+                assert.strictEqual(parsedEmbed.emoji, '💖');
+                assert.strictEqual(parsedEmbed.image.currentNumber, 3);
+                assert.strictEqual(parsedEmbed.name, 'Yukino Yukinoshita (雪ノ下 雪乃)');
+
+                assert.strictEqual(parsedEmbed.uniqueId, 1);
+                assert.strictEqual(parsedEmbed.globalId, 630);
+                assert.strictEqual(parsedEmbed.claimedBy, '🚀 Onwards to 2022!');
+                assert.strictEqual(parsedEmbed.age, 190);
+                assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-31');
+
+                assert.strictEqual(parsedEmbed.rarity, RarityConstants.SPECIAL);
+                assert.strictEqual(parsedEmbed.stars, 4);
+                assert.strictEqual(parsedEmbed.influenceRank, 68);
+                assert.strictEqual(parsedEmbed.influence, 1154);
+                assert.isUndefined(parsedEmbed.badgeId);
+                assert.isTrue(parsedEmbed.glitched);
+
+                assert.strictEqual(parsedEmbed.series.title.english, 'My Teen Romantic Comedy SNAFU');
+                assert.strictEqual(parsedEmbed.series.title.alternate,
+                    'Yahari Ore no Seishun Love Comedy wa Machigatteiru.');
+                assert.strictEqual(parsedEmbed.series.id, 56);
+                assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
+
+                assert.strictEqual(parsedEmbed.owner, '! JB');
+                assert.strictEqual(parsedEmbed.userId, '138419598469890048');
+
+                assert.strictEqual(parsedEmbed.image.uploader, 'matsu△');
+                assert.strictEqual(parsedEmbed.image.credit, 'Oregairu Official Art');
+                assert.isUndefined(parsedEmbed.existingAmount);
+            });
     });
 });
