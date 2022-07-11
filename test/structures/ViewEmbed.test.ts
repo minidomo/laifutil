@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 import { assert } from 'chai';
 import { MessageEmbed } from 'discord.js';
 import { ViewEmbed, RarityConstants } from '../../dist';
@@ -110,82 +112,75 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.existingAmount, 1187);
         });
 
-        it(
-            'should correctly parse a badged, star enhanced, glitched, favorited view ' + 'Discord embed from LaifuBot',
-            () => {
-                const embed = new MessageEmbed(viewEmbedsArr[3]);
-                const parsedEmbed = new ViewEmbed(embed);
+        it('should correctly parse a badged, star enhanced, glitched, favorited view Discord embed from LaifuBot', () => {
+            const embed = new MessageEmbed(viewEmbedsArr[3]);
+            const parsedEmbed = new ViewEmbed(embed);
 
-                assert.strictEqual(parsedEmbed.emoji, '🏮');
-                assert.strictEqual(parsedEmbed.image.currentNumber, 4);
-                assert.strictEqual(parsedEmbed.name, 'Satoru Gojou (五条 悟)');
+            assert.strictEqual(parsedEmbed.emoji, '🏮');
+            assert.strictEqual(parsedEmbed.image.currentNumber, 4);
+            assert.strictEqual(parsedEmbed.name, 'Satoru Gojou (五条 悟)');
 
-                assert.strictEqual(parsedEmbed.uniqueId, 264);
-                assert.strictEqual(parsedEmbed.globalId, 4652);
-                assert.strictEqual(parsedEmbed.claimedBy, 'JB');
-                assert.strictEqual(parsedEmbed.age, 321);
-                assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-16');
+            assert.strictEqual(parsedEmbed.uniqueId, 264);
+            assert.strictEqual(parsedEmbed.globalId, 4652);
+            assert.strictEqual(parsedEmbed.claimedBy, 'JB');
+            assert.strictEqual(parsedEmbed.age, 321);
+            assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-16');
 
-                assert.strictEqual(parsedEmbed.rarity, RarityConstants.ULTRA);
-                assert.strictEqual(parsedEmbed.stars, 4);
-                assert.strictEqual(parsedEmbed.influenceRank, 4);
-                assert.strictEqual(parsedEmbed.influence, 1897);
-                assert.strictEqual(parsedEmbed.badgeId, 85);
-                assert.isTrue(parsedEmbed.glitched);
+            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ULTRA);
+            assert.strictEqual(parsedEmbed.stars, 4);
+            assert.strictEqual(parsedEmbed.influenceRank, 4);
+            assert.strictEqual(parsedEmbed.influence, 1897);
+            assert.strictEqual(parsedEmbed.badgeId, 85);
+            assert.isTrue(parsedEmbed.glitched);
 
-                assert.strictEqual(parsedEmbed.series.title.english, 'Jujutsu Kaisen');
-                assert.strictEqual(parsedEmbed.series.title.alternate, 'Jujutsu Kaisen');
-                assert.strictEqual(parsedEmbed.series.id, 351);
-                assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
+            assert.strictEqual(parsedEmbed.series.title.english, 'Jujutsu Kaisen');
+            assert.strictEqual(parsedEmbed.series.title.alternate, 'Jujutsu Kaisen');
+            assert.strictEqual(parsedEmbed.series.id, 351);
+            assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
-                assert.strictEqual(parsedEmbed.owner, 'JB');
-                assert.strictEqual(parsedEmbed.userId, '138419598469890048');
+            assert.strictEqual(parsedEmbed.owner, 'JB');
+            assert.strictEqual(parsedEmbed.userId, '138419598469890048');
 
-                assert.strictEqual(parsedEmbed.image.uploader, 'JB');
-                assert.strictEqual(parsedEmbed.image.credit, 'Anime');
-                assert.strictEqual(parsedEmbed.existingAmount, 2);
-            },
-        );
+            assert.strictEqual(parsedEmbed.image.uploader, 'JB');
+            assert.strictEqual(parsedEmbed.image.credit, 'Anime');
+            assert.strictEqual(parsedEmbed.existingAmount, 2);
+        });
 
-        it(
-            'should correctly parse a star enhanced, glitched, favorited, special view ' +
-                'Discord embed from LaifuBot',
-            () => {
-                const embed = new MessageEmbed(viewEmbedsArr[4]);
-                const parsedEmbed = new ViewEmbed(embed);
+        it('should correctly parse a star enhanced, glitched, favorited, special view Discord embed from LaifuBot', () => {
+            const embed = new MessageEmbed(viewEmbedsArr[4]);
+            const parsedEmbed = new ViewEmbed(embed);
 
-                assert.strictEqual(parsedEmbed.emoji, '💖');
-                assert.strictEqual(parsedEmbed.image.currentNumber, 3);
-                assert.strictEqual(parsedEmbed.name, 'Yukino Yukinoshita (雪ノ下 雪乃)');
+            assert.strictEqual(parsedEmbed.emoji, '💖');
+            assert.strictEqual(parsedEmbed.image.currentNumber, 3);
+            assert.strictEqual(parsedEmbed.name, 'Yukino Yukinoshita (雪ノ下 雪乃)');
 
-                assert.strictEqual(parsedEmbed.uniqueId, 1);
-                assert.strictEqual(parsedEmbed.globalId, 630);
-                assert.strictEqual(parsedEmbed.claimedBy, '🚀 Onwards to 2022!');
-                assert.strictEqual(parsedEmbed.age, 190);
-                assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-31');
+            assert.strictEqual(parsedEmbed.uniqueId, 1);
+            assert.strictEqual(parsedEmbed.globalId, 630);
+            assert.strictEqual(parsedEmbed.claimedBy, '🚀 Onwards to 2022!');
+            assert.strictEqual(parsedEmbed.age, 190);
+            assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-31');
 
-                assert.strictEqual(parsedEmbed.rarity, RarityConstants.SPECIAL);
-                assert.strictEqual(parsedEmbed.stars, 4);
-                assert.strictEqual(parsedEmbed.influenceRank, 68);
-                assert.strictEqual(parsedEmbed.influence, 1154);
-                assert.isUndefined(parsedEmbed.badgeId);
-                assert.isTrue(parsedEmbed.glitched);
+            assert.strictEqual(parsedEmbed.rarity, RarityConstants.SPECIAL);
+            assert.strictEqual(parsedEmbed.stars, 4);
+            assert.strictEqual(parsedEmbed.influenceRank, 68);
+            assert.strictEqual(parsedEmbed.influence, 1154);
+            assert.isUndefined(parsedEmbed.badgeId);
+            assert.isTrue(parsedEmbed.glitched);
 
-                assert.strictEqual(parsedEmbed.series.title.english, 'My Teen Romantic Comedy SNAFU');
-                assert.strictEqual(
-                    parsedEmbed.series.title.alternate,
-                    'Yahari Ore no Seishun Love Comedy wa Machigatteiru.',
-                );
-                assert.strictEqual(parsedEmbed.series.id, 56);
-                assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
+            assert.strictEqual(parsedEmbed.series.title.english, 'My Teen Romantic Comedy SNAFU');
+            assert.strictEqual(
+                parsedEmbed.series.title.alternate,
+                'Yahari Ore no Seishun Love Comedy wa Machigatteiru.',
+            );
+            assert.strictEqual(parsedEmbed.series.id, 56);
+            assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
-                assert.strictEqual(parsedEmbed.owner, '! JB');
-                assert.strictEqual(parsedEmbed.userId, '138419598469890048');
+            assert.strictEqual(parsedEmbed.owner, '! JB');
+            assert.strictEqual(parsedEmbed.userId, '138419598469890048');
 
-                assert.strictEqual(parsedEmbed.image.uploader, 'matsu△');
-                assert.strictEqual(parsedEmbed.image.credit, 'Oregairu Official Art');
-                assert.isUndefined(parsedEmbed.existingAmount);
-            },
-        );
+            assert.strictEqual(parsedEmbed.image.uploader, 'matsu△');
+            assert.strictEqual(parsedEmbed.image.credit, 'Oregairu Official Art');
+            assert.isUndefined(parsedEmbed.existingAmount);
+        });
     });
 });
