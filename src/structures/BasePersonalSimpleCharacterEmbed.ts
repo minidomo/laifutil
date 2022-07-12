@@ -13,57 +13,32 @@ const USER_ID_REGEX = /^https:\/\/cdn\.discordapp\.com\/avatars\/(\d+)/;
 const starCount: Map<string, number> = new Map();
 starCount.set('☆☆☆☆', 0).set('★☆☆☆', 1).set('★★☆☆', 2).set('★★★☆', 3).set('★★★★', 4);
 
-/**
- * A basic implementation for character embeds from gacha, view, and burn commands
- */
+/** A basic implementation for character embeds from gacha, view, and burn commands */
 export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed {
-    /**
-     * The name of the character
-     */
+    /** The name of the character */
     name: string;
-    /**
-     * The global ID of the character
-     */
+    /** The global ID of the character */
     globalId: number;
-    /**
-     * The influence of the character
-     */
+    /** The influence of the character */
     influence: number;
-    /**
-     * The series of the character
-     */
+    /** The series of the character */
     series: Series;
-    /**
-     * Information of the character's image
-     */
+    /** Information of the character's image */
     image: ImageInfo;
-    /**
-     * The unique ID of the character
-     */
+    /** The unique ID of the character */
     uniqueId: number;
-    /**
-     * The rarity of the character
-     */
+    /** The rarity of the character */
     rarity: Rarity;
-    /**
-     * The number of stars the character has
-     */
+    /** The number of stars the character has */
     stars: number;
-    /**
-     * The influence rank of this character
-     */
+    /** The influence rank of this character */
     influenceRank: number;
-    /**
-     * The owner of this character
-     */
+    /** The owner of this character */
     owner: string;
-    /**
-     * The Discord user ID of the user that prompted this embed
-     */
+    /** The Discord user ID of the user that prompted this embed */
     userId: string;
 
     /**
-     *
      * @param embed The embed
      * @param ownerRegex The regular expression to obtain the owner of the character
      */

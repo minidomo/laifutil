@@ -9,17 +9,11 @@ function removeCommas(str: string) {
     return str.replaceAll(',', '');
 }
 
-/**
- * Represents a character embed from the view command
- */
+/** Represents a character embed from the view command */
 export class ViewEmbed extends BasePersonalFullCharacterEmbed {
-    /**
-     * The emoji this character has from the favorite command
-     */
+    /** The emoji this character has from the favorite command */
     emoji?: string;
-    /**
-     * The number of existing characters with the current rarity
-     */
+    /** The number of existing characters with the current rarity */
     existingAmount?: number;
 
     constructor(embed: MessageEmbed) {

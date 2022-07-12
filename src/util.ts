@@ -2,9 +2,7 @@ import { Message, MessageEmbed, PartialMessage, User } from 'discord.js';
 import emojiRegex from 'emoji-regex';
 import type { Bounds } from './types';
 
-/**
- * LaifuBot's user ID.
- */
+/** LaifuBot's user ID. */
 export const LAIFU_USER_ID = '688202466315206661';
 
 function getLastBounds(str: string, leftChar: string[], rightChar: string[]): Bounds | null {
@@ -74,8 +72,8 @@ export function cleanCharacterName(name: string): string {
 }
 
 /**
- * Checks if the given object is LaifuBot or from LaifuBot. The user ID associated with the object will be compared
- * with LaifuBot's known user ID.
+ * Checks if the given object is LaifuBot or from LaifuBot. The user ID associated with the object will be compared with
+ * LaifuBot's known user ID.
  *
  * @param data The object to be checked
  * @returns True if and only if the data given is LaifuBot or from LaifuBot, false otherwise

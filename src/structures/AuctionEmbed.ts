@@ -12,53 +12,31 @@ const TIME_REGEX = /Ends In:\*\* (.+) Hours$/;
 const starCount: Map<string, number> = new Map();
 starCount.set('☆☆☆☆', 0).set('★☆☆☆', 1).set('★★☆☆', 2).set('★★★☆', 3).set('★★★★', 4);
 
-/**
- * Represents an auction embed from LaifuBot
- */
+/** Represents an auction embed from LaifuBot */
 export class AuctionEmbed implements CharacterEmbed {
-    /**
-     * The name of the character
-     */
+    /** The name of the character */
     name: string;
-    /**
-     * The global ID of the character
-     */
+    /** The global ID of the character */
     globalId: number;
-    /**
-     * The influence of the character
-     */
+    /** The influence of the character */
     influence: number;
-    /**
-     * The series of the character
-     */
+    /** The series of the character */
     series: Series;
-    /**
-     * The image number of this character
-     */
+    /** The image number of this character */
     imageNumber: number;
-    /**
-     * The rarity of the character
-     */
+    /** The rarity of the character */
     rarity: Rarity;
-    /**
-     * The number of stars the character has
-     */
+    /** The number of stars the character has */
     stars: number;
-    /**
-     * The influence rank of this character
-     */
+    /** The influence rank of this character */
     influenceRank: number;
-    /**
-     * The highest bid
-     */
+    /** The highest bid */
     highestBid?: Bid;
-    /**
-     * The most recent bids (at most five bids)
-     */
+    /** The most recent bids (at most five bids) */
     auctionFeed: Bid[];
     /**
-     * The amount of hours left for the auction. Is 0 if and only if auction ends in '< 1 Hours', otherwise it
-     * is set to the number hours stated.
+     * The amount of hours left for the auction. Is 0 if and only if auction ends in '< 1 Hours', otherwise it is set to
+     * the number hours stated.
      */
     hoursLeft: number;
 

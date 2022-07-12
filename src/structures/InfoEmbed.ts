@@ -7,41 +7,23 @@ const INFLUENCE_REGEX = /\*\*(\d+)\*\*.+\n.+`#(\d+)`・`#(\d+)`/;
 const COLLECTIONS_REGEX = /(\d+)・(\d+)/g;
 const FOOTER_REGEX = /Image #(\d) - Uploaded by (.+)\nCredit: (.+)/;
 
-/**
- * Represents an info embed from LaifuBot
- */
+/** Represents an info embed from LaifuBot */
 export class InfoEmbed implements CharacterEmbed {
-    /**
-     * The name of the character
-     */
+    /** The name of the character */
     name: string;
-    /**
-     * The global ID of the character
-     */
+    /** The global ID of the character */
     globalId: number;
-    /**
-     * The influence of the character
-     */
+    /** The influence of the character */
     influence: number;
-    /**
-     * The series of the character
-     */
+    /** The series of the character */
     series: Series;
-    /**
-     * Information of the character's image
-     */
+    /** Information of the character's image */
     image: ImageInfo;
-    /**
-     * The total number of images this character has
-     */
+    /** The total number of images this character has */
     totalImages: number;
-    /**
-     * The influence range of this character
-     */
+    /** The influence range of this character */
     influenceRankRange: Bounds;
-    /**
-     * The rarity information of this character
-     */
+    /** The rarity information of this character */
     rarities: RarityStatisticsCollection;
 
     constructor(embed: MessageEmbed) {

@@ -1,20 +1,12 @@
 const LINE_REGEX = /(\d+) \| (.+)・\*\*(\d+)/;
 
-/**
- * Represents a character found in a wishlist embed
- */
+/** Represents a character found in a wishlist embed */
 export class WishlistCharacter {
-    /**
-     * The name of the character
-     */
+    /** The name of the character */
     name: string;
-    /**
-     * The global ID of the character
-     */
+    /** The global ID of the character */
     globalId: number;
-    /**
-     * The influence of the character
-     */
+    /** The influence of the character */
     influence: number;
 
     constructor(text: string) {
