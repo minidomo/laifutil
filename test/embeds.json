@@ -2032,7 +2032,29 @@
                     }
                 }
             ]
-        }
+        },
+        "bcompletion": [
+            {
+                "title": "! JB - Searching",
+                "type": "rich",
+                "description": "<a:101:851300303995535400> **#101** - *Isekai delivery service.*\n<a:102:851301157854773273> **#102** - *Hidden identities.*\n<a:103:851301875622215690> **#103** - *Midnight cat.*\n<a:105:851589069955399731> **#105** - *Sail ahead!*\n<a:106:851589671136788480> **#106** - 😺 *Catjam!*\n<a:107:851591044658757674> **#107** - *Under my control.*\n<a:108:852348115276791818> **#108** - *Star★Player.*\n<a:109:852349303829823508> **#109** - *Better luck next time!*\n<a:110:852350527291129886> **#110** - ⏱ *Devouring time.*\n<a:111:852351784730099713> **#111** - *How unpleasant!*\n<a:112:852728914941444106> **#112** - *What did she see..?*\n<a:113:852729812950450236> **#113** - *Lantern Memories.*\n<a:115:853127375024685096> **#115** - *The one who betrayed Konoha.*\n<a:116:853128329854451752> **#116** - 🔋 *Plus ultra 100%*\n<a:117:853782035466158080> **#117** - *On beat~*\n<a:118:853784503008493568> **#118** - <:118e:853783162379436072> *It doesn't even hurt anymore at this point.*\n<a:120:854148170329096211> **#120** - *Oath of Sakura.*\n<a:121:854265571881385984> **#121** - <a:121e:854265145744031774> *Happy birthday! Laifu!*\n<a:122:854501230981283860> **#122** - <a:122e:854500883961085992> *Shubajam!*\n<a:123:854502414153154561> **#123** - *Blood demon arts.*",
+                "url": null,
+                "timestamp": null,
+                "color": 62975,
+                "fields": [],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/793598007433232434/988362233279053834/3_2.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/793598007433232434/988362233279053834/3_2.gif",
+                    "height": 235,
+                    "width": 163
+                },
+                "image": null,
+                "author": null,
+                "footer": {
+                    "text": "Page 5/11 • Completion 40 / 258 (16%)"
+                }
+            }
+        ]
     },
     "util": {
         "embed1": {

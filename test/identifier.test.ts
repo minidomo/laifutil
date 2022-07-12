@@ -353,4 +353,10 @@ describe('identifier.ts', () => {
             test(embeds.identifier.workshop.frame.confirmation, laifutil.isFrameTransferConfirmationEmbed);
         });
     });
+
+    describe('#isBcompletionEmbed', () => {
+        it('should identify an embed as a bcompletion Discord embed from LaifuBot', () => {
+            test(embeds.identifier.bcompletion, laifutil.isBcompletionEmbed);
+        });
+    });
 });

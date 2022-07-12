@@ -69,7 +69,9 @@ export function isBurnRewardEmbed(embed: MessageEmbed): boolean {
 
 export function isCluSearchEmbed(embed: MessageEmbed): boolean {
     if (!embed) return false;
-    return embed.title?.includes('- Searching') ?? false;
+    const validTitle = embed.title?.includes('- Searching') ?? false;
+    const validFooter = embed.footer?.text.includes(' Results Found') ?? false;
+    return validTitle && validFooter;
 }
 
 export function isCluErrorEmbed(embed: MessageEmbed): boolean {
@@ -385,4 +387,11 @@ export function isFrameTransferConfirmationEmbed(embed: MessageEmbed): boolean {
     const validTitle = embed.title?.includes('Card Workshop') ?? false;
     const validDescription = embed.description?.includes('returning the frame') ?? false;
     return validTitle && validDescription;
+}
+
+export function isBcompletionEmbed(embed: MessageEmbed): boolean {
+    if (!embed) return false;
+    const validTitle = embed.title?.includes(' - Searching') ?? false;
+    const validFooter = embed.footer?.text.includes(' • Completion') ?? false;
+    return validTitle && validFooter;
 }
