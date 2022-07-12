@@ -11,7 +11,9 @@ const FOOTER_REGEX = /Uploaded by (.+)\nCredit: (.+)/;
 const USER_ID_REGEX = /^https:\/\/cdn\.discordapp\.com\/avatars\/(\d+)/;
 
 const starCount: Map<string, number> = new Map();
-starCount.set('☆☆☆☆', 0).set('★☆☆☆', 1).set('★★☆☆', 2).set('★★★☆', 3).set('★★★★', 4);
+starCount.set('☆☆☆☆', 0).set('★☆☆☆', 1).set('★★☆☆', 2)
+.set('★★★☆', 3)
+.set('★★★★', 4);
 
 /** A basic implementation for character embeds from gacha, view, and burn commands */
 export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed {
@@ -36,7 +38,7 @@ export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed
     /** The owner of this character */
     owner: string;
     /** The Discord user ID of the user that prompted this embed */
-    userId: string;
+    userId?: string;
 
     /**
      * @param embed The embed
@@ -53,8 +55,10 @@ export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed
         const nameMatch = author.name.match(ownerRegex) as RegExpMatchArray;
         this.owner = nameMatch[1];
 
-        const userIdMatch = (author.iconURL as string).match(USER_ID_REGEX) as RegExpMatchArray;
-        this.userId = userIdMatch[1];
+        const userIdMatch = author.iconURL?.match(USER_ID_REGEX) ?? undefined;
+        if (userIdMatch) {
+            this.userId = userIdMatch[1];
+        }
 
         // Footer
         const footerMatch = (embed.footer as EmbedFooterData).text.match(FOOTER_REGEX) as RegExpMatchArray;

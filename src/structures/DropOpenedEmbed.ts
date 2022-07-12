@@ -10,7 +10,7 @@ export class DropOpenedEmbed {
     /** The username of the user that opened the drop */
     username: string;
     /** The Discord user ID of the user that opened the drop */
-    userId: string;
+    userId?: string;
     /** The number of stones received from the drop */
     stonesReceived: number;
     /** The player's current balance in stones */
@@ -22,8 +22,10 @@ export class DropOpenedEmbed {
         const author = embed.author as MessageEmbedAuthor;
         this.username = author.name;
 
-        const userIdMatch = (author.iconURL as string).match(USER_ID_REGEX) as RegExpMatchArray;
-        this.userId = userIdMatch[1];
+        const userIdMatch = author.iconURL?.match(USER_ID_REGEX) ?? undefined;
+        if (userIdMatch) {
+            this.userId = userIdMatch[1];
+        }
 
         const stonesField = embed.fields[0] as EmbedField;
         const stonesMatch = stonesField.value.match(STONES_REGEX) as RegExpMatchArray;

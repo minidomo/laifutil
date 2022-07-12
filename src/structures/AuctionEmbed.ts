@@ -10,7 +10,9 @@ const BID_REGEX = /(.+) bid :dollar: \*\*\$\*\*([\d,]+)/gu;
 const TIME_REGEX = /Ends In:\*\* (.+) Hours$/;
 
 const starCount: Map<string, number> = new Map();
-starCount.set('☆☆☆☆', 0).set('★☆☆☆', 1).set('★★☆☆', 2).set('★★★☆', 3).set('★★★★', 4);
+starCount.set('☆☆☆☆', 0).set('★☆☆☆', 1).set('★★☆☆', 2)
+.set('★★★☆', 3)
+.set('★★★★', 4);
 
 /** Represents an auction embed from LaifuBot */
 export class AuctionEmbed implements CharacterEmbed {
