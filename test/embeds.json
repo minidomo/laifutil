@@ -472,6 +472,50 @@
                     "footer": {
                         "text": "★ Avoid Bans | Don't Alt.\nUploaded by LaifuBot †\nCredit: MyAnimeList"
                     }
+                },
+                {
+                    "title": "#1 Karen Onodera (小野寺樺恋)",
+                    "type": "rich",
+                    "description": null,
+                    "url": null,
+                    "timestamp": null,
+                    "color": 8436991,
+                    "fields": [
+                        {
+                            "value": "**UID:** 5070 | **GID:** 11169",
+                            "name": "General Info",
+                            "inline": false
+                        },
+                        {
+                            "value": "<a:r3:837480734074994749> | `ɢᴀᴍᴍᴀ`»`☆☆☆☆`\nInfluence `#14558`・**15**<:inf:755213119055200336>",
+                            "name": "Rarity",
+                            "inline": false
+                        },
+                        {
+                            "value": "**ENG:** Please Twins/Teacher\n**ALT:** Onegai Twins/Teacher\n**SID:** 1158 | `MAIN`",
+                            "name": "Main Series",
+                            "inline": false
+                        },
+                        {
+                            "value": "**Used** <:lawstone:725508010893508658>**x5**\n**Balance** <:lawstone:725508010893508658>**x245**\n<a:b1f:842175810633728060> | <:z1:842200435380191282> `Pity` | <:u1:842200435058409483> `Rate+` | <:tick1:788635993241944094> `K-POP`",
+                            "name": "Account",
+                            "inline": false
+                        }
+                    ],
+                    "thumbnail": null,
+                    "image": {
+                        "url": "https://cdn.discordapp.com/attachments/766880877099352085/824830508139020338/image.png",
+                        "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/824830508139020338/image.png",
+                        "height": 0,
+                        "width": 0
+                    },
+                    "author": {
+                        "name": "JB",
+                        "icon_url": "https://cdn.discordapp.com/embed/avatars/3.png"
+                    },
+                    "footer": {
+                        "text": "★ Avoid Bans | Don't Alt.\nUploaded by LaifuBot †\nCredit: MyAnimeList"
+                    }
                 }
             ],
             "badge": [
@@ -663,6 +707,33 @@
                     "author": {
                         "name": "CptDomo",
                         "icon_url": "https://cdn.discordapp.com/avatars/275002545867325440/7e063ea8f1a17271f60092fa8fb3ad5d.png?size=4096"
+                    },
+                    "footer": null
+                },
+                {
+                    "title": "Case File Opened",
+                    "type": "rich",
+                    "description": null,
+                    "url": null,
+                    "timestamp": null,
+                    "color": 2832008,
+                    "fields": [
+                        {
+                            "value": "<:lawstone:725508010893508658>x**1** / **5** *(457)*",
+                            "name": "Stones",
+                            "inline": false
+                        }
+                    ],
+                    "thumbnail": {
+                        "url": "https://cdn.discordapp.com/attachments/722702340620288042/810749727616139264/tenor.gif",
+                        "proxyURL": "https://media.discordapp.net/attachments/722702340620288042/810749727616139264/tenor.gif",
+                        "height": 140,
+                        "width": 336
+                    },
+                    "image": null,
+                    "author": {
+                        "name": "JB",
+                        "icon_url": "https://cdn.discordapp.com/embed/avatars/3.png"
                     },
                     "footer": null
                 }

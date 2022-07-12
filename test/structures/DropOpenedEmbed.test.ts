@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 import { MessageEmbed } from 'Discord.js';
 import { assert } from 'chai';
 import { Consumption, DropOpenedEmbed } from '../../dist';
@@ -36,6 +38,17 @@ describe('DropOpenedEmbed', () => {
             };
 
             assert.deepEqual(parsedEmbed.consumption, expConsumption);
+        });
+
+        it('should correctly parse a drop opened without consumption Discord embed from LaifuBot with default avatar', () => {
+            const embed = new MessageEmbed(dropEmbedsArr[2]);
+            const parsedEmbed = new DropOpenedEmbed(embed);
+
+            assert.strictEqual(parsedEmbed.username, 'JB');
+            assert.isUndefined(parsedEmbed.userId);
+            assert.strictEqual(parsedEmbed.stonesReceived, 1);
+            assert.strictEqual(parsedEmbed.balance, 457);
+            assert.isUndefined(parsedEmbed.consumption);
         });
     });
 });
