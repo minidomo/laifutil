@@ -5,29 +5,17 @@ const STONES_REGEX = /\*\*(\d)\*\*.+\((\d+)\)/;
 const CONSUMPTION_REGEX = /\+ (\d+).+\+ (\d+).+\+ (\d+).+\+ (\d+)/s;
 const USER_ID_REGEX = /^https:\/\/cdn\.discordapp\.com\/avatars\/(\d+)/;
 
-/**
- * Represents a opened drop embed from the drop command
- */
+/** Represents a opened drop embed from the drop command */
 export class DropOpenedEmbed {
-    /**
-     * The username of the user that opened the drop
-     */
+    /** The username of the user that opened the drop */
     username: string;
-    /**
-     * The Discord user ID of the user that opened the drop
-     */
+    /** The Discord user ID of the user that opened the drop */
     userId: string;
-    /**
-     * The number of stones received from the drop
-     */
+    /** The number of stones received from the drop */
     stonesReceived: number;
-    /**
-     * The player's current balance in stones
-     */
+    /** The player's current balance in stones */
     balance: number;
-    /**
-     * The consumption data
-     */
+    /** The consumption data */
     consumption?: Consumption;
 
     constructor(embed: MessageEmbed) {

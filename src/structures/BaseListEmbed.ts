@@ -2,33 +2,19 @@ import type { MessageEmbed, MessageEmbedFooter } from 'discord.js';
 
 const FOOTER_REGEX = /Page (\d+)\/(\d+) • (\d+) /;
 
-/**
- * A basic implementation for list-like embeds from LafiuBot
- */
+/** A basic implementation for list-like embeds from LafiuBot */
 export abstract class BaseListEmbed {
-    /**
-     * The name used in the title of this embed
-     */
+    /** The name used in the title of this embed */
     protected name: string;
-    /**
-     * The rows of data in the description of this embed
-     */
+    /** The rows of data in the description of this embed */
     protected data: string[];
-    /**
-     * The type of embed
-     */
+    /** The type of embed */
     protected identifier: string;
-    /**
-     * The current page the embed is on
-     */
+    /** The current page the embed is on */
     currentPage: number;
-    /**
-     * The number of pages available on this embed
-     */
+    /** The number of pages available on this embed */
     pages: number;
-    /**
-     * The number of entities in the entire list
-     */
+    /** The number of entities in the entire list */
     entities: number;
 
     constructor(embed: MessageEmbed) {

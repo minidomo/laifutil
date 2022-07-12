@@ -10,49 +10,27 @@ const BADGE_ID_REGEX = /\*\*<[^>]+>・<a:(\d+)/;
 const starCount: Map<string, number> = new Map();
 starCount.set('𝐈', 1).set('𝐈𝐈', 2).set('𝐈𝐈𝐈', 3).set('𝐈𝐕', 4);
 
-/**
- * Represents a character found in a list embed
- */
+/** Represents a character found in a list embed */
 export class ListCharacter {
-    /**
-     * The unique ID of the character
-     */
+    /** The unique ID of the character */
     uniqueId: number;
-    /**
-     * The emoji of the character
-     */
+    /** The emoji of the character */
     emoji?: string;
-    /**
-     * The rarity of the character
-     */
+    /** The rarity of the character */
     rarity: Rarity;
-    /**
-     * The number of starts the character has
-     */
+    /** The number of starts the character has */
     stars: number;
-    /**
-     * The image number of the character
-     */
+    /** The image number of the character */
     imageNumber: number;
-    /**
-     * The name of the character
-     */
+    /** The name of the character */
     name: string;
-    /**
-     * The influence rank of the character
-     */
+    /** The influence rank of the character */
     influenceRank: number;
-    /**
-     * The influence of the character
-     */
+    /** The influence of the character */
     influence: number;
-    /**
-     * Whether the character is glitched
-     */
+    /** Whether the character is glitched */
     glitched: boolean;
-    /**
-     * The badge ID of the character's badge
-     */
+    /** The badge ID of the character's badge */
     badgeId?: number;
 
     constructor(text: string) {
