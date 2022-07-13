@@ -33,8 +33,14 @@ export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed
     rarity: Rarity;
     /** The number of stars the character has */
     stars: number;
-    /** The influence rank of this character */
+    /**
+     * The influence rank of this character
+     *
+     * @deprecated This property is deprecated and will be removed in the future. Use {@link rank} instead.
+     */
     influenceRank: number;
+    /** The rank of this character */
+    rank: number;
     /** The owner of this character */
     owner: string;
     /** The Discord user ID of the user that prompted this embed */
@@ -84,6 +90,7 @@ export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed
 
         const influenceMatch = rarityField.value.match(INFLUENCE_REGEX) as RegExpMatchArray;
         this.influenceRank = parseInt(influenceMatch[1]);
+        this.rank = parseInt(influenceMatch[1]);
         this.influence = parseInt(influenceMatch[2]);
 
         // Series

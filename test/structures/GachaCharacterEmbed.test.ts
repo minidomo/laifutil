@@ -20,7 +20,7 @@ describe('GachaCharacterEmbed', () => {
 
             assert.strictEqual(parsedEmbed.rarity, RarityConstants.GAMMA);
             assert.strictEqual(parsedEmbed.stars, 0);
-            assert.strictEqual(parsedEmbed.influenceRank, 14558);
+            assert.strictEqual(parsedEmbed.rank, 14558);
             assert.strictEqual(parsedEmbed.influence, 15);
 
             assert.strictEqual(parsedEmbed.series.title.english, 'Please Twins/Teacher');
@@ -50,7 +50,7 @@ describe('GachaCharacterEmbed', () => {
 
             assert.strictEqual(parsedEmbed.rarity, RarityConstants.GAMMA);
             assert.strictEqual(parsedEmbed.stars, 0);
-            assert.strictEqual(parsedEmbed.influenceRank, 14558);
+            assert.strictEqual(parsedEmbed.rank, 14558);
             assert.strictEqual(parsedEmbed.influence, 15);
 
             assert.strictEqual(parsedEmbed.series.title.english, 'Please Twins/Teacher');

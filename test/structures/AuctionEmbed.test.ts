@@ -26,7 +26,7 @@ describe('AuctionEmbed', () => {
             assert.strictEqual(parsedEmbed.imageNumber, 1);
             assert.strictEqual(parsedEmbed.rarity, RarityConstants.ZETA);
             assert.strictEqual(parsedEmbed.stars, 0);
-            assert.strictEqual(parsedEmbed.influenceRank, 10890);
+            assert.strictEqual(parsedEmbed.rank, 10890);
             assert.strictEqual(parsedEmbed.hoursLeft, 15);
 
             assert.deepEqual(parsedEmbed.highestBid, makeBid('Preguntín', 2_855_000));
@@ -52,7 +52,7 @@ describe('AuctionEmbed', () => {
             assert.strictEqual(parsedEmbed.imageNumber, 1);
             assert.strictEqual(parsedEmbed.rarity, RarityConstants.ZETA);
             assert.strictEqual(parsedEmbed.stars, 0);
-            assert.strictEqual(parsedEmbed.influenceRank, 6803);
+            assert.strictEqual(parsedEmbed.rank, 6803);
             assert.strictEqual(parsedEmbed.hoursLeft, 0);
 
             assert.deepEqual(parsedEmbed.highestBid, makeBid('ChickpeaKryoz', 25_165_000));
@@ -78,7 +78,7 @@ describe('AuctionEmbed', () => {
             assert.strictEqual(parsedEmbed.imageNumber, 1);
             assert.strictEqual(parsedEmbed.rarity, RarityConstants.ZETA);
             assert.strictEqual(parsedEmbed.stars, 0);
-            assert.strictEqual(parsedEmbed.influenceRank, 6803);
+            assert.strictEqual(parsedEmbed.rank, 6803);
             assert.strictEqual(parsedEmbed.hoursLeft, 15);
 
             assert.isUndefined(parsedEmbed.highestBid);

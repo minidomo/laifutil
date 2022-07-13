@@ -15,7 +15,7 @@ describe('ListCharacter', () => {
             assert.strictEqual(character.stars, 0);
             assert.strictEqual(character.imageNumber, 6);
             assert.strictEqual(character.name, 'Power');
-            assert.strictEqual(character.influenceRank, 8);
+            assert.strictEqual(character.rank, 8);
             assert.strictEqual(character.influence, 1446);
             assert.isFalse(character.glitched);
             assert.isUndefined(character.badgeId);
@@ -32,7 +32,7 @@ describe('ListCharacter', () => {
             assert.strictEqual(character.stars, 4);
             assert.strictEqual(character.imageNumber, 4);
             assert.strictEqual(character.name, 'Satoru Gojou');
-            assert.strictEqual(character.influenceRank, 4);
+            assert.strictEqual(character.rank, 4);
             assert.strictEqual(character.influence, 1934);
             assert.isTrue(character.glitched);
             assert.strictEqual(character.badgeId, 85);
@@ -48,7 +48,7 @@ describe('ListCharacter', () => {
             assert.strictEqual(character.stars, 3);
             assert.strictEqual(character.imageNumber, 7);
             assert.strictEqual(character.name, 'Nino Nakano');
-            assert.strictEqual(character.influenceRank, 13);
+            assert.strictEqual(character.rank, 13);
             assert.strictEqual(character.influence, 1619);
             assert.isFalse(character.glitched);
             assert.isUndefined(character.badgeId);
@@ -65,7 +65,7 @@ describe('ListCharacter', () => {
             assert.strictEqual(character.stars, 4);
             assert.strictEqual(character.imageNumber, 3);
             assert.strictEqual(character.name, 'Yukino Yukinoshita');
-            assert.strictEqual(character.influenceRank, 67);
+            assert.strictEqual(character.rank, 67);
             assert.strictEqual(character.influence, 1151);
             assert.isFalse(character.glitched);
             assert.strictEqual(character.badgeId, 218);
