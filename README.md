@@ -35,12 +35,12 @@ client.on('ready', () => {
 
 client.on('messageCreate', message => {
     if (isLaifuBot(message) && isDropOpenedEmbed(message.embeds[0])) {
-        setTimeout(dropInterval)
-            .then(() => {
-                const embed = new DropOpenedEmbed(message.embeds[0]);
-                message.channel.send(`Time to drop, ${userMention(embed.userId)}!`);
-            })
-            .catch(console.error);
+        const embed = new DropOpenedEmbed(message.embeds[0]);
+        
+        if (embed.userId) {
+            await setTimeout(dropInterval)
+            message.channel.send(`Time to drop, ${userMention(embed.userId)}!`);
+        }
     }
 });
 
