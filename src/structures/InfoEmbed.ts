@@ -21,8 +21,14 @@ export class InfoEmbed implements CharacterEmbed {
     image: ImageInfo;
     /** The total number of images this character has */
     totalImages: number;
-    /** The influence range of this character */
+    /**
+     * The influence range of this character
+     *
+     * @deprecated This property is deprecated and will be removed in the future. Use {@link rankRange} instead.
+     */
     influenceRankRange: Bounds;
+    /** The rank range of this character */
+    rankRange: Bounds;
     /** The rarity information of this character */
     rarities: RarityStatisticsCollection;
 
@@ -60,6 +66,10 @@ export class InfoEmbed implements CharacterEmbed {
         const firstRank = parseInt(influenceMatch[2]);
         const secondRank = parseInt(influenceMatch[3]);
         this.influenceRankRange = {
+            lower: Math.min(firstRank, secondRank),
+            upper: Math.max(firstRank, secondRank),
+        };
+        this.rankRange = {
             lower: Math.min(firstRank, secondRank),
             upper: Math.max(firstRank, secondRank),
         };

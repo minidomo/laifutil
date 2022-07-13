@@ -27,7 +27,7 @@ describe('InfoEmbed', () => {
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
             assert.strictEqual(parsedEmbed.influence, 1981);
-            assert.deepEqual(parsedEmbed.influenceRankRange, { lower: 3, upper: 3 });
+            assert.deepEqual(parsedEmbed.rankRange, { lower: 3, upper: 3 });
 
             assert.deepEqual(parsedEmbed.rarities.alpha, makeRarityStats(1132, 1188));
             assert.deepEqual(parsedEmbed.rarities.beta, makeRarityStats(130, 136));

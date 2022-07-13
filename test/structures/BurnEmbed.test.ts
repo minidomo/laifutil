@@ -23,7 +23,7 @@ describe('BurnCharacterEmbed', () => {
 
             assert.strictEqual(parsedEmbed.rarity, RarityConstants.ZETA);
             assert.strictEqual(parsedEmbed.stars, 0);
-            assert.strictEqual(parsedEmbed.influenceRank, 11709);
+            assert.strictEqual(parsedEmbed.rank, 11709);
             assert.strictEqual(parsedEmbed.influence, 40);
             assert.isUndefined(parsedEmbed.badgeId);
             assert.isFalse(parsedEmbed.glitched);
@@ -58,7 +58,7 @@ describe('BurnCharacterEmbed', () => {
 
             assert.strictEqual(parsedEmbed.rarity, RarityConstants.ALPHA);
             assert.strictEqual(parsedEmbed.stars, 0);
-            assert.strictEqual(parsedEmbed.influenceRank, 210);
+            assert.strictEqual(parsedEmbed.rank, 210);
             assert.strictEqual(parsedEmbed.influence, 928);
             assert.strictEqual(parsedEmbed.badgeId, 82);
             assert.isFalse(parsedEmbed.glitched);
@@ -93,7 +93,7 @@ describe('BurnCharacterEmbed', () => {
 
             assert.strictEqual(parsedEmbed.rarity, RarityConstants.ALPHA);
             assert.strictEqual(parsedEmbed.stars, 1);
-            assert.strictEqual(parsedEmbed.influenceRank, 143);
+            assert.strictEqual(parsedEmbed.rank, 143);
             assert.strictEqual(parsedEmbed.influence, 1044);
             assert.strictEqual(parsedEmbed.badgeId, 126);
             assert.isFalse(parsedEmbed.glitched);
@@ -128,7 +128,7 @@ describe('BurnCharacterEmbed', () => {
 
             assert.strictEqual(parsedEmbed.rarity, RarityConstants.ALPHA);
             assert.strictEqual(parsedEmbed.stars, 0);
-            assert.strictEqual(parsedEmbed.influenceRank, 13929);
+            assert.strictEqual(parsedEmbed.rank, 13929);
             assert.strictEqual(parsedEmbed.influence, 6);
             assert.isUndefined(parsedEmbed.badgeId);
             assert.isFalse(parsedEmbed.glitched);

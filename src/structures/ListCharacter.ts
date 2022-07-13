@@ -25,8 +25,14 @@ export class ListCharacter {
     imageNumber: number;
     /** The name of the character */
     name: string;
-    /** The influence rank of the character */
+    /**
+     * The influence rank of this character
+     *
+     * @deprecated This property is deprecated and will be removed in the future. Use {@link rank} instead.
+     */
     influenceRank: number;
+    /** The rank of this character */
+    rank: number;
     /** The influence of the character */
     influence: number;
     /** Whether the character is glitched */
@@ -42,6 +48,7 @@ export class ListCharacter {
         this.imageNumber = parseInt(generalMatch[1]);
         this.name = generalMatch[2];
         this.influenceRank = parseInt(generalMatch[3]);
+        this.rank = parseInt(generalMatch[3]);
         this.influence = parseInt(generalMatch[4]);
 
         const rarityMatch = text.match(RARITY_REGEX) as RegExpMatchArray;
