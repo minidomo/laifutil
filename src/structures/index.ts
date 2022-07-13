@@ -13,3 +13,4 @@ export * from './ListEmbed';
 export * from './AuctionEmbed';
 export * from './CluCharacter';
 export * from './CluSearchEmbed';
+export * from './GachaBadgeEmbed';

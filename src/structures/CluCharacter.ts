@@ -1,5 +1,6 @@
 const LINE_REGEX = /(\d+) \| \[#(\d)\] (.+?) - (.+) ・\*\*(\d+)\*\*/;
 
+/** Represents a character found in a clu search embed */
 export class CluCharacter {
     /** The global ID of the character */
     globalId: number;
