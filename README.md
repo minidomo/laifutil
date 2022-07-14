@@ -12,7 +12,7 @@ npm install laifutil
 
 ### Peer Dependencies
 
--   [discord.js](https://discord.js.org/#/) v13.x
+-   [discord.js](https://discord.js.org/#/) `>= 13.6 < 14`
 
 ## Example usage
 
@@ -36,7 +36,7 @@ client.on('ready', () => {
 client.on('messageCreate', message => {
     if (isLaifuBot(message) && isDropOpenedEmbed(message.embeds[0])) {
         const embed = new DropOpenedEmbed(message.embeds[0]);
-        
+
         if (embed.userId) {
             await setTimeout(dropInterval)
             message.channel.send(`Time to drop, ${userMention(embed.userId)}!`);
