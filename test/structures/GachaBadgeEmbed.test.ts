@@ -1,5 +1,5 @@
-import { MessageEmbed } from 'Discord.js';
 import { assert } from 'chai';
+import { MessageEmbed } from 'discord.js';
 import { BadgeRarity, GachaBadgeEmbed } from '../../dist';
 import * as embeds from '../embeds.json';
 import { MEOArr } from '../util';

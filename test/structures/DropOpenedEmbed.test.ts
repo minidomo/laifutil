@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
-import { MessageEmbed } from 'Discord.js';
 import { assert } from 'chai';
+import { MessageEmbed } from 'discord.js';
 import { Consumption, DropOpenedEmbed } from '../../dist';
 import * as embeds from '../embeds.json';
 import { MEOArr } from '../util';
