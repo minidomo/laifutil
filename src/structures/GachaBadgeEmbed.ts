@@ -4,6 +4,7 @@ import { BadgeRarity } from '../constants';
 const TITLE_REGEX = /#(\d+) (.+)/;
 const ACCOUNT_REGEX = /\*\*x(\d)\*\*\n.+\*\*x(\d+)\*\*/;
 const RARITY_REGEX = /(.+)/;
+const USER_ID_REGEX = /^https:\/\/cdn\.discordapp\.com\/avatars\/(\d+)/;
 
 function resolveBadgeRarity(str: string): BadgeRarity {
     const key = str.replaceAll(/ +/g, '_').replaceAll(/\*/g, '').toUpperCase();
@@ -27,6 +28,8 @@ export class GachaBadgeEmbed {
     stonesUsed: number;
     /** The owner's current balance in stones */
     balance: number;
+    /** The Discord user ID of the user that prompted this embed */
+    userId?: string;
 
     constructor(embed: MessageEmbed) {
         const titleMatch = embed.title?.match(TITLE_REGEX) as RegExpExecArray;
@@ -39,5 +42,10 @@ export class GachaBadgeEmbed {
         const accountMatch = embed.fields[1].value.match(ACCOUNT_REGEX) as RegExpMatchArray;
         this.stonesUsed = parseInt(accountMatch[1]);
         this.balance = parseInt(accountMatch[2]);
+
+        const userIdMatch = embed.author?.iconURL?.match(USER_ID_REGEX) ?? undefined;
+        if (userIdMatch) {
+            this.userId = userIdMatch[1];
+        }
     }
 }

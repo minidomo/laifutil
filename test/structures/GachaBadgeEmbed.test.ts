@@ -17,6 +17,7 @@ describe('GachaBadgeEmbed', () => {
             assert.strictEqual(parsedEmbed.rarity, BadgeRarity.TIER_1);
             assert.strictEqual(parsedEmbed.stonesUsed, 4);
             assert.strictEqual(parsedEmbed.balance, 537);
+            assert.strictEqual(parsedEmbed.userId, '138419598469890048');
         });
     });
 });
