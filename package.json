@@ -11,7 +11,7 @@
         "test": "ts-mocha test/**/*.test.ts",
         "prepack": "rimraf *.tgz && npm run build",
         "prepublish": "npm run build && npm run build:docs",
-        "prebuild": "rimraf dist && npm run prettier && npm run lint:fix",
+        "prebuild": "rimraf dist && npm run lint:fix",
         "build": "tsc",
         "build:docs": "typedoc",
         "deploy": "np",
