@@ -8,7 +8,7 @@
         "prettier": "prettier --write .",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
-        "test": "ts-mocha test/**/*.test.ts",
+        "test": "ts-mocha \"test/**/*.test.ts\"",
         "prepack": "rimraf *.tgz && npm run build",
         "prepublish": "npm run build && npm run build:docs",
         "prebuild": "rimraf dist && npm run lint:fix",
