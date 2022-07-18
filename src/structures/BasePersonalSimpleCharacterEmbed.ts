@@ -1,4 +1,4 @@
-import type { EmbedAuthorData, EmbedFooterData, MessageEmbed } from 'discord.js';
+import type { APIEmbed, APIEmbedAuthor, APIEmbedField, APIEmbedFooter } from 'discord-api-types/v10';
 import { Rarity, RARITY_REGEX, resolveRarity } from '../rarity';
 import type { CharacterEmbed, ImageInfo, Series } from '../types';
 
@@ -50,24 +50,24 @@ export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed
      * @param embed The embed
      * @param ownerRegex The regular expression to obtain the owner of the character
      */
-    constructor(embed: MessageEmbed, ownerRegex: RegExp) {
+    constructor(embed: APIEmbed, ownerRegex: RegExp) {
         // Title
         const titleMatch = (embed.title as string).match(TITLE_REGEX) as RegExpMatchArray;
         this.name = titleMatch[2];
 
         // Author
-        const author = embed.author as EmbedAuthorData;
+        const author = embed.author as APIEmbedAuthor;
 
         const nameMatch = author.name.match(ownerRegex) as RegExpMatchArray;
         this.owner = nameMatch[1];
 
-        const userIdMatch = author.iconURL?.match(USER_ID_REGEX) ?? undefined;
+        const userIdMatch = author.icon_url?.match(USER_ID_REGEX) ?? undefined;
         if (userIdMatch) {
             this.userId = userIdMatch[1];
         }
 
         // Footer
-        const footerMatch = (embed.footer as EmbedFooterData).text.match(FOOTER_REGEX) as RegExpMatchArray;
+        const footerMatch = (embed.footer as APIEmbedFooter).text.match(FOOTER_REGEX) as RegExpMatchArray;
         this.image = {
             currentNumber: parseInt(titleMatch[1]),
             uploader: footerMatch[1],
@@ -75,12 +75,14 @@ export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed
         };
 
         // General info
-        const generalInfoMatch = embed.fields[0].value.match(GENERAL_INFO_REGEX) as RegExpMatchArray;
+        const fields = embed.fields as APIEmbedField[];
+
+        const generalInfoMatch = fields[0].value.match(GENERAL_INFO_REGEX) as RegExpMatchArray;
         this.uniqueId = parseInt(generalInfoMatch[1]);
         this.globalId = parseInt(generalInfoMatch[2]);
 
         // Rarity
-        const rarityField = embed.fields[1];
+        const rarityField = fields[1];
 
         const rarityMatch = rarityField.value.match(RARITY_REGEX) as RegExpMatchArray;
         this.rarity = resolveRarity(rarityMatch[1]) as Rarity;
@@ -94,7 +96,7 @@ export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed
         this.influence = parseInt(influenceMatch[2]);
 
         // Series
-        const mainSeriesMatch = embed.fields[2].value.match(MAIN_SERIES_REGEX) as RegExpMatchArray;
+        const mainSeriesMatch = fields[2].value.match(MAIN_SERIES_REGEX) as RegExpMatchArray;
         this.series = {
             title: {
                 english: mainSeriesMatch[1],

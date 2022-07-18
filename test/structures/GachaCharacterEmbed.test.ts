@@ -1,16 +1,14 @@
 import { assert } from 'chai';
-import { MessageEmbed } from 'discord.js';
 import { GachaCharacterEmbed, RarityConstants } from '../../dist';
 import * as embeds from '../embeds.json';
-import { MEOArr } from '../util';
+import { asAPIEmbedArr } from '../util';
 
 describe('GachaCharacterEmbed', () => {
-    const gachaCharacterEmbedsArr = MEOArr(embeds.identifier.gacha.character);
+    const embedArr = asAPIEmbedArr(embeds.identifier.gacha.character);
 
     describe('#constructor', () => {
         it('should correctly parse a gacha character Discord embed from LaifuBot', () => {
-            const embed = new MessageEmbed(gachaCharacterEmbedsArr[0]);
-            const parsedEmbed = new GachaCharacterEmbed(embed);
+            const parsedEmbed = new GachaCharacterEmbed(embedArr[0]);
 
             assert.strictEqual(parsedEmbed.image.currentNumber, 1);
             assert.strictEqual(parsedEmbed.name, 'Karen Onodera (小野寺樺恋)');
@@ -39,8 +37,7 @@ describe('GachaCharacterEmbed', () => {
         });
 
         it('should correctly parse a gacha character Discord embed from LaifuBot with default avatar', () => {
-            const embed = new MessageEmbed(gachaCharacterEmbedsArr[1]);
-            const parsedEmbed = new GachaCharacterEmbed(embed);
+            const parsedEmbed = new GachaCharacterEmbed(embedArr[1]);
 
             assert.strictEqual(parsedEmbed.image.currentNumber, 1);
             assert.strictEqual(parsedEmbed.name, 'Karen Onodera (小野寺樺恋)');

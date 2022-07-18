@@ -1,16 +1,14 @@
 import { assert } from 'chai';
-import { MessageEmbed } from 'discord.js';
 import { BadgeRarity, GachaBadgeEmbed } from '../../dist';
 import * as embeds from '../embeds.json';
-import { MEOArr } from '../util';
+import { asAPIEmbedArr } from '../util';
 
 describe('GachaBadgeEmbed', () => {
-    const gachaBadgeEmbedsArr = MEOArr(embeds.identifier.gacha.badge);
+    const embedArr = asAPIEmbedArr(embeds.identifier.gacha.badge);
 
     describe('#constructor', () => {
         it('should correctly parse a gacha badge Discord embed from LaifuBot', () => {
-            const embed = new MessageEmbed(gachaBadgeEmbedsArr[0]);
-            const parsedEmbed = new GachaBadgeEmbed(embed);
+            const parsedEmbed = new GachaBadgeEmbed(embedArr[0]);
 
             assert.strictEqual(parsedEmbed.id, 235);
             assert.strictEqual(parsedEmbed.title, '*Is this a Pigeon?*');

@@ -1,16 +1,14 @@
 import { assert } from 'chai';
-import { MessageEmbed } from 'discord.js';
 import { BurnCharacterEmbed, RarityConstants } from '../../dist';
 import * as embeds from '../embeds.json';
-import { MEOArr } from '../util';
+import { asAPIEmbedArr } from '../util';
 
 describe('BurnCharacterEmbed', () => {
-    const burnEmbedsArr = MEOArr(embeds.identifier.burn.character);
+    const embedArr = asAPIEmbedArr(embeds.identifier.burn.character);
 
     describe('#constructor', () => {
         it('should correctly parse a burn Discord embed of a normal card from LaifuBot', () => {
-            const embed = new MessageEmbed(burnEmbedsArr[0]);
-            const parsedEmbed = new BurnCharacterEmbed(embed);
+            const parsedEmbed = new BurnCharacterEmbed(embedArr[0]);
 
             assert.strictEqual(parsedEmbed.image.currentNumber, 1);
             assert.strictEqual(parsedEmbed.name, 'Nagi Kodachi (小太刀　凪)');
@@ -44,8 +42,7 @@ describe('BurnCharacterEmbed', () => {
         });
 
         it('should correctly parse a burn Discord embed of a badged card from LaifuBot', () => {
-            const embed = new MessageEmbed(burnEmbedsArr[1]);
-            const parsedEmbed = new BurnCharacterEmbed(embed);
+            const parsedEmbed = new BurnCharacterEmbed(embedArr[1]);
 
             assert.strictEqual(parsedEmbed.image.currentNumber, 1);
             assert.strictEqual(parsedEmbed.name, 'Ririka Momobami (桃喰 リリカ)');
@@ -79,8 +76,7 @@ describe('BurnCharacterEmbed', () => {
         });
 
         it('should correctly parse a burn Discord embed of a badged, star enhanced card from LaifuBot', () => {
-            const embed = new MessageEmbed(burnEmbedsArr[2]);
-            const parsedEmbed = new BurnCharacterEmbed(embed);
+            const parsedEmbed = new BurnCharacterEmbed(embedArr[2]);
 
             assert.strictEqual(parsedEmbed.image.currentNumber, 2);
             assert.strictEqual(parsedEmbed.name, 'Alice Zuberg (アリス・ツーベルク)');
@@ -114,8 +110,7 @@ describe('BurnCharacterEmbed', () => {
         });
 
         it('should correctly parse a burn Discord embed of a card that does not have burn data from LaifuBot', () => {
-            const embed = new MessageEmbed(burnEmbedsArr[3]);
-            const parsedEmbed = new BurnCharacterEmbed(embed);
+            const parsedEmbed = new BurnCharacterEmbed(embedArr[3]);
 
             assert.strictEqual(parsedEmbed.image.currentNumber, 1);
             assert.strictEqual(parsedEmbed.name, 'Mei Hiuchidani');

@@ -1,4 +1,4 @@
-import type { MessageEmbed, MessageEmbedFooter } from 'discord.js';
+import type { APIEmbed, APIEmbedFooter } from 'discord-api-types/v10';
 
 const FOOTER_REGEX = /Page (\d+)\/(\d+) • (\d+) /;
 
@@ -17,14 +17,14 @@ export abstract class BaseListEmbed {
     /** The number of entities in the entire list */
     entities: number;
 
-    constructor(embed: MessageEmbed) {
+    constructor(embed: APIEmbed) {
         const titleParts = (embed.title as string).split(' - ');
         this.name = titleParts[0];
         this.identifier = titleParts[1];
 
         this.data = (embed.description as string).split(/\n+/);
 
-        const footerMatch = (embed.footer as MessageEmbedFooter).text.match(FOOTER_REGEX) as RegExpMatchArray;
+        const footerMatch = (embed.footer as APIEmbedFooter).text.match(FOOTER_REGEX) as RegExpMatchArray;
         this.currentPage = parseInt(footerMatch[1]);
         this.pages = parseInt(footerMatch[2]);
         this.entities = parseInt(footerMatch[3]);

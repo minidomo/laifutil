@@ -1,4 +1,4 @@
-import type { EmbedFooterData, MessageEmbed } from 'discord.js';
+import type { APIEmbed, APIEmbedField, APIEmbedFooter } from 'discord-api-types/v10';
 import type { Bounds, CharacterEmbed, ImageInfo, RarityStatistics, RarityStatisticsCollection, Series } from '../types';
 
 const GENERAL_INFO_REGEX = /\*\*Global ID:\*\* (\d+)\n\*\*Total Images:\*\* (\d+)/;
@@ -32,11 +32,11 @@ export class InfoEmbed implements CharacterEmbed {
     /** The rarity information of this character */
     rarities: RarityStatisticsCollection;
 
-    constructor(embed: MessageEmbed) {
+    constructor(embed: APIEmbed) {
         this.name = embed.title as string;
 
         // Footer
-        const footerMatch = (embed.footer as EmbedFooterData).text.match(FOOTER_REGEX) as RegExpMatchArray;
+        const footerMatch = (embed.footer as APIEmbedFooter).text.match(FOOTER_REGEX) as RegExpMatchArray;
         this.image = {
             currentNumber: parseInt(footerMatch[1]),
             uploader: footerMatch[2],
@@ -44,12 +44,14 @@ export class InfoEmbed implements CharacterEmbed {
         };
 
         // General info
-        const generalInfoMatch = embed.fields[0].value.match(GENERAL_INFO_REGEX) as RegExpMatchArray;
+        const fields = embed.fields as APIEmbedField[];
+
+        const generalInfoMatch = fields[0].value.match(GENERAL_INFO_REGEX) as RegExpMatchArray;
         this.globalId = parseInt(generalInfoMatch[1]);
         this.totalImages = parseInt(generalInfoMatch[2]);
 
         // Main series
-        const mainSeriesMatch = embed.fields[1].value.match(MAIN_SERIES_REGEX) as RegExpMatchArray;
+        const mainSeriesMatch = fields[1].value.match(MAIN_SERIES_REGEX) as RegExpMatchArray;
         this.series = {
             title: {
                 english: mainSeriesMatch[1],
@@ -60,7 +62,7 @@ export class InfoEmbed implements CharacterEmbed {
         };
 
         // Influence
-        const influenceMatch = embed.fields[2].value.match(INFLUENCE_REGEX) as RegExpMatchArray;
+        const influenceMatch = fields[2].value.match(INFLUENCE_REGEX) as RegExpMatchArray;
         this.influence = parseInt(influenceMatch[1]);
 
         const firstRank = parseInt(influenceMatch[2]);
@@ -75,7 +77,7 @@ export class InfoEmbed implements CharacterEmbed {
         };
 
         // Collections
-        const it = embed.fields[3].value.matchAll(COLLECTIONS_REGEX);
+        const it = fields[3].value.matchAll(COLLECTIONS_REGEX);
         const stats: RarityStatistics[] = [];
 
         for (let obj = it.next(); !obj.done; obj = it.next()) {

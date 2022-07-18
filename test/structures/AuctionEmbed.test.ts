@@ -1,20 +1,18 @@
 import { assert } from 'chai';
-import { MessageEmbed } from 'discord.js';
 import { AuctionEmbed, Bid, RarityConstants } from '../../dist';
 import * as embeds from '../embeds.json';
-import { MEOArr } from '../util';
+import { asAPIEmbedArr } from '../util';
 
 function makeBid(username: string, amount: number): Bid {
     return { username, amount };
 }
 
 describe('AuctionEmbed', () => {
-    const auctionEmbedsArr = MEOArr(embeds.identifier.auction);
+    const embedArr = asAPIEmbedArr(embeds.identifier.auction);
 
     describe('#constructor', () => {
         it('should correctly parse an auction Discord embed from LaifuBot', () => {
-            const embed = new MessageEmbed(auctionEmbedsArr[0]);
-            const parsedEmbed = new AuctionEmbed(embed);
+            const parsedEmbed = new AuctionEmbed(embedArr[0]);
 
             assert.strictEqual(parsedEmbed.name, 'Jill (ジル)');
             assert.strictEqual(parsedEmbed.globalId, 5207);
@@ -39,8 +37,7 @@ describe('AuctionEmbed', () => {
         });
 
         it('should correctly parse an auction Discord embed from LaifuBot with less than an hour left', () => {
-            const embed = new MessageEmbed(auctionEmbedsArr[1]);
-            const parsedEmbed = new AuctionEmbed(embed);
+            const parsedEmbed = new AuctionEmbed(embedArr[1]);
 
             assert.strictEqual(parsedEmbed.name, 'Big the Cat (ビッグ・ザ・キャット)');
             assert.strictEqual(parsedEmbed.globalId, 11580);
@@ -65,8 +62,7 @@ describe('AuctionEmbed', () => {
         });
 
         it('should correctly parse an auction Discord embed from LaifuBot with zero bids', () => {
-            const embed = new MessageEmbed(auctionEmbedsArr[2]);
-            const parsedEmbed = new AuctionEmbed(embed);
+            const parsedEmbed = new AuctionEmbed(embedArr[2]);
 
             assert.strictEqual(parsedEmbed.name, 'Big the Cat (ビッグ・ザ・キャット)');
             assert.strictEqual(parsedEmbed.globalId, 11580);

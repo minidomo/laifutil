@@ -1,4 +1,4 @@
-import type { EmbedField, MessageEmbed, MessageEmbedAuthor } from 'discord.js';
+import type { APIEmbed, APIEmbedAuthor, APIEmbedField } from 'discord-api-types/v10';
 import type { Consumption } from '../types';
 
 const STONES_REGEX = /\*\*(\d)\*\*.+\((\d+)\)/;
@@ -18,22 +18,24 @@ export class DropOpenedEmbed {
     /** The consumption data */
     consumption?: Consumption;
 
-    constructor(embed: MessageEmbed) {
-        const author = embed.author as MessageEmbedAuthor;
+    constructor(embed: APIEmbed) {
+        const author = embed.author as APIEmbedAuthor;
         this.username = author.name;
 
-        const userIdMatch = author.iconURL?.match(USER_ID_REGEX) ?? undefined;
+        const userIdMatch = author.icon_url?.match(USER_ID_REGEX) ?? undefined;
         if (userIdMatch) {
             this.userId = userIdMatch[1];
         }
 
-        const stonesField = embed.fields[0] as EmbedField;
+        const fields = embed.fields as APIEmbedField[];
+
+        const stonesField = fields[0];
         const stonesMatch = stonesField.value.match(STONES_REGEX) as RegExpMatchArray;
         this.stonesReceived = parseInt(stonesMatch[1]);
         this.balance = parseInt(stonesMatch[2]);
 
-        if (embed.fields[1]) {
-            const consumptionMatch = embed.fields[1].value.match(CONSUMPTION_REGEX) as RegExpMatchArray;
+        if (fields[1]) {
+            const consumptionMatch = fields[1].value.match(CONSUMPTION_REGEX) as RegExpMatchArray;
             this.consumption = {
                 experience: parseInt(consumptionMatch[1]),
                 health: parseInt(consumptionMatch[2]),

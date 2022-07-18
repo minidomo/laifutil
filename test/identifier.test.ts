@@ -1,11 +1,10 @@
 import { assert } from 'chai';
-import { MessageEmbed } from 'discord.js';
+import { APIEmbed } from 'discord-api-types/v10';
 import * as embeds from './embeds.json';
-import { MEO } from './util';
 import * as laifutil from '../dist';
 
 const identifyEmbed = (() => {
-    type IsEmbedFunction = (boolean: MessageEmbed) => boolean;
+    type IsEmbedFunction = (boolean: APIEmbed) => boolean;
 
     const functions: IsEmbedFunction[] = [];
     const IS_EMBED_REGEX = /^is.+Embed$/;
@@ -17,22 +16,20 @@ const identifyEmbed = (() => {
         }
     });
 
-    function run(embed: MessageEmbed): string[] {
+    function run(embed: APIEmbed): string[] {
         return functions.filter(f => f(embed)).map(f => f.name);
     }
 
     return run;
 })();
 
-function test(exampleEmbeds: object[], f: (arg: MessageEmbed) => boolean) {
-    exampleEmbeds
-        .map(e => new MessageEmbed(MEO(e)))
-        .forEach((embed, i) => {
-            const identities = identifyEmbed(embed);
+function test(exampleEmbeds: object[], f: (arg: APIEmbed) => boolean) {
+    exampleEmbeds.forEach((embed: APIEmbed, i) => {
+        const identities = identifyEmbed(embed);
 
-            assert.strictEqual(identities.length, 1, `index: ${i} | ${identities}`);
-            assert.isTrue(f(embed), `index: ${i}`);
-        });
+        assert.strictEqual(identities.length, 1, `index: ${i} | ${identities}`);
+        assert.isTrue(f(embed), `index: ${i}`);
+    });
 }
 
 describe('identifier.ts', () => {

@@ -1,4 +1,4 @@
-import type { MessageEmbed } from 'discord.js';
+import type { APIEmbed } from 'discord-api-types/v10';
 import { BaseListEmbed } from './BaseListEmbed';
 import { CluCharacter } from './CluCharacter';
 
@@ -9,7 +9,7 @@ export class CluSearchEmbed extends BaseListEmbed {
     /** The list of characters currently displayed on this embed */
     characters: CluCharacter[];
 
-    constructor(embed: MessageEmbed) {
+    constructor(embed: APIEmbed) {
         super(embed);
 
         this.nickname = this.name;

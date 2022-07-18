@@ -1,16 +1,14 @@
 import { assert } from 'chai';
-import { MessageEmbed } from 'discord.js';
 import { CluSearchEmbed } from '../../dist';
 import * as embeds from '../embeds.json';
-import { MEOArr } from '../util';
+import { asAPIEmbedArr } from '../util';
 
 describe('CluSearchEmbed', () => {
-    const cluSearchEmbedsArr = MEOArr(embeds.identifier.clu.search);
+    const embedArr = asAPIEmbedArr(embeds.identifier.clu.search);
 
     describe('#constructor', () => {
         it('should correctly parse a clu search Discord embed from LaifuBot', () => {
-            const embed = new MessageEmbed(cluSearchEmbedsArr[0]);
-            const parsedEmbed = new CluSearchEmbed(embed);
+            const parsedEmbed = new CluSearchEmbed(embedArr[0]);
 
             assert.strictEqual(parsedEmbed.nickname, '! JB');
             assert.strictEqual(parsedEmbed.currentPage, 1);

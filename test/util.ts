@@ -1,9 +1,9 @@
-import { MessageEmbedOptions } from 'discord.js';
+import { APIEmbed } from 'discord-api-types/v10';
 
-export function MEO(obj: object): MessageEmbedOptions {
-    return obj as unknown as MessageEmbedOptions;
+export function asAPIEmbed(obj: object): APIEmbed {
+    return obj as unknown as APIEmbed;
 }
 
-export function MEOArr(arr: object[]): MessageEmbedOptions[] {
-    return arr as unknown as MessageEmbedOptions[];
+export function asAPIEmbedArr(arr: object[]): APIEmbed[] {
+    return arr as unknown as APIEmbed[];
 }

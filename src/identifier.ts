@@ -1,24 +1,24 @@
-import type { MessageEmbed } from 'discord.js';
+import type { APIEmbed } from 'discord-api-types/v10';
 
 const CARD_TITLE_REGEX = /(?:([^\s]+) )?#([1-9]) (.+)/;
 
-export function isArenaInitialEmbed(embed: MessageEmbed): boolean {
+export function isArenaInitialEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('ARENA: ') ?? false;
-    const validImage = embed.image !== null;
-    const field = embed.fields.find(val => val.name === 'Attacker');
+    const validImage = !embed.image;
+    const field = embed.fields?.find(val => val.name === 'Attacker');
 
     if (field) {
         const validField = field.value.includes('+');
-        return validTitle && !validField && !validImage;
+        return validTitle && !validField && validImage;
     }
     return false;
 }
 
-export function isArenaResultEmbed(embed: MessageEmbed): boolean {
+export function isArenaResultEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('ARENA: ') ?? false;
-    const field = embed.fields.find(val => val.name === 'Attacker');
+    const field = embed.fields?.find(val => val.name === 'Attacker');
 
     if (field) {
         const validField = field.value.includes('+');
@@ -27,32 +27,32 @@ export function isArenaResultEmbed(embed: MessageEmbed): boolean {
     return false;
 }
 
-export function isArenaLoadingEmbed(embed: MessageEmbed): boolean {
+export function isArenaLoadingEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('ARENA: ') ?? false;
-    const validImage = embed.image !== null;
+    const validImage = !!embed.image;
     return validTitle && validImage;
 }
 
-export function isBluMenuEmbed(embed: MessageEmbed): boolean {
+export function isBluMenuEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.endsWith('- Badge Index') ?? false;
-    const validField = embed.fields.some(e => e.name === 'Guide');
+    const validField = embed.fields?.some(e => e.name === 'Guide') ?? false;
     return validTitle && validField;
 }
 
-export function isBluInfoEmbed(embed: MessageEmbed): boolean {
+export function isBluInfoEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.endsWith('- Badge Index') ?? false;
     const validField = embed.description?.includes('Badge Completion') ?? false;
     return validTitle && validField;
 }
 
-export function isBurnCharacterEmbed(embed: MessageEmbed): boolean {
+export function isBurnCharacterEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     if (embed.title) {
         const validTitle = CARD_TITLE_REGEX.test(embed.title);
-        const field = embed.fields.find(val => val.name === 'Guide');
+        const field = embed.fields?.find(val => val.name === 'Guide');
 
         if (field) {
             const validField = field.value.includes('burn');
@@ -62,21 +62,21 @@ export function isBurnCharacterEmbed(embed: MessageEmbed): boolean {
     return false;
 }
 
-export function isBurnRewardEmbed(embed: MessageEmbed): boolean {
+export function isBurnRewardEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title?.includes('Burn: Rewards') ?? false;
 }
 
-export function isCluSearchEmbed(embed: MessageEmbed): boolean {
+export function isCluSearchEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('- Searching') ?? false;
     const validFooter = embed.footer?.text.includes(' Results Found') ?? false;
     return validTitle && validFooter;
 }
 
-export function isCluErrorEmbed(embed: MessageEmbed): boolean {
+export function isCluErrorEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
-    const field = embed.fields.find(val => val.name === 'Error');
+    const field = embed.fields?.find(val => val.name === 'Error');
 
     if (field) {
         const validField = field.value.includes('Lookup');
@@ -85,34 +85,34 @@ export function isCluErrorEmbed(embed: MessageEmbed): boolean {
     return false;
 }
 
-export function isDailyClaimedEmbed(embed: MessageEmbed): boolean {
+export function isDailyClaimedEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title === 'Daily: Claimed';
 }
 
-export function isDailyCooldownEmbed(embed: MessageEmbed): boolean {
+export function isDailyCooldownEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title === 'Daily: Cooldown';
 }
 
-export function isDropCodeEmbed(embed: MessageEmbed): boolean {
+export function isDropCodeEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.description?.includes('Dropped a Case File') ?? false;
 }
 
-export function isDropOpenedEmbed(embed: MessageEmbed): boolean {
+export function isDropOpenedEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title === 'Case File Opened';
 }
 
-export function isDropCooldownEmbed(embed: MessageEmbed): boolean {
+export function isDropCooldownEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title === 'Drop: Cooldown';
 }
 
-export function isFavoriteAddEmbed(embed: MessageEmbed): boolean {
+export function isFavoriteAddEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
-    const field = embed.fields.find(val => val.name === 'Success');
+    const field = embed.fields?.find(val => val.name === 'Success');
 
     if (field) {
         return field.value.includes('favorite') && field.value.includes('set');
@@ -120,9 +120,9 @@ export function isFavoriteAddEmbed(embed: MessageEmbed): boolean {
     return false;
 }
 
-export function isFavoriteRemoveEmbed(embed: MessageEmbed): boolean {
+export function isFavoriteRemoveEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
-    const field = embed.fields.find(val => val.name === 'Success');
+    const field = embed.fields?.find(val => val.name === 'Success');
 
     if (field) {
         return field.value.includes('favorites') && field.value.includes('removed');
@@ -130,49 +130,49 @@ export function isFavoriteRemoveEmbed(embed: MessageEmbed): boolean {
     return false;
 }
 
-export function isGachaCharacterEmbed(embed: MessageEmbed): boolean {
+export function isGachaCharacterEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     if (embed.title) {
         const validTitle = CARD_TITLE_REGEX.test(embed.title);
-        const validField = embed.fields.some(val => val.name === 'Account');
+        const validField = embed.fields?.some(val => val.name === 'Account') ?? false;
         return validTitle && validField;
     }
     return false;
 }
 
-export function isGachaBadgeEmbed(embed: MessageEmbed): boolean {
+export function isGachaBadgeEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.description?.includes('You unboxed a rare badge!') ?? false;
 }
 
-export function isGachaLoadingEmbed(embed: MessageEmbed): boolean {
+export function isGachaLoadingEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title === 'Feeling Lucky?';
 }
 
-export function isMedalDropActiveEmbed(embed: MessageEmbed): boolean {
+export function isMedalDropActiveEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title?.includes('Medal Drop : Active!') ?? false;
 }
 
-export function isMedalDropClosedEmbed(embed: MessageEmbed): boolean {
+export function isMedalDropClosedEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title?.includes('Medal Drop : Closed!') ?? false;
 }
 
-export function isUpgradeMenuEmbed(embed: MessageEmbed): boolean {
+export function isUpgradeMenuEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('Depths of RNG') ?? false;
     const validDescription = embed.description?.includes('Choose an option') ?? false;
     return validTitle && validDescription;
 }
 
-export function isStarEnhancingMenuEmbed(embed: MessageEmbed): boolean {
+export function isStarEnhancingMenuEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.description?.includes('Star Enhancing(SE)') ?? false;
 }
 
-export function isStarEnhancingConfirmationEmbed(embed: MessageEmbed): boolean {
+export function isStarEnhancingConfirmationEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     if (embed.description) {
         return embed.description.includes('Star Enhancing') && embed.description.includes('COST');
@@ -180,7 +180,7 @@ export function isStarEnhancingConfirmationEmbed(embed: MessageEmbed): boolean {
     return false;
 }
 
-export function isCardGlitchingMenuEmbed(embed: MessageEmbed): boolean {
+export function isCardGlitchingMenuEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     if (embed.description) {
         return embed.description.includes('Card Glitching(Glitch)') && embed.description.includes('Insert');
@@ -188,7 +188,7 @@ export function isCardGlitchingMenuEmbed(embed: MessageEmbed): boolean {
     return false;
 }
 
-export function isCardGlitchingConfirmationEmbed(embed: MessageEmbed): boolean {
+export function isCardGlitchingConfirmationEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     if (embed.description) {
         return embed.description.includes('Card Glitching(Glitch)') && embed.description.includes('COST');
@@ -196,7 +196,7 @@ export function isCardGlitchingConfirmationEmbed(embed: MessageEmbed): boolean {
     return false;
 }
 
-export function isInfluenceSkinsMenuEmbed(embed: MessageEmbed): boolean {
+export function isInfluenceSkinsMenuEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     if (embed.description) {
         return embed.description.includes('Influence Skins') && embed.description.includes('CURRENT ROTATION');
@@ -204,7 +204,7 @@ export function isInfluenceSkinsMenuEmbed(embed: MessageEmbed): boolean {
     return false;
 }
 
-export function isInfluenceSkinsConfirmationEmbed(embed: MessageEmbed): boolean {
+export function isInfluenceSkinsConfirmationEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     if (embed.description) {
         return embed.description.includes('Influence Skins') && embed.description.includes('CHANGES APPLIED');
@@ -212,7 +212,7 @@ export function isInfluenceSkinsConfirmationEmbed(embed: MessageEmbed): boolean 
     return false;
 }
 
-export function isMedalsMenuEmbed(embed: MessageEmbed): boolean {
+export function isMedalsMenuEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     if (embed.description) {
         return embed.description.includes('Medals') && embed.description.includes('Insert');
@@ -220,7 +220,7 @@ export function isMedalsMenuEmbed(embed: MessageEmbed): boolean {
     return false;
 }
 
-export function isMedalsConfirmationEmbed(embed: MessageEmbed): boolean {
+export function isMedalsConfirmationEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     if (embed.description) {
         return embed.description.includes('Medals') && embed.description.includes('COST');
@@ -228,14 +228,14 @@ export function isMedalsConfirmationEmbed(embed: MessageEmbed): boolean {
     return false;
 }
 
-export function isWishlistListEmbed(embed: MessageEmbed): boolean {
+export function isWishlistListEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title?.includes('- Wishlist') ?? false;
 }
 
-export function isWishlistAddEmbed(embed: MessageEmbed): boolean {
+export function isWishlistAddEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
-    const field = embed.fields.find(val => val.name === 'Success');
+    const field = embed.fields?.find(val => val.name === 'Success');
 
     if (field) {
         return field.value.includes('wishlist') && field.value.includes('set');
@@ -243,9 +243,9 @@ export function isWishlistAddEmbed(embed: MessageEmbed): boolean {
     return false;
 }
 
-export function isWishlistRemoveEmbed(embed: MessageEmbed): boolean {
+export function isWishlistRemoveEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
-    const field = embed.fields.find(val => val.name === 'Success');
+    const field = embed.fields?.find(val => val.name === 'Success');
 
     if (field) {
         return field.value.includes('wishlist') && field.value.includes('removed');
@@ -253,70 +253,70 @@ export function isWishlistRemoveEmbed(embed: MessageEmbed): boolean {
     return false;
 }
 
-export function isWorkshopMenuEmbed(embed: MessageEmbed): boolean {
+export function isWorkshopMenuEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('Card Workshop') ?? false;
     const validDescription = embed.description?.includes('Choose an option') ?? false;
     return validTitle && validDescription;
 }
 
-export function isBadgeTransferMenuEmbed(embed: MessageEmbed): boolean {
+export function isBadgeTransferMenuEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('Card Workshop') ?? false;
     const validDescription = embed.description?.includes('Return a badge') ?? false;
     return validTitle && validDescription;
 }
 
-export function isBadgeTransferConfirmationEmbed(embed: MessageEmbed): boolean {
+export function isBadgeTransferConfirmationEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('Card Workshop') ?? false;
     const validDescription = embed.description?.includes('returning the badge') ?? false;
     return validTitle && validDescription;
 }
 
-export function isSkinTransferMenuEmbed(embed: MessageEmbed): boolean {
+export function isSkinTransferMenuEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('Card Workshop') ?? false;
     const validDescription = embed.description?.includes('Return a influence skin') ?? false;
     return validTitle && validDescription;
 }
 
-export function isSkinTransferConfirmationEmbed(embed: MessageEmbed): boolean {
+export function isSkinTransferConfirmationEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('Card Workshop') ?? false;
     const validDescription = embed.description?.includes('returning the influence skin') ?? false;
     return validTitle && validDescription;
 }
 
-export function isViewEmbed(embed: MessageEmbed): boolean {
+export function isViewEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     if (embed.title) {
         const validTitle = CARD_TITLE_REGEX.test(embed.title);
         const validAuthor = embed.author?.name.endsWith('is Viewing...') ?? false;
-        const validField = embed.fields.some(val => val.name === 'Guide');
+        const validField = embed.fields?.some(val => val.name === 'Guide') ?? false;
         return validTitle && validAuthor && !validField;
     }
     return false;
 }
 
-export function isAuctionEmbed(embed: MessageEmbed): boolean {
+export function isAuctionEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title === 'Auction Card' ?? false;
 }
 
-export function isInfoEmbed(embed: MessageEmbed): boolean {
+export function isInfoEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validAuthor = embed.author?.name === 'Information Card';
-    const validField = embed.fields.some(val => val.name === 'Collections');
+    const validField = embed.fields?.some(val => val.name === 'Collections') ?? false;
     return validAuthor && validField;
 }
 
-export function isBadgePreviewEmbed(embed: MessageEmbed): boolean {
+export function isBadgePreviewEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     if (embed.title) {
         const validTitle = CARD_TITLE_REGEX.test(embed.title);
         const validAuthor = embed.author?.name.endsWith('is Viewing...') ?? false;
-        const field = embed.fields.find(val => val.name === 'Guide');
+        const field = embed.fields?.find(val => val.name === 'Guide');
 
         if (field) {
             const validField = field.value.includes('apply');
@@ -326,70 +326,70 @@ export function isBadgePreviewEmbed(embed: MessageEmbed): boolean {
     return false;
 }
 
-export function isRewardBoxEmbed(embed: MessageEmbed): boolean {
+export function isRewardBoxEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title?.endsWith('- Reward Box') ?? false;
 }
 
-export function isCdEmbed(embed: MessageEmbed): boolean {
+export function isCdEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
-    return embed.fields.some(val => val.name === 'Cooldowns');
+    return embed.fields?.some(val => val.name === 'Cooldowns') ?? false;
 }
 
-export function isListEmbed(embed: MessageEmbed): boolean {
+export function isListEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title?.endsWith('- Collection') ?? false;
 }
 
-export function isTopEmbed(embed: MessageEmbed): boolean {
+export function isTopEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title?.includes('TOP 500') ?? false;
 }
 
-export function isVoteCooldownEmbed(embed: MessageEmbed): boolean {
+export function isVoteCooldownEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title?.includes('Vote: Cooldown') ?? false;
 }
 
-export function isProfileEmbed(embed: MessageEmbed): boolean {
+export function isProfileEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title?.includes('Account Perks & Options') ?? false;
 }
 
-export function isCasinoEmbed(embed: MessageEmbed): boolean {
+export function isCasinoEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     return embed.title?.endsWith('The Palace') ?? false;
 }
 
-export function isFluMenuEmbed(embed: MessageEmbed): boolean {
+export function isFluMenuEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.endsWith('- Frame Index') ?? false;
-    const validField = embed.fields.some(e => e.name === 'Guide');
+    const validField = embed.fields?.some(e => e.name === 'Guide') ?? false;
     return validTitle && validField;
 }
 
-export function isFluInfoEmbed(embed: MessageEmbed): boolean {
+export function isFluInfoEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.endsWith('- Frame Index') ?? false;
     const validField = embed.description?.includes('Frame Completion') ?? false;
     return validTitle && validField;
 }
 
-export function isFrameTransferMenuEmbed(embed: MessageEmbed): boolean {
+export function isFrameTransferMenuEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('Card Workshop') ?? false;
     const validDescription = embed.description?.includes('Return a frame') ?? false;
     return validTitle && validDescription;
 }
 
-export function isFrameTransferConfirmationEmbed(embed: MessageEmbed): boolean {
+export function isFrameTransferConfirmationEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes('Card Workshop') ?? false;
     const validDescription = embed.description?.includes('returning the frame') ?? false;
     return validTitle && validDescription;
 }
 
-export function isBcompletionEmbed(embed: MessageEmbed): boolean {
+export function isBcompletionEmbed(embed: APIEmbed | undefined): boolean {
     if (!embed) return false;
     const validTitle = embed.title?.includes(' - Searching') ?? false;
     const validFooter = embed.footer?.text.includes(' • Completion') ?? false;
