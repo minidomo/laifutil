@@ -1,7 +1,8 @@
 import type { APIEmbed, APIEmbedField } from 'discord-api-types/v10';
 import { BasePersonalSimpleCharacterEmbed } from './BasePersonalSimpleCharacterEmbed';
 
-const CLAIM_REGEX = /\*\*Claimed By:\*\* (.+)\n\*\*Age:\*\* ([\d-]+) \| `(\d+)`/;
+const CLAIM_REGEX = /\*\*Claimed By:\*\* (.+)/;
+const AGE_REGEX = /\*\*Age:\*\* ([\d-]+) \| `(-?\d+)`/;
 const BADGE_REGEX = /❦#(\d+)/u;
 const GLITCH_REGEX = /ɢʟɪᴛᴄʜᴇᴅ/u;
 
@@ -10,9 +11,9 @@ export abstract class BasePersonalFullCharacterEmbed extends BasePersonalSimpleC
     /** The username of the initial user that claimed this character */
     claimedBy: string;
     /** The date when this character was claimed */
-    dateClaimed: string;
+    dateClaimed?: string;
     /** The number of days since this character was claimed */
-    age: number;
+    age?: number;
     /** The badge ID of this character */
     badgeId?: number;
     /** Indicates whether the character is glitched or not */
@@ -29,8 +30,12 @@ export abstract class BasePersonalFullCharacterEmbed extends BasePersonalSimpleC
 
         const claimMatch = fields[0].value.match(CLAIM_REGEX) as RegExpMatchArray;
         this.claimedBy = claimMatch[1];
-        this.dateClaimed = claimMatch[2];
-        this.age = parseInt(claimMatch[3]);
+
+        const ageMatch = fields[0].value.match(AGE_REGEX);
+        if (ageMatch) {
+            this.dateClaimed = ageMatch[1];
+            this.age = parseInt(ageMatch[2]);
+        }
 
         const rarityField = fields[1];
 

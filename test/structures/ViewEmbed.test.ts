@@ -141,7 +141,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.existingAmount, 2);
         });
 
-        it('should correctly parse a star enhanced, glitched, favorited, special view Discord embed from LaifuBot', () => {
+        it('should correctly parse a special view with negative days Discord embed from LaifuBot', () => {
             const parsedEmbed = new ViewEmbed(embedArr[4]);
 
             assert.strictEqual(parsedEmbed.emoji, '💖');
@@ -151,7 +151,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.uniqueId, 1);
             assert.strictEqual(parsedEmbed.globalId, 630);
             assert.strictEqual(parsedEmbed.claimedBy, '🚀 Onwards to 2022!');
-            assert.strictEqual(parsedEmbed.age, 190);
+            assert.strictEqual(parsedEmbed.age, -190);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-31');
 
             assert.strictEqual(parsedEmbed.rarity, RarityConstants.SPECIAL);
@@ -174,6 +174,39 @@ describe('ViewEmbed', () => {
 
             assert.strictEqual(parsedEmbed.image.uploader, 'matsu△');
             assert.strictEqual(parsedEmbed.image.credit, 'Oregairu Official Art');
+            assert.isUndefined(parsedEmbed.existingAmount);
+        });
+
+        it('should correctly parse a scarlet view Discord embed from LaifuBot', () => {
+            const parsedEmbed = new ViewEmbed(embedArr[5]);
+
+            assert.strictEqual(parsedEmbed.emoji, '💍');
+            assert.strictEqual(parsedEmbed.image.currentNumber, 3);
+            assert.strictEqual(parsedEmbed.name, 'Shinoa Hiiragi (柊 シノア)');
+
+            assert.strictEqual(parsedEmbed.uniqueId, 4669);
+            assert.strictEqual(parsedEmbed.globalId, 532);
+            assert.strictEqual(parsedEmbed.claimedBy, 'WickedAlice');
+            assert.isUndefined(parsedEmbed.age);
+            assert.isUndefined(parsedEmbed.dateClaimed);
+
+            assert.strictEqual(parsedEmbed.rarity, RarityConstants.SCARLET);
+            assert.strictEqual(parsedEmbed.stars, 0);
+            assert.strictEqual(parsedEmbed.rank, 90);
+            assert.strictEqual(parsedEmbed.influence, 1151);
+            assert.strictEqual(parsedEmbed.badgeId, 99);
+            assert.isFalse(parsedEmbed.glitched);
+
+            assert.strictEqual(parsedEmbed.series.title.english, 'Seraph of the End: Vampire Reign');
+            assert.strictEqual(parsedEmbed.series.title.alternate, 'Owari no Seraph');
+            assert.strictEqual(parsedEmbed.series.id, 69);
+            assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
+
+            assert.strictEqual(parsedEmbed.owner, 'Arjay');
+            assert.strictEqual(parsedEmbed.userId, '275002545867325440');
+
+            assert.strictEqual(parsedEmbed.image.uploader, 'Shiro no Joō');
+            assert.strictEqual(parsedEmbed.image.credit, 'Manga Volume 17 Chapter 67 Illustration');
             assert.isUndefined(parsedEmbed.existingAmount);
         });
     });
