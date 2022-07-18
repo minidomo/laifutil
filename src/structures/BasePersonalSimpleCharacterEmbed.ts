@@ -12,8 +12,8 @@ const USER_ID_REGEX = /^https:\/\/cdn\.discordapp\.com\/avatars\/(\d+)/;
 
 const starCount: Map<string, number> = new Map();
 starCount.set('☆☆☆☆', 0).set('★☆☆☆', 1).set('★★☆☆', 2)
-.set('★★★☆', 3)
-.set('★★★★', 4);
+    .set('★★★☆', 3)
+    .set('★★★★', 4);
 
 /** A basic implementation for character embeds from gacha, view, and burn commands */
 export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed {
@@ -33,12 +33,6 @@ export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed
     rarity: Rarity;
     /** The number of stars the character has */
     stars: number;
-    /**
-     * The influence rank of this character
-     *
-     * @deprecated This property is deprecated and will be removed in the future. Use {@link rank} instead.
-     */
-    influenceRank: number;
     /** The rank of this character */
     rank: number;
     /** The owner of this character */
@@ -91,7 +85,6 @@ export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed
         this.stars = starCount.get(starMatch[1]) ?? 0;
 
         const influenceMatch = rarityField.value.match(INFLUENCE_REGEX) as RegExpMatchArray;
-        this.influenceRank = parseInt(influenceMatch[1]);
         this.rank = parseInt(influenceMatch[1]);
         this.influence = parseInt(influenceMatch[2]);
 
