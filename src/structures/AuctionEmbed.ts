@@ -11,8 +11,8 @@ const TIME_REGEX = /Ends In:\*\* (.+) Hours$/;
 
 const starCount: Map<string, number> = new Map();
 starCount.set('☆☆☆☆', 0).set('★☆☆☆', 1).set('★★☆☆', 2)
-.set('★★★☆', 3)
-.set('★★★★', 4);
+    .set('★★★☆', 3)
+    .set('★★★★', 4);
 
 /** Represents an auction embed from LaifuBot */
 export class AuctionEmbed implements CharacterEmbed {
@@ -30,12 +30,6 @@ export class AuctionEmbed implements CharacterEmbed {
     rarity: Rarity;
     /** The number of stars the character has */
     stars: number;
-    /**
-     * The influence rank of this character
-     *
-     * @deprecated This property is deprecated and will be removed in the future. Use {@link rank} instead.
-     */
-    influenceRank: number;
     /** The rank of this character */
     rank: number;
     /** The highest bid */
@@ -69,7 +63,6 @@ export class AuctionEmbed implements CharacterEmbed {
         this.stars = starCount.get(starMatch[1]) ?? 0;
 
         const influenceMatch = rarityField.value.match(INFLUENCE_REGEX) as RegExpMatchArray;
-        this.influenceRank = parseInt(influenceMatch[1]);
         this.rank = parseInt(influenceMatch[1]);
         this.influence = parseInt(influenceMatch[2]);
 
