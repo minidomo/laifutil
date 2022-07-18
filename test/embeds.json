@@ -425,6 +425,48 @@
                 "footer": {
                     "text": "Uploaded by matsu△\nCredit: Oregairu Official Art"
                 }
+            },
+            {
+                "title": "💍 #3 Shinoa Hiiragi (柊 シノア)",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 16711680,
+                "fields": [
+                    {
+                        "name": "General Info",
+                        "value": "**UID:** 4669 | **GID:** 532 \n**Claimed By:** WickedAlice\n**Age:** ♾ | ♾ ᴅᴀʏs",
+                        "inline": false
+                    },
+                    {
+                        "name": "Rarity",
+                        "value": "<a:r9:837877366843637780> | `sᴄᴀʀʟᴇᴛ`»`❦#99`»`☆☆☆☆`\nInfluence `#90`・**1151**<:inf:755213119055200336>\n<a:99e:850926376163999754> *Scythe dance of death.*\n<a:b1:838570555761491969><a:b4:838734760591228978><a:b3:838578341807390750>",
+                        "inline": false
+                    },
+                    {
+                        "name": "Main Series",
+                        "value": "**ENG:** Seraph of the End: Vampire Reign\n**ALT:** Owari no Seraph\n**SID:** 69 | `MAIN`",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/attachments/819798600837627904/850926241410449408/99.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/819798600837627904/850926241410449408/99.gif",
+                    "height": 388,
+                    "width": 444
+                },
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/766880877099352085/766924114300239892/image.png",
+                    "proxyURL": "https://media.discordapp.net/attachments/766880877099352085/766924114300239892/image.png",
+                    "height": 350,
+                    "width": 225
+                },
+                "author": {
+                    "name": "Arjay is Viewing...",
+                    "icon_url": "https://cdn.discordapp.com/avatars/275002545867325440/0c883295dc1ac8244ea33efbfe22c568.png?size=4096"
+                },
+                "footer": { "text": "Uploaded by Shiro no Joō\nCredit: Manga Volume 17 Chapter 67 Illustration" }
             }
         ],
         "gacha": {

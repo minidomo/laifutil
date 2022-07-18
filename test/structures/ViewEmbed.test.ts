@@ -146,40 +146,40 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.existingAmount, 2);
         });
 
-        it('should correctly parse a star enhanced, glitched, favorited, special view Discord embed from LaifuBot', () => {
-            const embed = new MessageEmbed(viewEmbedsArr[4]);
+        it('should correctly parse a scarlet view Discord embed from LaifuBot', () => {
+            const embed = new MessageEmbed(viewEmbedsArr[5]);
             const parsedEmbed = new ViewEmbed(embed);
 
-            assert.strictEqual(parsedEmbed.emoji, '💖');
+            assert.strictEqual(parsedEmbed.emoji, '💍');
             assert.strictEqual(parsedEmbed.image.currentNumber, 3);
-            assert.strictEqual(parsedEmbed.name, 'Yukino Yukinoshita (雪ノ下 雪乃)');
+            assert.strictEqual(parsedEmbed.name, 'Shinoa Hiiragi (柊 シノア)');
 
-            assert.strictEqual(parsedEmbed.uniqueId, 1);
-            assert.strictEqual(parsedEmbed.globalId, 630);
-            assert.strictEqual(parsedEmbed.claimedBy, '🚀 Onwards to 2022!');
-            assert.strictEqual(parsedEmbed.age, 190);
-            assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-31');
+            assert.strictEqual(parsedEmbed.uniqueId, 4669);
+            assert.strictEqual(parsedEmbed.globalId, 532);
+            assert.strictEqual(parsedEmbed.claimedBy, 'WickedAlice');
+            assert.isUndefined(parsedEmbed.age);
+            assert.isUndefined(parsedEmbed.dateClaimed);
 
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.SPECIAL);
-            assert.strictEqual(parsedEmbed.stars, 4);
-            assert.strictEqual(parsedEmbed.rank, 68);
-            assert.strictEqual(parsedEmbed.influence, 1154);
-            assert.isUndefined(parsedEmbed.badgeId);
-            assert.isTrue(parsedEmbed.glitched);
+            assert.strictEqual(parsedEmbed.rarity, RarityConstants.SCARLET);
+            assert.strictEqual(parsedEmbed.stars, 0);
+            assert.strictEqual(parsedEmbed.rank, 90);
+            assert.strictEqual(parsedEmbed.influence, 1151);
+            assert.strictEqual(parsedEmbed.badgeId, 99);
+            assert.isFalse(parsedEmbed.glitched);
 
-            assert.strictEqual(parsedEmbed.series.title.english, 'My Teen Romantic Comedy SNAFU');
+            assert.strictEqual(parsedEmbed.series.title.english, 'Seraph of the End: Vampire Reign');
             assert.strictEqual(
                 parsedEmbed.series.title.alternate,
-                'Yahari Ore no Seishun Love Comedy wa Machigatteiru.',
+                'Owari no Seraph',
             );
-            assert.strictEqual(parsedEmbed.series.id, 56);
+            assert.strictEqual(parsedEmbed.series.id, 69);
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
 
-            assert.strictEqual(parsedEmbed.owner, '! JB');
-            assert.strictEqual(parsedEmbed.userId, '138419598469890048');
+            assert.strictEqual(parsedEmbed.owner, 'Arjay');
+            assert.strictEqual(parsedEmbed.userId, '275002545867325440');
 
-            assert.strictEqual(parsedEmbed.image.uploader, 'matsu△');
-            assert.strictEqual(parsedEmbed.image.credit, 'Oregairu Official Art');
+            assert.strictEqual(parsedEmbed.image.uploader, 'Shiro no Joō');
+            assert.strictEqual(parsedEmbed.image.credit, 'Manga Volume 17 Chapter 67 Illustration');
             assert.isUndefined(parsedEmbed.existingAmount);
         });
     });

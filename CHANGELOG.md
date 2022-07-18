@@ -4,7 +4,7 @@
 
 ## Features
 
--  Added userId to GachaBadgeEmbed (https://github.com/minidomo/laifutil/pull/33) (https://github.com/minidomo/laifutil/pull/33/commits/256acca159e29d70a4ee465de4276b4b03adf275)
+-   Added userId to GachaBadgeEmbed (https://github.com/minidomo/laifutil/pull/33) (https://github.com/minidomo/laifutil/pull/33/commits/256acca159e29d70a4ee465de4276b4b03adf275)
 
 # 2.1.0 - (2022-07-13)
 
