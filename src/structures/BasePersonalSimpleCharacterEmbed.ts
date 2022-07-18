@@ -12,8 +12,8 @@ const USER_ID_REGEX = /^https:\/\/cdn\.discordapp\.com\/avatars\/(\d+)/;
 
 const starCount: Map<string, number> = new Map();
 starCount.set('☆☆☆☆', 0).set('★☆☆☆', 1).set('★★☆☆', 2)
-    .set('★★★☆', 3)
-    .set('★★★★', 4);
+.set('★★★☆', 3)
+.set('★★★★', 4);
 
 /** A basic implementation for character embeds from gacha, view, and burn commands */
 export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed {
