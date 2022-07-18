@@ -1,4 +1,4 @@
-import type { EmbedFooterData, MessageEmbed } from 'discord.js';
+import type { APIEmbed, APIEmbedFooter } from 'discord-api-types/v10';
 import { BasePersonalFullCharacterEmbed } from './BasePersonalFullCharacterEmbed';
 
 const EMOJI_REGEX = /^(?:([^\s]+) )#/;
@@ -16,7 +16,7 @@ export class ViewEmbed extends BasePersonalFullCharacterEmbed {
     /** The number of existing characters with the current rarity */
     existingAmount?: number;
 
-    constructor(embed: MessageEmbed) {
+    constructor(embed: APIEmbed) {
         super(embed, OWNER_REGEX);
 
         const emojiMatch = (embed.title as string).match(EMOJI_REGEX);
@@ -24,7 +24,7 @@ export class ViewEmbed extends BasePersonalFullCharacterEmbed {
             this.emoji = emojiMatch[1];
         }
 
-        const numExistingMatch = (embed.footer as EmbedFooterData).text.match(NUM_EXISTING_REGEX);
+        const numExistingMatch = (embed.footer as APIEmbedFooter).text.match(NUM_EXISTING_REGEX);
         if (numExistingMatch) {
             this.existingAmount = parseInt(removeCommas(numExistingMatch[1]));
         }

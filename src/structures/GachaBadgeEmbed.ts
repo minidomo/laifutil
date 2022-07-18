@@ -1,4 +1,4 @@
-import type { MessageEmbed } from 'discord.js';
+import type { APIEmbed, APIEmbedField } from 'discord-api-types/v10';
 import { BadgeRarity } from '../constants';
 
 const TITLE_REGEX = /#(\d+) (.+)/;
@@ -31,19 +31,21 @@ export class GachaBadgeEmbed {
     /** The Discord user ID of the user that prompted this embed */
     userId?: string;
 
-    constructor(embed: MessageEmbed) {
+    constructor(embed: APIEmbed) {
         const titleMatch = embed.title?.match(TITLE_REGEX) as RegExpExecArray;
         this.id = parseInt(titleMatch[1]);
         this.title = titleMatch[2];
 
-        const rarityMatch = embed.fields[0].value.match(RARITY_REGEX) as RegExpMatchArray;
+        const fields = embed.fields as APIEmbedField[];
+
+        const rarityMatch = fields[0].value.match(RARITY_REGEX) as RegExpMatchArray;
         this.rarity = resolveBadgeRarity(rarityMatch[1]);
 
-        const accountMatch = embed.fields[1].value.match(ACCOUNT_REGEX) as RegExpMatchArray;
+        const accountMatch = fields[1].value.match(ACCOUNT_REGEX) as RegExpMatchArray;
         this.stonesUsed = parseInt(accountMatch[1]);
         this.balance = parseInt(accountMatch[2]);
 
-        const userIdMatch = embed.author?.iconURL?.match(USER_ID_REGEX) ?? undefined;
+        const userIdMatch = embed.author?.icon_url?.match(USER_ID_REGEX) ?? undefined;
         if (userIdMatch) {
             this.userId = userIdMatch[1];
         }

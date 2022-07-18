@@ -1,7 +1,6 @@
 import { assert } from 'chai';
-import { MessageEmbed } from 'discord.js';
 import * as embeds from './embeds.json';
-import { MEO } from './util';
+import { asAPIEmbed } from './util';
 import { cleanCharacterName, hasSameImage, LAIFU_USER_ID } from '../dist';
 
 describe('util.ts', () => {
@@ -13,8 +12,8 @@ describe('util.ts', () => {
 
     describe('#hasSameImage', () => {
         it('should have the same image', () => {
-            const embed1 = new MessageEmbed(MEO(embeds.util.embed1));
-            const embed2 = new MessageEmbed(MEO(embeds.util.embed2));
+            const embed1 = asAPIEmbed(embeds.util.embed1);
+            const embed2 = asAPIEmbed(embeds.util.embed2);
             const ret = hasSameImage(embed1, embed2);
             assert.isTrue(ret);
         });

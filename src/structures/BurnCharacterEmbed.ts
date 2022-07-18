@@ -1,4 +1,4 @@
-import type { EmbedFooterData, MessageEmbed } from 'discord.js';
+import type { APIEmbed, APIEmbedField, APIEmbedFooter } from 'discord-api-types/v10';
 import { BasePersonalFullCharacterEmbed } from './BasePersonalFullCharacterEmbed';
 
 const BURN_REWARD_REGEX = /^Burn Reward Counter: (\d+) \/ 15\n/;
@@ -12,13 +12,13 @@ export class BurnCharacterEmbed extends BasePersonalFullCharacterEmbed {
     /** The burn percent rate of this character, represented as an integer from 0 to 100 */
     burnPercentage?: number;
 
-    constructor(embed: MessageEmbed) {
+    constructor(embed: APIEmbed) {
         super(embed, OWNER_REGEX);
 
-        const burnRewardMatch = (embed.footer as EmbedFooterData).text.match(BURN_REWARD_REGEX) as RegExpMatchArray;
+        const burnRewardMatch = (embed.footer as APIEmbedFooter).text.match(BURN_REWARD_REGEX) as RegExpMatchArray;
         this.burnRewardCounter = parseInt(burnRewardMatch[1]);
 
-        const guideMatch = embed.fields[3].value.match(GUIDE_REGEX);
+        const guideMatch = (embed.fields as APIEmbedField[])[3].value.match(GUIDE_REGEX);
         if (guideMatch) {
             this.burnPercentage = parseInt(guideMatch[1]);
         }

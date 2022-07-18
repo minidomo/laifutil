@@ -1,4 +1,4 @@
-import type { MessageEmbed } from 'discord.js';
+import type { APIEmbed, APIEmbedField } from 'discord-api-types/v10';
 import { Rarity, RARITY_REGEX, resolveRarity } from '../rarity';
 import type { Bid, CharacterEmbed, Series } from '../types';
 
@@ -48,17 +48,19 @@ export class AuctionEmbed implements CharacterEmbed {
      */
     hoursLeft: number;
 
-    constructor(embed: MessageEmbed) {
+    constructor(embed: APIEmbed) {
         const descriptionMatch = (embed.description as string).match(DESCRIPTION_REGEX) as RegExpMatchArray;
         this.name = descriptionMatch[1];
         this.globalId = parseInt(descriptionMatch[2]);
         this.imageNumber = parseInt(descriptionMatch[3]);
 
-        const timeMatch = embed.fields[2].value.match(TIME_REGEX) as RegExpMatchArray;
+        const fields = embed.fields as APIEmbedField[];
+
+        const timeMatch = fields[2].value.match(TIME_REGEX) as RegExpMatchArray;
         this.hoursLeft = /^\d+$/.test(timeMatch[1]) ? parseInt(timeMatch[1]) : 0;
 
         // Rarity
-        const rarityField = embed.fields[1];
+        const rarityField = fields[1];
 
         const rarityMatch = rarityField.value.match(RARITY_REGEX) as RegExpMatchArray;
         this.rarity = resolveRarity(rarityMatch[1]) as Rarity;
@@ -72,7 +74,7 @@ export class AuctionEmbed implements CharacterEmbed {
         this.influence = parseInt(influenceMatch[2]);
 
         // Series
-        const mainSeriesMatch = embed.fields[0].value.match(MAIN_SERIES_REGEX) as RegExpMatchArray;
+        const mainSeriesMatch = fields[0].value.match(MAIN_SERIES_REGEX) as RegExpMatchArray;
         this.series = {
             title: {
                 english: mainSeriesMatch[1],
@@ -83,7 +85,7 @@ export class AuctionEmbed implements CharacterEmbed {
         };
 
         // Auction feed
-        const it = embed.fields[3].value.matchAll(BID_REGEX);
+        const it = fields[3].value.matchAll(BID_REGEX);
         this.auctionFeed = [];
 
         for (let obj = it.next(); !obj.done; obj = it.next()) {

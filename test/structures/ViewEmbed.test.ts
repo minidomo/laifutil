@@ -1,18 +1,16 @@
 /* eslint-disable max-len */
 
 import { assert } from 'chai';
-import { MessageEmbed } from 'discord.js';
 import { ViewEmbed, RarityConstants } from '../../dist';
 import * as embeds from '../embeds.json';
-import { MEOArr } from '../util';
+import { asAPIEmbedArr } from '../util';
 
 describe('ViewEmbed', () => {
-    const viewEmbedsArr = MEOArr(embeds.identifier.view);
+    const embedArr = asAPIEmbedArr(embeds.identifier.view);
 
     describe('#constructor', () => {
         it('should correctly parse a normal view Discord embed from LaifuBot', () => {
-            const embed = new MessageEmbed(viewEmbedsArr[0]);
-            const parsedEmbed = new ViewEmbed(embed);
+            const parsedEmbed = new ViewEmbed(embedArr[0]);
 
             assert.isUndefined(parsedEmbed.emoji);
             assert.strictEqual(parsedEmbed.image.currentNumber, 1);
@@ -45,8 +43,7 @@ describe('ViewEmbed', () => {
         });
 
         it('should correctly parse a badged view Discord embed from LaifuBot', () => {
-            const embed = new MessageEmbed(viewEmbedsArr[1]);
-            const parsedEmbed = new ViewEmbed(embed);
+            const parsedEmbed = new ViewEmbed(embedArr[1]);
 
             assert.isUndefined(parsedEmbed.emoji);
             assert.strictEqual(parsedEmbed.image.currentNumber, 1);
@@ -79,8 +76,7 @@ describe('ViewEmbed', () => {
         });
 
         it('should correctly parse a badged, star enhanced view Discord embed from LaifuBot', () => {
-            const embed = new MessageEmbed(viewEmbedsArr[2]);
-            const parsedEmbed = new ViewEmbed(embed);
+            const parsedEmbed = new ViewEmbed(embedArr[2]);
 
             assert.isUndefined(parsedEmbed.emoji);
             assert.strictEqual(parsedEmbed.image.currentNumber, 2);
@@ -113,8 +109,7 @@ describe('ViewEmbed', () => {
         });
 
         it('should correctly parse a badged, star enhanced, glitched, favorited view Discord embed from LaifuBot', () => {
-            const embed = new MessageEmbed(viewEmbedsArr[3]);
-            const parsedEmbed = new ViewEmbed(embed);
+            const parsedEmbed = new ViewEmbed(embedArr[3]);
 
             assert.strictEqual(parsedEmbed.emoji, '🏮');
             assert.strictEqual(parsedEmbed.image.currentNumber, 4);
@@ -147,8 +142,7 @@ describe('ViewEmbed', () => {
         });
 
         it('should correctly parse a star enhanced, glitched, favorited, special view Discord embed from LaifuBot', () => {
-            const embed = new MessageEmbed(viewEmbedsArr[4]);
-            const parsedEmbed = new ViewEmbed(embed);
+            const parsedEmbed = new ViewEmbed(embedArr[4]);
 
             assert.strictEqual(parsedEmbed.emoji, '💖');
             assert.strictEqual(parsedEmbed.image.currentNumber, 3);

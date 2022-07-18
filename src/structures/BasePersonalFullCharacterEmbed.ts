@@ -1,4 +1,4 @@
-import type { MessageEmbed } from 'discord.js';
+import type { APIEmbed, APIEmbedField } from 'discord-api-types/v10';
 import { BasePersonalSimpleCharacterEmbed } from './BasePersonalSimpleCharacterEmbed';
 
 const CLAIM_REGEX = /\*\*Claimed By:\*\* (.+)\n\*\*Age:\*\* ([\d-]+) \| `(\d+)`/;
@@ -22,15 +22,17 @@ export abstract class BasePersonalFullCharacterEmbed extends BasePersonalSimpleC
      * @param embed The embed
      * @param ownerRegex The regular expression to obtain the owner of the character
      */
-    constructor(embed: MessageEmbed, ownerRegex: RegExp) {
+    constructor(embed: APIEmbed, ownerRegex: RegExp) {
         super(embed, ownerRegex);
 
-        const claimMatch = embed.fields[0].value.match(CLAIM_REGEX) as RegExpMatchArray;
+        const fields = embed.fields as APIEmbedField[];
+
+        const claimMatch = fields[0].value.match(CLAIM_REGEX) as RegExpMatchArray;
         this.claimedBy = claimMatch[1];
         this.dateClaimed = claimMatch[2];
         this.age = parseInt(claimMatch[3]);
 
-        const rarityField = embed.fields[1];
+        const rarityField = fields[1];
 
         const badgeMatch = rarityField.value.match(BADGE_REGEX);
         if (badgeMatch) {

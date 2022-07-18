@@ -1,18 +1,16 @@
 /* eslint-disable max-len */
 
 import { assert } from 'chai';
-import { MessageEmbed } from 'discord.js';
 import { Consumption, DropOpenedEmbed } from '../../dist';
 import * as embeds from '../embeds.json';
-import { MEOArr } from '../util';
+import { asAPIEmbedArr } from '../util';
 
 describe('DropOpenedEmbed', () => {
-    const dropEmbedsArr = MEOArr(embeds.identifier.drop.opened);
+    const embedArr = asAPIEmbedArr(embeds.identifier.drop.opened);
 
     describe('#constructor', () => {
         it('should correctly parse a drop opened without consumption Discord embed from LaifuBot', () => {
-            const embed = new MessageEmbed(dropEmbedsArr[0]);
-            const parsedEmbed = new DropOpenedEmbed(embed);
+            const parsedEmbed = new DropOpenedEmbed(embedArr[0]);
 
             assert.strictEqual(parsedEmbed.username, 'JB');
             assert.strictEqual(parsedEmbed.userId, '138419598469890048');
@@ -22,8 +20,7 @@ describe('DropOpenedEmbed', () => {
         });
 
         it('should correctly parse a drop opened with consumption Discord embed from LaifuBot', () => {
-            const embed = new MessageEmbed(dropEmbedsArr[1]);
-            const parsedEmbed = new DropOpenedEmbed(embed);
+            const parsedEmbed = new DropOpenedEmbed(embedArr[1]);
 
             assert.strictEqual(parsedEmbed.username, 'CptDomo');
             assert.strictEqual(parsedEmbed.userId, '275002545867325440');
@@ -41,8 +38,7 @@ describe('DropOpenedEmbed', () => {
         });
 
         it('should correctly parse a drop opened without consumption Discord embed from LaifuBot with default avatar', () => {
-            const embed = new MessageEmbed(dropEmbedsArr[2]);
-            const parsedEmbed = new DropOpenedEmbed(embed);
+            const parsedEmbed = new DropOpenedEmbed(embedArr[2]);
 
             assert.strictEqual(parsedEmbed.username, 'JB');
             assert.isUndefined(parsedEmbed.userId);

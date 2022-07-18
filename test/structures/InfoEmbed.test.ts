@@ -1,20 +1,18 @@
 import { assert } from 'chai';
-import { MessageEmbed } from 'discord.js';
 import { InfoEmbed, RarityStatistics } from '../../dist';
 import * as embeds from '../embeds.json';
-import { MEOArr } from '../util';
+import { asAPIEmbedArr } from '../util';
 
 function makeRarityStats(existingAmount: number, totalClaimed: number): RarityStatistics {
     return { existingAmount, totalClaimed };
 }
 
 describe('InfoEmbed', () => {
-    const infoEmbedsArr = MEOArr(embeds.identifier.info);
+    const embedArr = asAPIEmbedArr(embeds.identifier.info);
 
     describe('#constructor', () => {
         it('should correctly parse an info Discord embed from LaifuBot', () => {
-            const embed = new MessageEmbed(infoEmbedsArr[0]);
-            const parsedEmbed = new InfoEmbed(embed);
+            const parsedEmbed = new InfoEmbed(embedArr[0]);
 
             assert.strictEqual(parsedEmbed.name, 'Megumin (めぐみん)');
 

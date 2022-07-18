@@ -1,4 +1,5 @@
-import { Message, MessageEmbed, PartialMessage, User } from 'discord.js';
+import type { APIEmbed } from 'discord-api-types/v10';
+import { Message, PartialMessage, User } from 'discord.js';
 import emojiRegex from 'emoji-regex';
 import type { Bounds } from './types';
 
@@ -95,13 +96,13 @@ export function isLaifuBot(data: string | Message | PartialMessage | User): bool
 /**
  * Checks if the given embeds contains the same image.
  *
- * @param embed1 The first embed
- * @param embed2 The second embed
+ * @param a The first embed
+ * @param b The second embed
  * @returns True if and only if both contain an image and their URLs are the same, false otherwise
  */
-export function hasSameImage(embed1: MessageEmbed, embed2: MessageEmbed): boolean {
-    if (embed1.image && embed2.image) {
-        return embed1.image.url === embed2.image.url;
+export function hasSameImage(a: APIEmbed, b: APIEmbed): boolean {
+    if (a.image && b.image) {
+        return a.image.url === b.image.url;
     }
 
     return false;
