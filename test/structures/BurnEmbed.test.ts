@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { BurnCharacterEmbed, RarityConstants } from '../../dist';
+import { BurnCharacterEmbed } from '../../dist';
 import * as embeds from '../embeds.json';
 import { asAPIEmbedArr } from '../util';
 
@@ -19,7 +19,7 @@ describe('BurnCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 166);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-18');
 
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ZETA);
+            assert.strictEqual(parsedEmbed.rarity, 'ZETA');
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.rank, 11709);
             assert.strictEqual(parsedEmbed.influence, 40);
@@ -53,7 +53,7 @@ describe('BurnCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 177);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-07');
 
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ALPHA);
+            assert.strictEqual(parsedEmbed.rarity, 'ALPHA');
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.rank, 210);
             assert.strictEqual(parsedEmbed.influence, 928);
@@ -87,7 +87,7 @@ describe('BurnCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 323);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-14');
 
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ALPHA);
+            assert.strictEqual(parsedEmbed.rarity, 'ALPHA');
             assert.strictEqual(parsedEmbed.stars, 1);
             assert.strictEqual(parsedEmbed.rank, 143);
             assert.strictEqual(parsedEmbed.influence, 1044);
@@ -121,7 +121,7 @@ describe('BurnCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 0);
             assert.strictEqual(parsedEmbed.dateClaimed, '2022-05-31');
 
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ALPHA);
+            assert.strictEqual(parsedEmbed.rarity, 'ALPHA');
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.rank, 13929);
             assert.strictEqual(parsedEmbed.influence, 6);

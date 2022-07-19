@@ -1,5 +1,5 @@
 import type { APIEmbed, APIEmbedField } from 'discord-api-types/v10';
-import { BadgeRarity } from '../constants';
+import { BadgeRarity } from '../enums';
 
 const TITLE_REGEX = /#(\d+) (.+)/;
 const ACCOUNT_REGEX = /\*\*x(\d)\*\*\n.+\*\*x(\d+)\*\*/;

@@ -1,4 +1,5 @@
-import { Rarity, RARITY_REGEX, resolveRarity } from '../rarity';
+import { CHARACTER_RARITY_REGEX, resolveCharacterRarity } from '../characterRarity';
+import type { CharacterRarityKey } from '../types';
 
 const UNIQUE_ID_REGEX = /^(\d+)/;
 const GENERAL_REGEX = /#(\d) (.+) `#(\d+)`・\*\*(\d+)\*\*/;
@@ -18,7 +19,7 @@ export class ListCharacter {
     /** The emoji of the character */
     emoji?: string;
     /** The rarity of the character */
-    rarity: Rarity;
+    rarity: CharacterRarityKey;
     /** The number of starts the character has */
     stars: number;
     /** The image number of the character */
@@ -44,8 +45,8 @@ export class ListCharacter {
         this.rank = parseInt(generalMatch[3]);
         this.influence = parseInt(generalMatch[4]);
 
-        const rarityMatch = text.match(RARITY_REGEX) as RegExpMatchArray;
-        this.rarity = resolveRarity(rarityMatch[1]) as Rarity;
+        const rarityMatch = text.match(CHARACTER_RARITY_REGEX);
+        this.rarity = rarityMatch ? resolveCharacterRarity(rarityMatch[1]) : 'UNKNOWN';
 
         const starMatch = text.match(STAR_REGEX);
         this.stars = starMatch ? (starCount.get(starMatch[1]) as number) : 0;

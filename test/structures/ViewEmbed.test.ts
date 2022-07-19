@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
 import { assert } from 'chai';
-import { ViewEmbed, RarityConstants } from '../../dist';
+import { ViewEmbed } from '../../dist';
 import * as embeds from '../embeds.json';
 import { asAPIEmbedArr } from '../util';
 
@@ -22,7 +22,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 166);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-18');
 
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ZETA);
+            assert.strictEqual(parsedEmbed.rarity, 'ZETA');
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.rank, 11709);
             assert.strictEqual(parsedEmbed.influence, 40);
@@ -55,7 +55,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 177);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-07');
 
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ALPHA);
+            assert.strictEqual(parsedEmbed.rarity, 'ALPHA');
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.rank, 210);
             assert.strictEqual(parsedEmbed.influence, 928);
@@ -88,7 +88,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 323);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-14');
 
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ALPHA);
+            assert.strictEqual(parsedEmbed.rarity, 'ALPHA');
             assert.strictEqual(parsedEmbed.stars, 1);
             assert.strictEqual(parsedEmbed.rank, 143);
             assert.strictEqual(parsedEmbed.influence, 1044);
@@ -121,7 +121,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.age, 321);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-07-16');
 
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ULTRA);
+            assert.strictEqual(parsedEmbed.rarity, 'ULTRA');
             assert.strictEqual(parsedEmbed.stars, 4);
             assert.strictEqual(parsedEmbed.rank, 4);
             assert.strictEqual(parsedEmbed.influence, 1897);
@@ -154,7 +154,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.age, -190);
             assert.strictEqual(parsedEmbed.dateClaimed, '2021-12-31');
 
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.SPECIAL);
+            assert.strictEqual(parsedEmbed.rarity, 'SPECIAL');
             assert.strictEqual(parsedEmbed.stars, 4);
             assert.strictEqual(parsedEmbed.rank, 68);
             assert.strictEqual(parsedEmbed.influence, 1154);
@@ -190,7 +190,7 @@ describe('ViewEmbed', () => {
             assert.isUndefined(parsedEmbed.age);
             assert.isUndefined(parsedEmbed.dateClaimed);
 
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.SCARLET);
+            assert.strictEqual(parsedEmbed.rarity, 'SCARLET');
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.rank, 90);
             assert.strictEqual(parsedEmbed.influence, 1151);

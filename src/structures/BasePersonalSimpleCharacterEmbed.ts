@@ -1,6 +1,6 @@
 import type { APIEmbed, APIEmbedAuthor, APIEmbedField, APIEmbedFooter } from 'discord-api-types/v10';
-import { Rarity, RARITY_REGEX, resolveRarity } from '../rarity';
-import type { CharacterEmbed, ImageInfo, Series } from '../types';
+import { CHARACTER_RARITY_REGEX, resolveCharacterRarity } from '../characterRarity';
+import type { CharacterEmbed, CharacterRarityKey, ImageInfo, Series } from '../types';
 
 const TITLE_REGEX = /#(\d) (.+)/;
 const MAIN_SERIES_REGEX = /\*\*ENG:\*\* (.+)\n\*\*ALT:\*\* (.+)\n\*\*SID:\*\* (\d+) \| `(.+)`/;
@@ -30,7 +30,7 @@ export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed
     /** The unique ID of the character */
     uniqueId: number;
     /** The rarity of the character */
-    rarity: Rarity;
+    rarity: CharacterRarityKey;
     /** The number of stars the character has */
     stars: number;
     /** The rank of this character */
@@ -78,8 +78,8 @@ export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed
         // Rarity
         const rarityField = fields[1];
 
-        const rarityMatch = rarityField.value.match(RARITY_REGEX) as RegExpMatchArray;
-        this.rarity = resolveRarity(rarityMatch[1]) as Rarity;
+        const rarityMatch = rarityField.value.match(CHARACTER_RARITY_REGEX);
+        this.rarity = rarityMatch ? resolveCharacterRarity(rarityMatch[1]) : 'UNKNOWN';
 
         const starMatch = rarityField.value.match(STAR_REGEX) as RegExpMatchArray;
         this.stars = starCount.get(starMatch[1]) ?? 0;
