@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
 import { assert } from 'chai';
-import { ListCharacter, RarityConstants } from '../../dist';
+import { ListCharacter } from '../../dist';
 
 describe('ListCharacter', () => {
     describe('#constructor', () => {
@@ -11,7 +11,7 @@ describe('ListCharacter', () => {
 
             assert.strictEqual(character.uniqueId, 3171);
             assert.isUndefined(character.emoji);
-            assert.strictEqual(character.rarity, RarityConstants.ALPHA);
+            assert.strictEqual(character.rarity, 'ALPHA');
             assert.strictEqual(character.stars, 0);
             assert.strictEqual(character.imageNumber, 6);
             assert.strictEqual(character.name, 'Power');
@@ -28,7 +28,7 @@ describe('ListCharacter', () => {
 
             assert.strictEqual(character.uniqueId, 264);
             assert.strictEqual(character.emoji, '🏮');
-            assert.strictEqual(character.rarity, RarityConstants.ULTRA);
+            assert.strictEqual(character.rarity, 'ULTRA');
             assert.strictEqual(character.stars, 4);
             assert.strictEqual(character.imageNumber, 4);
             assert.strictEqual(character.name, 'Satoru Gojou');
@@ -44,7 +44,7 @@ describe('ListCharacter', () => {
 
             assert.strictEqual(character.uniqueId, 1067);
             assert.isUndefined(character.emoji);
-            assert.strictEqual(character.rarity, RarityConstants.ALPHA);
+            assert.strictEqual(character.rarity, 'ALPHA');
             assert.strictEqual(character.stars, 3);
             assert.strictEqual(character.imageNumber, 7);
             assert.strictEqual(character.name, 'Nino Nakano');
@@ -61,7 +61,7 @@ describe('ListCharacter', () => {
 
             assert.strictEqual(character.uniqueId, 1);
             assert.strictEqual(character.emoji, '💖');
-            assert.strictEqual(character.rarity, RarityConstants.SPECIAL);
+            assert.strictEqual(character.rarity, 'SPECIAL');
             assert.strictEqual(character.stars, 4);
             assert.strictEqual(character.imageNumber, 3);
             assert.strictEqual(character.name, 'Yukino Yukinoshita');

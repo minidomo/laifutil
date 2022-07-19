@@ -1,3 +1,5 @@
+import type { CharacterRarity } from '../enums';
+
 /** Represents a lower and upper bound */
 export interface Bounds {
     /** The lower bound of this object (inclusive) */
@@ -94,3 +96,5 @@ export interface Bid {
     /** The amount that was bid */
     amount: number;
 }
+
+export type CharacterRarityKey = keyof typeof CharacterRarity;

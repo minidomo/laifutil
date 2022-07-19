@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { GachaCharacterEmbed, RarityConstants } from '../../dist';
+import { GachaCharacterEmbed } from '../../dist';
 import * as embeds from '../embeds.json';
 import { asAPIEmbedArr } from '../util';
 
@@ -16,7 +16,7 @@ describe('GachaCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.uniqueId, 5070);
             assert.strictEqual(parsedEmbed.globalId, 11169);
 
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.GAMMA);
+            assert.strictEqual(parsedEmbed.rarity, 'GAMMA');
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.rank, 14558);
             assert.strictEqual(parsedEmbed.influence, 15);
@@ -45,7 +45,7 @@ describe('GachaCharacterEmbed', () => {
             assert.strictEqual(parsedEmbed.uniqueId, 5070);
             assert.strictEqual(parsedEmbed.globalId, 11169);
 
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.GAMMA);
+            assert.strictEqual(parsedEmbed.rarity, 'GAMMA');
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.rank, 14558);
             assert.strictEqual(parsedEmbed.influence, 15);

@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { AuctionEmbed, Bid, RarityConstants } from '../../dist';
+import { AuctionEmbed, Bid } from '../../dist';
 import * as embeds from '../embeds.json';
 import { asAPIEmbedArr } from '../util';
 
@@ -22,7 +22,7 @@ describe('AuctionEmbed', () => {
             assert.strictEqual(parsedEmbed.series.id, 408);
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
             assert.strictEqual(parsedEmbed.imageNumber, 1);
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ZETA);
+            assert.strictEqual(parsedEmbed.rarity, 'ZETA');
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.rank, 10890);
             assert.strictEqual(parsedEmbed.hoursLeft, 15);
@@ -47,7 +47,7 @@ describe('AuctionEmbed', () => {
             assert.strictEqual(parsedEmbed.series.id, 748);
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
             assert.strictEqual(parsedEmbed.imageNumber, 1);
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ZETA);
+            assert.strictEqual(parsedEmbed.rarity, 'ZETA');
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.rank, 6803);
             assert.strictEqual(parsedEmbed.hoursLeft, 0);
@@ -72,7 +72,7 @@ describe('AuctionEmbed', () => {
             assert.strictEqual(parsedEmbed.series.id, 748);
             assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
             assert.strictEqual(parsedEmbed.imageNumber, 1);
-            assert.strictEqual(parsedEmbed.rarity, RarityConstants.ZETA);
+            assert.strictEqual(parsedEmbed.rarity, 'ZETA');
             assert.strictEqual(parsedEmbed.stars, 0);
             assert.strictEqual(parsedEmbed.rank, 6803);
             assert.strictEqual(parsedEmbed.hoursLeft, 15);
