@@ -1,6 +1,6 @@
 import type { APIEmbed, APIEmbedField } from 'discord-api-types/v10';
 import type { Bid, CharacterEmbed, CharacterRarityKey, Series } from '../types';
-import { CHARACTER_RARITY_REGEX, resolveCharacterRarity } from '../utils';
+import { CHARACTER_RARITY_REGEX, resolveCharacterRarity, resolveSequence } from '../utils';
 
 const DESCRIPTION_REGEX = /Name:\*\* (.+)\n.+ID:\*\* (\d+)\n.+#(\d)/;
 const MAIN_SERIES_REGEX = /\*\*ENG:\*\* (.+)\n\*\*ALT:\*\* (.+)\n\*\*SID:\*\* (\d+) \| `(.+)`/;
@@ -74,7 +74,7 @@ export class AuctionEmbed implements CharacterEmbed {
                 alternate: mainSeriesMatch[2],
             },
             id: parseInt(mainSeriesMatch[3]),
-            sequence: mainSeriesMatch[4],
+            sequence: resolveSequence(mainSeriesMatch[4]),
         };
 
         // Auction feed

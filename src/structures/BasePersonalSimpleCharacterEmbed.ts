@@ -1,6 +1,6 @@
 import type { APIEmbed, APIEmbedAuthor, APIEmbedField, APIEmbedFooter } from 'discord-api-types/v10';
 import type { CharacterEmbed, CharacterRarityKey, ImageInfo, Series } from '../types';
-import { CHARACTER_RARITY_REGEX, resolveCharacterRarity } from '../utils';
+import { CHARACTER_RARITY_REGEX, resolveCharacterRarity, resolveSequence } from '../utils';
 
 const TITLE_REGEX = /#(\d) (.+)/;
 const MAIN_SERIES_REGEX = /\*\*ENG:\*\* (.+)\n\*\*ALT:\*\* (.+)\n\*\*SID:\*\* (\d+) \| `(.+)`/;
@@ -96,7 +96,7 @@ export abstract class BasePersonalSimpleCharacterEmbed implements CharacterEmbed
                 alternate: mainSeriesMatch[2],
             },
             id: parseInt(mainSeriesMatch[3]),
-            sequence: mainSeriesMatch[4],
+            sequence: resolveSequence(mainSeriesMatch[4]),
         };
     }
 }

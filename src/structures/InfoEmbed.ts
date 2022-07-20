@@ -1,5 +1,6 @@
 import type { APIEmbed, APIEmbedField, APIEmbedFooter } from 'discord-api-types/v10';
 import type { Bounds, CharacterEmbed, ImageInfo, RarityStatistics, RarityStatisticsCollection, Series } from '../types';
+import { resolveSequence } from '../utils';
 
 const GENERAL_INFO_REGEX = /\*\*Global ID:\*\* (\d+)\n\*\*Total Images:\*\* (\d+)/;
 const MAIN_SERIES_REGEX = /\*\*ENG:\*\* (.+)\n\*\*ALT:\*\* (.+)\n\*\*SID:\*\* (\d+) \| `(.+)`/;
@@ -52,7 +53,7 @@ export class InfoEmbed implements CharacterEmbed {
                 alternate: mainSeriesMatch[2],
             },
             id: parseInt(mainSeriesMatch[3]),
-            sequence: mainSeriesMatch[4],
+            sequence: resolveSequence(mainSeriesMatch[4]),
         };
 
         // Influence
