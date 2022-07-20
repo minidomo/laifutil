@@ -1,5 +1,12 @@
 import type { APIEmbed, APIEmbedField, APIEmbedFooter } from 'discord-api-types/v10';
-import type { Bounds, CharacterEmbed, ImageInfo, RarityStatistics, RarityStatisticsCollection, Series } from '../types';
+import type {
+    Bounds,
+    CharacterEmbed,
+    ImageInfo,
+    CharacterRarityStatistics,
+    CharacterRarityCollection,
+    Series,
+} from '../types';
 import { resolveSequence } from '../utils';
 
 const GENERAL_INFO_REGEX = /\*\*Global ID:\*\* (\d+)\n\*\*Total Images:\*\* (\d+)/;
@@ -25,7 +32,7 @@ export class InfoEmbed implements CharacterEmbed {
     /** The rank range of this character */
     rankRange: Bounds;
     /** The rarity information of this character */
-    rarities: RarityStatisticsCollection;
+    rarities: CharacterRarityCollection;
 
     constructor(embed: APIEmbed) {
         this.name = embed.title as string;
@@ -69,7 +76,7 @@ export class InfoEmbed implements CharacterEmbed {
 
         // Collections
         const it = fields[3].value.matchAll(COLLECTIONS_REGEX);
-        const stats: RarityStatistics[] = [];
+        const stats: CharacterRarityStatistics[] = [];
 
         for (let obj = it.next(); !obj.done; obj = it.next()) {
             stats.push({
