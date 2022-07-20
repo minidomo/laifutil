@@ -1,5 +1,66 @@
 # Changelog
 
+# 3.0.0 - (2022-07-20)
+
+## Bug Fixes
+
+-   Fix error with view embeds for Scarlet/Event (https://github.com/minidomo/laifutil/pull/38) (https://github.com/minidomo/laifutil/pull/38/commits/41a11cf654527b55ed6776911100046322aa6ad2)
+-   Parse negative days correctly (https://github.com/minidomo/laifutil/pull/38) (https://github.com/minidomo/laifutil/pull/38/commits/41a11cf654527b55ed6776911100046322aa6ad2)
+-   Fix identifying glitched in ListCharacter (https://github.com/minidomo/laifutil/pull/44) (https://github.com/minidomo/laifutil/pull/44/commits/e9121b40d759ffe296d7c2d8f100d7430386c5e8)
+
+## Features
+
+-   Added `influenceSkinId` property (https://github.com/minidomo/laifutil/pull/45) (https://github.com/minidomo/laifutil/pull/45/commits/2bd14869b0f7ad0133b3e1ac4ff003e11a4269b0)
+-   Added `medal` property and enum (https://github.com/minidomo/laifutil/pull/46) (https://github.com/minidomo/laifutil/pull/46/commits/14042ae8027204244267251535da0259b6fd5d7d)
+-   Added enum for `sequence` property (https://github.com/minidomo/laifutil/pull/42) (https://github.com/minidomo/laifutil/pull/42/commits/a2c50898098d043eab1b8b11656a3389f6f7506a)
+-   Added CharacterRarity related enums (https://github.com/minidomo/laifutil/pull/39) (https://github.com/minidomo/laifutil/pull/39/commits/248fc25586f6cc3df83ed804179601dfaf7a8bf7)
+
+## Breaking Changes
+
+v3 is compatibable with discord.js v13 and v14 and no longer has a dependence on discord.js.
+
+### Type MessageEmbed Parameters
+
+**All** instances of parameters of type `MessageEmbed` are now type `APIEmbed`. For example,
+
+```diff
+- new ListEmbed(embed)
++ new ListEmbed(embed.toJSON())
+```
+
+### isLaifuBot
+
+Now only accepts a string argument.
+
+```diff
+- isLaifuBot(message)
++ isLaifuBot(message.author.id)
+```
+
+### Removed
+
+`Rarity`, `RarityConstants`, `RarityContainer`, `hasRarityValue`, and `compareRarity` have been removed in favor of utilizing the enums `CharacterRarity`, `CharacterRaritySymbol`, and `CharacterRarityText`.
+
+### RARITY_REGEX
+
+Renamed to `CHARACTER_RARITY_REGEX`.
+
+### resolveRarity
+
+Renamed to `resolveCharacterRarity` and returns a `CharacterRarityKey`.
+
+### RarityStatisticsCollection
+
+Renamed to `CharacterRarityCollection`.
+
+### RarityStatistics
+
+Renamed to `CharacterRarityStatistics`.
+
+### GachaBadgeEmbed.rarity
+
+Type is now `BadgeRarityKey` rather than `BadgeRarity`.
+
 # 2.1.1 - (2022-07-14)
 
 ## Features
