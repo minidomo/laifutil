@@ -1,18 +1,19 @@
 import type { APIEmbed, APIEmbedField } from 'discord-api-types/v10';
 import { BadgeRarity } from '../enums';
+import type { BadgeRarityKey } from '../types';
 
 const TITLE_REGEX = /#(\d+) (.+)/;
 const ACCOUNT_REGEX = /\*\*x(\d)\*\*\n.+\*\*x(\d+)\*\*/;
 const RARITY_REGEX = /(.+)/;
 const USER_ID_REGEX = /^https:\/\/cdn\.discordapp\.com\/avatars\/(\d+)/;
 
-function resolveBadgeRarity(str: string): BadgeRarity {
+function resolveBadgeRarity(str: string): BadgeRarityKey {
     const key = str.replaceAll(/ +/g, '_').replaceAll(/\*/g, '').toUpperCase();
 
     if (key in BadgeRarity) {
-        return BadgeRarity[key as keyof typeof BadgeRarity];
+        return key as BadgeRarityKey;
     } else {
-        return BadgeRarity.UNKNOWN;
+        return 'UNKNOWN';
     }
 }
 
@@ -23,7 +24,7 @@ export class GachaBadgeEmbed {
     /** The title of the badge */
     title: string;
     /** The rarity of the badge */
-    rarity: BadgeRarity;
+    rarity: BadgeRarityKey;
     /** The number of stones used for this gacha */
     stonesUsed: number;
     /** The owner's current balance in stones */

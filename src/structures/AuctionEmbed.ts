@@ -1,6 +1,6 @@
 import type { APIEmbed, APIEmbedField } from 'discord-api-types/v10';
-import { CHARACTER_RARITY_REGEX, resolveCharacterRarity } from '../characterRarity';
 import type { Bid, CharacterEmbed, CharacterRarityKey, Series } from '../types';
+import { CHARACTER_RARITY_REGEX, resolveCharacterRarity } from '../utils';
 
 const DESCRIPTION_REGEX = /Name:\*\* (.+)\n.+ID:\*\* (\d+)\n.+#(\d)/;
 const MAIN_SERIES_REGEX = /\*\*ENG:\*\* (.+)\n\*\*ALT:\*\* (.+)\n\*\*SID:\*\* (\d+) \| `(.+)`/;

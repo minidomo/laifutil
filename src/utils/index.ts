@@ -1,6 +1,9 @@
 import type { APIEmbed } from 'discord-api-types/v10';
 import emojiRegex from 'emoji-regex';
-import type { Bounds } from './types';
+import type { Bounds } from '../types';
+
+export * from './identifier';
+export * from './characterRarity';
 
 /** LaifuBot's user ID. */
 export const LAIFU_USER_ID = '688202466315206661';
