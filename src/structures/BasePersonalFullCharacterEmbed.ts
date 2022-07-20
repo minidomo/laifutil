@@ -5,6 +5,7 @@ const CLAIM_REGEX = /\*\*Claimed By:\*\* (.+)/;
 const AGE_REGEX = /\*\*Age:\*\* ([\d-]+) \| `(-?\d+)`/;
 const BADGE_REGEX = /❦#(\d+)/u;
 const GLITCH_REGEX = /ɢʟɪᴛᴄʜᴇᴅ/u;
+const INFLUENCE_SKIN_ID_REGEX = /:ig?(\d+):/;
 
 /** An extension of {@link BasePersonalSimpleCharacterEmbed} with additional information */
 export abstract class BasePersonalFullCharacterEmbed extends BasePersonalSimpleCharacterEmbed {
@@ -18,6 +19,8 @@ export abstract class BasePersonalFullCharacterEmbed extends BasePersonalSimpleC
     badgeId?: number;
     /** Indicates whether the character is glitched or not */
     glitched: boolean;
+    /** The influence skin ID of the character's influence skin */
+    influenceSkinId?: number;
 
     /**
      * @param embed The embed
@@ -42,6 +45,11 @@ export abstract class BasePersonalFullCharacterEmbed extends BasePersonalSimpleC
         const badgeMatch = rarityField.value.match(BADGE_REGEX);
         if (badgeMatch) {
             this.badgeId = parseInt(badgeMatch[1]);
+        }
+
+        const influenceSkinIdMatch = rarityField.value.match(INFLUENCE_SKIN_ID_REGEX);
+        if (influenceSkinIdMatch) {
+            this.influenceSkinId = parseInt(influenceSkinIdMatch[1]);
         }
 
         this.glitched = GLITCH_REGEX.test(rarityField.value);

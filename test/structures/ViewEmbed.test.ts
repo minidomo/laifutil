@@ -28,6 +28,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.influence, 40);
             assert.isUndefined(parsedEmbed.badgeId);
             assert.isFalse(parsedEmbed.glitched);
+            assert.isUndefined(parsedEmbed.influenceSkinId);
 
             assert.strictEqual(parsedEmbed.series.title.english, 'A Good Librarian Like a Good Shepherd');
             assert.strictEqual(parsedEmbed.series.title.alternate, 'Daitoshokan no Hitsujikai');
@@ -61,6 +62,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.influence, 928);
             assert.strictEqual(parsedEmbed.badgeId, 82);
             assert.isFalse(parsedEmbed.glitched);
+            assert.isUndefined(parsedEmbed.influenceSkinId);
 
             assert.strictEqual(parsedEmbed.series.title.english, 'Kakegurui: Compulsive Gambler');
             assert.strictEqual(parsedEmbed.series.title.alternate, 'Kakegurui');
@@ -94,6 +96,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.influence, 1044);
             assert.strictEqual(parsedEmbed.badgeId, 126);
             assert.isFalse(parsedEmbed.glitched);
+            assert.isUndefined(parsedEmbed.influenceSkinId);
 
             assert.strictEqual(parsedEmbed.series.title.english, 'Sword Art Online');
             assert.strictEqual(parsedEmbed.series.title.alternate, 'Sword Art Online');
@@ -127,6 +130,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.influence, 1897);
             assert.strictEqual(parsedEmbed.badgeId, 85);
             assert.isTrue(parsedEmbed.glitched);
+            assert.isUndefined(parsedEmbed.influenceSkinId);
 
             assert.strictEqual(parsedEmbed.series.title.english, 'Jujutsu Kaisen');
             assert.strictEqual(parsedEmbed.series.title.alternate, 'Jujutsu Kaisen');
@@ -160,6 +164,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.influence, 1154);
             assert.isUndefined(parsedEmbed.badgeId);
             assert.isTrue(parsedEmbed.glitched);
+            assert.isUndefined(parsedEmbed.influenceSkinId);
 
             assert.strictEqual(parsedEmbed.series.title.english, 'My Teen Romantic Comedy SNAFU');
             assert.strictEqual(
@@ -196,6 +201,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.influence, 1151);
             assert.strictEqual(parsedEmbed.badgeId, 99);
             assert.isFalse(parsedEmbed.glitched);
+            assert.isUndefined(parsedEmbed.influenceSkinId);
 
             assert.strictEqual(parsedEmbed.series.title.english, 'Seraph of the End: Vampire Reign');
             assert.strictEqual(parsedEmbed.series.title.alternate, 'Owari no Seraph');
@@ -229,6 +235,7 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.influence, 1603);
             assert.isUndefined(parsedEmbed.badgeId);
             assert.isFalse(parsedEmbed.glitched);
+            assert.strictEqual(parsedEmbed.influenceSkinId, 12);
 
             assert.strictEqual(parsedEmbed.series.title.english, 'Violet Evergarden');
             assert.strictEqual(parsedEmbed.series.title.alternate, 'Violet Evergarden');

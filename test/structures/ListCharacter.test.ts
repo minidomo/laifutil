@@ -19,6 +19,7 @@ describe('ListCharacter', () => {
             assert.strictEqual(character.influence, 1446);
             assert.isFalse(character.glitched);
             assert.isUndefined(character.badgeId);
+            assert.isUndefined(character.influenceSkinId);
         });
 
         it('should correctly parse a character with all fields from a list embed', () => {
@@ -36,6 +37,7 @@ describe('ListCharacter', () => {
             assert.strictEqual(character.influence, 1934);
             assert.isTrue(character.glitched);
             assert.strictEqual(character.badgeId, 85);
+            assert.isUndefined(character.influenceSkinId);
         });
 
         it('should correctly parse a three star character from a list embed', () => {
@@ -52,9 +54,10 @@ describe('ListCharacter', () => {
             assert.strictEqual(character.influence, 1619);
             assert.isFalse(character.glitched);
             assert.isUndefined(character.badgeId);
+            assert.isUndefined(character.influenceSkinId);
         });
 
-        it('should correctly parse a special character from a list embed', () => {
+        it('should correctly parse a glitched special character from a list embed', () => {
             const text =
                 '1 | 💖 [Λ 𝐈𝐕] #3 Yukino Yukinoshita `#67`・**1151**<a:spi:856659240228093983>・<a:218:915038054383767613>';
             const character = new ListCharacter(text);
@@ -69,6 +72,41 @@ describe('ListCharacter', () => {
             assert.strictEqual(character.influence, 1151);
             assert.isTrue(character.glitched);
             assert.strictEqual(character.badgeId, 218);
+            assert.isUndefined(character.influenceSkinId);
+        });
+
+        it('should correctly parse an influence skin character from a list embed', () => {
+            const text = '2188 |  [α] #9 Violet Evergarden `#14`・**1587** <a:i12:974445370987929650>';
+            const character = new ListCharacter(text);
+
+            assert.strictEqual(character.uniqueId, 2188);
+            assert.isUndefined(character.emoji);
+            assert.strictEqual(character.rarity, 'ALPHA');
+            assert.strictEqual(character.stars, 0);
+            assert.strictEqual(character.imageNumber, 9);
+            assert.strictEqual(character.name, 'Violet Evergarden');
+            assert.strictEqual(character.rank, 14);
+            assert.strictEqual(character.influence, 1587);
+            assert.isFalse(character.glitched);
+            assert.isUndefined(character.badgeId);
+            assert.strictEqual(character.influenceSkinId, 12);
+        });
+
+        it('should correctly parse a glitched, influence skin character from a list embed', () => {
+            const text = '2188 |  [α] #9 Violet Evergarden `#14`・**1587** <a:ig12:974445370987929650>';
+            const character = new ListCharacter(text);
+
+            assert.strictEqual(character.uniqueId, 2188);
+            assert.isUndefined(character.emoji);
+            assert.strictEqual(character.rarity, 'ALPHA');
+            assert.strictEqual(character.stars, 0);
+            assert.strictEqual(character.imageNumber, 9);
+            assert.strictEqual(character.name, 'Violet Evergarden');
+            assert.strictEqual(character.rank, 14);
+            assert.strictEqual(character.influence, 1587);
+            assert.isTrue(character.glitched);
+            assert.isUndefined(character.badgeId);
+            assert.strictEqual(character.influenceSkinId, 12);
         });
     });
 });
