@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import { APIEmbed } from 'discord-api-types/v10';
-import * as embeds from './embeds.json';
-import * as laifutil from '../dist';
+import * as laifutil from '../../dist';
+import * as embeds from '../embeds.json';
 
 const identifyEmbed = (() => {
     type IsEmbedFunction = (boolean: APIEmbed) => boolean;

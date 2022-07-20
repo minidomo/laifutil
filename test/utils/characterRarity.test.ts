@@ -1,8 +1,8 @@
 import { assert } from 'chai';
-import { CHARACTER_RARITY_REGEX, resolveCharacterRarity } from '../dist';
+import { CHARACTER_RARITY_REGEX, resolveCharacterRarity } from '../../dist';
 
 describe('characterRarity.ts', () => {
-    describe('#resolve', () => {
+    describe('#resolveCharacterRarity', () => {
         it('should return ZETA', () => {
             const ret = resolveCharacterRarity('ζ');
             assert.strictEqual(ret, 'ZETA');

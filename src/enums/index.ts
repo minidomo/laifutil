@@ -51,3 +51,10 @@ export enum CharacterRarityText {
     EVENT = 'ᴇᴠᴇɴᴛ',
     SPECIAL = 'sᴘᴇᴄɪᴀʟ',
 }
+
+/** Various sequences for a character embed */
+export enum Sequence {
+    UNKNOWN,
+    MAIN,
+    KPOP,
+}

@@ -1,9 +1,9 @@
 import { assert } from 'chai';
-import * as embeds from './embeds.json';
-import { asAPIEmbed } from './util';
-import { cleanCharacterName, hasSameImage, LAIFU_USER_ID } from '../dist';
+import { cleanCharacterName, hasSameImage, LAIFU_USER_ID } from '../../dist';
+import * as embeds from '../embeds.json';
+import { asAPIEmbed } from '../util';
 
-describe('util.ts', () => {
+describe('general.ts', () => {
     describe('.LAIFU_USER_ID', () => {
         it('should be equal to 688202466315206661', () => {
             assert.strictEqual(LAIFU_USER_ID, '688202466315206661');
