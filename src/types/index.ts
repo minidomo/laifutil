@@ -1,4 +1,4 @@
-import type { BadgeRarity, CharacterRarity, Sequence } from '../enums';
+import type { BadgeRarity, CharacterRarity, Medal, Sequence } from '../enums';
 
 /** Represents a lower and upper bound */
 export interface Bounds {
@@ -100,3 +100,4 @@ export interface Bid {
 export type CharacterRarityKey = keyof typeof CharacterRarity;
 export type BadgeRarityKey = keyof typeof BadgeRarity;
 export type SequenceKey = keyof typeof Sequence;
+export type MedalKey = keyof typeof Medal;

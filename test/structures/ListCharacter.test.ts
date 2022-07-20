@@ -20,6 +20,7 @@ describe('ListCharacter', () => {
             assert.isFalse(character.glitched);
             assert.isUndefined(character.badgeId);
             assert.isUndefined(character.influenceSkinId);
+            assert.isUndefined(character.medal);
         });
 
         it('should correctly parse a character with all fields from a list embed', () => {
@@ -38,6 +39,7 @@ describe('ListCharacter', () => {
             assert.isTrue(character.glitched);
             assert.strictEqual(character.badgeId, 85);
             assert.isUndefined(character.influenceSkinId);
+            assert.isUndefined(character.medal);
         });
 
         it('should correctly parse a three star character from a list embed', () => {
@@ -55,6 +57,7 @@ describe('ListCharacter', () => {
             assert.isFalse(character.glitched);
             assert.isUndefined(character.badgeId);
             assert.isUndefined(character.influenceSkinId);
+            assert.isUndefined(character.medal);
         });
 
         it('should correctly parse a glitched special character from a list embed', () => {
@@ -73,6 +76,7 @@ describe('ListCharacter', () => {
             assert.isTrue(character.glitched);
             assert.strictEqual(character.badgeId, 218);
             assert.isUndefined(character.influenceSkinId);
+            assert.isUndefined(character.medal);
         });
 
         it('should correctly parse an influence skin character from a list embed', () => {
@@ -90,10 +94,12 @@ describe('ListCharacter', () => {
             assert.isFalse(character.glitched);
             assert.isUndefined(character.badgeId);
             assert.strictEqual(character.influenceSkinId, 12);
+            assert.isUndefined(character.medal);
         });
 
-        it('should correctly parse a glitched, influence skin character from a list embed', () => {
-            const text = '2188 |  [α] #9 Violet Evergarden `#14`・**1587** <a:ig12:974445370987929650>';
+        it('should correctly parse a medal character from a list embed', () => {
+            const text =
+                '2188 |  [α <a:gm1:960028177898545222>] #9 Violet Evergarden `#14`・**1587** <a:ig12:974445370987929650>';
             const character = new ListCharacter(text);
 
             assert.strictEqual(character.uniqueId, 2188);
@@ -107,6 +113,7 @@ describe('ListCharacter', () => {
             assert.isTrue(character.glitched);
             assert.isUndefined(character.badgeId);
             assert.strictEqual(character.influenceSkinId, 12);
+            assert.strictEqual(character.medal, 'BRONZE');
         });
     });
 });

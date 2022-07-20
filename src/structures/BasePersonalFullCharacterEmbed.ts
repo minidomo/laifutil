@@ -1,5 +1,7 @@
 import type { APIEmbed, APIEmbedField } from 'discord-api-types/v10';
 import { BasePersonalSimpleCharacterEmbed } from './BasePersonalSimpleCharacterEmbed';
+import { MEDAL_REGEX, resolveMedal } from '../private';
+import type { MedalKey } from '../types';
 
 const CLAIM_REGEX = /\*\*Claimed By:\*\* (.+)/;
 const AGE_REGEX = /\*\*Age:\*\* ([\d-]+) \| `(-?\d+)`/;
@@ -21,6 +23,8 @@ export abstract class BasePersonalFullCharacterEmbed extends BasePersonalSimpleC
     glitched: boolean;
     /** The influence skin ID of the character's influence skin */
     influenceSkinId?: number;
+    /** The medal of this character */
+    medal?: MedalKey;
 
     /**
      * @param embed The embed
@@ -47,11 +51,16 @@ export abstract class BasePersonalFullCharacterEmbed extends BasePersonalSimpleC
             this.badgeId = parseInt(badgeMatch[1]);
         }
 
+        this.glitched = GLITCH_REGEX.test(rarityField.value);
+
         const influenceSkinIdMatch = rarityField.value.match(INFLUENCE_SKIN_ID_REGEX);
         if (influenceSkinIdMatch) {
             this.influenceSkinId = parseInt(influenceSkinIdMatch[1]);
         }
 
-        this.glitched = GLITCH_REGEX.test(rarityField.value);
+        const medalMatch = rarityField.value.match(MEDAL_REGEX);
+        if (medalMatch) {
+            this.medal = resolveMedal(medalMatch[1]);
+        }
     }
 }

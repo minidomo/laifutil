@@ -58,3 +58,12 @@ export enum Sequence {
     MAIN,
     KPOP,
 }
+
+/** Various types of medals */
+export enum Medal {
+    UNKNOWN,
+    BRONZE,
+    SILVER,
+    GOLD,
+    PRISTINE,
+}
