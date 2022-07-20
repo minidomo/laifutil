@@ -67,7 +67,7 @@ describe('ListCharacter', () => {
             assert.strictEqual(character.name, 'Yukino Yukinoshita');
             assert.strictEqual(character.rank, 67);
             assert.strictEqual(character.influence, 1151);
-            assert.isFalse(character.glitched);
+            assert.isTrue(character.glitched);
             assert.strictEqual(character.badgeId, 218);
         });
     });
