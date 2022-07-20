@@ -7,6 +7,7 @@ const STAR_REGEX = /(𝐈{1,3}𝐕?)/u;
 const EMOJI_REGEX = /\| ([^\s]+) \[/;
 const GLITCHED_REGEX = /:(?:\w{1,2}i|ig\d+):/;
 const BADGE_ID_REGEX = /\*\*<[^>]+>・<a:(\d+)/;
+const INFLUENCE_SKIN_ID_REGEX = /:ig?(\d+):/;
 
 const starCount: Map<string, number> = new Map();
 starCount.set('𝐈', 1).set('𝐈𝐈', 2).set('𝐈𝐈𝐈', 3)
@@ -34,6 +35,8 @@ export class ListCharacter {
     glitched: boolean;
     /** The badge ID of the character's badge */
     badgeId?: number;
+    /** The influence skin ID of the character's influence skin */
+    influenceSkinId?: number;
 
     constructor(text: string) {
         const uniqueIdMatch = text.match(UNIQUE_ID_REGEX) as RegExpMatchArray;
@@ -61,6 +64,11 @@ export class ListCharacter {
         const badgeIdMatch = text.match(BADGE_ID_REGEX);
         if (badgeIdMatch) {
             this.badgeId = parseInt(badgeIdMatch[1]);
+        }
+
+        const influenceSkinIdMatch = text.match(INFLUENCE_SKIN_ID_REGEX);
+        if (influenceSkinIdMatch) {
+            this.influenceSkinId = parseInt(influenceSkinIdMatch[1]);
         }
     }
 }
