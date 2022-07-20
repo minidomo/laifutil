@@ -1,4 +1,4 @@
-import type { CharacterRarityKey } from './types';
+import type { CharacterRarityKey } from '../types';
 
 /**
  * Regular expression for matching rarity text and symbols.
@@ -6,6 +6,9 @@ import type { CharacterRarityKey } from './types';
  * ```js
  * CHARACTER_RARITY_REGEX.test('sᴘᴇᴄɪᴀʟ'); // true
  * CHARACTER_RARITY_REGEX.test('Λ'); // true
+ *
+ * const match = CHARACTER_RARITY_REGEX.exec('345 | [Λ] #4');
+ * console.log(match[1]); // prints 'Λ'
  * ```
  */
 export const CHARACTER_RARITY_REGEX = (() => {
@@ -60,10 +63,10 @@ mappings
     .set('Λ', 'SPECIAL');
 
 /**
- * Resolves the query with the corresponding Rarity.
+ * Resolves the query with the corresponding character rarity.
  *
  * @param query The query to resolve
- * @returns The corresponding Rarity, 'UNKNOWN' otherwise
+ * @returns The corresponding character rarity, `'UNKNOWN'` otherwise
  */
 export function resolveCharacterRarity(query: string): CharacterRarityKey {
     return mappings.get(query) ?? 'UNKNOWN';

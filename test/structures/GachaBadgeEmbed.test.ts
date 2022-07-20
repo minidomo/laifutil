@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { BadgeRarity, GachaBadgeEmbed } from '../../dist';
+import { GachaBadgeEmbed } from '../../dist';
 import * as embeds from '../embeds.json';
 import { asAPIEmbedArr } from '../util';
 
@@ -12,7 +12,7 @@ describe('GachaBadgeEmbed', () => {
 
             assert.strictEqual(parsedEmbed.id, 235);
             assert.strictEqual(parsedEmbed.title, '*Is this a Pigeon?*');
-            assert.strictEqual(parsedEmbed.rarity, BadgeRarity.TIER_1);
+            assert.strictEqual(parsedEmbed.rarity, 'TIER_1');
             assert.strictEqual(parsedEmbed.stonesUsed, 4);
             assert.strictEqual(parsedEmbed.balance, 537);
             assert.strictEqual(parsedEmbed.userId, '138419598469890048');

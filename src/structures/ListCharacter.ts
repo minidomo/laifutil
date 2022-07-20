@@ -1,5 +1,5 @@
-import { CHARACTER_RARITY_REGEX, resolveCharacterRarity } from '../characterRarity';
 import type { CharacterRarityKey } from '../types';
+import { CHARACTER_RARITY_REGEX, resolveCharacterRarity } from '../utils';
 
 const UNIQUE_ID_REGEX = /^(\d+)/;
 const GENERAL_REGEX = /#(\d) (.+) `#(\d+)`・\*\*(\d+)\*\*/;
