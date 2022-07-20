@@ -469,6 +469,45 @@
                 "footer": {
                     "text": "Uploaded by Shiro no Joō\nCredit: Manga Volume 17 Chapter 67 Illustration"
                 }
+            },
+            {
+                "title": "#9 Violet Evergarden (ヴァイオレット・エヴァーガーデン)",
+                "type": "rich",
+                "description": null,
+                "url": null,
+                "timestamp": null,
+                "color": 13227220,
+                "fields": [
+                    {
+                        "name": "General Info",
+                        "value": "**UID:** 2188 | **GID:** 447 \n**Claimed By:** JB\n**Age:** 2021-08-10 | `344` ᴅᴀʏs",
+                        "inline": false
+                    },
+                    {
+                        "name": "Rarity",
+                        "value": "<a:r1:837480734050222100> | `ᴀʟᴘʜᴀ`»`☆☆☆☆`\nInfluence `#14`・**1603** <a:i12:974445370987929650>",
+                        "inline": false
+                    },
+                    {
+                        "name": "Main Series",
+                        "value": "**ENG:** Violet Evergarden\n**ALT:** Violet Evergarden\n**SID:** 89 | `MAIN`",
+                        "inline": false
+                    }
+                ],
+                "thumbnail": null,
+                "image": {
+                    "url": "https://cdn.discordapp.com/attachments/747423582346412052/845452201177645056/violet_pog.gif",
+                    "proxyURL": "https://media.discordapp.net/attachments/747423582346412052/845452201177645056/violet_pog.gif",
+                    "height": 350,
+                    "width": 225
+                },
+                "author": {
+                    "name": "! JB is Viewing...",
+                    "icon_url": "https://cdn.discordapp.com/avatars/138419598469890048/15ec94674d2d6acd1af739bd586744b5.png?size=4096"
+                },
+                "footer": {
+                    "text": "1,175 versions of this card currently exist.\nUploaded by bonker\nCredit: Anime"
+                }
             }
         ],
         "gacha": {

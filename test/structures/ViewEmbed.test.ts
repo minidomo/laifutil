@@ -209,5 +209,38 @@ describe('ViewEmbed', () => {
             assert.strictEqual(parsedEmbed.image.credit, 'Manga Volume 17 Chapter 67 Illustration');
             assert.isUndefined(parsedEmbed.existingAmount);
         });
+
+        it('should correctly parse an influence skin view Discord embed from LaifuBot', () => {
+            const parsedEmbed = new ViewEmbed(embedArr[6]);
+
+            assert.isUndefined(parsedEmbed.emoji);
+            assert.strictEqual(parsedEmbed.image.currentNumber, 9);
+            assert.strictEqual(parsedEmbed.name, 'Violet Evergarden (ヴァイオレット・エヴァーガーデン)');
+
+            assert.strictEqual(parsedEmbed.uniqueId, 2188);
+            assert.strictEqual(parsedEmbed.globalId, 447);
+            assert.strictEqual(parsedEmbed.claimedBy, 'JB');
+            assert.strictEqual(parsedEmbed.age, 344);
+            assert.strictEqual(parsedEmbed.dateClaimed, '2021-08-10');
+
+            assert.strictEqual(parsedEmbed.rarity, 'ALPHA');
+            assert.strictEqual(parsedEmbed.stars, 0);
+            assert.strictEqual(parsedEmbed.rank, 14);
+            assert.strictEqual(parsedEmbed.influence, 1603);
+            assert.isUndefined(parsedEmbed.badgeId);
+            assert.isFalse(parsedEmbed.glitched);
+
+            assert.strictEqual(parsedEmbed.series.title.english, 'Violet Evergarden');
+            assert.strictEqual(parsedEmbed.series.title.alternate, 'Violet Evergarden');
+            assert.strictEqual(parsedEmbed.series.id, 89);
+            assert.strictEqual(parsedEmbed.series.sequence, 'MAIN');
+
+            assert.strictEqual(parsedEmbed.owner, '! JB');
+            assert.strictEqual(parsedEmbed.userId, '138419598469890048');
+
+            assert.strictEqual(parsedEmbed.image.uploader, 'bonker');
+            assert.strictEqual(parsedEmbed.image.credit, 'Anime');
+            assert.strictEqual(parsedEmbed.existingAmount, 1175);
+        });
     });
 });
