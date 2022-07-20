@@ -1,4 +1,5 @@
-import type { CharacterRarityKey } from '../types';
+import { MEDAL_REGEX, resolveMedal } from '../private';
+import type { CharacterRarityKey, MedalKey } from '../types';
 import { CHARACTER_RARITY_REGEX, resolveCharacterRarity } from '../utils';
 
 const UNIQUE_ID_REGEX = /^(\d+)/;
@@ -37,6 +38,8 @@ export class ListCharacter {
     badgeId?: number;
     /** The influence skin ID of the character's influence skin */
     influenceSkinId?: number;
+    /** The medal of this character */
+    medal?: MedalKey;
 
     constructor(text: string) {
         const uniqueIdMatch = text.match(UNIQUE_ID_REGEX) as RegExpMatchArray;
@@ -69,6 +72,11 @@ export class ListCharacter {
         const influenceSkinIdMatch = text.match(INFLUENCE_SKIN_ID_REGEX);
         if (influenceSkinIdMatch) {
             this.influenceSkinId = parseInt(influenceSkinIdMatch[1]);
+        }
+
+        const medalMatch = text.match(MEDAL_REGEX);
+        if (medalMatch) {
+            this.medal = resolveMedal(medalMatch[1]);
         }
     }
 }
