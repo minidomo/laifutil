@@ -5,7 +5,7 @@ const UNIQUE_ID_REGEX = /^(\d+)/;
 const GENERAL_REGEX = /#(\d) (.+) `#(\d+)`・\*\*(\d+)\*\*/;
 const STAR_REGEX = /(𝐈{1,3}𝐕?)/u;
 const EMOJI_REGEX = /\| ([^\s]+) \[/;
-const GLITCHED_REGEX = /a:ui:856752760599085076/;
+const GLITCHED_REGEX = /:(?:\w{1,2}i|ig\d+):/;
 const BADGE_ID_REGEX = /\*\*<[^>]+>・<a:(\d+)/;
 
 const starCount: Map<string, number> = new Map();
