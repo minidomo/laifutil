@@ -1,4 +1,4 @@
-const LINE_REGEX = /(\d+) \| \[#(\d)\] (.+?) - (.+) ・\*\*(\d+)\*\*/;
+const LINE_REGEX = /(\d+) \| \[#(\d)\] (.+?) - (.+)・\*\*(\d+)\*\*/;
 
 /** Represents a character found in a clu search embed */
 export class CluCharacter {
@@ -18,7 +18,7 @@ export class CluCharacter {
         this.globalId = parseInt(lineMatch[1]);
         this.totalImages = parseInt(lineMatch[2]);
         this.name = lineMatch[3];
-        this.title = lineMatch[4];
+        this.title = lineMatch[4].trim();
         this.influence = parseInt(lineMatch[5]);
     }
 }

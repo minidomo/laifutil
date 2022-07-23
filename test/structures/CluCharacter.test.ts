@@ -24,5 +24,16 @@ describe('CluCharacter', () => {
             assert.strictEqual(character.title, 'Free! - Iwatobi Swim Club');
             assert.strictEqual(character.influence, 645);
         });
+
+        it('should correctly parse a basic character from a clu search embed (-name)', () => {
+            const text = '675 | [#1] Yoshie Tanaka - Oreshura・**69**<:inf:755213119055200336>';
+            const character = new CluCharacter(text);
+
+            assert.strictEqual(character.globalId, 675);
+            assert.strictEqual(character.totalImages, 1);
+            assert.strictEqual(character.name, 'Yoshie Tanaka');
+            assert.strictEqual(character.title, 'Oreshura');
+            assert.strictEqual(character.influence, 69);
+        });
     });
 });
