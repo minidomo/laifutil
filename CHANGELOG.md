@@ -2,6 +2,8 @@
 
 # 3.0.1 - (2022-07-23)
 
+## Bug Fixes
+
 -   Fix CluCharacter internal regular expression
 
 # 3.0.0 - (2022-07-20)
